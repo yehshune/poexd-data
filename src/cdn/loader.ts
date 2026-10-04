@@ -56,29 +56,34 @@ export class PoeDataLoader {
   private schema: SchemaFile | null = null;
 
   constructor(
+    public readonly gameVersion: 'poe1' | 'poe2',
     public readonly patchVersion: string,
     public readonly fileLoader: BaseFileLoader<CachingBundleLoader>,
     private readonly cacheRoot: string
   ) {}
 
-  static async create(cacheRoot = path.join(process.cwd(), '.cache')): Promise<PoeDataLoader> {
-    console.log('[CDN] 檢查 PoE 2 最新版本 (via poe-versions.obsoleet.org)...');
+  static async create(
+    gameVersion: 'poe1' | 'poe2' = 'poe2',
+    cacheRoot = path.join(process.cwd(), '.cache')
+  ): Promise<PoeDataLoader> {
+    console.log(`[CDN] 檢查 ${gameVersion === 'poe1' ? 'PoE 1' : 'PoE 2'} 最新版本 (via poe-versions.obsoleet.org)...`);
     let patchVersion = '';
     try {
       const verResp = await fetch('https://poe-versions.obsoleet.org');
       const verJson = (await verResp.json()) as { poe: string; poe2: string };
-      patchVersion = verJson.poe2;
+      patchVersion = gameVersion === 'poe1' ? verJson.poe : verJson.poe2;
     } catch {
-      const fallbackResp = await fetch('https://ggpk.exposed/version?poe=2');
+      const fallbackParam = gameVersion === 'poe1' ? '1' : '2';
+      const fallbackResp = await fetch(`https://ggpk.exposed/version?poe=${fallbackParam}`);
       const fallbackUrl = (await fallbackResp.text()).trim();
       patchVersion = fallbackUrl.replace(/^https?:\/\/[^/]+\//, '').replace(/\/+$/, '');
     }
-    console.log(`[CDN] 當前版本: ${patchVersion}`);
+    console.log(`[CDN] ${gameVersion} 當前版本: ${patchVersion}`);
 
     const bundleLoader = await CachingBundleLoader.create(path.join(cacheRoot, 'bundles'), patchVersion);
     const fileLoader = await BaseFileLoader.create(bundleLoader);
 
-    return new PoeDataLoader(patchVersion, fileLoader, cacheRoot);
+    return new PoeDataLoader(gameVersion, patchVersion, fileLoader, cacheRoot);
   }
 
   async getSchema(): Promise<SchemaFile> {
@@ -116,7 +121,7 @@ export class PoeDataLoader {
   ): Promise<Record<string, any>[]> {
     const schema = await this.getSchema();
     const lang = options.language ?? 'English';
-    const basePath = options.basePath ?? 'Data/Balance';
+    const basePath = options.basePath ?? (this.gameVersion === 'poe1' ? 'Data' : 'Data/Balance');
 
     const dirPath = lang === 'Traditional Chinese' ? `${basePath}/Traditional Chinese` : basePath;
     const datPath = `${dirPath}/${tableName}.datc64`;
@@ -158,7 +163,8 @@ export class PoeDataLoader {
 
   private buildHeaders(name: string, datFile: DatFile, schema: SchemaFile): NamedHeader[] {
     const foundByName = schema.tables.filter((s) => s.name === name);
-    const sch = foundByName.find((s) => (s.validFor & ValidFor.PoE2) !== 0) ?? foundByName[0];
+    const targetValidFor = this.gameVersion === 'poe1' ? ValidFor.PoE1 : ValidFor.PoE2;
+    const sch = foundByName.find((s) => (s.validFor & targetValidFor) !== 0) ?? foundByName[0];
     if (!sch) {
       throw new Error(`在 dat-schema 中找不到資料表 "${name}"`);
     }

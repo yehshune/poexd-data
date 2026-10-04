@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsx src/index.ts all",
     "build:atlas": "tsx src/index.ts atlas",
+    "build:mods": "tsx src/index.ts mods",
     "build:all": "tsx src/index.ts all"
   },
   "keywords": [],
@@ -26,5 +27,8 @@
     "sharp": "^0.35.5",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "texture2ddecoder-wasm": "^1.2.5"
   }
 }
