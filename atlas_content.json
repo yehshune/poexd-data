@@ -1,0 +1,849 @@
+{
+  "100": {
+    "name": "Powerful Map Boss",
+    "icon": "AtlasIconContentMapBoss",
+    "desc": "Area contains a Powerful Map Boss",
+    "translates": {
+      "traditional chinese": {
+        "name": "強大地圖頭目",
+        "desc": "區域含有一個強大地圖頭目"
+      }
+    }
+  },
+  "101": {
+    "name": "Breach",
+    "icon": "AtlasIconContentBreach",
+    "desc": "Area contains an Otherworldly Breach",
+    "translates": {
+      "traditional chinese": {
+        "name": "裂痕",
+        "desc": "區域含有一個異界的裂痕"
+      }
+    }
+  },
+  "102": {
+    "name": "Expedition",
+    "icon": "AtlasIconContentExpedition",
+    "desc": "Area contains a Kalguuran Expedition",
+    "translates": {
+      "traditional chinese": {
+        "name": "死境探險",
+        "desc": "區域含有一個卡爾葛探險"
+      }
+    }
+  },
+  "103": {
+    "name": "Delirium",
+    "icon": "AtlasIconContentDelirium",
+    "desc": "Area contains a Delirium Mirror",
+    "translates": {
+      "traditional chinese": {
+        "name": "譫妄",
+        "desc": "區域含有一面譫妄之鏡"
+      }
+    }
+  },
+  "104": {
+    "name": "Ritual",
+    "icon": "AtlasIconContentRitual",
+    "desc": "Area contains Ritual Altars",
+    "translates": {
+      "traditional chinese": {
+        "name": "祭祀",
+        "desc": "區域含有祭祀神壇"
+      }
+    }
+  },
+  "105": {
+    "name": "Irradiated",
+    "icon": "AtlasIconContentIrradiated",
+    "desc": "Area has +1 to Monster Level",
+    "translates": {
+      "traditional chinese": {
+        "name": "照耀",
+        "desc": "區域怪物等級 +1"
+      }
+    }
+  },
+  "106": {
+    "name": "Overrun by the Abyssal",
+    "icon": "AtlasIconContentAbyssOverrun",
+    "desc": "Area contains many extra Abysses",
+    "translates": {
+      "traditional chinese": {
+        "name": "深淵蔓延",
+        "desc": "區域含有許多額外深淵"
+      }
+    }
+  },
+  "107": {
+    "name": "Vaal Beacons",
+    "icon": "AtlasIconContentIncursion",
+    "desc": "Area contains Vaal Beacons",
+    "translates": {
+      "traditional chinese": {
+        "name": "瓦爾烽塔",
+        "desc": "區域含有瓦爾烽塔"
+      }
+    }
+  },
+  "108": {
+    "name": "Abyss",
+    "icon": "AtlasIconContentAbyss",
+    "desc": "Area contains Abysses",
+    "translates": {
+      "traditional chinese": {
+        "name": "深淵",
+        "desc": "區域含有深淵"
+      }
+    }
+  },
+  "109": {
+    "name": "Notable Location",
+    "icon": "AtlasMasteryBiome",
+    "desc": "Area contains an important objective",
+    "translates": {
+      "traditional chinese": {
+        "name": "任務區域",
+        "desc": "區域含有任務目標"
+      }
+    }
+  },
+  "110": {
+    "name": "[DNT] Breach City - Not Shown to Players",
+    "icon": "",
+    "desc": "DNT No visual identity = not shown",
+    "translates": {
+      "traditional chinese": {
+        "name": "[DNT] Breach City - Not Shown to Players",
+        "desc": "DNT No visual identity = not shown"
+      }
+    }
+  },
+  "111": {
+    "name": "Great Beast",
+    "icon": "CompanionsNotable1",
+    "desc": "Slay the Great Beast to earn Hilda's Favour",
+    "translates": {
+      "traditional chinese": {
+        "name": "巨型野獸",
+        "desc": "擊殺猛獸以獲得希爾妲的好感"
+      }
+    }
+  },
+  "112": {
+    "name": "Essence Trove",
+    "icon": "AtlasIconContentEssence",
+    "desc": "All Rare monsters are Essence monsters",
+    "translates": {
+      "traditional chinese": {
+        "name": "精髓寶藏",
+        "desc": "所有稀有怪物皆為精髓怪物"
+      }
+    }
+  },
+  "113": {
+    "name": "Monstrous Treasure",
+    "icon": "AtlasIconContentStrongBox",
+    "desc": "Contains many extra Strongboxes with monsters waiting in ambush",
+    "translates": {
+      "traditional chinese": {
+        "name": "巨大的寶物",
+        "desc": "含有許多額外保險箱和伏擊中的怪物"
+      }
+    }
+  },
+  "114": {
+    "name": "Spirit Guide",
+    "icon": "AtlasIconContentAzmeriSpirit",
+    "desc": "Contains an Azmeri Spirit that will be released when Possessed Monsters are slain",
+    "translates": {
+      "traditional chinese": {
+        "name": "魂靈指引",
+        "desc": "含有一個會於被附身的怪物被擊殺時釋放的阿茲莫里魂靈"
+      }
+    }
+  },
+  "115": {
+    "name": "Arcane Hordes",
+    "icon": "ItemQuantityandRarity",
+    "desc": "All Monsters are at least Magic",
+    "translates": {
+      "traditional chinese": {
+        "name": "祕法群集",
+        "desc": "所有怪物至少為魔法"
+      }
+    }
+  },
+  "116": {
+    "name": "Hunting Grounds",
+    "icon": "Hunter",
+    "desc": "Contains 2 additional Rogue Exiles and 5 additional Rare Beasts",
+    "translates": {
+      "traditional chinese": {
+        "name": "獵場",
+        "desc": "含有額外2名盜賊流亡者和5隻稀有野獸"
+      }
+    }
+  },
+  "117": {
+    "name": "Nature Shrines",
+    "icon": "HybridShrineAzmeriSpirit",
+    "desc": "Contains 2 additional Shrines\nShrines release an Azmeri Spirit when activated",
+    "translates": {
+      "traditional chinese": {
+        "name": "自然神殿",
+        "desc": "含有2座額外神殿\n神殿會於啟動時釋放一個阿茲莫里魂靈"
+      }
+    }
+  },
+  "118": {
+    "name": "Crystalised Twinning",
+    "icon": "EssenceNotable1",
+    "desc": "Contains 3 additional Essence Packs\nEssence Packs have an additional Rare Monster",
+    "translates": {
+      "traditional chinese": {
+        "name": "晶化雙生",
+        "desc": "含有額外3個精髓怪物群\n精髓怪物群含有一名額外稀有怪物"
+      }
+    }
+  },
+  "119": {
+    "name": "Indomitable Essence",
+    "icon": "EssenceNotable2",
+    "desc": "Contains 3 additional Essence\nEssences transfer to a random Unique Monster on death",
+    "translates": {
+      "traditional chinese": {
+        "name": "不屈精髓",
+        "desc": "含有額外3個精髓怪物群\n精髓會於死亡時轉移至一名隨機傳奇怪物"
+      }
+    }
+  },
+  "120": {
+    "name": "Azmeri Energisation",
+    "icon": "MoreWildWisps",
+    "desc": "Contains 2 additional Azmeri Spirits\nAzmeri Spirits have 1000% increased maximum Empowerment",
+    "translates": {
+      "traditional chinese": {
+        "name": "阿茲莫里充能",
+        "desc": "含有額外2個阿茲莫里魂靈\n阿茲莫里魂靈增加1000%最大強化值"
+      }
+    }
+  },
+  "121": {
+    "name": "Spirit Migration",
+    "icon": "VividPrimalWildWisps",
+    "desc": "An Azmeri Spirit moves to a nearby map on completion, eventually ascending to a Sacred Spirit",
+    "translates": {
+      "traditional chinese": {
+        "name": "魂靈遷徙",
+        "desc": "阿茲莫里魂靈會於完成後移動至相鄰地圖，並最終晉升為聖潔魂靈"
+      }
+    }
+  },
+  "122": {
+    "name": "Sacred Spirit",
+    "icon": "MoreSacredWisps",
+    "desc": "The Azmeri Spirit has ascended to a Sacred Spirit",
+    "translates": {
+      "traditional chinese": {
+        "name": "聖潔魂靈",
+        "desc": "阿茲莫里魂靈已晉升為聖潔魂靈"
+      }
+    }
+  },
+  "123": {
+    "name": "Ancient Trove",
+    "icon": "StrongboxNotable2",
+    "desc": "Contains a Unique Strongbox",
+    "translates": {
+      "traditional chinese": {
+        "name": "遠古寶庫",
+        "desc": "含有一個傳奇保險箱"
+      }
+    }
+  },
+  "124": {
+    "name": "Twice-Locked Boxes",
+    "icon": "StrongboxNotable1",
+    "desc": "Contains 3 additional Strongboxes\nStrongboxes are openable twice",
+    "translates": {
+      "traditional chinese": {
+        "name": "雙鎖密櫃",
+        "desc": "含有額外3個保險箱\n保險箱可以被開啟兩次"
+      }
+    }
+  },
+  "125": {
+    "name": "Power of Faith",
+    "icon": "Shrines",
+    "desc": "Contains 3 additional Shrines",
+    "translates": {
+      "traditional chinese": {
+        "name": "信仰之力",
+        "desc": "區域含有 3 座額外神殿"
+      }
+    }
+  },
+  "126": {
+    "name": "Large Congregation",
+    "icon": "ShrinesNode",
+    "desc": "Contains 3 additional Shrines\nShrines have 2 additional packs of Worshippers",
+    "translates": {
+      "traditional chinese": {
+        "name": "信眾雲集",
+        "desc": "含有額外2座神殿\n神殿含有額外2群膜拜者"
+      }
+    }
+  },
+  "127": {
+    "name": "Zealous Reverence",
+    "icon": "BossNotableSpawnAdditionalShrine",
+    "desc": "Contains 2 additional Shrines\nElemental Shrines do not appear in area\nShrine Duration increased by 1000%",
+    "translates": {
+      "traditional chinese": {
+        "name": "崇敬熱忱",
+        "desc": "含有額外2座神殿\n區域內不會出現元素神殿\n玩家被神殿增加1000%持續時間"
+      }
+    }
+  },
+  "128": {
+    "name": "Persistent Devotion",
+    "icon": "GreedShrinenoteble",
+    "desc": "Shrine Buffs are reapplied when entering the Map Boss Arena",
+    "translates": {
+      "traditional chinese": {
+        "name": "矢志不渝",
+        "desc": "進入地圖頭目競技場時，將重新套用神殿增益效果"
+      }
+    }
+  },
+  "129": {
+    "name": "Rites of the Rogues",
+    "icon": "Anarchy5",
+    "desc": "Contains 2 additional Shrines\nShrines are Worshipped by a Rogue Exile",
+    "translates": {
+      "traditional chinese": {
+        "name": "盜賊儀式",
+        "desc": "含有額外2座神殿\n神殿會被一名盜賊流亡者膜拜"
+      }
+    }
+  },
+  "130": {
+    "name": "Surprising Alliances",
+    "icon": "AnarchyNode1",
+    "desc": "Contains 2 additional Rogue Exiles\nRogue Exiles appear in Pairs",
+    "translates": {
+      "traditional chinese": {
+        "name": "意外盟友",
+        "desc": "含有額外2名盜賊流亡者\n盜賊流亡者成對出現"
+      }
+    }
+  },
+  "131": {
+    "name": "Azmeri Bloodline",
+    "icon": "Anarchy4",
+    "desc": "Contains an additional Rogue Exile and 2 additional Azmeri Spirits\nRogue Exiles are Possessed when a Possessed Monster is killed in Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "阿茲莫里血脈",
+        "desc": "含有額外1名盜賊流亡者和2個阿茲莫里魂靈\n盜賊流亡者在區域內有被附身怪物被擊殺時會被附身"
+      }
+    }
+  },
+  "132": {
+    "name": "Twinned Terrors",
+    "icon": "StoneCircles",
+    "desc": "Contains an additional Summoning Circles\nSummoning Circles always summon an additional Boss",
+    "translates": {
+      "traditional chinese": {
+        "name": "雙生恐懼",
+        "desc": "含有額外1座召喚法陣\n召喚法陣總是召喚一名額外頭目"
+      }
+    }
+  },
+  "133": {
+    "name": "Scattered Stones",
+    "icon": "StoneCirclesNode",
+    "desc": "Contains 3 additional Summoning Circles",
+    "translates": {
+      "traditional chinese": {
+        "name": "散落石陣",
+        "desc": "含有額外3座召喚法陣"
+      }
+    }
+  },
+  "134": {
+    "name": "Map Area Modified",
+    "icon": "Mapnode",
+    "desc": "World Area has been manipulated and cannot be manipulated again",
+    "translates": {
+      "traditional chinese": {
+        "name": "地圖區域受影響",
+        "desc": "世界區域已被影響且無法被再次影響"
+      }
+    }
+  },
+  "135": {
+    "name": "Fleeing Exile",
+    "icon": "AnarchyNotable2",
+    "desc": "",
+    "translates": {
+      "traditional chinese": {
+        "name": "逃亡流亡者",
+        "desc": ""
+      }
+    }
+  },
+  "136": {
+    "name": "Breach Hive",
+    "icon": "BreachNotable4",
+    "desc": "Contains a Breach Hive",
+    "translates": {
+      "traditional chinese": {
+        "name": "裂痕巢穴",
+        "desc": "含有一座裂痕巢穴"
+      }
+    }
+  },
+  "137": {
+    "name": "Simulacrum",
+    "icon": "AtlasIconContentDelirium",
+    "desc": "Contains a manifestation of Delirium",
+    "translates": {
+      "traditional chinese": {
+        "name": "幻像異界",
+        "desc": "含有一個具現化的譫妄"
+      }
+    }
+  },
+  "138": {
+    "name": "Chaotic Cacophony",
+    "icon": "ElderShaperNotable1",
+    "desc": "Contains an extra of each type of content",
+    "translates": {
+      "traditional chinese": {
+        "name": "混沌嘈雜",
+        "desc": "含有額外每種內容類型"
+      }
+    }
+  },
+  "139": {
+    "name": "Affluent Armies",
+    "icon": "BossMapDrops",
+    "desc": "50% increased Rarity of items found in area",
+    "translates": {
+      "traditional chinese": {
+        "name": "富裕軍隊",
+        "desc": "區域內找到的物品稀有度提高 50%"
+      }
+    }
+  },
+  "140": {
+    "name": "Behemoth's Bounty",
+    "icon": "ExceptionalItemsWeaponsShields",
+    "desc": "Map Boss drops a Unique item",
+    "translates": {
+      "traditional chinese": {
+        "name": "巨獸懸賞",
+        "desc": "地圖頭目掉落一件傳奇物品"
+      }
+    }
+  },
+  "141": {
+    "name": "Trialmaster's Trainee",
+    "icon": "VaalNotable1",
+    "desc": "Map Boss drops an Inscribed Ultimatum",
+    "translates": {
+      "traditional chinese": {
+        "name": "試煉大師的學員",
+        "desc": "地圖頭目掉落一張最後通牒雕刻"
+      }
+    }
+  },
+  "142": {
+    "name": "Sekhema's Student",
+    "icon": "SorceressSandDjinnCorpseBeetles",
+    "desc": "Map Boss drops a Djinn Barya",
+    "translates": {
+      "traditional chinese": {
+        "name": "絲克瑪的學生",
+        "desc": "地圖頭目掉落一枚巨靈之幣"
+      }
+    }
+  },
+  "143": {
+    "name": "Azmeri Champion",
+    "icon": "BossNotableAzmeriSpirit",
+    "desc": "Map Boss is Possessed",
+    "translates": {
+      "traditional chinese": {
+        "name": "阿茲莫里冠軍",
+        "desc": "地圖頭目已附身"
+      }
+    }
+  },
+  "144": {
+    "name": "Gigantic Uprising",
+    "icon": "MinionsandManaNotable",
+    "desc": "Monsters are Gigantic, have 50% reduced pack size and drop 50% increased items",
+    "translates": {
+      "traditional chinese": {
+        "name": "極大暴動",
+        "desc": "怪物極大化，減少50%怪物群大小，增加50%掉落物品數量提高"
+      }
+    }
+  },
+  "145": {
+    "name": "Glimmering Mutation",
+    "icon": "CurrencyNode",
+    "desc": "Currency found is replaced with rarer varieties",
+    "translates": {
+      "traditional chinese": {
+        "name": "閃爍異變",
+        "desc": "找到的通貨將替換為更高稀有度的種類"
+      }
+    }
+  },
+  "146": {
+    "name": "Stolen Power",
+    "icon": "ScorchTheEarth",
+    "desc": "Contains an additional Summoning Circle\nSummoning Circle Bosses have increased difficulty and reward per power of enemy slain",
+    "translates": {
+      "traditional chinese": {
+        "name": "竊取之力",
+        "desc": "含有額外1座召喚法陣\n召喚法陣頭目會依擊殺敵人的強度，提高難度及獎勵"
+      }
+    }
+  },
+  "147": {
+    "name": "Headhunters",
+    "icon": "skullcracking",
+    "desc": "When Players Kill a Rare Monster they will gain 1 of its Modifiers for 20 seconds",
+    "translates": {
+      "traditional chinese": {
+        "name": "獵頭者",
+        "desc": "當玩家擊殺一隻稀有怪物時，將獲得其 1 個詞綴，持續 20 秒"
+      }
+    }
+  },
+  "148": {
+    "name": "Swarming Spirits",
+    "icon": "EnduranceFrenzyPowerChargeNode",
+    "desc": "Contains 5 additional Azmeri Spirits",
+    "translates": {
+      "traditional chinese": {
+        "name": "魂靈蜂擁",
+        "desc": "區域含有5個阿茲莫里魂靈"
+      }
+    }
+  },
+  "149": {
+    "name": "Power Struggle",
+    "icon": "BossNotableSpawnBeyondMonsters",
+    "desc": "Contains 3 additional Map Bosses throughout the area",
+    "translates": {
+      "traditional chinese": {
+        "name": "力量爭奪",
+        "desc": "區域內含有3名地圖頭目"
+      }
+    }
+  },
+  "150": {
+    "name": "Corrupted Mirage",
+    "icon": "CorruptedDefences",
+    "desc": "Area has 2 additional random Waystone Modifiers",
+    "translates": {
+      "traditional chinese": {
+        "name": "腐化幻象",
+        "desc": "區域有 2 個額外的隨機換界石詞綴"
+      }
+    }
+  },
+  "151": {
+    "name": "Energized Ley Lines",
+    "icon": "CaptivatedInterestKeystone",
+    "desc": "Doubles Effect of Tablets used on Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "能量地脈",
+        "desc": "區域上使用的碑牌效果加倍"
+      }
+    }
+  },
+  "152": {
+    "name": "Exceptional Find",
+    "icon": "ExceptionalItemsBodyArmour",
+    "desc": "1000% increased Exceptional Items found in Area\nMonster may drop anyExceptional Items",
+    "translates": {
+      "traditional chinese": {
+        "name": "卓越發現",
+        "desc": "增加1000%區域內找到的卓越物品\n怪物可以掉落任意卓越物品"
+      }
+    }
+  },
+  "153": {
+    "name": "Water Influence",
+    "icon": "WaterBiome",
+    "desc": "Also counts as a Water Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "水域影響",
+        "desc": "同時計算為水域區域"
+      }
+    }
+  },
+  "154": {
+    "name": "Mountain Influence",
+    "icon": "MountainBiome",
+    "desc": "Also counts as a Mountain Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "山地影響",
+        "desc": "同時計算為山地區域"
+      }
+    }
+  },
+  "155": {
+    "name": "Grass Influence",
+    "icon": "GrassBiome",
+    "desc": "Also counts as a Grass Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "草地影響",
+        "desc": "同時計算為草地區域"
+      }
+    }
+  },
+  "156": {
+    "name": "Forest Influence",
+    "icon": "ForestBiome",
+    "desc": "Also counts as a Forest Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "森林影響",
+        "desc": "同時計算為森林區域"
+      }
+    }
+  },
+  "157": {
+    "name": "Swamp Influence",
+    "icon": "SwampBiome",
+    "desc": "Also counts as a Swamp Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "沼澤影響",
+        "desc": "同時計算為沼澤區域"
+      }
+    }
+  },
+  "158": {
+    "name": "Desert Influence",
+    "icon": "DesertBiome",
+    "desc": "Also counts as a Desert Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "沙漠影響",
+        "desc": "同時計算為沙漠區域"
+      }
+    }
+  },
+  "159": {
+    "name": "Immured Fury",
+    "icon": "AtlasIconContentSanctificationBoss",
+    "desc": "Doryani has spotted The Immured Fury in this Area",
+    "translates": {
+      "traditional chinese": {
+        "name": "禁錮之怒",
+        "desc": "多里亞尼在此區域發現了禁錮之怒"
+      }
+    }
+  },
+  "160": {
+    "name": "Mirage of Riches",
+    "icon": "Currency2",
+    "desc": "Equipment dropped by monsters is replaced with other items",
+    "translates": {
+      "traditional chinese": {
+        "name": "財富幻象",
+        "desc": "怪物掉落的裝備會被其他物品替換"
+      }
+    }
+  },
+  "161": {
+    "name": "Wisdom's Teachings",
+    "icon": "BossNotableGrantMoreExperience",
+    "desc": "Monsters grant 100% increased Experience",
+    "translates": {
+      "traditional chinese": {
+        "name": "智慧傳授",
+        "desc": "怪物增加100%經驗"
+      }
+    }
+  },
+  "162": {
+    "name": "Tight Pockets",
+    "icon": "BossNotableDropMoreItems",
+    "desc": "Gold dropped by monsters is replaced with other items",
+    "translates": {
+      "traditional chinese": {
+        "name": "緊縮口袋",
+        "desc": "怪物掉落的金幣會被其他物品替換"
+      }
+    }
+  },
+  "163": {
+    "name": "Fragment of Immortality",
+    "icon": "IncreaseMinionLifeNode",
+    "desc": "Players have unlimited Revivals in area\nMonsters have 100% increased Effectiveness",
+    "translates": {
+      "traditional chinese": {
+        "name": "永生碎片",
+        "desc": "區域中的玩家沒有的復活次數限制\n怪物增加100%效用"
+      }
+    }
+  },
+  "164": {
+    "name": "Prosperous Populous",
+    "icon": "ItemQuantity",
+    "desc": "100% increased Rarity of items found in area",
+    "translates": {
+      "traditional chinese": {
+        "name": "富裕繁榮",
+        "desc": "增加100%區域中找到的物品稀有度"
+      }
+    }
+  },
+  "165": {
+    "name": "Echoes of Power",
+    "icon": "GenericMinionNotable",
+    "desc": "5 Rare Monsters are Duplicated",
+    "translates": {
+      "traditional chinese": {
+        "name": "力量回聲",
+        "desc": "5名稀有怪物會被複製"
+      }
+    }
+  },
+  "166": {
+    "name": "Grand Expedition",
+    "icon": "ExpeditionNode1",
+    "desc": "Area contains a Grand Expedition",
+    "translates": {
+      "traditional chinese": {
+        "name": "大型探險",
+        "desc": "區域含有一個大型探險"
+      }
+    }
+  },
+  "167": {
+    "name": "Abyssal Depths",
+    "icon": "AtlasIconContentAbyssalDepths",
+    "desc": "Area contains an Abyssal Depths",
+    "translates": {
+      "traditional chinese": {
+        "name": "無盡深淵",
+        "desc": "區域含有一個無盡深淵"
+      }
+    }
+  },
+  "168": {
+    "name": "Abyssal Fissure",
+    "icon": "AtlasIconContentAbyss",
+    "desc": "Area contains Abysses. Maps further along the Fissure contain stronger Abyssal Monsters and additional pits.",
+    "translates": {
+      "traditional chinese": {
+        "name": "深淵裂谷",
+        "desc": "區域含有一個 深淵。隨著深淵裂縫的深入，會出現更強大的深淵怪物與額外的深淵坑。"
+      }
+    }
+  },
+  "169": {
+    "name": "Viridian Wildwood",
+    "icon": "AtlasIconContentAzmeriSpirit",
+    "desc": "Area contains a Viridian Wildwood",
+    "translates": {
+      "traditional chinese": {
+        "name": "翠綠荒林",
+        "desc": "區域含有一個翠綠荒林。"
+      }
+    }
+  },
+  "1000": {
+    "name": "Corruption",
+    "icon": "AtlasIconContentCorruption",
+    "desc": "This map is Corrupted.",
+    "translates": {
+      "traditional chinese": {
+        "name": "腐化",
+        "desc": "此地圖已被腐化。"
+      }
+    }
+  },
+  "1002": {
+    "name": "Delirium Fog",
+    "icon": "AtlasIconContentDelirium",
+    "desc": "Players in area are Delirious.",
+    "translates": {
+      "traditional chinese": {
+        "name": "譫妄迷霧",
+        "desc": "區域內的玩家受到譫妄籠罩。"
+      }
+    }
+  },
+  "1003": {
+    "name": "Cleansed",
+    "icon": "AtlasIconContentSanctification",
+    "desc": "Area has been Cleansed.",
+    "translates": {
+      "traditional chinese": {
+        "name": "已淨化",
+        "desc": "區域已淨化。"
+      }
+    }
+  },
+  "1004": {
+    "name": "Wandering Trader",
+    "icon": "AtlasIconContentTrader",
+    "desc": "Area contains a Wandering Trader.",
+    "translates": {
+      "traditional chinese": {
+        "name": "流浪商人",
+        "desc": "區域含有一位流浪商人。"
+      }
+    }
+  },
+  "1005": {
+    "name": "Corrupted Nexus",
+    "icon": "AtlasIconContentCorruptionNexus",
+    "desc": "Area contains a Corrupted Boss.",
+    "translates": {
+      "traditional chinese": {
+        "name": "腐化樞紐",
+        "desc": "區域含有一個腐化頭目。"
+      }
+    }
+  },
+  "1006": {
+    "name": "Deadly Map Boss",
+    "icon": "AtlasIconContentMapBossSpecial",
+    "desc": "Area contains a Deadly Map Boss.",
+    "translates": {
+      "traditional chinese": {
+        "name": "致命地圖頭目",
+        "desc": "區域含有一個致命地圖頭目。"
+      }
+    }
+  },
+  "1007": {
+    "name": "Grand Mirror",
+    "icon": "AtlasIconContentGigaMirror",
+    "desc": "Contains a reflection of the Map Boss. When the bosses are defeated Delirium fog spreads to nearby Maps.",
+    "translates": {
+      "traditional chinese": {
+        "name": "宏偉之鏡",
+        "desc": "包含地圖頭目的倒影；擊敗頭目後，譫妄迷霧會擴散到鄰近地圖。"
+      }
+    }
+  }
+}

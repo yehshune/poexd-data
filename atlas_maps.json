@@ -1,0 +1,3065 @@
+{
+  "G_Endgame_Town": {
+    "name": "The Ziggurat Refuge",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "The Ziggurat Refuge",
+      "traditional chinese": "高地神塔庇護所"
+    }
+  },
+  "MapBloomingField": {
+    "name": "Blooming Field",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Blooming Field",
+      "traditional chinese": "盛放田野"
+    },
+    "bosses": [
+      {
+        "id": "CrowBellBossMap_",
+        "name": "黑鴉",
+        "name_en": "The Black Crow"
+      }
+    ]
+  },
+  "MapSavanna": {
+    "name": "Savannah",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Savannah",
+      "traditional chinese": "大草原"
+    },
+    "bosses": [
+      {
+        "id": "RathbreakerBossMap",
+        "name": "土狼領主．凱爾壯",
+        "name_en": "Caedron, the Hyena Lord"
+      }
+    ]
+  },
+  "MapFortress": {
+    "name": "Fortress",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Fortress",
+      "traditional chinese": "堡壘"
+    },
+    "bosses": [
+      {
+        "id": "BalbalaMAP",
+        "name": "被遺忘的囚犯．帕拉薩",
+        "name_en": "Pirasha, the Forgotten Prisoner"
+      }
+    ]
+  },
+  "MapPenitentiary": {
+    "name": "Penitentiary",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Penitentiary",
+      "traditional chinese": "監獄"
+    },
+    "bosses": [
+      {
+        "id": "GuillotineExecutionerMap",
+        "name": "死亡化身",
+        "name_en": "Incarnation of Death"
+      }
+    ]
+  },
+  "MapLostTowers": {
+    "name": "Lost Towers",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Lost Towers",
+      "traditional chinese": "失落之塔"
+    },
+    "bosses": [
+      {
+        "id": "MutantBird2Map",
+        "name": "羽毛瘟疫．切札",
+        "name_en": "Chetza, the Feathered Plague"
+      }
+    ]
+  },
+  "MapSandspit": {
+    "name": "Sandspit",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Sandspit",
+      "traditional chinese": "沙吐"
+    },
+    "bosses": [
+      {
+        "id": "GreatWhiteOneMAP_",
+        "name": "沙行者",
+        "name_en": "The Sandstrider"
+      }
+    ]
+  },
+  "MapForge": {
+    "name": "Forge",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Forge",
+      "traditional chinese": "鍛造"
+    },
+    "bosses": [
+      {
+        "id": "TitanBossMap",
+        "name": "巨型守衛者．瓦斯威德",
+        "name_en": "Vastweld, the Colossal Guardian"
+      }
+    ]
+  },
+  "MapSulphuricCaverns": {
+    "name": "Sulphuric Caverns",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Sulphuric Caverns",
+      "traditional chinese": "硫化洞窟"
+    },
+    "bosses": [
+      {
+        "id": "MastodonBossMAP",
+        "name": "骨之巨像",
+        "name_en": "The Bone Colossus"
+      },
+      {
+        "id": "BoneCultist_NecromancerBossMAP",
+        "name": "深坑之王",
+        "name_en": "Lord of the Pit"
+      }
+    ]
+  },
+  "MapMire": {
+    "name": "Mire",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Mire",
+      "traditional chinese": "泥沼"
+    },
+    "bosses": [
+      {
+        "id": "UrchinHagBossMap",
+        "name": "寒冬之嘲．梨歐娜",
+        "name_en": "Riona, Winter's Cackle"
+      }
+    ]
+  },
+  "MapWoodland": {
+    "name": "Woodland",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Woodland",
+      "traditional chinese": "木林"
+    },
+    "bosses": [
+      {
+        "id": "SwollenMillerBossMAPDuo_",
+        "name": "膨脹者．默塔格",
+        "name_en": "Murtagh, the Engorged"
+      },
+      {
+        "id": "SwollenMillerBossMAPDuo2_",
+        "name": "怨毒者．柯姆",
+        "name_en": "Colm, the Rancorous"
+      }
+    ]
+  },
+  "MapSump": {
+    "name": "Sump",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Sump",
+      "traditional chinese": "污水坑"
+    },
+    "bosses": [
+      {
+        "id": "IgnagdukBogWitchMap",
+        "name": "凋零老嫗．布拉卡",
+        "name_en": "Brakka, the Withered Crone"
+      }
+    ]
+  },
+  "MapWillow": {
+    "name": "Willow",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Willow",
+      "traditional chinese": "垂柳"
+    },
+    "bosses": [
+      {
+        "id": "BitterGuyBossMap",
+        "name": "苦難之靈．康納爾",
+        "name_en": "Connal, the Tormented"
+      }
+    ]
+  },
+  "MapHeadland": {
+    "name": "Headland",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Headland",
+      "traditional chinese": "海角"
+    },
+    "bosses": [
+      {
+        "id": "ForsakenSonMap",
+        "name": "墮落之子．哈斯克",
+        "name_en": "Hask, the Fallen Son"
+      }
+    ]
+  },
+  "MapLoftySummit": {
+    "name": "Lofty Summit",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Lofty Summit",
+      "traditional chinese": "崇高之巔"
+    },
+    "bosses": [
+      {
+        "id": "BlackJawMap",
+        "name": "無情者．歐羅頓",
+        "name_en": "Oloton, the Remorseless"
+      }
+    ]
+  },
+  "MapNecropolis": {
+    "name": "Necropolis",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Necropolis",
+      "traditional chinese": "魔影墓場"
+    },
+    "bosses": [
+      {
+        "id": "HusbandMonsterMAP",
+        "name": "暗黑執政官．泰科",
+        "name_en": "Tycho, the Black Praetor"
+      }
+    ]
+  },
+  "MapCrypt": {
+    "name": "Crypt",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Crypt",
+      "traditional chinese": "靜謐陵墓"
+    },
+    "bosses": [
+      {
+        "id": "ManorGargoyleBossMap",
+        "name": "信仰之嘲．融蠟",
+        "name_en": "Meltwax, Mockery of Faith"
+      }
+    ]
+  },
+  "MapSteamingSprings": {
+    "name": "Steaming Springs",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Steaming Springs",
+      "traditional chinese": "蒸氣之泉"
+    },
+    "bosses": [
+      {
+        "id": "SerpentClanCasterBossMap",
+        "name": "巨蛇女王．瑪娜莎",
+        "name_en": "Manassa, the Serpent Queen"
+      }
+    ]
+  },
+  "MapSeepage": {
+    "name": "Seepage",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Seepage",
+      "traditional chinese": "滲漏"
+    },
+    "bosses": [
+      {
+        "id": "FungusBehemothMap",
+        "name": "真菌巨靈",
+        "name_en": "The Fungus Behemoth"
+      }
+    ]
+  },
+  "MapRiverside": {
+    "name": "Riverside",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Riverside",
+      "traditional chinese": "河畔"
+    },
+    "bosses": [
+      {
+        "id": "QuadrillaBossMAP",
+        "name": "碎顱者．澤寇亞",
+        "name_en": "Zekoa, the Headcrusher"
+      }
+    ]
+  },
+  "MapSteppe": {
+    "name": "Steppe",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Steppe",
+      "traditional chinese": "乾草原"
+    },
+    "bosses": [
+      {
+        "id": "TheRustKingBossMAP",
+        "name": "反叛鐵鏽之王．葛森",
+        "name_en": "Gozen, Rebellious Rustlord"
+      }
+    ]
+  },
+  "MapSlick": {
+    "name": "Slick",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Slick",
+      "traditional chinese": "浮油"
+    },
+    "bosses": [
+      {
+        "id": "RudjaDreadEngineerMAP",
+        "name": "煉獄工程師．沃黎克",
+        "name_en": "Vorrik, The Infernal Engineer"
+      }
+    ]
+  },
+  "MapSpiderWoods": {
+    "name": "Spider Woods",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Spider Woods",
+      "traditional chinese": "蜘蛛之林"
+    },
+    "bosses": [
+      {
+        "id": "CarnivorousPlantEaterOldForestMap",
+        "name": "森林之憎．根爪",
+        "name_en": "Rootgrasp, the Hateful Forest"
+      }
+    ]
+  },
+  "MapMarrow": {
+    "name": "Marrow",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Marrow",
+      "traditional chinese": "朽髓"
+    },
+    "bosses": [
+      {
+        "id": "GiantSkeletonSnakeBossMap",
+        "name": "骨之暴君．札瓦里",
+        "name_en": "Zar Wali, the Bone Tyrant"
+      }
+    ]
+  },
+  "MapVaalCity": {
+    "name": "Vaal City",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Vaal City",
+      "traditional chinese": "瓦爾古城"
+    },
+    "bosses": [
+      {
+        "id": "ViperNapuatziMAP",
+        "name": "邪魔毒蛇．納普阿茲",
+        "name_en": "Viper Napuatzi"
+      }
+    ]
+  },
+  "MapBloodwood": {
+    "name": "Bloodwood",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Bloodwood",
+      "traditional chinese": "血林"
+    },
+    "bosses": [
+      {
+        "id": "MudBurrowerHeadBossMAP2__",
+        "name": "移動大地．戈里安",
+        "name_en": "Gorian, the Moving Earth"
+      }
+    ]
+  },
+  "MapCenotes": {
+    "name": "Cenotes",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Cenotes",
+      "traditional chinese": "天然井"
+    },
+    "bosses": [
+      {
+        "id": "ChaosGodOwlBossMAP_",
+        "name": "天空先知．巴拉克",
+        "name_en": "Bahlak, the Sky Seer"
+      }
+    ]
+  },
+  "MapHiddenGrotto": {
+    "name": "Hidden Grotto",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Hidden Grotto",
+      "traditional chinese": "隱密石窟"
+    },
+    "bosses": [
+      {
+        "id": "GiantSkeletonSnakeBossMap",
+        "name": "骨之暴君．札瓦里",
+        "name_en": "Zar Wali, the Bone Tyrant"
+      }
+    ]
+  },
+  "MapRavine": {
+    "name": "Ravine",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Ravine",
+      "traditional chinese": "溪谷"
+    },
+    "bosses": [
+      {
+        "id": "VaalStatueBossMAP",
+        "name": "熾烈衛士．特茲卡特",
+        "name_en": "Tetzcatl, the Blazing Guardian"
+      }
+    ]
+  },
+  "MapAlpineRidge": {
+    "name": "Alpine Ridge",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Alpine Ridge",
+      "traditional chinese": "高山山脊"
+    },
+    "bosses": [
+      {
+        "id": "IgnagdukBogWitchHagBattleMap",
+        "name": "烈焰之誓．伊娜提亞",
+        "name_en": "Ignatia, the Flame-Sworn"
+      },
+      {
+        "id": "UrchinHagBossHagBattleMap",
+        "name": "冰霜之舌．蓋利達",
+        "name_en": "Gelida, the Frost-Tongue"
+      }
+    ]
+  },
+  "MapAugury": {
+    "name": "Augury",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Augury",
+      "traditional chinese": "預兆"
+    },
+    "bosses": [
+      {
+        "id": "ChimeraUltimatumBossMap",
+        "name": "巔峰者．葛雷索庫",
+        "name_en": "Gressor-Kul, the Apex"
+      }
+    ]
+  },
+  "MapBastille": {
+    "name": "Bastille",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Bastille",
+      "traditional chinese": "堡壘"
+    },
+    "bosses": [
+      {
+        "id": "FrozenOneBossMAP_",
+        "name": "霜禍．維納",
+        "name_en": "Veynar, the Frostbane"
+      }
+    ]
+  },
+  "MapCreek": {
+    "name": "Creek",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Creek",
+      "traditional chinese": "小溪"
+    },
+    "bosses": [
+      {
+        "id": "SwollenMillerBossMAP",
+        "name": "憎恨之靈．提爾尼",
+        "name_en": "Tierney, the Hateful"
+      }
+    ]
+  },
+  "MapCrimsonShores": {
+    "name": "Crimson Shores",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Crimson Shores",
+      "traditional chinese": "緋紅海岸"
+    },
+    "bosses": [
+      {
+        "id": "SaltGolemBossMAP",
+        "name": "燼裔．沃克哈爾",
+        "name_en": "Volkhar, the Emberborn"
+      }
+    ]
+  },
+  "MapDecay": {
+    "name": "Decay",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Decay",
+      "traditional chinese": "腐蝕"
+    },
+    "bosses": [
+      {
+        "id": "FungusBehemothMap",
+        "name": "真菌巨靈",
+        "name_en": "The Fungus Behemoth"
+      }
+    ]
+  },
+  "MapDeserted": {
+    "name": "Deserted",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Deserted",
+      "traditional chinese": "棄置之地"
+    },
+    "bosses": [
+      {
+        "id": "BoneCultist_NecromancerBossMAPSOLO",
+        "name": "深坑之王",
+        "name_en": "Lord of the Pit"
+      }
+    ]
+  },
+  "MapGrimhaven": {
+    "name": "Grimhaven",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Grimhaven",
+      "traditional chinese": "肅穆之地"
+    },
+    "bosses": [
+      {
+        "id": "WifeMonsterMap_",
+        "name": "恐懼之伴．賽菲菈",
+        "name_en": "Saphira, The Dread Consort"
+      }
+    ]
+  },
+  "MapHive": {
+    "name": "Hive",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Hive",
+      "traditional chinese": "巢穴"
+    },
+    "bosses": [
+      {
+        "id": "FungusBehemothMap",
+        "name": "真菌巨靈",
+        "name_en": "The Fungus Behemoth"
+      }
+    ]
+  },
+  "MapInferno": {
+    "name": "Inferno",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Inferno",
+      "traditional chinese": "煉獄"
+    },
+    "bosses": [
+      {
+        "id": "DogTrader_",
+        "name": "WIP",
+        "name_en": "[DNT-UNUSED] Dog Trader"
+      }
+    ]
+  },
+  "MapMineshaft": {
+    "name": "Mineshaft",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Mineshaft",
+      "traditional chinese": "礦井"
+    },
+    "bosses": [
+      {
+        "id": "RudjaDreadEngineerMAP",
+        "name": "煉獄工程師．沃黎克",
+        "name_en": "Vorrik, The Infernal Engineer"
+      }
+    ]
+  },
+  "MapOasis": {
+    "name": "Oasis",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Oasis",
+      "traditional chinese": "幻景綠洲"
+    },
+    "bosses": [
+      {
+        "id": "PerennialKingHumanBossMAP",
+        "name": "長生者．伊許塔洛",
+        "name_en": "Ishtaroth, the Perennial"
+      }
+    ]
+  },
+  "MapOutlands": {
+    "name": "Outlands",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Outlands",
+      "traditional chinese": "外域"
+    }
+  },
+  "MapRockpools": {
+    "name": "Rockpools",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Rockpools",
+      "traditional chinese": "岩池"
+    },
+    "bosses": [
+      {
+        "id": "GoblinGiantBossMAP_",
+        "name": "無饜者．布魯高",
+        "name_en": "Brughor, the Insatiable"
+      }
+    ]
+  },
+  "MapSwampTower": {
+    "name": "Sinking Spire",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Sinking Spire",
+      "traditional chinese": "沉溺尖塔"
+    },
+    "bosses": [
+      {
+        "id": "BlackJawLightningMap",
+        "name": "守護者．風暴血獸",
+        "name_en": "Stormgore, the Guardian"
+      }
+    ]
+  },
+  "MapUberBoss_IronCitadel": {
+    "name": "The Iron Citadel",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "arbiter",
+      "arbiter_of_ash"
+    ],
+    "translates": {
+      "english": "The Iron Citadel",
+      "traditional chinese": "鋼鐵城塞"
+    },
+    "bosses": [
+      {
+        "id": "BaronBossHumanFormMap",
+        "name": "吉恩諾伯爵",
+        "name_en": "Count Geonor"
+      },
+      {
+        "id": "BaronBossCorruptedWolfFormMap",
+        "name": "腐敗巨狼．吉恩諾",
+        "name_en": "Geonor, the Putrid Wolf"
+      }
+    ]
+  },
+  "MapUberBoss_StoneCitadel": {
+    "name": "The Stone Citadel",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "arbiter",
+      "arbiter_of_ash"
+    ],
+    "translates": {
+      "english": "The Stone Citadel",
+      "traditional chinese": "岩石城塞"
+    },
+    "bosses": [
+      {
+        "id": "DoryaniPastMap",
+        "name": "皇家奇術師．多里亞尼",
+        "name_en": "Doryani, Royal Thaumaturge"
+      },
+      {
+        "id": "DoryaniMechMap",
+        "name": "多里亞尼的凱旋",
+        "name_en": "Doryani's Triumph"
+      }
+    ]
+  },
+  "MapUberBoss_CopperCitadel": {
+    "name": "The Copper Citadel",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "arbiter",
+      "arbiter_of_ash"
+    ],
+    "translates": {
+      "english": "The Copper Citadel",
+      "traditional chinese": "青銅城塞"
+    },
+    "bosses": [
+      {
+        "id": "PerennialKingMap",
+        "name": "憎惡者．賈嫚拉",
+        "name_en": "Jamanra, the Abomination"
+      }
+    ]
+  },
+  "MapUniqueCastaway": {
+    "name": "Castaway",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Castaway",
+      "traditional chinese": "漂流者之所"
+    },
+    "bosses": [
+      {
+        "id": "CaptainRothBossCASTAWAY_",
+        "name": "沉溺艦隊．托雷克",
+        "name_en": "Torrek of the Drowned Fleet"
+      }
+    ]
+  },
+  "MapUniqueUntaintedParadise": {
+    "name": "Untainted Paradise",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Untainted Paradise",
+      "traditional chinese": "純淨樂園"
+    }
+  },
+  "MapUniqueVault": {
+    "name": "Vaults of Kamasa",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Vaults of Kamasa",
+      "traditional chinese": "卡瑪薩秘寶庫"
+    }
+  },
+  "MapUniqueMerchant01_Chimeral": {
+    "name": "Merchant's Campsite",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Merchant's Campsite",
+      "traditional chinese": "商人營地"
+    }
+  },
+  "MapUniqueMerchant01_Oasis": {
+    "name": "Jado's Campsite",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Jado's Campsite",
+      "traditional chinese": "賈多的營地"
+    }
+  },
+  "MapUniqueMerchant01_Sandswept": {
+    "name": "Merchant's Campsite",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Merchant's Campsite",
+      "traditional chinese": "商人營地"
+    }
+  },
+  "MapUniqueMerchant02_Crimson": {
+    "name": "Merchant's Campsite",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Merchant's Campsite",
+      "traditional chinese": "商人營地"
+    }
+  },
+  "MapUniqueMerchant02_Farmland": {
+    "name": "Merchant's Campsite",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Merchant's Campsite",
+      "traditional chinese": "商人營地"
+    }
+  },
+  "Map_HildaCampsite": {
+    "name": "Hilda's Campsite",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "traverse",
+      "unique"
+    ],
+    "translates": {
+      "english": "Hilda's Campsite",
+      "traditional chinese": "希爾妲的營地"
+    }
+  },
+  "MapUniqueMerchant03_Beach": {
+    "name": "Moment of Zen",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Moment of Zen",
+      "traditional chinese": "禪意時刻"
+    }
+  },
+  "MapUniqueMerchant03_Raft": {
+    "name": "Moment of Zen",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Moment of Zen",
+      "traditional chinese": "禪意時刻"
+    }
+  },
+  "MapUniqueMerchant03_Tropical": {
+    "name": "Moment of Zen",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "Moment of Zen",
+      "traditional chinese": "禪意時刻"
+    }
+  },
+  "MapVaalVillage": {
+    "name": "Vaal Village",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Vaal Village",
+      "traditional chinese": "瓦爾村莊"
+    },
+    "bosses": [
+      {
+        "id": "DogTrader_",
+        "name": "WIP",
+        "name_en": "[DNT-UNUSED] Dog Trader"
+      }
+    ]
+  },
+  "MapRustbowl": {
+    "name": "Rustbowl",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Rustbowl",
+      "traditional chinese": "銹碗"
+    },
+    "bosses": [
+      {
+        "id": "TheRustKingBossMAP",
+        "name": "反叛鐵鏽之王．葛森",
+        "name_en": "Gozen, Rebellious Rustlord"
+      }
+    ]
+  },
+  "MapBackwash": {
+    "name": "Backwash",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Backwash",
+      "traditional chinese": "餘波"
+    },
+    "bosses": [
+      {
+        "id": "QueenofFilfthBossMap",
+        "name": "憎惡者．亞歐塔",
+        "name_en": "Yaota, the Loathsome"
+      }
+    ]
+  },
+  "MapBurialBog": {
+    "name": "Burial Bog",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Burial Bog",
+      "traditional chinese": "埋葬沼澤"
+    },
+    "bosses": [
+      {
+        "id": "DredgeFiendShamanBossMap",
+        "name": "惡棘者．葛局拉許",
+        "name_en": "Grudgelash, Vile Thorn"
+      }
+    ]
+  },
+  "MapWetlands": {
+    "name": "Wetlands",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Wetlands",
+      "traditional chinese": "濕地"
+    },
+    "bosses": [
+      {
+        "id": "RathbreakerBossMap",
+        "name": "土狼領主．凱爾壯",
+        "name_en": "Caedron, the Hyena Lord"
+      }
+    ]
+  },
+  "MapHideoutFelled_Claimable": {
+    "name": "Felled Hideout",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": true,
+    "tags": [
+      "hideout"
+    ],
+    "translates": {
+      "english": "Felled Hideout",
+      "traditional chinese": "藏身處：殞落"
+    }
+  },
+  "MapHideoutLimestone_Claimable": {
+    "name": "Limestone Hideout",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": true,
+    "tags": [
+      "hideout"
+    ],
+    "translates": {
+      "english": "Limestone Hideout",
+      "traditional chinese": "藏身處：石灰岩"
+    }
+  },
+  "MapHideoutShrine_Claimable": {
+    "name": "Shrine Hideout",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": true,
+    "tags": [
+      "hideout"
+    ],
+    "translates": {
+      "english": "Shrine Hideout",
+      "traditional chinese": "藏身處：神殿"
+    }
+  },
+  "MapHideoutCanal_Claimable": {
+    "name": "Canal Hideout",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": true,
+    "tags": [
+      "hideout"
+    ],
+    "translates": {
+      "english": "Canal Hideout",
+      "traditional chinese": "藏身處：運河"
+    }
+  },
+  "MapSunTemple": {
+    "name": "Sun Temple",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Sun Temple",
+      "traditional chinese": "太陽神殿"
+    },
+    "bosses": [
+      {
+        "id": "VaalSunWorshipperMAP",
+        "name": "烈日先知．桐桂",
+        "name_en": "Tonqui, Seer of the Sun"
+      }
+    ]
+  },
+  "MapChannel": {
+    "name": "Channel",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Channel",
+      "traditional chinese": "通道"
+    },
+    "bosses": [
+      {
+        "id": "ForsakenSonMap",
+        "name": "墮落之子．哈斯克",
+        "name_en": "Hask, the Fallen Son"
+      }
+    ]
+  },
+  "MapVaalFoundry": {
+    "name": "Molten Vault",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Molten Vault",
+      "traditional chinese": "熔岩寶庫"
+    },
+    "bosses": [
+      {
+        "id": "VaalForgemasterMAP",
+        "name": "活熔爐．古爾札",
+        "name_en": "Gulzal, the Living Furnace "
+      }
+    ]
+  },
+  "MapVaalFactory": {
+    "name": "The Assembly",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "The Assembly",
+      "traditional chinese": "集會"
+    },
+    "bosses": [
+      {
+        "id": "VaalStatueBossMAP",
+        "name": "熾烈衛士．特茲卡特",
+        "name_en": "Tetzcatl, the Blazing Guardian"
+      }
+    ]
+  },
+  "MapMesa": {
+    "name": "Mesa",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Mesa",
+      "traditional chinese": "平頂荒漠"
+    },
+    "bosses": [
+      {
+        "id": "ShakariMap_",
+        "name": "沙丘居民．卡拉許",
+        "name_en": "Karash, The Dune Dweller"
+      }
+    ]
+  },
+  "MapBluff": {
+    "name": "Bluff",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Bluff",
+      "traditional chinese": "絕壁"
+    },
+    "bosses": [
+      {
+        "id": "ChimeraUltimatumBossMap",
+        "name": "巔峰者．葛雷索庫",
+        "name_en": "Gressor-Kul, the Apex"
+      }
+    ]
+  },
+  "MapUniqueWildwood": {
+    "name": "The Viridian Wildwood",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "The Viridian Wildwood",
+      "traditional chinese": "翠綠荒林"
+    }
+  },
+  "MapUniqueSelenite": {
+    "name": "The Silent Cave",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "The Silent Cave",
+      "traditional chinese": "沉默洞穴"
+    }
+  },
+  "MapUniqueMegalith": {
+    "name": "The Ezomyte Megaliths",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "The Ezomyte Megaliths",
+      "traditional chinese": "艾茲麥巨石"
+    }
+  },
+  "MapAzmerianRanges": {
+    "name": "Azmerian Ranges",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Azmerian Ranges",
+      "traditional chinese": "阿茲莫里山脈"
+    },
+    "bosses": [
+      {
+        "id": "ViperNapuatziAzmeriMap_",
+        "name": "滅親者．莫溫恩",
+        "name_en": "Morwyn, the Kinslayer"
+      }
+    ]
+  },
+  "MapUniqueLake": {
+    "name": "The Fractured Lake",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "unique"
+    ],
+    "translates": {
+      "english": "The Fractured Lake",
+      "traditional chinese": "破裂迷湖"
+    }
+  },
+  "MapFrozenFalls": {
+    "name": "Frozen Falls",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Frozen Falls",
+      "traditional chinese": "冰凍瀑布"
+    },
+    "bosses": [
+      {
+        "id": "IcyOwlBossMap",
+        "name": "寒冬之翼．瑟雷文",
+        "name_en": "Thraeven, Wing of Winter"
+      }
+    ]
+  },
+  "MapTrenches": {
+    "name": "Trenches",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Trenches",
+      "traditional chinese": "壕溝"
+    },
+    "bosses": [
+      {
+        "id": "MudBurrowerHeadBossMAP_",
+        "name": "移動大地．戈里安",
+        "name_en": "Gorian, the Moving Earth"
+      }
+    ]
+  },
+  "MapHideoutFarmlands_Claimable": {
+    "name": "Farmlands Hideout",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": true,
+    "tags": [
+      "hideout"
+    ],
+    "translates": {
+      "english": "Farmlands Hideout",
+      "traditional chinese": "藏身處：農地"
+    }
+  },
+  "MapHideoutPrison_Claimable": {
+    "name": "Prison Hideout",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": true,
+    "tags": [
+      "hideout"
+    ],
+    "translates": {
+      "english": "Prison Hideout",
+      "traditional chinese": "藏身處：監獄"
+    }
+  },
+  "MapUberBoss_JadeCitadel": {
+    "name": "The Jade Isles",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "lineage"
+    ],
+    "translates": {
+      "english": "The Jade Isles",
+      "traditional chinese": "翠玉群島"
+    },
+    "bosses": [
+      {
+        "id": "KaruiCaptainBoss_Map",
+        "name": "選召者．瑪諾奇",
+        "name_en": "Manoki, the Chosen"
+      },
+      {
+        "id": "KaruiCaptainBoss_2Map",
+        "name": "染疫者．瑪諾奇",
+        "name_en": "Manoki, the Fevered"
+      },
+      {
+        "id": "KaruiCaptainBoss_3Map",
+        "name": "玷汙者．瑪諾奇",
+        "name_en": "Manoki, the Defiled"
+      }
+    ]
+  },
+  "MapCavernCity": {
+    "name": "Sacred Reservoir",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "lineage"
+    ],
+    "translates": {
+      "english": "Sacred Reservoir",
+      "traditional chinese": "神聖水源地"
+    },
+    "bosses": [
+      {
+        "id": "FaridunOlrothMAP",
+        "name": "刀鋒之主．札米爾",
+        "name_en": "Zahmir, the Blade Sovereign"
+      }
+    ]
+  },
+  "MapDerelictMansion": {
+    "name": "Derelict Mansion",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "lineage"
+    ],
+    "translates": {
+      "english": "Derelict Mansion",
+      "traditional chinese": "廢棄宅邸"
+    },
+    "bosses": [
+      {
+        "id": "BloodKnightBossMAP_",
+        "name": "灰燼領主．瓦爾洛奇",
+        "name_en": "Varloch, the Ashen Lord"
+      },
+      {
+        "id": "VampireQueenBossMAP_",
+        "name": "凋零玫瑰．艾維琳",
+        "name_en": "Avelyne, the Withered Rose"
+      }
+    ]
+  },
+  "MapVaalVault": {
+    "name": "Sealed Vault",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "lineage"
+    ],
+    "translates": {
+      "english": "Sealed Vault",
+      "traditional chinese": "封印的寶庫"
+    },
+    "bosses": [
+      {
+        "id": "VaalBloodPriestessBossMAP_",
+        "name": "鮮血先知．伊查拉",
+        "name_en": "Ytzara, Blood Oracle"
+      },
+      {
+        "id": "VaalBloodPriestBossMAP_",
+        "name": "血肉塑造者．馬茲里",
+        "name_en": "Maztli, Flesh-Shaper"
+      }
+    ]
+  },
+  "MapSevenWaters": {
+    "name": "Confluence",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Confluence",
+      "traditional chinese": "匯流處"
+    },
+    "bosses": [
+      {
+        "id": "SerpentClanCasterBossMap",
+        "name": "巨蛇女王．瑪娜莎",
+        "name_en": "Manassa, the Serpent Queen"
+      }
+    ]
+  },
+  "MapOvergrown": {
+    "name": "Overgrown",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Overgrown",
+      "traditional chinese": "蔥鬱之域"
+    },
+    "bosses": [
+      {
+        "id": "VaalStatueBossMAP2",
+        "name": "熾烈衛士．特茲卡特",
+        "name_en": "Tetzcatl, the Blazing Guardian"
+      }
+    ]
+  },
+  "MapStronghold": {
+    "name": "Stronghold",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Stronghold",
+      "traditional chinese": "要塞"
+    },
+    "bosses": [
+      {
+        "id": "PrisonerBossMAP_",
+        "name": "被束縛的恐懼",
+        "name_en": "The Shackled Horror"
+      }
+    ]
+  },
+  "MapRupture": {
+    "name": "Rupture",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Rupture",
+      "traditional chinese": "殘破"
+    },
+    "bosses": [
+      {
+        "id": "QuadrillaBossMAP",
+        "name": "碎顱者．澤寇亞",
+        "name_en": "Zekoa, the Headcrusher"
+      }
+    ]
+  },
+  "MapSpring_": {
+    "name": "Spring",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Spring",
+      "traditional chinese": "湧泉"
+    },
+    "bosses": [
+      {
+        "id": "SerpentClanCasterBossMapSpring",
+        "name": "巨蛇女王．瑪娜莎",
+        "name_en": "Manassa, the Serpent Queen"
+      }
+    ]
+  },
+  "MapWaywardIsle": {
+    "name": "Wayward Isle",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Wayward Isle",
+      "traditional chinese": "無常之島"
+    },
+    "bosses": [
+      {
+        "id": "BoneCultist_NecromancerBossMAPSOLO",
+        "name": "深坑之王",
+        "name_en": "Lord of the Pit"
+      }
+    ]
+  },
+  "MapEpitaph": {
+    "name": "Epitaph",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Epitaph",
+      "traditional chinese": "幽殤之園"
+    },
+    "bosses": [
+      {
+        "id": "WifeMonsterMap_",
+        "name": "恐懼之伴．賽菲菈",
+        "name_en": "Saphira, The Dread Consort"
+      }
+    ]
+  },
+  "MapCliffside": {
+    "name": "Cliffside",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Cliffside",
+      "traditional chinese": "崖壁"
+    },
+    "bosses": [
+      {
+        "id": "TwilightOrderGuardBossMap",
+        "name": "勇士．布拉克斯",
+        "name_en": "Brakkus, the Juggernaut"
+      }
+    ]
+  },
+  "MapSinkhole": {
+    "name": "Sinkhole",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Sinkhole",
+      "traditional chinese": "沉洞"
+    },
+    "bosses": [
+      {
+        "id": "YamaBossMAP_",
+        "name": "白之亞瑪",
+        "name_en": "Yama The White"
+      }
+    ]
+  },
+  "MapCaldera": {
+    "name": "Caldera",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Caldera",
+      "traditional chinese": "火山炎口"
+    },
+    "bosses": [
+      {
+        "id": "ArenaBeastBossMAP_",
+        "name": "貪婪利牙",
+        "name_en": "The Ravenous Fang"
+      }
+    ]
+  },
+  "MapFlotsam": {
+    "name": "Flotsam",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Flotsam",
+      "traditional chinese": "廢料堆"
+    },
+    "bosses": [
+      {
+        "id": "CaptainRothBossMAP",
+        "name": "深海領主．瑪爾戈",
+        "name_en": "Malgor, the Nautilord"
+      }
+    ]
+  },
+  "ChayulaLeague_Tower": {
+    "name": "Hive Fortress",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Hive Fortress",
+      "traditional chinese": "巢裔要塞"
+    }
+  },
+  "ChayulaLeague_TowerBoss": {
+    "name": "Hive Colony",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Hive Colony",
+      "traditional chinese": "巢裔聚落"
+    },
+    "bosses": [
+      {
+        "id": "FallenKnight",
+        "name": "昔日之托沃",
+        "name_en": "It That Was Tul"
+      },
+      {
+        "id": "HandMage",
+        "name": "昔日之艾許",
+        "name_en": "It That Was Esh"
+      }
+    ]
+  },
+  "MapUniqueReactor_01": {
+    "name": "Western Gateway",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "quest",
+      "unique"
+    ],
+    "translates": {
+      "english": "Western Gateway",
+      "traditional chinese": "西側閘門"
+    },
+    "bosses": [
+      {
+        "id": "CentipedeReactorGuardian1_",
+        "name": "先行者分離器",
+        "name_en": "Precursor Separator"
+      }
+    ]
+  },
+  "MapUniqueReactor_02": {
+    "name": "Ancient Gateway",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "quest",
+      "unique"
+    ],
+    "translates": {
+      "english": "Ancient Gateway",
+      "traditional chinese": "遠古閘門"
+    }
+  },
+  "MapUniqueReactor_03": {
+    "name": "Eastern Gateway",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "quest",
+      "unique"
+    ],
+    "translates": {
+      "english": "Eastern Gateway",
+      "traditional chinese": "東側閘門"
+    },
+    "bosses": [
+      {
+        "id": "CorruptionProcessor1",
+        "name": "先行者精煉器",
+        "name_en": "Precursor Refiner"
+      }
+    ]
+  },
+  "MapUberBoss_Divinity": {
+    "name": "The Origin Tower",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss",
+      "quest"
+    ],
+    "translates": {
+      "english": "The Origin Tower",
+      "traditional chinese": "起源高塔"
+    },
+    "bosses": [
+      {
+        "id": "ArbiterofDivinity_",
+        "name": "神聖仲裁者",
+        "name_en": "The Arbiter of Divinity"
+      }
+    ]
+  },
+  "MapMothersoul_Male": {
+    "name": "The Patriarch Halls",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "arbiter",
+      "arbiter_of_divinity"
+    ],
+    "translates": {
+      "english": "The Patriarch Halls",
+      "traditional chinese": "聖祖殿"
+    },
+    "bosses": [
+      {
+        "id": "GeneticsScientistMale__",
+        "name": "光輝守望．菲克斯",
+        "name_en": "Phyx, Sentinel of the Spark"
+      }
+    ]
+  },
+  "MapMothersoul_Female": {
+    "name": "The Matriarch Halls",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "arbiter",
+      "arbiter_of_divinity"
+    ],
+    "translates": {
+      "english": "The Matriarch Halls",
+      "traditional chinese": "聖母殿"
+    },
+    "bosses": [
+      {
+        "id": "GeneticsScientistFemale",
+        "name": "搖籃守望．菲亞",
+        "name_en": "Phya, Sentinel of the Cradle"
+      }
+    ]
+  },
+  "MapUberBoss_Monolith": {
+    "name": "The Burning Monolith",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss",
+      "quest"
+    ],
+    "translates": {
+      "english": "The Burning Monolith",
+      "traditional chinese": "燃燒豐碑"
+    },
+    "bosses": [
+      {
+        "id": "DemonClawBoss",
+        "name": "灰燼仲裁者",
+        "name_en": "The Arbiter of Ash"
+      }
+    ]
+  },
+  "MapUberBoss_IronCitadel_Quest": {
+    "name": "Western Enigma Chamber",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "quest"
+    ],
+    "translates": {
+      "english": "Western Enigma Chamber",
+      "traditional chinese": "西側謎團密室"
+    },
+    "bosses": [
+      {
+        "id": "BaronBossHumanFormMap",
+        "name": "吉恩諾伯爵",
+        "name_en": "Count Geonor"
+      },
+      {
+        "id": "BaronBossCorruptedWolfFormMap",
+        "name": "腐敗巨狼．吉恩諾",
+        "name_en": "Geonor, the Putrid Wolf"
+      }
+    ]
+  },
+  "MapUberBoss_StoneCitadel_Quest": {
+    "name": "Eastern Enigma Chamber",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "quest"
+    ],
+    "translates": {
+      "english": "Eastern Enigma Chamber",
+      "traditional chinese": "東側謎團密室"
+    },
+    "bosses": [
+      {
+        "id": "DoryaniPastMap",
+        "name": "皇家奇術師．多里亞尼",
+        "name_en": "Doryani, Royal Thaumaturge"
+      },
+      {
+        "id": "DoryaniMechMap",
+        "name": "多里亞尼的凱旋",
+        "name_en": "Doryani's Triumph"
+      }
+    ]
+  },
+  "MapSnowfall": {
+    "name": "Snowfall",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Snowfall",
+      "traditional chinese": "雪域"
+    },
+    "bosses": [
+      {
+        "id": "EzomyteReaperBossMAP",
+        "name": "幽暗凶靈．薩瑞爾",
+        "name_en": "Thariel, the Umbral Wraith"
+      }
+    ]
+  },
+  "MapGreenhouse": {
+    "name": "Greenhouse",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Greenhouse",
+      "traditional chinese": "繁茂溫室"
+    },
+    "bosses": [
+      {
+        "id": "CarnivorousPlantEaterOldForestMap",
+        "name": "森林之憎．根爪",
+        "name_en": "Rootgrasp, the Hateful Forest"
+      }
+    ]
+  },
+  "MapChasm": {
+    "name": "Chasm",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Chasm",
+      "traditional chinese": "裂口"
+    },
+    "bosses": [
+      {
+        "id": "SirenBoss",
+        "name": "死亡之謠．黛莫拉",
+        "name_en": "Diamora, Song of Death"
+      }
+    ]
+  },
+  "MapPit": {
+    "name": "Pit",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Pit",
+      "traditional chinese": "巨坑"
+    },
+    "bosses": [
+      {
+        "id": "TwilightOrderGuardBossMap",
+        "name": "勇士．布拉克斯",
+        "name_en": "Brakkus, the Juggernaut"
+      }
+    ]
+  },
+  "MapPort": {
+    "name": "Port",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Port",
+      "traditional chinese": "失落城塢"
+    },
+    "bosses": [
+      {
+        "id": "CaptainRothBossMAP",
+        "name": "深海領主．瑪爾戈",
+        "name_en": "Malgor, the Nautilord"
+      }
+    ]
+  },
+  "MapAridPlains": {
+    "name": "Arid Plains",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Arid Plains",
+      "traditional chinese": "旱原"
+    },
+    "bosses": [
+      {
+        "id": "ShakariDuoMAP_",
+        "name": "最終之刺．艾克提",
+        "name_en": "Akthi, the Final Sting"
+      },
+      {
+        "id": "DevourerBossDuoHeadMAP_",
+        "name": "沙蟲．艾能德",
+        "name_en": "Anundr, the Sandworm"
+      }
+    ]
+  },
+  "MapBazaar": {
+    "name": "Bazaar",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Bazaar",
+      "traditional chinese": "喧鬧集市"
+    },
+    "bosses": [
+      {
+        "id": "ViperNapuatziMAP",
+        "name": "邪魔毒蛇．納普阿茲",
+        "name_en": "Viper Napuatzi"
+      }
+    ]
+  },
+  "MapSinterRift": {
+    "name": "Sinter Rift",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Sinter Rift",
+      "traditional chinese": "罪灰裂隙"
+    },
+    "bosses": [
+      {
+        "id": "GoblinGiantBossMAP_",
+        "name": "無饜者．布魯高",
+        "name_en": "Brughor, the Insatiable"
+      }
+    ]
+  },
+  "MapReservoir": {
+    "name": "Reservoir",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Reservoir",
+      "traditional chinese": "水源地"
+    },
+    "bosses": [
+      {
+        "id": "DredgeFiendShamanBossMap",
+        "name": "惡棘者．葛局拉許",
+        "name_en": "Grudgelash, Vile Thorn"
+      }
+    ]
+  },
+  "MapSlash": {
+    "name": "Slash",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Slash",
+      "traditional chinese": "橫斷流域"
+    },
+    "bosses": [
+      {
+        "id": "CrowBellBossEnragedMap_",
+        "name": "黑鴉",
+        "name_en": "The Black Crow"
+      }
+    ]
+  },
+  "MapPlantation": {
+    "name": "Plantation",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Plantation",
+      "traditional chinese": "林地"
+    },
+    "bosses": [
+      {
+        "id": "BloodKnightBossMAP2_",
+        "name": "灰燼領主．瓦爾洛奇",
+        "name_en": "Varloch, the Ashen Lord"
+      }
+    ]
+  },
+  "MapOrbalasCrossing": {
+    "name": "Orbala's Crossing",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Orbala's Crossing",
+      "traditional chinese": "奧爾巴拉渡口"
+    },
+    "bosses": [
+      {
+        "id": "CaptainSandstormMAP_",
+        "name": "覆鱗者．澤拉斯",
+        "name_en": "Serath, the Scaled One"
+      }
+    ]
+  },
+  "MapMonument": {
+    "name": "The Monument",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "The Monument",
+      "traditional chinese": "紀念碑"
+    }
+  },
+  "MapSanctuary": {
+    "name": "Sanctuary",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Sanctuary",
+      "traditional chinese": "聖所"
+    },
+    "bosses": [
+      {
+        "id": "BalbalaMAP",
+        "name": "被遺忘的囚犯．帕拉薩",
+        "name_en": "Pirasha, the Forgotten Prisoner"
+      }
+    ]
+  },
+  "MapSwarm": {
+    "name": "Swarm",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Swarm",
+      "traditional chinese": "蟲群"
+    },
+    "bosses": [
+      {
+        "id": "SaltGolemBossMAP",
+        "name": "燼裔．沃克哈爾",
+        "name_en": "Volkhar, the Emberborn"
+      }
+    ]
+  },
+  "MapDeforestation": {
+    "name": "Deforestation",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Deforestation",
+      "traditional chinese": "伐林地"
+    },
+    "bosses": [
+      {
+        "id": "ViperNapuatziAzmeriMap_",
+        "name": "滅親者．莫溫恩",
+        "name_en": "Morwyn, the Kinslayer"
+      }
+    ]
+  },
+  "MapPrecipice": {
+    "name": "Precipice",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Precipice",
+      "traditional chinese": "陡斷峭壁"
+    },
+    "bosses": [
+      {
+        "id": "FireBeastBossMAP__",
+        "name": "煉獄之怒．莫瓦克",
+        "name_en": "Morvak, the Infernal"
+      }
+    ]
+  },
+  "Delirium_Act1Town": {
+    "name": "Simulacrum of Delusion",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Simulacrum of Delusion",
+      "traditional chinese": "妄想幻象異界"
+    }
+  },
+  "ExpeditionLogBook_Atoll": {
+    "name": "Barren Atoll",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Barren Atoll",
+      "traditional chinese": "貧瘠環礁"
+    }
+  },
+  "Delirium_Act1Town_Quest": {
+    "name": "Simulacrum of Delusion",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Simulacrum of Delusion",
+      "traditional chinese": "妄想幻象異界"
+    }
+  },
+  "EndgameDoodad_MeteorCrater": {
+    "name": "The Fallen Star",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "The Fallen Star",
+      "traditional chinese": "殞星"
+    }
+  },
+  "MapUberBoss_FallenStar": {
+    "name": "Ruins of Kingsmarch",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss",
+      "quest",
+      "traverse"
+    ],
+    "translates": {
+      "english": "Ruins of Kingsmarch",
+      "traditional chinese": "金司馬區廢墟"
+    },
+    "bosses": [
+      {
+        "id": "CyclopsSpiderBoss",
+        "name": "異變體",
+        "name_en": "The Aberration"
+      }
+    ]
+  },
+  "ChayulaLeague": {
+    "name": "Monastery of the Keepers",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "traverse"
+    ],
+    "translates": {
+      "english": "Monastery of the Keepers",
+      "traditional chinese": "黯焰修道院"
+    }
+  },
+  "EndgameDoodad_BeastGroundZero": {
+    "name": "The Chained Beast",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "The Chained Beast",
+      "traditional chinese": "鏈纏巨獸"
+    }
+  },
+  "MapUberBoss_Ritual": {
+    "name": "Caer Tarth",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss",
+      "quest",
+      "traverse"
+    ],
+    "translates": {
+      "english": "Caer Tarth",
+      "traditional chinese": "凱爾塔斯"
+    },
+    "bosses": [
+      {
+        "id": "RitualWendigoBoss",
+        "name": "博德克",
+        "name_en": "The Bodach"
+      }
+    ]
+  },
+  "MapUberBoss_Delirium": {
+    "name": "The Withered Willow",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss",
+      "quest",
+      "traverse"
+    ],
+    "translates": {
+      "english": "The Withered Willow",
+      "traditional chinese": "凋萎敗柳"
+    },
+    "bosses": [
+      {
+        "id": "TangmazuBoss",
+        "name": "渡鴉欺詐者",
+        "name_en": "The Raven Trickster"
+      }
+    ]
+  },
+  "Abyss_Pinnacle": {
+    "name": "The Well of Souls",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss",
+      "traverse"
+    ],
+    "translates": {
+      "english": "The Well of Souls",
+      "traditional chinese": "靈魂之井"
+    },
+    "bosses": [
+      {
+        "id": "KulemakBoss",
+        "name": "骷髏馬克的容器",
+        "name_en": "Vessel of Kulemak"
+      }
+    ]
+  },
+  "IncursionHubEndgame": {
+    "name": "Vaal Ruins",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "traverse"
+    ],
+    "translates": {
+      "english": "Vaal Ruins",
+      "traditional chinese": "瓦爾遺跡"
+    }
+  },
+  "MapVoidReliquary": {
+    "name": "The Reliquary Vault",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "quest",
+      "unique"
+    ],
+    "translates": {
+      "english": "The Reliquary Vault",
+      "traditional chinese": "聖物寶庫"
+    }
+  },
+  "Delirium_Act2Reveal": {
+    "name": "Garukhan's Tomb",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss"
+    ],
+    "translates": {
+      "english": "Garukhan's Tomb",
+      "traditional chinese": "卡洛翰陵墓"
+    }
+  },
+  "Delirium_Act3Town": {
+    "name": "Sunken Pyramid",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss"
+    ],
+    "translates": {
+      "english": "Sunken Pyramid",
+      "traditional chinese": "沉沒金字塔"
+    }
+  },
+  "Delirium_VastiriOutskirts": {
+    "name": "[DNT-UNUSED] Vastiri Outpost",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss"
+    ],
+    "translates": {
+      "english": "[DNT-UNUSED] Vastiri Outpost",
+      "traditional chinese": "WIP"
+    }
+  },
+  "ExpeditionSubArea_MedvedBoss": {
+    "name": "Sprawling Jungle",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition",
+      "pinnacle_boss"
+    ],
+    "translates": {
+      "english": "Sprawling Jungle",
+      "traditional chinese": "蔓延叢林"
+    },
+    "bosses": [
+      {
+        "id": "MedvedBoss",
+        "name": "墮落先知．梅德偉",
+        "name_en": "Medved, the Fallen Seer"
+      }
+    ]
+  },
+  "ExpeditionSubArea_VoranaBoss": {
+    "name": "Mournful Cliffside",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition",
+      "pinnacle_boss"
+    ],
+    "translates": {
+      "english": "Mournful Cliffside",
+      "traditional chinese": "哀泣崖壁"
+    },
+    "bosses": [
+      {
+        "id": "Vorana",
+        "name": "最後生還．沃拉娜",
+        "name_en": "Vorana, Last to Fall"
+      }
+    ]
+  },
+  "ExpeditionSubArea_UhtredBoss": {
+    "name": "Secluded Temple",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition",
+      "pinnacle_boss"
+    ],
+    "translates": {
+      "english": "Secluded Temple",
+      "traditional chinese": "隱密神廟"
+    },
+    "bosses": [
+      {
+        "id": "UhtredBoss",
+        "name": "飲星者．烏特雷",
+        "name_en": "Uhtred, the Stardrinker"
+      }
+    ]
+  },
+  "ExpeditionSubArea_OlrothBoss": {
+    "name": "Obscure Island",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition",
+      "pinnacle_boss"
+    ],
+    "translates": {
+      "english": "Obscure Island",
+      "traditional chinese": "幽隱島嶼"
+    },
+    "bosses": [
+      {
+        "id": "Olroth",
+        "name": "墮落起源．奧爾羅斯",
+        "name_en": "Olroth, Origin of the Fall"
+      }
+    ]
+  },
+  "MapPrecursorTowerDesert": {
+    "name": "Precursor Tower",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Precursor Tower",
+      "traditional chinese": "先行者高塔"
+    },
+    "bosses": [
+      {
+        "id": "CorruptionProcessor2",
+        "name": "先行者置換器",
+        "name_en": "Precursor Displacer"
+      },
+      {
+        "id": "CentipedeReactorGuardian2",
+        "name": "先行者萃取器",
+        "name_en": "Precursor Extractor"
+      }
+    ]
+  },
+  "MapPrecursorTowerForest": {
+    "name": "Precursor Tower",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Precursor Tower",
+      "traditional chinese": "先行者高塔"
+    },
+    "bosses": [
+      {
+        "id": "CorruptionProcessor2",
+        "name": "先行者置換器",
+        "name_en": "Precursor Displacer"
+      },
+      {
+        "id": "CentipedeReactorGuardian2",
+        "name": "先行者萃取器",
+        "name_en": "Precursor Extractor"
+      }
+    ]
+  },
+  "MapPrecursorTowerGrass": {
+    "name": "Precursor Tower",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Precursor Tower",
+      "traditional chinese": "先行者高塔"
+    },
+    "bosses": [
+      {
+        "id": "CorruptionProcessor2",
+        "name": "先行者置換器",
+        "name_en": "Precursor Displacer"
+      },
+      {
+        "id": "CentipedeReactorGuardian2",
+        "name": "先行者萃取器",
+        "name_en": "Precursor Extractor"
+      }
+    ]
+  },
+  "MapPrecursorTowerMountain": {
+    "name": "Precursor Tower",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Precursor Tower",
+      "traditional chinese": "先行者高塔"
+    },
+    "bosses": [
+      {
+        "id": "CorruptionProcessor2",
+        "name": "先行者置換器",
+        "name_en": "Precursor Displacer"
+      },
+      {
+        "id": "CentipedeReactorGuardian2",
+        "name": "先行者萃取器",
+        "name_en": "Precursor Extractor"
+      }
+    ]
+  },
+  "MapPrecursorTowerSwamp": {
+    "name": "Precursor Tower",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "tower"
+    ],
+    "translates": {
+      "english": "Precursor Tower",
+      "traditional chinese": "先行者高塔"
+    },
+    "bosses": [
+      {
+        "id": "CorruptionProcessor2",
+        "name": "先行者置換器",
+        "name_en": "Precursor Displacer"
+      },
+      {
+        "id": "CentipedeReactorGuardian2",
+        "name": "先行者萃取器",
+        "name_en": "Precursor Extractor"
+      }
+    ]
+  },
+  "RitualLeagueBoss": {
+    "name": "Crux of Nothingness",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "pinnacle_boss",
+      "unique"
+    ],
+    "translates": {
+      "english": "Crux of Nothingness",
+      "traditional chinese": "無量困境"
+    },
+    "bosses": [
+      {
+        "id": "VoodooKingBoss2MAP",
+        "name": "迷霧之王",
+        "name_en": "The King in the Mists"
+      },
+      {
+        "id": "VoodooKingBoss3MAP",
+        "name": "迷霧之王",
+        "name_en": "The King in the Mists"
+      }
+    ]
+  },
+  "ExpeditionLogBook_Basin": {
+    "name": "Stagnant Basin",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Stagnant Basin",
+      "traditional chinese": "靜滯盆地"
+    }
+  },
+  "ExpeditionLogBook_Digsite": {
+    "name": "Exhumed Ruins",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Exhumed Ruins",
+      "traditional chinese": "廢棄挖掘場"
+    }
+  },
+  "ExpeditionLogBook_Gully": {
+    "name": "Sloughed Gully",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Sloughed Gully",
+      "traditional chinese": "滑塌溪谷"
+    }
+  },
+  "ExpeditionLogBook_Heath": {
+    "name": "Moor of Fallen Skies",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition",
+      "unique"
+    ],
+    "translates": {
+      "english": "Moor of Fallen Skies",
+      "traditional chinese": "殞空荒原"
+    }
+  },
+  "ExpeditionLogBook_Peninsula": {
+    "name": "Craggy Peninsula",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Craggy Peninsula",
+      "traditional chinese": "崎嶇半島"
+    }
+  },
+  "ExpeditionLogBook_Prairie": {
+    "name": "Grazed Prairie",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Grazed Prairie",
+      "traditional chinese": "闊牧遼原"
+    }
+  },
+  "ExpeditionLogBook_Reef": {
+    "name": "Bleached Shoals",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Bleached Shoals",
+      "traditional chinese": "白化淺灘"
+    }
+  },
+  "ExpeditionLogBook_Tropical": {
+    "name": "Lush Isle",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Lush Isle",
+      "traditional chinese": "蓊鬱群島"
+    }
+  },
+  "ExpeditionLogBook_Tundra": {
+    "name": "Frigid Bluffs",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Frigid Bluffs",
+      "traditional chinese": "寒風峭壁"
+    }
+  },
+  "ExpeditionLogBook_Wastes": {
+    "name": "Scorched Cay",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "GrandExpedition"
+    ],
+    "translates": {
+      "english": "Scorched Cay",
+      "traditional chinese": "焦灼孤島"
+    }
+  },
+  "MapExcavation": {
+    "name": "Digsite",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Digsite",
+      "traditional chinese": "挖掘地"
+    },
+    "bosses": [
+      {
+        "id": "TwilightOrderOverlordMAP_",
+        "name": "大裁決者．奧瑞利安",
+        "name_en": "Aurelian, the Grand Adjudicator"
+      }
+    ]
+  },
+  "MapIceCave": {
+    "name": "Ice Cave",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Ice Cave",
+      "traditional chinese": "寒冰洞穴"
+    },
+    "bosses": [
+      {
+        "id": "IcyQuadrillaBossMap",
+        "name": "霜裔惡魔",
+        "name_en": "The Frostborn Fiend"
+      }
+    ]
+  },
+  "MapRazedFields": {
+    "name": "Razed Fields",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Razed Fields",
+      "traditional chinese": "殘破原野"
+    },
+    "bosses": [
+      {
+        "id": "IgnagdukBogWitchHagBattleMap2",
+        "name": "殘忍之炎．艾爾瓦菈",
+        "name_en": "Elvara, the Savage Flame"
+      },
+      {
+        "id": "UrchinHagBossHagBattleMap2",
+        "name": "霜寒之手．瑞爾",
+        "name_en": "Rael, the Frost Hand"
+      }
+    ]
+  },
+  "MapRiverhold": {
+    "name": "Riverhold",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Riverhold",
+      "traditional chinese": "河流堡"
+    },
+    "bosses": [
+      {
+        "id": "EzomyteReaperBossMAP",
+        "name": "幽暗凶靈．薩瑞爾",
+        "name_en": "Thariel, the Umbral Wraith"
+      }
+    ]
+  },
+  "MapRugosa": {
+    "name": "Rugosa",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Rugosa",
+      "traditional chinese": "盧戈薩"
+    },
+    "bosses": [
+      {
+        "id": "SirenBossMAP_",
+        "name": "深邃之女．希沃亞",
+        "name_en": "Syvora, Daughter of the Deep"
+      }
+    ]
+  },
+  "MapMortuary": {
+    "name": "Mortuary",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Mortuary",
+      "traditional chinese": "停屍間"
+    },
+    "bosses": [
+      {
+        "id": "MechaQueenOfFilfthTierMAP_",
+        "name": "重塑者．米卡塔",
+        "name_en": "Micata, the Remade"
+      }
+    ]
+  },
+  "MapMothersoul_Male_Quest": {
+    "name": "The Patriarch Halls",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "arbiter",
+      "arbiter_of_divinity",
+      "quest"
+    ],
+    "translates": {
+      "english": "The Patriarch Halls",
+      "traditional chinese": "聖祖殿"
+    },
+    "bosses": [
+      {
+        "id": "GeneticsScientistMale__",
+        "name": "光輝守望．菲克斯",
+        "name_en": "Phyx, Sentinel of the Spark"
+      }
+    ]
+  },
+  "MapMothersoul_Female_Quest": {
+    "name": "The Matriarch Halls",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [
+      "arbiter",
+      "arbiter_of_divinity",
+      "quest"
+    ],
+    "translates": {
+      "english": "The Matriarch Halls",
+      "traditional chinese": "聖母殿"
+    },
+    "bosses": [
+      {
+        "id": "GeneticsScientistFemale",
+        "name": "搖籃守望．菲亞",
+        "name_en": "Phya, Sentinel of the Cradle"
+      }
+    ]
+  },
+  "MapUniqueInitialTower": {
+    "name": "Precursor Tower",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "tower",
+      "unique"
+    ],
+    "translates": {
+      "english": "Precursor Tower",
+      "traditional chinese": "先行者高塔"
+    },
+    "bosses": [
+      {
+        "id": "ShakariMap_",
+        "name": "沙丘居民．卡拉許",
+        "name_en": "Karash, The Dune Dweller"
+      }
+    ]
+  },
+  "MapUniqueReactor_04": {
+    "name": "Site of the Chosen",
+    "group": "map",
+    "IsUniqueMapArea": true,
+    "IsHideout": false,
+    "tags": [
+      "quest",
+      "unique"
+    ],
+    "translates": {
+      "english": "Site of the Chosen",
+      "traditional chinese": "天選之所"
+    }
+  },
+  "MapCanyon": {
+    "name": "Canyon",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Canyon",
+      "traditional chinese": "炙陽峽谷"
+    },
+    "bosses": [
+      {
+        "id": "FireBeastBossMAP__",
+        "name": "煉獄之怒．莫瓦克",
+        "name_en": "Morvak, the Infernal"
+      }
+    ]
+  },
+  "MapOrnateChambers": {
+    "name": "Ornate Chambers",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": false,
+    "tags": [],
+    "translates": {
+      "english": "Ornate Chambers",
+      "traditional chinese": "華美密室"
+    },
+    "bosses": [
+      {
+        "id": "CaptainSandstormMAP_",
+        "name": "覆鱗者．澤拉斯",
+        "name_en": "Serath, the Scaled One"
+      }
+    ]
+  }
+}
