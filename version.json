@@ -1,4 +1,9 @@
 {
-  "patchVersion": "4.5.5.4",
-  "generatedAt": "2026-10-04T06:35:19.512Z"
+  "poe1": {
+    "patchVersion": "3.29.3.3"
+  },
+  "poe2": {
+    "patchVersion": "4.5.5.4"
+  },
+  "generatedAt": "2026-10-04T15:02:10.246Z"
 }

@@ -1,0 +1,3297 @@
+{
+  "gameVersion": "poe1",
+  "generatedAt": "2026-10-04T15:02:10.245Z",
+  "totalTiers": 3560,
+  "matchedCount": 3411,
+  "unmatchedCount": 149,
+  "matchRate": "95.8%",
+  "summaryByTemplate": [
+    {
+      "template": "#% 格擋率",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "使用技能時觸發插槽中的 1 個法術，有 8 秒冷卻時間\\n以此方式觸發的法術有 150% 更多消耗",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外塑界者守護者地圖",
+      "count": 2,
+      "affinities": [
+        "shaper"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外尊師守護者地圖",
+      "count": 2,
+      "affinities": [
+        "elder"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外征服者地圖",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群會造成火焰傷害的怪物|||||玩家與怪物增加 #% 承受火焰傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群會造成冰冷傷害的怪物|||||玩家與怪物增加承受 #% 冰冷傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群會造成閃電傷害的怪物|||||玩家與怪物增加承受 #% 閃電傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群會造成物理傷害的怪物|||||玩家與怪物增加承受 #% 物理傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群會造成混沌傷害的怪物|||||玩家與怪物增加承受 #% 混沌傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傳奇頭目掉落腐化物品",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有埃哈",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有尼科",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有瓊恩",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加 #% 魔法怪物群大小",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有許多背叛者",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群被擊殺時會轉化的怪物",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群會治癒的怪物|||||玩家透過藥劑立刻恢復生命和魔力",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域內裂痕為索伏|||||區域內的裂痕含有 # 個額外抑制之手",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域內裂痕為托沃|||||區域內的裂痕含有 # 個額外抑制之手",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域內裂痕為艾許|||||區域內的裂痕含有 # 個額外抑制之手",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域內裂痕為烏爾尼多|||||區域內的裂痕含有 # 個額外抑制之手",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域內裂痕為夏烏拉|||||區域內的裂痕含有 # 個額外抑制之手",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域內掉落的非傳奇地圖為已汙染且有 8 個詞綴",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "在區域內製造已捕捉野獸的複製體",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "戰亂怪物有 #% 更多生命|||||戰亂怪物掉落的裂片和徽印被複製",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域內掉落的油瓶高 1 階|||||凋落防守塔的建造和升級費用為 2 倍",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "譫妄獎勵條加速 #% 填滿",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個藍色作物",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個紫色作物",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個黃色作物",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域內掉落的非傳奇劫盜契約書有 1 個額外固定詞綴",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "祭祀神壇重骰恩賜之物前 # 次免費",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "當你專注時，觸發插槽中的法術，有 0.25 秒冷卻時間",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傳奇頭目伴隨著 1 個神祕的神諭|||||傳奇頭目掉落額外通貨碎片|||||神諭掉落額外通貨碎片",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群已汙染瓦爾怪物|||||玩家擊殺時額外獲得 1 個瓦爾靈魂",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群已汙染瓦爾怪物|||||已汙染瓦爾怪物掉落的物品有 #% 機率為已汙染",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域被 1 個額外苦痛異教徒糾纏|||||最初 3 個被附身的怪物掉落 1 個額外地圖",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群已汙染瓦爾怪物|||||每個使用的凡人碎片，使區域有 #% 機率含有赤紅皇后之贈|||||每個使用的奉獻碎片，使區域有 #% 機率含有奉獻之贈",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群已汙染瓦爾怪物|||||玩家的瓦爾技能不套用停止獲得靈魂",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "此區域含有 1 個譫妄之鏡",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "近戰擊中有 #% 機率護體",
+      "count": 1,
+      "affinities": [
+        "corrupted"
+      ],
+      "sampleTypes": [
+        "claw",
+        "claws",
+        "dagger",
+        "daggers",
+        "rune_dagger"
+      ]
+    },
+    {
+      "template": "腐化之血對你沒有影響",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "擊中時使用懲戒詛咒敵人",
+      "count": 1,
+      "affinities": [
+        "corrupted"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "你不能被阻礙",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "你不能被癱瘓",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加 #% 技能的保留效用",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "你不會被沉默",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傷害穿透 #% 火焰抗性",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傷害穿透 #% 冰冷抗性",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傷害穿透 #% 閃電抗性",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傷害穿透 #% 元素抗性",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "擊中有 #% 機率無視敵人的物理傷害減免",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "減少 #% 你身上中毒的持續時間",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "減少 #% 你身上流血的持續時間",
+      "count": 1,
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "擊中時有 25% 機率造成流血",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "錘和權杖增加 #% 傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "one-hand-mace",
+        "one_hand_maces",
+        "two-hand-mace",
+        "two_hand_maces"
+      ]
+    },
+    {
+      "template": "增加 #% 斧的傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "one-hand-axe",
+        "one_hand_axes",
+        "two-hand-axe",
+        "two_hand_axes"
+      ]
+    },
+    {
+      "template": "增加 #% 劍的傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "one-hand-sword",
+        "one_hand_swords",
+        "two-hand-sword",
+        "two_hand_swords"
+      ]
+    },
+    {
+      "template": "持弓類武器時增加 #% 傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "bow",
+        "bows"
+      ]
+    },
+    {
+      "template": "增加 #% 爪的傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "claw",
+        "claws"
+      ]
+    },
+    {
+      "template": "增加 #% 匕首的傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "dagger",
+        "daggers"
+      ]
+    },
+    {
+      "template": "增加 #% 法杖傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "wand",
+        "wands"
+      ]
+    },
+    {
+      "template": "增加 #% 長杖的傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "staff",
+        "staves"
+      ]
+    },
+    {
+      "template": "持長杖時增加 #% 法術傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "staff",
+        "staves"
+      ]
+    },
+    {
+      "template": "錘和權杖增加 #% 攻擊速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "one-hand-mace",
+        "one_hand_maces",
+        "two-hand-mace",
+        "two_hand_maces"
+      ]
+    },
+    {
+      "template": "使用斧類武器時增加 #% 攻擊速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "one-hand-axe",
+        "one_hand_axes",
+        "two-hand-axe",
+        "two_hand_axes"
+      ]
+    },
+    {
+      "template": "使用劍類武器時增加 #% 攻擊速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "one-hand-sword",
+        "one_hand_swords",
+        "two-hand-sword",
+        "two_hand_swords"
+      ]
+    },
+    {
+      "template": "使用弓類武器時增加 #% 攻擊速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "bow",
+        "bows"
+      ]
+    },
+    {
+      "template": "使用爪類武器時增加 #% 攻擊速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "claw",
+        "claws"
+      ]
+    },
+    {
+      "template": "使用匕首類武器時增加 #% 攻擊速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "dagger",
+        "daggers"
+      ]
+    },
+    {
+      "template": "使用法杖類武器時增加 #% 攻擊速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "wand",
+        "wands"
+      ]
+    },
+    {
+      "template": "使用長杖類武器時增加 #% 攻擊速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "staff",
+        "staves"
+      ]
+    },
+    {
+      "template": "持長杖時增加 #% 施放速度",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "staff",
+        "staves"
+      ]
+    },
+    {
+      "template": "持長杖時 +#% 攻擊傷害格擋率",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "staff",
+        "staves"
+      ]
+    },
+    {
+      "template": "持長杖時 +#% 法術傷害格擋率",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "staff",
+        "staves"
+      ]
+    },
+    {
+      "template": "傳奇頭目掉落額外 # 件傳奇物品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "此區域吸引人",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傳奇頭目伴隨著護衛|||||完成此區域額外掉落 1 張地圖",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傳奇頭目伴隨著護衛|||||完成此區域額外掉落 # 張地圖",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "此區域含 # 個額外深淵|||||區域內含有深淵",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "有 1 個深淵插槽",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "belt",
+        "belts"
+      ]
+    },
+    {
+      "template": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外銹蝕聖甲蟲",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外圓滑聖甲蟲",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外鍍金聖甲蟲",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域被 1 個額外苦痛反叛者糾纏|||||前 3 個被附身的怪物掉落 1 個額外展翅聖甲蟲",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域被 1 個額外苦痛盜墓者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外傳奇道具",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加 #% 生命偷取的每秒總恢復",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加 #% 魔力偷取的每秒總恢復",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加光環技能 #% 範圍效果",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加 #% 照亮範圍",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "減少 #% 你被冰凍的持續時間",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "#% 機率避免被中毒",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "減少 #% 反射元素傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "減少 #% 反射物理傷害",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加 #% 狂怒球持續時間",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加 #% 暴擊球持續時間",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加 #% 耐力球持續時間",
+      "count": 1,
+      "affinities": [
+        "master"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "每 6 秒獲得 {} 顆耐力、狂怒或暴擊球",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "wand",
+        "wands"
+      ]
+    },
+    {
+      "template": "{:+d} 最大暴擊球和耐力球數量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "staff",
+        "staves",
+        "warstaff"
+      ]
+    },
+    {
+      "template": "當你格擋敵人的傷害時，對他們造成焦灼",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ]
+    },
+    {
+      "template": "當你格擋敵人的傷害時，對他們造成易碎",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ]
+    },
+    {
+      "template": "當你格擋敵人的傷害時，對他們造成殘喘",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ]
+    }
+  ],
+  "unmatchedDetails": [
+    {
+      "modId": "V2ChanceToGainFortifyOnMeleeHitCorrupted",
+      "template": "melee hits have #% chance to fortify",
+      "template_zh": "近戰擊中有 #% 機率護體",
+      "key": "melee hits have (10-15)% chance to fortify",
+      "key_zh": "近戰擊中有 (10-15)% 機率護體",
+      "types": [
+        "claw",
+        "claws",
+        "dagger",
+        "daggers",
+        "rune_dagger",
+        "rune-dagger",
+        "wand",
+        "wands",
+        "one-hand-sword",
+        "one_hand_swords",
+        "one-hand-axe",
+        "one_hand_axes",
+        "one-hand-mace",
+        "one_hand_maces",
+        "sceptre",
+        "sceptres"
+      ],
+      "affinities": [
+        "corrupted"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "V2CorruptedBloodImmunityCorrupted",
+      "template": "corrupted blood cannot be inflicted on you",
+      "template_zh": "腐化之血對你沒有影響",
+      "key": "corrupted blood cannot be inflicted on you",
+      "key_zh": "腐化之血對你沒有影響",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "33"
+    },
+    {
+      "modId": "V2CurseOnHitPunishment",
+      "template": "curse enemies with punishment on hit",
+      "template_zh": "擊中時使用懲戒詛咒敵人",
+      "key": "curse enemies with punishment on hit",
+      "key_zh": "擊中時使用懲戒詛咒敵人",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int"
+      ],
+      "affinities": [
+        "corrupted"
+      ],
+      "level": "30"
+    },
+    {
+      "modId": "V2HinderImmunityCorrupted",
+      "template": "you cannot be hindered",
+      "template_zh": "你不能被阻礙",
+      "key": "you cannot be hindered",
+      "key_zh": "你不能被阻礙",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "40"
+    },
+    {
+      "modId": "V2MaimImmunityCorrupted",
+      "template": "you cannot be maimed",
+      "template_zh": "你不能被癱瘓",
+      "key": "you cannot be maimed",
+      "key_zh": "你不能被癱瘓",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "40"
+    },
+    {
+      "modId": "V2ReducedManaReservationCorruptedEfficiency__",
+      "template": "#% increased reservation efficiency of skills",
+      "template_zh": "增加 #% 技能的保留效用",
+      "key": "2% increased reservation efficiency of skills",
+      "key_zh": "增加 2% 技能的保留效用",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "V2SilenceImmunityJewelCorrupted",
+      "template": "you cannot be cursed with silence",
+      "template_zh": "你不會被沉默",
+      "key": "you cannot be cursed with silence",
+      "key_zh": "你不會被沉默",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "60"
+    },
+    {
+      "modId": "V2FirePenetrationJewelCorrupted",
+      "template": "damage penetrates #% fire resistance",
+      "template_zh": "傷害穿透 #% 火焰抗性",
+      "key": "damage penetrates 1% fire resistance",
+      "key_zh": "傷害穿透 1% 火焰抗性",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "V2ColdPenetrationJewelCorrupted",
+      "template": "damage penetrates #% cold resistance",
+      "template_zh": "傷害穿透 #% 冰冷抗性",
+      "key": "damage penetrates 1% cold resistance",
+      "key_zh": "傷害穿透 1% 冰冷抗性",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "V2LightningPenetrationJewelCorrupted__",
+      "template": "damage penetrates #% lightning resistance",
+      "template_zh": "傷害穿透 #% 閃電抗性",
+      "key": "damage penetrates 1% lightning resistance",
+      "key_zh": "傷害穿透 1% 閃電抗性",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "V2ElementalPenetrationJewelCorrupted_",
+      "template": "damage penetrates #% elemental resistances",
+      "template_zh": "傷害穿透 #% 元素抗性",
+      "key": "damage penetrates 1% elemental resistances",
+      "key_zh": "傷害穿透 1% 元素抗性",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "V2ArmourPenetrationJewelCorrupted",
+      "template": "hits have #% chance to ignore enemy physical damage reduction",
+      "template_zh": "擊中有 #% 機率無視敵人的物理傷害減免",
+      "key": "hits have (10-15)% chance to ignore enemy physical damage reduction",
+      "key_zh": "擊中有 (10-15)% 機率無視敵人的物理傷害減免",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "V2PoisonDurationOnYouJewelCorrupted",
+      "template": "#% reduced poison duration on you",
+      "template_zh": "減少 #% 你身上中毒的持續時間",
+      "key": "(20-25)% reduced poison duration on you",
+      "key_zh": "減少 (20-25)% 你身上中毒的持續時間",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "V2BleedDurationOnYouJewelCorrupted",
+      "template": "#% reduced bleed duration on you",
+      "template_zh": "減少 #% 你身上流血的持續時間",
+      "key": "(20-25)% reduced bleed duration on you",
+      "key_zh": "減少 (20-25)% 你身上流血的持續時間",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "corrupted",
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "StrMasterBlockCrafted2",
+      "template": "#% chance to block",
+      "template_zh": "#% 格擋率",
+      "key": "+(2-3)% chance to block",
+      "key_zh": "+(2-3)% 格擋率",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "30"
+    },
+    {
+      "modId": "StrDexMasterBleedingCrafted",
+      "template": "25% chance to cause bleeding on hit",
+      "template_zh": "擊中時有 25% 機率造成流血",
+      "key": "25% chance to cause bleeding on hit",
+      "key_zh": "擊中時有 25% 機率造成流血",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "40"
+    },
+    {
+      "modId": "MaceDamageJewel",
+      "template": "#% increased damage with maces or sceptres",
+      "template_zh": "錘和權杖增加 #% 傷害",
+      "key": "(14-16)% increased damage with maces or sceptres",
+      "key_zh": "錘和權杖增加 (14-16)% 傷害",
+      "types": [
+        "one-hand-mace",
+        "one_hand_maces",
+        "two-hand-mace",
+        "two_hand_maces"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AxeDamageJewel",
+      "template": "#% increased damage with axes",
+      "template_zh": "增加 #% 斧的傷害",
+      "key": "(14-16)% increased damage with axes",
+      "key_zh": "增加 (14-16)% 斧的傷害",
+      "types": [
+        "one-hand-axe",
+        "one_hand_axes",
+        "two-hand-axe",
+        "two_hand_axes"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SwordDamageJewel",
+      "template": "#% increased damage with swords",
+      "template_zh": "增加 #% 劍的傷害",
+      "key": "(14-16)% increased damage with swords",
+      "key_zh": "增加 (14-16)% 劍的傷害",
+      "types": [
+        "one-hand-sword",
+        "one_hand_swords",
+        "two-hand-sword",
+        "two_hand_swords"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "BowDamageJewel",
+      "template": "#% increased damage with bows",
+      "template_zh": "持弓類武器時增加 #% 傷害",
+      "key": "(14-16)% increased damage with bows",
+      "key_zh": "持弓類武器時增加 (14-16)% 傷害",
+      "types": [
+        "bow",
+        "bows"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ClawDamageJewel",
+      "template": "#% increased damage with claws",
+      "template_zh": "增加 #% 爪的傷害",
+      "key": "(14-16)% increased damage with claws",
+      "key_zh": "增加 (14-16)% 爪的傷害",
+      "types": [
+        "claw",
+        "claws"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "DaggerDamageJewel",
+      "template": "#% increased damage with daggers",
+      "template_zh": "增加 #% 匕首的傷害",
+      "key": "(14-16)% increased damage with daggers",
+      "key_zh": "增加 (14-16)% 匕首的傷害",
+      "types": [
+        "dagger",
+        "daggers"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "WandDamageJewel",
+      "template": "#% increased damage with wands",
+      "template_zh": "增加 #% 法杖傷害",
+      "key": "(14-16)% increased damage with wands",
+      "key_zh": "增加 (14-16)% 法杖傷害",
+      "types": [
+        "wand",
+        "wands"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "StaffDamageJewel",
+      "template": "#% increased damage with staves",
+      "template_zh": "增加 #% 長杖的傷害",
+      "key": "(14-16)% increased damage with staves",
+      "key_zh": "增加 (14-16)% 長杖的傷害",
+      "types": [
+        "staff",
+        "staves"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "StaffSpellDamageJewel",
+      "template": "#% increased spell damage while wielding a staff",
+      "template_zh": "持長杖時增加 #% 法術傷害",
+      "key": "(14-16)% increased spell damage while wielding a staff",
+      "key_zh": "持長杖時增加 (14-16)% 法術傷害",
+      "types": [
+        "staff",
+        "staves"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MaceAttackSpeedJewel",
+      "template": "#% increased attack speed with maces or sceptres",
+      "template_zh": "錘和權杖增加 #% 攻擊速度",
+      "key": "(6-8)% increased attack speed with maces or sceptres",
+      "key_zh": "錘和權杖增加 (6-8)% 攻擊速度",
+      "types": [
+        "one-hand-mace",
+        "one_hand_maces",
+        "two-hand-mace",
+        "two_hand_maces"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AxeAttackSpeedJewel",
+      "template": "#% increased attack speed with axes",
+      "template_zh": "使用斧類武器時增加 #% 攻擊速度",
+      "key": "(6-8)% increased attack speed with axes",
+      "key_zh": "使用斧類武器時增加 (6-8)% 攻擊速度",
+      "types": [
+        "one-hand-axe",
+        "one_hand_axes",
+        "two-hand-axe",
+        "two_hand_axes"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SwordAttackSpeedJewel",
+      "template": "#% increased attack speed with swords",
+      "template_zh": "使用劍類武器時增加 #% 攻擊速度",
+      "key": "(6-8)% increased attack speed with swords",
+      "key_zh": "使用劍類武器時增加 (6-8)% 攻擊速度",
+      "types": [
+        "one-hand-sword",
+        "one_hand_swords",
+        "two-hand-sword",
+        "two_hand_swords"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "BowAttackSpeedJewel",
+      "template": "#% increased attack speed with bows",
+      "template_zh": "使用弓類武器時增加 #% 攻擊速度",
+      "key": "(6-8)% increased attack speed with bows",
+      "key_zh": "使用弓類武器時增加 (6-8)% 攻擊速度",
+      "types": [
+        "bow",
+        "bows"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ClawAttackSpeedJewel",
+      "template": "#% increased attack speed with claws",
+      "template_zh": "使用爪類武器時增加 #% 攻擊速度",
+      "key": "(6-8)% increased attack speed with claws",
+      "key_zh": "使用爪類武器時增加 (6-8)% 攻擊速度",
+      "types": [
+        "claw",
+        "claws"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "DaggerAttackSpeedJewel",
+      "template": "#% increased attack speed with daggers",
+      "template_zh": "使用匕首類武器時增加 #% 攻擊速度",
+      "key": "(6-8)% increased attack speed with daggers",
+      "key_zh": "使用匕首類武器時增加 (6-8)% 攻擊速度",
+      "types": [
+        "dagger",
+        "daggers"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "WandAttackSpeedJewel",
+      "template": "#% increased attack speed with wands",
+      "template_zh": "使用法杖類武器時增加 #% 攻擊速度",
+      "key": "(6-8)% increased attack speed with wands",
+      "key_zh": "使用法杖類武器時增加 (6-8)% 攻擊速度",
+      "types": [
+        "wand",
+        "wands"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "StaffAttackSpeedJewel",
+      "template": "#% increased attack speed with staves",
+      "template_zh": "使用長杖類武器時增加 #% 攻擊速度",
+      "key": "(6-8)% increased attack speed with staves",
+      "key_zh": "使用長杖類武器時增加 (6-8)% 攻擊速度",
+      "types": [
+        "staff",
+        "staves"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "StaffCastSpeedJewel",
+      "template": "#% increased cast speed while wielding a staff",
+      "template_zh": "持長杖時增加 #% 施放速度",
+      "key": "(3-5)% increased cast speed while wielding a staff",
+      "key_zh": "持長杖時增加 (3-5)% 施放速度",
+      "types": [
+        "staff",
+        "staves"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "BlockStaffJewel",
+      "template": "#% chance to block attack damage while wielding a staff",
+      "template_zh": "持長杖時 +#% 攻擊傷害格擋率",
+      "key": "+(2-3)% chance to block attack damage while wielding a staff",
+      "key_zh": "持長杖時 +(2-3)% 攻擊傷害格擋率",
+      "types": [
+        "staff",
+        "staves"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "StaffSpellBlockJewel",
+      "template": "#% chance to block spell damage while wielding a staff",
+      "template_zh": "持長杖時 +#% 法術傷害格擋率",
+      "key": "+(2-3)% chance to block spell damage while wielding a staff",
+      "key_zh": "持長杖時 +(2-3)% 法術傷害格擋率",
+      "types": [
+        "staff",
+        "staves"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBossAdditionalUnique",
+      "template": "unique boss drops # additional unique item",
+      "template_zh": "傳奇頭目掉落額外 # 件傳奇物品",
+      "key": "unique boss drops 1 additional unique item",
+      "key_zh": "傳奇頭目掉落額外 1 件傳奇物品",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBossDropsShaperGuardianMap",
+      "template": "unique boss deals #% more damage|||||unique boss has #% more life|||||an additional shaper guardian map drops on completing area (tier 14+)",
+      "template_zh": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外塑界者守護者地圖",
+      "key": "unique boss deals 100% more damage|||||unique boss has 200% more life|||||an additional shaper guardian map drops on completing area (tier 14+)",
+      "key_zh": "傳奇頭目造成 100% 更多傷害|||||傳奇頭目有 200% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外塑界者守護者地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "shaper"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBossDropsShaperGuardianMapMaven",
+      "template": "unique boss deals #% more damage|||||unique boss has #% more life|||||an additional shaper guardian map drops on completing area (tier 14+)",
+      "template_zh": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外塑界者守護者地圖",
+      "key": "unique boss deals 100% more damage|||||unique boss has 200% more life|||||an additional shaper guardian map drops on completing area (tier 14+)",
+      "key_zh": "傳奇頭目造成 100% 更多傷害|||||傳奇頭目有 200% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外塑界者守護者地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "shaper"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBossDropsElderGuardianMap",
+      "template": "unique boss deals #% more damage|||||unique boss has #% more life|||||an additional elder guardian map drops on completing area (tier 14+)",
+      "template_zh": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外尊師守護者地圖",
+      "key": "unique boss deals 100% more damage|||||unique boss has 200% more life|||||an additional elder guardian map drops on completing area (tier 14+)",
+      "key_zh": "傳奇頭目造成 100% 更多傷害|||||傳奇頭目有 200% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外尊師守護者地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "elder"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBossDropsElderGuardianMapMaven",
+      "template": "unique boss deals #% more damage|||||unique boss has #% more life|||||an additional elder guardian map drops on completing area (tier 14+)",
+      "template_zh": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外尊師守護者地圖",
+      "key": "unique boss deals 100% more damage|||||unique boss has 200% more life|||||an additional elder guardian map drops on completing area (tier 14+)",
+      "key_zh": "傳奇頭目造成 100% 更多傷害|||||傳奇頭目有 200% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外尊師守護者地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "elder"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBossDropsConquerorMap",
+      "template": "unique boss deals #% more damage|||||unique boss has #% more life|||||an additional conqueror map drops on completing area (tier 14+)",
+      "template_zh": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外征服者地圖",
+      "key": "unique boss deals 100% more damage|||||unique boss has 200% more life|||||an additional conqueror map drops on completing area (tier 14+)",
+      "key_zh": "傳奇頭目造成 100% 更多傷害|||||傳奇頭目有 200% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外征服者地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBossDropsConquerorMapMaven",
+      "template": "unique boss deals #% more damage|||||unique boss has #% more life|||||an additional conqueror map drops on completing area (tier 14+)",
+      "template_zh": "傳奇頭目造成 #% 更多傷害|||||傳奇頭目有 #% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外征服者地圖",
+      "key": "unique boss deals 100% more damage|||||unique boss has 200% more life|||||an additional conqueror map drops on completing area (tier 14+)",
+      "key_zh": "傳奇頭目造成 100% 更多傷害|||||傳奇頭目有 200% 更多生命|||||完成區域 (階級 14+) 時，掉落 1 張額外征服者地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasFireDamageAndPacks3",
+      "template": "area contains # additional packs of monsters that deal fire damage|||||players and monsters take #% increased fire damage",
+      "template_zh": "區域含有額外 # 群會造成火焰傷害的怪物|||||玩家與怪物增加 #% 承受火焰傷害",
+      "key": "area contains 6 additional packs of monsters that deal fire damage|||||players and monsters take 12% increased fire damage",
+      "key_zh": "區域含有額外 6 群會造成火焰傷害的怪物|||||玩家與怪物增加 12% 承受火焰傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasFireDamageAndPacksMaven",
+      "template": "area contains # additional packs of monsters that deal fire damage|||||players and monsters take #% increased fire damage",
+      "template_zh": "區域含有額外 # 群會造成火焰傷害的怪物|||||玩家與怪物增加 #% 承受火焰傷害",
+      "key": "area contains 8 additional packs of monsters that deal fire damage|||||players and monsters take 14% increased fire damage",
+      "key_zh": "區域含有額外 8 群會造成火焰傷害的怪物|||||玩家與怪物增加 14% 承受火焰傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasColdDamageAndPacks3",
+      "template": "area contains # additional packs of monsters that deal cold damage|||||players and monsters take #% increased cold damage",
+      "template_zh": "區域含有額外 # 群會造成冰冷傷害的怪物|||||玩家與怪物增加承受 #% 冰冷傷害",
+      "key": "area contains 6 additional packs of monsters that deal cold damage|||||players and monsters take 12% increased cold damage",
+      "key_zh": "區域含有額外 6 群會造成冰冷傷害的怪物|||||玩家與怪物增加承受 12% 冰冷傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasColdDamageAndPacksMaven_",
+      "template": "area contains # additional packs of monsters that deal cold damage|||||players and monsters take #% increased cold damage",
+      "template_zh": "區域含有額外 # 群會造成冰冷傷害的怪物|||||玩家與怪物增加承受 #% 冰冷傷害",
+      "key": "area contains 8 additional packs of monsters that deal cold damage|||||players and monsters take 14% increased cold damage",
+      "key_zh": "區域含有額外 8 群會造成冰冷傷害的怪物|||||玩家與怪物增加承受 14% 冰冷傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasLightningDamageAndPacks3",
+      "template": "area contains # additional packs of monsters that deal lightning damage|||||players and monsters take #% increased lightning damage",
+      "template_zh": "區域含有額外 # 群會造成閃電傷害的怪物|||||玩家與怪物增加承受 #% 閃電傷害",
+      "key": "area contains 6 additional packs of monsters that deal lightning damage|||||players and monsters take 12% increased lightning damage",
+      "key_zh": "區域含有額外 6 群會造成閃電傷害的怪物|||||玩家與怪物增加承受 12% 閃電傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasLightningDamageAndPacksMaven",
+      "template": "area contains # additional packs of monsters that deal lightning damage|||||players and monsters take #% increased lightning damage",
+      "template_zh": "區域含有額外 # 群會造成閃電傷害的怪物|||||玩家與怪物增加承受 #% 閃電傷害",
+      "key": "area contains 8 additional packs of monsters that deal lightning damage|||||players and monsters take 14% increased lightning damage",
+      "key_zh": "區域含有額外 8 群會造成閃電傷害的怪物|||||玩家與怪物增加承受 14% 閃電傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasPhysicalDamageAndPacks3_",
+      "template": "area contains # additional packs of monsters that deal physical damage|||||players and monsters take #% increased physical damage",
+      "template_zh": "區域含有額外 # 群會造成物理傷害的怪物|||||玩家與怪物增加承受 #% 物理傷害",
+      "key": "area contains 6 additional packs of monsters that deal physical damage|||||players and monsters take 12% increased physical damage",
+      "key_zh": "區域含有額外 6 群會造成物理傷害的怪物|||||玩家與怪物增加承受 12% 物理傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasPhysicalDamageAndPacksMaven",
+      "template": "area contains # additional packs of monsters that deal physical damage|||||players and monsters take #% increased physical damage",
+      "template_zh": "區域含有額外 # 群會造成物理傷害的怪物|||||玩家與怪物增加承受 #% 物理傷害",
+      "key": "area contains 8 additional packs of monsters that deal physical damage|||||players and monsters take 14% increased physical damage",
+      "key_zh": "區域含有額外 8 群會造成物理傷害的怪物|||||玩家與怪物增加承受 14% 物理傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasChaosDamageAndPacks3",
+      "template": "area contains # additional packs of monsters that deal chaos damage|||||players and monsters take #% increased chaos damage",
+      "template_zh": "區域含有額外 # 群會造成混沌傷害的怪物|||||玩家與怪物增加承受 #% 混沌傷害",
+      "key": "area contains 6 additional packs of monsters that deal chaos damage|||||players and monsters take 12% increased chaos damage",
+      "key_zh": "區域含有額外 6 群會造成混沌傷害的怪物|||||玩家與怪物增加承受 12% 混沌傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasChaosDamageAndPacksMaven",
+      "template": "area contains # additional packs of monsters that deal chaos damage|||||players and monsters take #% increased chaos damage",
+      "template_zh": "區域含有額外 # 群會造成混沌傷害的怪物|||||玩家與怪物增加承受 #% 混沌傷害",
+      "key": "area contains 8 additional packs of monsters that deal chaos damage|||||players and monsters take 14% increased chaos damage",
+      "key_zh": "區域含有額外 8 群會造成混沌傷害的怪物|||||玩家與怪物增加承受 14% 混沌傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasUniqueMonstersDropCorruptedItems2_",
+      "template": "unique monsters drop corrupted items",
+      "template_zh": "傳奇頭目掉落腐化物品",
+      "key": "unique monsters drop corrupted items",
+      "key_zh": "傳奇頭目掉落腐化物品",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasUniqueMonstersDropCorruptedItemsMaven_",
+      "template": "unique monsters drop corrupted items",
+      "template_zh": "傳奇頭目掉落腐化物品",
+      "key": "unique monsters drop corrupted items",
+      "key_zh": "傳奇頭目掉落腐化物品",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasFishy",
+      "template": "area is alluring",
+      "template_zh": "此區域吸引人",
+      "key": "area is alluring",
+      "key_zh": "此區域吸引人",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasContainsEinharMission2_",
+      "template": "area contains einhar",
+      "template_zh": "區域含有埃哈",
+      "key": "area contains einhar",
+      "key_zh": "區域含有埃哈",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasContainsEinharMissionMaven",
+      "template": "area contains einhar",
+      "template_zh": "區域含有埃哈",
+      "key": "area contains einhar",
+      "key_zh": "區域含有埃哈",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasContainsNikoMission2",
+      "template": "area contains niko",
+      "template_zh": "區域含有尼科",
+      "key": "area contains niko",
+      "key_zh": "區域含有尼科",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasContainsNikoMissionMaven",
+      "template": "area contains niko",
+      "template_zh": "區域含有尼科",
+      "key": "area contains niko",
+      "key_zh": "區域含有尼科",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasContainsJunMission2",
+      "template": "area contains jun",
+      "template_zh": "區域含有瓊恩",
+      "key": "area contains jun",
+      "key_zh": "區域含有瓊恩",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasContainsJunMissionMaven_",
+      "template": "area contains jun",
+      "template_zh": "區域含有瓊恩",
+      "key": "area contains jun",
+      "key_zh": "區域含有瓊恩",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasMagicPackSize3",
+      "template": "#% increased magic pack size",
+      "template_zh": "增加 #% 魔法怪物群大小",
+      "key": "25% increased magic pack size",
+      "key_zh": "增加 25% 魔法怪物群大小",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasMagicPackSizeMaven",
+      "template": "#% increased magic pack size",
+      "template_zh": "增加 #% 魔法怪物群大小",
+      "key": "30% increased magic pack size",
+      "key_zh": "增加 30% 魔法怪物群大小",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasReducedReflectedDamageTakenMirroredRares3",
+      "template": "area contains # additional packs with mirrored rare monsters|||||players and their minions cannot take reflected damage",
+      "template_zh": "區域含有額外 # 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
+      "key": "area contains 4 additional packs with mirrored rare monsters|||||players and their minions cannot take reflected damage",
+      "key_zh": "區域含有額外 4 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasReducedReflectedDamageTakenMirroredRaresMaven",
+      "template": "area contains # additional packs with mirrored rare monsters|||||players and their minions cannot take reflected damage",
+      "template_zh": "區域含有額外 # 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
+      "key": "area contains 5 additional packs with mirrored rare monsters|||||players and their minions cannot take reflected damage",
+      "key_zh": "區域含有額外 5 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHighValueEnemiesOnOwnTeam",
+      "template": "area contains hunted traitors",
+      "template_zh": "區域含有許多背叛者",
+      "key": "area contains hunted traitors",
+      "key_zh": "區域含有許多背叛者",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHighValueEnemiesOnOwnTeamMaven",
+      "template": "area contains hunted traitors",
+      "template_zh": "區域含有許多背叛者",
+      "key": "area contains hunted traitors",
+      "key_zh": "區域含有許多背叛者",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasMontersThatConvertOnDeath3",
+      "template": "area contains # additional packs of monsters that convert when killed",
+      "template_zh": "區域含有額外 # 群被擊殺時會轉化的怪物",
+      "key": "area contains 6 additional packs of monsters that convert when killed",
+      "key_zh": "區域含有額外 6 群被擊殺時會轉化的怪物",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasMontersThatConvertOnDeathMaven__",
+      "template": "area contains # additional packs of monsters that convert when killed",
+      "template_zh": "區域含有額外 # 群被擊殺時會轉化的怪物",
+      "key": "area contains 8 additional packs of monsters that convert when killed",
+      "key_zh": "區域含有額外 8 群被擊殺時會轉化的怪物",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasInstantFlasksAndHealingMonsters3",
+      "template": "area contains # additional packs of monsters that heal|||||player's life and mana recovery from flasks are instant",
+      "template_zh": "區域含有額外 # 群會治癒的怪物|||||玩家透過藥劑立刻恢復生命和魔力",
+      "key": "area contains 6 additional packs of monsters that heal|||||player's life and mana recovery from flasks are instant",
+      "key_zh": "區域含有額外 6 群會治癒的怪物|||||玩家透過藥劑立刻恢復生命和魔力",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasInstantFlasksAndHealingMonstersMaven_",
+      "template": "area contains # additional packs of monsters that heal|||||player's life and mana recovery from flasks are instant",
+      "template_zh": "區域含有額外 # 群會治癒的怪物|||||玩家透過藥劑立刻恢復生命和魔力",
+      "key": "area contains 8 additional packs of monsters that heal|||||player's life and mana recovery from flasks are instant",
+      "key_zh": "區域含有額外 8 群會治癒的怪物|||||玩家透過藥劑立刻恢復生命和魔力",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBodyguardsAndBossMapDrops2",
+      "template": "unique boss is accompanied by bodyguards|||||an additional map drops on completing area",
+      "template_zh": "傳奇頭目伴隨著護衛|||||完成此區域額外掉落 1 張地圖",
+      "key": "unique boss is accompanied by bodyguards|||||an additional map drops on completing area",
+      "key_zh": "傳奇頭目伴隨著護衛|||||完成此區域額外掉落 1 張地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBodyguardsAndBossMapDropsMaven__",
+      "template": "unique boss is accompanied by bodyguards|||||# additional maps drop on completing area",
+      "template_zh": "傳奇頭目伴隨著護衛|||||完成此區域額外掉落 # 張地圖",
+      "key": "unique boss is accompanied by bodyguards|||||2 additional maps drop on completing area",
+      "key_zh": "傳奇頭目伴隨著護衛|||||完成此區域額外掉落 2 張地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasAdditionalBreachesMaven",
+      "template": "area can contain breaches|||||area contains # additional unstable breaches",
+      "template_zh": "此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕",
+      "key": "area can contain breaches|||||area contains 2 additional unstable breaches",
+      "key_zh": "此區域可能含有裂痕|||||區域內含有2道額外的不穩定裂痕",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsFire",
+      "template": "breaches in area belong to xoph|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為索伏|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to xoph|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為索伏|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsFireMaven",
+      "template": "breaches in area belong to xoph|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為索伏|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to xoph|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為索伏|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsCold",
+      "template": "breaches in area belong to tul|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為托沃|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to tul|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為托沃|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsColdMaven",
+      "template": "breaches in area belong to tul|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為托沃|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to tul|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為托沃|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsLightning",
+      "template": "breaches in area belong to esh|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為艾許|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to esh|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為艾許|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsLightningMaven",
+      "template": "breaches in area belong to esh|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為艾許|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to esh|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為艾許|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsPhysical",
+      "template": "breaches in area belong to uul-netol|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為烏爾尼多|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to uul-netol|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為烏爾尼多|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsPhysicalMaven",
+      "template": "breaches in area belong to uul-netol|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為烏爾尼多|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to uul-netol|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為烏爾尼多|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsChaos",
+      "template": "breaches in area belong to chayula|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為夏烏拉|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to chayula|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為夏烏拉|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBreachIsChaosMaven",
+      "template": "breaches in area belong to chayula|||||breaches in area contain # additional clasped hands",
+      "template_zh": "區域內裂痕為夏烏拉|||||區域內的裂痕含有 # 個額外抑制之手",
+      "key": "breaches in area belong to chayula|||||breaches in area contain 3 additional clasped hands",
+      "key_zh": "區域內裂痕為夏烏拉|||||區域內的裂痕含有 3 個額外抑制之手",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasAdditionalAbyssesMaven",
+      "template": "area contains # additional abysses|||||areas contain abysses",
+      "template_zh": "此區域含 # 個額外深淵|||||區域內含有深淵",
+      "key": "area contains 2 additional abysses|||||areas contain abysses",
+      "key_zh": "此區域含 2 個額外深淵|||||區域內含有深淵",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasMapDropsAreCorruptedAndHave8Modifiers",
+      "template": "non-unique maps found in area are corrupted with 8 modifiers",
+      "template_zh": "區域內掉落的非傳奇地圖為已汙染且有 8 個詞綴",
+      "key": "non-unique maps found in area are corrupted with 8 modifiers",
+      "key_zh": "區域內掉落的非傳奇地圖為已汙染且有 8 個詞綴",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasMapDropsAreCorruptedAndHave8ModifiersMaven",
+      "template": "non-unique maps found in area are corrupted with 8 modifiers",
+      "template_zh": "區域內掉落的非傳奇地圖為已汙染且有 8 個詞綴",
+      "key": "non-unique maps found in area are corrupted with 8 modifiers",
+      "key_zh": "區域內掉落的非傳奇地圖為已汙染且有 8 個詞綴",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasCapturedBeastsDuplicateChance",
+      "template": "create a copy of beasts captured in area",
+      "template_zh": "在區域內製造已捕捉野獸的複製體",
+      "key": "create a copy of beasts captured in area",
+      "key_zh": "在區域內製造已捕捉野獸的複製體",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasCapturedBeastsDuplicateChanceMaven",
+      "template": "create a copy of beasts captured in area",
+      "template_zh": "在區域內製造已捕捉野獸的複製體",
+      "key": "create a copy of beasts captured in area",
+      "key_zh": "在區域內製造已捕捉野獸的複製體",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasLegionSplintersEmblemsDuplicated",
+      "template": "legion monsters have #% more life|||||splinters and emblems dropped by legion monsters are duplicated",
+      "template_zh": "戰亂怪物有 #% 更多生命|||||戰亂怪物掉落的裂片和徽印被複製",
+      "key": "legion monsters have 100% more life|||||splinters and emblems dropped by legion monsters are duplicated",
+      "key_zh": "戰亂怪物有 100% 更多生命|||||戰亂怪物掉落的裂片和徽印被複製",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasLegionSplintersEmblemsDuplicatedMaven",
+      "template": "legion monsters have #% more life|||||splinters and emblems dropped by legion monsters are duplicated",
+      "template_zh": "戰亂怪物有 #% 更多生命|||||戰亂怪物掉落的裂片和徽印被複製",
+      "key": "legion monsters have 100% more life|||||splinters and emblems dropped by legion monsters are duplicated",
+      "key_zh": "戰亂怪物有 100% 更多生命|||||戰亂怪物掉落的裂片和徽印被複製",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBlightOilsChanceToDropOneTierHigher",
+      "template": "oils found in area are 1 tier higher|||||cost of building and upgrading blight towers is doubled",
+      "template_zh": "區域內掉落的油瓶高 1 階|||||凋落防守塔的建造和升級費用為 2 倍",
+      "key": "oils found in area are 1 tier higher|||||cost of building and upgrading blight towers is doubled",
+      "key_zh": "區域內掉落的油瓶高 1 階|||||凋落防守塔的建造和升級費用為 2 倍",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasBlightOilsChanceToDropOneTierHigherMaven",
+      "template": "oils found in area are 1 tier higher|||||cost of building and upgrading blight towers is doubled",
+      "template_zh": "區域內掉落的油瓶高 1 階|||||凋落防守塔的建造和升級費用為 2 倍",
+      "key": "oils found in area are 1 tier higher|||||cost of building and upgrading blight towers is doubled",
+      "key_zh": "區域內掉落的油瓶高 1 階|||||凋落防守塔的建造和升級費用為 2 倍",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasDeliriumRewardsFillFaster",
+      "template": "delirium reward bars fill #% faster",
+      "template_zh": "譫妄獎勵條加速 #% 填滿",
+      "key": "delirium reward bars fill 100% faster",
+      "key_zh": "譫妄獎勵條加速 100% 填滿",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasDeliriumRewardsFillFasterMaven",
+      "template": "delirium reward bars fill #% faster",
+      "template_zh": "譫妄獎勵條加速 #% 填滿",
+      "key": "delirium reward bars fill 100% faster",
+      "key_zh": "譫妄獎勵條加速 100% 填滿",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHarvestPlotSeedsContainBlueSeeds",
+      "template": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have #% more life|||||harvests contain at least one crop of blue plants",
+      "template_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個藍色作物",
+      "key": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have 100% more life|||||harvests contain at least one crop of blue plants",
+      "key_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 100% 更多生命|||||豐收含有至少 1 個藍色作物",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHarvestPlotSeedsContainPurpleSeeds",
+      "template": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have #% more life|||||harvests contain at least one crop of purple plants",
+      "template_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個紫色作物",
+      "key": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have 100% more life|||||harvests contain at least one crop of purple plants",
+      "key_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 100% 更多生命|||||豐收含有至少 1 個紫色作物",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHarvestPlotSeedsContainYellowSeeds",
+      "template": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have #% more life|||||harvests contain at least one crop of yellow plants",
+      "template_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個黃色作物",
+      "key": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have 100% more life|||||harvests contain at least one crop of yellow plants",
+      "key_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 100% 更多生命|||||豐收含有至少 1 個黃色作物",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHarvestPlotSeedsContainBlueSeedsMaven",
+      "template": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have #% more life|||||harvests contain at least one crop of blue plants",
+      "template_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個藍色作物",
+      "key": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have 100% more life|||||harvests contain at least one crop of blue plants",
+      "key_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 100% 更多生命|||||豐收含有至少 1 個藍色作物",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHarvestPlotSeedsContainPurpleSeedsMaven",
+      "template": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have #% more life|||||harvests contain at least one crop of purple plants",
+      "template_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個紫色作物",
+      "key": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have 100% more life|||||harvests contain at least one crop of purple plants",
+      "key_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 100% 更多生命|||||豐收含有至少 1 個紫色作物",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHarvestPlotSeedsContainYellowSeedsMaven",
+      "template": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have #% more life|||||harvests contain at least one crop of yellow plants",
+      "template_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 #% 更多生命|||||豐收含有至少 1 個黃色作物",
+      "key": "lifeforce dropped by harvest monsters is duplicated|||||harvest monsters have 100% more life|||||harvests contain at least one crop of yellow plants",
+      "key_zh": "豐收怪物掉落的生靈之力被複製|||||豐收怪物有 100% 更多生命|||||豐收含有至少 1 個黃色作物",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHeistContractsHaveImplicitModifier",
+      "template": "non-unique heist contracts found in area have an additional implicit modifier",
+      "template_zh": "區域內掉落的非傳奇劫盜契約書有 1 個額外固定詞綴",
+      "key": "non-unique heist contracts found in area have an additional implicit modifier",
+      "key_zh": "區域內掉落的非傳奇劫盜契約書有 1 個額外固定詞綴",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHeistContractsHaveImplicitModifierMaven",
+      "template": "non-unique heist contracts found in area have an additional implicit modifier",
+      "template_zh": "區域內掉落的非傳奇劫盜契約書有 1 個額外固定詞綴",
+      "key": "non-unique heist contracts found in area have an additional implicit modifier",
+      "key_zh": "區域內掉落的非傳奇劫盜契約書有 1 個額外固定詞綴",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasRitualsInAreasCanBeRerolledOnceAtNoCost",
+      "template": "rerolling favours at ritual altars has no cost the first time",
+      "template_zh": "祭祀神壇重骰恩賜之物前 # 次免費",
+      "key": "rerolling favours at ritual altars has no cost the first time",
+      "key_zh": "祭祀神壇重骰恩賜之物前 1 次免費",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasRitualsInAreasCanBeRerolledOnceAtNoCostMaven",
+      "template": "rerolling favours at ritual altars has no cost the first time",
+      "template_zh": "祭祀神壇重骰恩賜之物前 # 次免費",
+      "key": "rerolling favours at ritual altars has no cost the first time",
+      "key_zh": "祭祀神壇重骰恩賜之物前 1 次免費",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AbyssJewelSocketImplicit",
+      "template": "has 1 abyssal socket",
+      "template_zh": "有 1 個深淵插槽",
+      "key": "has 1 abyssal socket",
+      "key_zh": "有 1 個深淵插槽",
+      "types": [
+        "belt",
+        "belts"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JunMaster2TriggerSocketedSpellWhenYouFocus1",
+      "template": "trigger socketed spells when you focus, with a 0.25 second cooldown",
+      "template_zh": "當你專注時，觸發插槽中的法術，有 0.25 秒冷卻時間",
+      "key": "trigger socketed spells when you focus, with a 0.25 second cooldown",
+      "key_zh": "當你專注時，觸發插槽中的法術，有 0.25 秒冷卻時間",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "60"
+    },
+    {
+      "modId": "JunMaster2TriggerSocketedSpellOnSkillUse1",
+      "template": "trigger a socketed spell when you use a skill, with a 8 second cooldown\\nspells triggered this way have 150% more cost",
+      "template_zh": "使用技能時觸發插槽中的 1 個法術，有 8 秒冷卻時間\\n以此方式觸發的法術有 150% 更多消耗",
+      "key": "trigger a socketed spell when you use a skill, with a 8 second cooldown\\nspells triggered this way have 150% more cost",
+      "key_zh": "使用技能時觸發插槽中的 1 個法術，有 8 秒冷卻時間\\n以此方式觸發的法術有 150% 更多消耗",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "75"
+    },
+    {
+      "modId": "JunMasterTriggerSocketedSpellWhenYouFocus1",
+      "template": "trigger socketed spells when you focus, with a 0.25 second cooldown",
+      "template_zh": "當你專注時，觸發插槽中的法術，有 0.25 秒冷卻時間",
+      "key": "trigger socketed spells when you focus, with a 0.25 second cooldown",
+      "key_zh": "當你專注時，觸發插槽中的法術，有 0.25 秒冷卻時間",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JunMasterTriggerSocketedSpellOnSkillUse1",
+      "template": "trigger a socketed spell when you use a skill, with a 8 second cooldown\\nspells triggered this way have 150% more cost",
+      "template_zh": "使用技能時觸發插槽中的 1 個法術，有 8 秒冷卻時間\\n以此方式觸發的法術有 150% 更多消耗",
+      "key": "trigger a socketed spell when you use a skill, with a 8 second cooldown\\nspells triggered this way have 150% more cost",
+      "key_zh": "使用技能時觸發插槽中的 1 個法術，有 8 秒冷卻時間\\n以此方式觸發的法術有 150% 更多消耗",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "25"
+    },
+    {
+      "modId": "EinharMasterShieldAttackBlock1",
+      "template": "#% chance to block",
+      "template_zh": "#% 格擋率",
+      "key": "+(2-3)% chance to block",
+      "key_zh": "+(2-3)% 格擋率",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "50"
+    },
+    {
+      "modId": "EinharMasterShieldAttackBlock2",
+      "template": "#% chance to block",
+      "template_zh": "#% 格擋率",
+      "key": "+(4-5)% chance to block",
+      "key_zh": "+(4-5)% 格擋率",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "EinharMasterTriggerSocketedSpellOnSkillUse1",
+      "template": "trigger a socketed spell when you use a skill, with a 8 second cooldown\\nspells triggered this way have 150% more cost",
+      "template_zh": "使用技能時觸發插槽中的 1 個法術，有 8 秒冷卻時間\\n以此方式觸發的法術有 150% 更多消耗",
+      "key": "trigger a socketed spell when you use a skill, with a 8 second cooldown\\nspells triggered this way have 150% more cost",
+      "key_zh": "使用技能時觸發插槽中的 1 個法術，有 8 秒冷卻時間\\n以此方式觸發的法術有 150% 更多消耗",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "75"
+    },
+    {
+      "modId": "MapAtlasHarbingerAndBossAdditionalCurrencyShards",
+      "template": "unique boss is accompanied by a mysterious harbinger|||||unique boss drops additional currency shards|||||harbingers drop additional currency shards",
+      "template_zh": "傳奇頭目伴隨著 1 個神祕的神諭|||||傳奇頭目掉落額外通貨碎片|||||神諭掉落額外通貨碎片",
+      "key": "unique boss is accompanied by a mysterious harbinger|||||unique boss drops additional currency shards|||||harbingers drop additional currency shards",
+      "key_zh": "傳奇頭目伴隨著 1 個神祕的神諭|||||傳奇頭目掉落額外通貨碎片|||||神諭掉落額外通貨碎片",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasHarbingerAndBossAdditionalCurrencyShardsMaven",
+      "template": "unique boss is accompanied by a mysterious harbinger|||||unique boss drops additional currency shards|||||harbingers drop additional currency shards",
+      "template_zh": "傳奇頭目伴隨著 1 個神祕的神諭|||||傳奇頭目掉落額外通貨碎片|||||神諭掉落額外通貨碎片",
+      "key": "unique boss is accompanied by a mysterious harbinger|||||unique boss drops additional currency shards|||||harbingers drop additional currency shards",
+      "key_zh": "傳奇頭目伴隨著 1 個神祕的神諭|||||傳奇頭目掉落額外通貨碎片|||||神諭掉落額外通貨碎片",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasVaalSoulsOnKillAndExtraVaalPacks3",
+      "template": "area contains # additional packs of corrupted vaal monsters|||||players gain an additional vaal soul on kill",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物|||||玩家擊殺時額外獲得 1 個瓦爾靈魂",
+      "key": "area contains 6 additional packs of corrupted vaal monsters|||||players gain an additional vaal soul on kill",
+      "key_zh": "區域含有額外 6 群已汙染瓦爾怪物|||||玩家擊殺時額外獲得 1 個瓦爾靈魂",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasVaalSoulsOnKillAndExtraVaalPacksMaven",
+      "template": "area contains # additional packs of corrupted vaal monsters|||||players gain an additional vaal soul on kill",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物|||||玩家擊殺時額外獲得 1 個瓦爾靈魂",
+      "key": "area contains 8 additional packs of corrupted vaal monsters|||||players gain an additional vaal soul on kill",
+      "key_zh": "區域含有額外 8 群已汙染瓦爾怪物|||||玩家擊殺時額外獲得 1 個瓦爾靈魂",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasCorruptedDropWithExtraVaalPacks3____",
+      "template": "area contains # additional packs of corrupted vaal monsters|||||items dropped by corrupted vaal monsters have #% chance to be corrupted",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物|||||已汙染瓦爾怪物掉落的物品有 #% 機率為已汙染",
+      "key": "area contains 6 additional packs of corrupted vaal monsters|||||items dropped by corrupted vaal monsters have 25% chance to be corrupted",
+      "key_zh": "區域含有額外 6 群已汙染瓦爾怪物|||||已汙染瓦爾怪物掉落的物品有 25% 機率為已汙染",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasCorruptedDropWithExtraVaalPacksMaven",
+      "template": "area contains # additional packs of corrupted vaal monsters|||||items dropped by corrupted vaal monsters have #% chance to be corrupted",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物|||||已汙染瓦爾怪物掉落的物品有 #% 機率為已汙染",
+      "key": "area contains 8 additional packs of corrupted vaal monsters|||||items dropped by corrupted vaal monsters have 30% chance to be corrupted",
+      "key_zh": "區域含有額外 8 群已汙染瓦爾怪物|||||已汙染瓦爾怪物掉落的物品有 30% 機率為已汙染",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasTormentedBetrayerAndScarabDropChance",
+      "template": "area is haunted by an additional tormented betrayer|||||the first 3 possessed monsters drop an additional rusted scarab",
+      "template_zh": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外銹蝕聖甲蟲",
+      "key": "area is haunted by an additional tormented betrayer|||||the first 3 possessed monsters drop an additional rusted scarab",
+      "key_zh": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外銹蝕聖甲蟲",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasTormentedBetrayerAndPolishedScarabDropChance",
+      "template": "area is haunted by an additional tormented betrayer|||||the first 3 possessed monsters drop an additional polished scarab",
+      "template_zh": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外圓滑聖甲蟲",
+      "key": "area is haunted by an additional tormented betrayer|||||the first 3 possessed monsters drop an additional polished scarab",
+      "key_zh": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外圓滑聖甲蟲",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasTormentedBetrayerAndGildedScarabDropChance",
+      "template": "area is haunted by an additional tormented betrayer|||||the first 3 possessed monsters drop an additional gilded scarab",
+      "template_zh": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外鍍金聖甲蟲",
+      "key": "area is haunted by an additional tormented betrayer|||||the first 3 possessed monsters drop an additional gilded scarab",
+      "key_zh": "區域被 1 個額外苦痛反叛者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外鍍金聖甲蟲",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasTormentedBetrayerAndWingedScarabDropChanceMaven",
+      "template": "area is haunted by an additional tormented betrayer|||||the first 3 possessed monsters drop an additional winged scarab",
+      "template_zh": "區域被 1 個額外苦痛反叛者糾纏|||||前 3 個被附身的怪物掉落 1 個額外展翅聖甲蟲",
+      "key": "area is haunted by an additional tormented betrayer|||||the first 3 possessed monsters drop an additional winged scarab",
+      "key_zh": "區域被 1 個額外苦痛反叛者糾纏|||||前 3 個被附身的怪物掉落 1 個額外展翅聖甲蟲",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasTormentedHereticAndMapDropChance",
+      "template": "area is haunted by an additional tormented heretic|||||the first 3 possessed monsters drop an additional map",
+      "template_zh": "區域被 1 個額外苦痛異教徒糾纏|||||最初 3 個被附身的怪物掉落 1 個額外地圖",
+      "key": "area is haunted by an additional tormented heretic|||||the first 3 possessed monsters drop an additional map",
+      "key_zh": "區域被 1 個額外苦痛異教徒糾纏|||||最初 3 個被附身的怪物掉落 1 個額外地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasTormentedHereticAndMapDropChanceMaven__",
+      "template": "area is haunted by an additional tormented heretic|||||the first 3 possessed monsters drop an additional map",
+      "template_zh": "區域被 1 個額外苦痛異教徒糾纏|||||最初 3 個被附身的怪物掉落 1 個額外地圖",
+      "key": "area is haunted by an additional tormented heretic|||||the first 3 possessed monsters drop an additional map",
+      "key_zh": "區域被 1 個額外苦痛異教徒糾纏|||||最初 3 個被附身的怪物掉落 1 個額外地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasTormentedGraverobberAndUniqueDropChance",
+      "template": "area is haunted by an additional tormented graverobber|||||the first 3 possessed monsters drop an additional unique item",
+      "template_zh": "區域被 1 個額外苦痛盜墓者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外傳奇道具",
+      "key": "area is haunted by an additional tormented graverobber|||||the first 3 possessed monsters drop an additional unique item",
+      "key_zh": "區域被 1 個額外苦痛盜墓者糾纏|||||最初 3 個被附身的怪物掉落 1 個額外傳奇道具",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasUniqueStrongboxChanceWithExtraVaalPacks3_",
+      "template": "area contains # additional packs of corrupted vaal monsters|||||area has #% chance to contain gifts of the red queen per mortal fragment used|||||area has #% chance to contain gifts of the sacrificed per sacrifice fragment used",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物|||||每個使用的凡人碎片，使區域有 #% 機率含有赤紅皇后之贈|||||每個使用的奉獻碎片，使區域有 #% 機率含有奉獻之贈",
+      "key": "area contains 6 additional packs of corrupted vaal monsters|||||area has 50% chance to contain gifts of the red queen per mortal fragment used|||||area has 50% chance to contain gifts of the sacrificed per sacrifice fragment used",
+      "key_zh": "區域含有額外 6 群已汙染瓦爾怪物|||||每個使用的凡人碎片，使區域有 50% 機率含有赤紅皇后之贈|||||每個使用的奉獻碎片，使區域有 50% 機率含有奉獻之贈",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasUniqueStrongboxChanceWithExtraVaalPacksMaven",
+      "template": "area contains # additional packs of corrupted vaal monsters|||||area has #% chance to contain gifts of the red queen per mortal fragment used|||||area has #% chance to contain gifts of the sacrificed per sacrifice fragment used",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物|||||每個使用的凡人碎片，使區域有 #% 機率含有赤紅皇后之贈|||||每個使用的奉獻碎片，使區域有 #% 機率含有奉獻之贈",
+      "key": "area contains 8 additional packs of corrupted vaal monsters|||||area has 50% chance to contain gifts of the red queen per mortal fragment used|||||area has 50% chance to contain gifts of the sacrificed per sacrifice fragment used",
+      "key_zh": "區域含有額外 8 群已汙染瓦爾怪物|||||每個使用的凡人碎片，使區域有 50% 機率含有赤紅皇后之贈|||||每個使用的奉獻碎片，使區域有 50% 機率含有奉獻之贈",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasNoSoulGainPreventionWithExtraVaalPacks3",
+      "template": "area contains # additional packs of corrupted vaal monsters|||||players' vaal skills do not apply soul gain prevention",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物|||||玩家的瓦爾技能不套用停止獲得靈魂",
+      "key": "area contains 6 additional packs of corrupted vaal monsters|||||players' vaal skills do not apply soul gain prevention",
+      "key_zh": "區域含有額外 6 群已汙染瓦爾怪物|||||玩家的瓦爾技能不套用停止獲得靈魂",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasNoSoulGainPreventionWithExtraVaalPacksMaven",
+      "template": "area contains # additional packs of corrupted vaal monsters|||||players' vaal skills do not apply soul gain prevention",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物|||||玩家的瓦爾技能不套用停止獲得靈魂",
+      "key": "area contains 8 additional packs of corrupted vaal monsters|||||players' vaal skills do not apply soul gain prevention",
+      "key_zh": "區域含有額外 8 群已汙染瓦爾怪物|||||玩家的瓦爾技能不套用停止獲得靈魂",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasDelirium",
+      "template": "areas contain a mirror of delirium",
+      "template_zh": "此區域含有 1 個譫妄之鏡",
+      "key": "areas contain a mirror of delirium",
+      "key_zh": "此區域含有 1 個譫妄之鏡",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasDeliriumMaven",
+      "template": "areas contain a mirror of delirium",
+      "template_zh": "此區域含有 1 個譫妄之鏡",
+      "key": "areas contain a mirror of delirium",
+      "key_zh": "此區域含有 1 個譫妄之鏡",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitLifeLeechRate",
+      "template": "#% increased total recovery per second from life leech",
+      "template_zh": "增加 #% 生命偷取的每秒總恢復",
+      "key": "20% increased total recovery per second from life leech",
+      "key_zh": "增加 20% 生命偷取的每秒總恢復",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitManaLeechRate",
+      "template": "#% increased total recovery per second from mana leech",
+      "template_zh": "增加 #% 魔力偷取的每秒總恢復",
+      "key": "20% increased total recovery per second from mana leech",
+      "key_zh": "增加 20% 魔力偷取的每秒總恢復",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitAuraAreaOfEffect",
+      "template": "#% increased area of effect of aura skills",
+      "template_zh": "增加光環技能 #% 範圍效果",
+      "key": "(3-6)% increased area of effect of aura skills",
+      "key_zh": "增加光環技能 (3-6)% 範圍效果",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitLightRadius",
+      "template": "#% increased light radius",
+      "template_zh": "增加 #% 照亮範圍",
+      "key": "(3-6)% increased light radius",
+      "key_zh": "增加 (3-6)% 照亮範圍",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitReducedFreezeDuration_",
+      "template": "#% reduced freeze duration on you",
+      "template_zh": "減少 #% 你被冰凍的持續時間",
+      "key": "15% reduced freeze duration on you",
+      "key_zh": "減少 15% 你被冰凍的持續時間",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitChanceToAvoidPoison",
+      "template": "#% chance to avoid being poisoned",
+      "template_zh": "#% 機率避免被中毒",
+      "key": "15% chance to avoid being poisoned",
+      "key_zh": "15% 機率避免被中毒",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitReducedElementalReflect",
+      "template": "#% reduced reflected elemental damage taken",
+      "template_zh": "減少 #% 反射元素傷害",
+      "key": "10% reduced reflected elemental damage taken",
+      "key_zh": "減少 10% 反射元素傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitReducedPhysicalReflect",
+      "template": "#% reduced reflected physical damage taken",
+      "template_zh": "減少 #% 反射物理傷害",
+      "key": "10% reduced reflected physical damage taken",
+      "key_zh": "減少 10% 反射物理傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitFrenzyChargeDuration__",
+      "template": "#% increased frenzy charge duration",
+      "template_zh": "增加 #% 狂怒球持續時間",
+      "key": "10% increased frenzy charge duration",
+      "key_zh": "增加 10% 狂怒球持續時間",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitPowerChargeDuration",
+      "template": "#% increased power charge duration",
+      "template_zh": "增加 #% 暴擊球持續時間",
+      "key": "10% increased power charge duration",
+      "key_zh": "增加 10% 暴擊球持續時間",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelImplicitEnduranceChargeDuration",
+      "template": "#% increased endurance charge duration",
+      "template_zh": "增加 #% 耐力球持續時間",
+      "key": "10% increased endurance charge duration",
+      "key_zh": "增加 10% 耐力球持續時間",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "master"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "GainRandomChargeEvery6SecondsImplicitE2",
+      "template": "gain {} endurance, frenzy or power charges every 6 seconds",
+      "template_zh": "每 6 秒獲得 {} 顆耐力、狂怒或暴擊球",
+      "key": "gain {} endurance, frenzy or power charges every 6 seconds",
+      "key_zh": "每 6 秒獲得 {} 顆耐力、狂怒或暴擊球",
+      "types": [
+        "wand",
+        "wands"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MaximumPowerandEnduranceChargesImplicitE1",
+      "template": "{:+d} to maximum power charges and maximum endurance charges",
+      "template_zh": "{:+d} 最大暴擊球和耐力球數量",
+      "key": "{:+d} to maximum power charges and maximum endurance charges",
+      "key_zh": "{:+d} 最大暴擊球和耐力球數量",
+      "types": [
+        "staff",
+        "staves",
+        "warstaff"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ChanceToInflictScorchOnEnemyOnBlockImplicitE1",
+      "template": "scorch enemies when you block their damage",
+      "template_zh": "當你格擋敵人的傷害時，對他們造成焦灼",
+      "key": "scorch enemies when you block their damage",
+      "key_zh": "當你格擋敵人的傷害時，對他們造成焦灼",
+      "types": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ChanceToInflictBrittleOnEnemyOnBlockImplicitE1",
+      "template": "inflict brittle on enemies when you block their damage",
+      "template_zh": "當你格擋敵人的傷害時，對他們造成易碎",
+      "key": "inflict brittle on enemies when you block their damage",
+      "key_zh": "當你格擋敵人的傷害時，對他們造成易碎",
+      "types": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ChanceToInflictSapOnEnemyOnBlockImplicitE1",
+      "template": "sap enemies when you block their damage",
+      "template_zh": "當你格擋敵人的傷害時，對他們造成殘喘",
+      "key": "sap enemies when you block their damage",
+      "key_zh": "當你格擋敵人的傷害時，對他們造成殘喘",
+      "types": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    }
+  ]
+}

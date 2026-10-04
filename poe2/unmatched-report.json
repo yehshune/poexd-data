@@ -1,0 +1,2405 @@
+{
+  "gameVersion": "poe2",
+  "generatedAt": "2026-10-04T15:02:08.294Z",
+  "totalTiers": 3439,
+  "matchedCount": 3352,
+  "unmatchedCount": 87,
+  "matchRate": "97.5%",
+  "summaryByTemplate": [
+    {
+      "template": "擊中時有#%機率造成目眩",
+      "count": 3,
+      "affinities": [
+        "normal",
+        "desecrated"
+      ],
+      "sampleTypes": [
+        "jewel",
+        "emerald",
+        "gloves",
+        "gloves_str",
+        "gloves_dex"
+      ]
+    },
+    {
+      "template": "攻擊擊中時，有#%機率施加切割",
+      "count": 3,
+      "affinities": [
+        "normal",
+        "desecrated"
+      ],
+      "sampleTypes": [
+        "jewel",
+        "ruby",
+        "gloves",
+        "gloves_str",
+        "gloves_dex"
+      ]
+    },
+    {
+      "template": "增加#%怪物傷害",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "relic",
+        "relics",
+        "tapestry-relic",
+        "incense-relic"
+      ]
+    },
+    {
+      "template": "玩家增加#%移動速度",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "relic",
+        "relics",
+        "urn-relic",
+        "vase-relic"
+      ]
+    },
+    {
+      "template": "增加#%精魂保留效用",
+      "count": 3,
+      "affinities": [
+        "desecrated"
+      ],
+      "sampleTypes": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex"
+      ]
+    },
+    {
+      "template": "#至#點物理荊棘傷害",
+      "count": 3,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "增加#%斧傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "斧增加#%攻擊速度",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%匕首的暴擊率",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%匕首傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "匕首增加#%攻擊速度",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%鏈錘暴擊率",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%鏈錘傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%劍的傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "劍增加#%攻擊速度",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%陷阱傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%陷阱投擲速度",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%空手攻擊傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%空手攻擊速度",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "#%混沌持續傷害加成",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "#%冰冷持續傷害加成",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "#%火焰持續傷害加成",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "#%物理持續傷害加成",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "拾取元素灌注時，有#%機率獲得額外一個同類型的元素灌注",
+      "count": 2,
+      "affinities": [
+        "desecrated",
+        "bonded"
+      ],
+      "sampleTypes": [
+        "focus",
+        "foci",
+        "wand",
+        "wands",
+        "staff"
+      ]
+    },
+    {
+      "template": "格擋傷害的#%補償為魔力",
+      "count": 2,
+      "affinities": [
+        "socketable",
+        "bonded"
+      ],
+      "sampleTypes": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ]
+    },
+    {
+      "template": "裝填額外#發弩箭",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "crossbow",
+        "crossbows"
+      ]
+    },
+    {
+      "template": "擲彈技能有+#次冷卻使用次數",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "crossbow",
+        "crossbows"
+      ]
+    },
+    {
+      "template": "擲彈技能發射額外#個投射物",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "crossbow",
+        "crossbows"
+      ]
+    },
+    {
+      "template": "範圍內對冰冷和閃電傷害的增減\\n會改為套用至火焰傷害",
+      "count": 1,
+      "affinities": [
+        "liquid"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內對火焰和閃電傷害的增減\\n會改為套用至冰冷傷害",
+      "count": 1,
+      "affinities": [
+        "liquid"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內對冰冷和火焰傷害的增減\\n會改為套用至閃電傷害",
+      "count": 1,
+      "affinities": [
+        "liquid"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "{:+d}%最大品質",
+      "count": 1,
+      "affinities": [
+        "essence"
+      ],
+      "sampleTypes": [
+        "ring",
+        "rings",
+        "amulet",
+        "amulets"
+      ]
+    },
+    {
+      "template": "每秒回復#%生命",
+      "count": 1,
+      "affinities": [
+        "desecrated"
+      ],
+      "sampleTypes": [
+        "jewel",
+        "sapphire",
+        "ruby",
+        "emerald"
+      ]
+    },
+    {
+      "template": "擊殺時恢復#%魔力",
+      "count": 1,
+      "affinities": [
+        "desecrated"
+      ],
+      "sampleTypes": [
+        "ring",
+        "rings",
+        "amulet",
+        "amulets"
+      ]
+    },
+    {
+      "template": "擊中時施加缺血\\n缺血允許敵人被施加+#層腐化之血減益",
+      "count": 1,
+      "affinities": [
+        "breach_otherworldly"
+      ],
+      "sampleTypes": [
+        "amulet",
+        "amulets",
+        "ring",
+        "rings",
+        "belt"
+      ]
+    },
+    {
+      "template": "盛怒的固有損失延後#秒開始",
+      "count": 1,
+      "affinities": [
+        "berserking"
+      ],
+      "sampleTypes": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex"
+      ]
+    },
+    {
+      "template": "#護符欄位",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex"
+      ]
+    },
+    {
+      "template": "每15精魂增加#%移動速度，上限為40%。\\n除套用至衝刺的外其他移動速度詞墜將失效",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex"
+      ]
+    },
+    {
+      "template": "消耗2000魔力後開始充能能量護盾，\\n效果每2秒只能觸發一次",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "移動速度的增減同時套用到\\n能量護盾充能率",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex"
+      ]
+    },
+    {
+      "template": "獲得等同於所裝備護甲物品總力量需求#%的最大能量護盾",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex"
+      ]
+    },
+    {
+      "template": "裝備的物品中每鑲嵌一個符文，即獲得等同於#%傷害的額外隨機元素傷害",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "若你近期沒有偏斜擊中，\\n避免+#%來自偏斜擊中的傷害",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex"
+      ]
+    },
+    {
+      "template": "盟友擊中你標記的目標時獲得猛攻，持續#秒",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "升級插槽中的符文",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "claw",
+        "claws",
+        "dagger",
+        "daggers",
+        "wand"
+      ]
+    },
+    {
+      "template": "若你的符文保護近期被傷害\\n敵人擊中你的傷害很不幸",
+      "count": 1,
+      "affinities": [
+        "bonded"
+      ],
+      "sampleTypes": [
+        "sceptre",
+        "sceptres"
+      ]
+    },
+    {
+      "template": "你身上的易爆引爆時，你有#%機率重新獲得等量的易爆",
+      "count": 1,
+      "affinities": [
+        "bonded"
+      ],
+      "sampleTypes": [
+        "wand",
+        "wands"
+      ]
+    },
+    {
+      "template": "當鑲嵌至一件傳奇卡爾葛或艾茲麥物品時，摧毀該物品並創造一枚灌注該物品能力的符文",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "claw",
+        "claws",
+        "dagger",
+        "daggers",
+        "wand"
+      ]
+    },
+    {
+      "template": "你的攻擊暴擊時，加劇目標身上的流血",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex"
+      ]
+    },
+    {
+      "template": "格擋時威嚇敵人，持續#秒",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ]
+    },
+    {
+      "template": "增加#%招架傷害",
+      "count": 1,
+      "affinities": [
+        "bonded"
+      ],
+      "sampleTypes": [
+        "shield",
+        "bucklers"
+      ]
+    },
+    {
+      "template": "格擋時，會對敵人施加衰弱衰弱詛咒",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "shield",
+        "bucklers"
+      ]
+    },
+    {
+      "template": "增加#%投射物的格擋率",
+      "count": 1,
+      "affinities": [
+        "bonded"
+      ],
+      "sampleTypes": [
+        "shield",
+        "bucklers"
+      ]
+    },
+    {
+      "template": "攻擊不能造成流血",
+      "count": 1,
+      "affinities": [
+        "bonded"
+      ],
+      "sampleTypes": [
+        "talisman",
+        "talismans"
+      ]
+    },
+    {
+      "template": "每隔5秒替換：\\n承受#%更少擊中傷害\\n承受#%更少持續傷害",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex"
+      ]
+    },
+    {
+      "template": "擊中敵人時，在20秒內獲得等同於敵人強度的最大附加閃電傷害，最高總計#",
+      "count": 1,
+      "affinities": [
+        "socketable"
+      ],
+      "sampleTypes": [
+        "one-hand-mace",
+        "one_hand_maces"
+      ]
+    }
+  ],
+  "unmatchedDetails": [
+    {
+      "modId": "AdditionalAmmo2",
+      "template": "loads # additional bolts",
+      "template_zh": "裝填額外#發弩箭",
+      "key": "loads 2 additional bolts",
+      "key_zh": "裝填額外2發弩箭",
+      "types": [
+        "crossbow",
+        "crossbows"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "82"
+    },
+    {
+      "modId": "GrenadeSkillAdditionalCooldownUse2",
+      "template": "grenade skills have +# cooldown uses",
+      "template_zh": "擲彈技能有+#次冷卻使用次數",
+      "key": "grenade skills have +2 cooldown uses",
+      "key_zh": "擲彈技能有+2次冷卻使用次數",
+      "types": [
+        "crossbow",
+        "crossbows"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "81"
+    },
+    {
+      "modId": "GrenadeSkillAdditionalProjectile2",
+      "template": "grenade skills fire # additional projectiles",
+      "template_zh": "擲彈技能發射額外#個投射物",
+      "key": "grenade skills fire 2 additional projectiles",
+      "key_zh": "擲彈技能發射額外2個投射物",
+      "types": [
+        "crossbow",
+        "crossbows"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "81"
+    },
+    {
+      "modId": "JewelAxeDamage",
+      "template": "#% increased damage with axes",
+      "template_zh": "增加#%斧傷害",
+      "key": "(5-15)% increased damage with axes",
+      "key_zh": "增加(5-15)%斧傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelAxeSpeed",
+      "template": "#% increased attack speed with axes",
+      "template_zh": "斧增加#%攻擊速度",
+      "key": "(2-4)% increased attack speed with axes",
+      "key_zh": "斧增加(2-4)%攻擊速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelDaggerCriticalChance",
+      "template": "#% increased critical hit chance with daggers",
+      "template_zh": "增加#%匕首的暴擊率",
+      "key": "(6-16)% increased critical hit chance with daggers",
+      "key_zh": "增加(6-16)%匕首的暴擊率",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelDaggerDamage",
+      "template": "#% increased damage with daggers",
+      "template_zh": "增加#%匕首傷害",
+      "key": "(6-16)% increased damage with daggers",
+      "key_zh": "增加(6-16)%匕首傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelDaggerSpeed",
+      "template": "#% increased attack speed with daggers",
+      "template_zh": "匕首增加#%攻擊速度",
+      "key": "(2-4)% increased attack speed with daggers",
+      "key_zh": "匕首增加(2-4)%攻擊速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelDazeBuildup",
+      "template": "#% chance to daze on hit",
+      "template_zh": "擊中時有#%機率造成目眩",
+      "key": "(5-10)% chance to daze on hit",
+      "key_zh": "擊中時有(5-10)%機率造成目眩",
+      "types": [
+        "jewel",
+        "emerald"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelFlailCriticalChance",
+      "template": "#% increased critical hit chance with flails",
+      "template_zh": "增加#%鏈錘暴擊率",
+      "key": "(6-16)% increased critical hit chance with flails",
+      "key_zh": "增加(6-16)%鏈錘暴擊率",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelFlailDamage",
+      "template": "#% increased damage with flails",
+      "template_zh": "增加#%鏈錘傷害",
+      "key": "(6-16)% increased damage with flails",
+      "key_zh": "增加(6-16)%鏈錘傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelSwordDamage",
+      "template": "#% increased damage with swords",
+      "template_zh": "增加#%劍的傷害",
+      "key": "(6-16)% increased damage with swords",
+      "key_zh": "增加(6-16)%劍的傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelSwordSpeed",
+      "template": "#% increased attack speed with swords",
+      "template_zh": "劍增加#%攻擊速度",
+      "key": "(2-4)% increased attack speed with swords",
+      "key_zh": "劍增加(2-4)%攻擊速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelTrapDamage",
+      "template": "#% increased trap damage",
+      "template_zh": "增加#%陷阱傷害",
+      "key": "(6-16)% increased trap damage",
+      "key_zh": "增加(6-16)%陷阱傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelTrapThrowSpeed",
+      "template": "#% increased trap throwing speed",
+      "template_zh": "增加#%陷阱投擲速度",
+      "key": "(4-8)% increased trap throwing speed",
+      "key_zh": "增加(4-8)%陷阱投擲速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelUnarmedDamage",
+      "template": "#% increased damage with unarmed attacks",
+      "template_zh": "增加#%空手攻擊傷害",
+      "key": "(6-16)% increased damage with unarmed attacks",
+      "key_zh": "增加(6-16)%空手攻擊傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelUnarmedAttackSpeed",
+      "template": "#% increased unarmed attack speed",
+      "template_zh": "增加#%空手攻擊速度",
+      "key": "(2-4)% increased unarmed attack speed",
+      "key_zh": "增加(2-4)%空手攻擊速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelIncisionChance",
+      "template": "#% chance for attack hits to apply incision",
+      "template_zh": "攻擊擊中時，有#%機率施加切割",
+      "key": "(15-25)% chance for attack hits to apply incision",
+      "key_zh": "攻擊擊中時，有(15-25)%機率施加切割",
+      "types": [
+        "jewel",
+        "ruby"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusAxeDamage",
+      "template": "#% increased damage with axes",
+      "template_zh": "增加#%斧傷害",
+      "key": "(2-3)% increased damage with axes",
+      "key_zh": "增加(2-3)%斧傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusAxeSpeed",
+      "template": "#% increased attack speed with axes",
+      "template_zh": "斧增加#%攻擊速度",
+      "key": "(1-2)% increased attack speed with axes",
+      "key_zh": "斧增加(1-2)%攻擊速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusDaggerCriticalChance",
+      "template": "#% increased critical hit chance with daggers",
+      "template_zh": "增加#%匕首的暴擊率",
+      "key": "(3-7)% increased critical hit chance with daggers",
+      "key_zh": "增加(3-7)%匕首的暴擊率",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusDaggerDamage",
+      "template": "#% increased damage with daggers",
+      "template_zh": "增加#%匕首傷害",
+      "key": "(2-3)% increased damage with daggers",
+      "key_zh": "增加(2-3)%匕首傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusDaggerSpeed",
+      "template": "#% increased attack speed with daggers",
+      "template_zh": "匕首增加#%攻擊速度",
+      "key": "(1-2)% increased attack speed with daggers",
+      "key_zh": "匕首增加(1-2)%攻擊速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusDazeBuildup",
+      "template": "#% chance to daze on hit",
+      "template_zh": "擊中時有#%機率造成目眩",
+      "key": "1% chance to daze on hit",
+      "key_zh": "擊中時有1%機率造成目眩",
+      "types": [
+        "jewel",
+        "emerald"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusFlailCriticalChance",
+      "template": "#% increased critical hit chance with flails",
+      "template_zh": "增加#%鏈錘暴擊率",
+      "key": "(3-7)% increased critical hit chance with flails",
+      "key_zh": "增加(3-7)%鏈錘暴擊率",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusFlailDamage",
+      "template": "#% increased damage with flails",
+      "template_zh": "增加#%鏈錘傷害",
+      "key": "(1-2)% increased damage with flails",
+      "key_zh": "增加(1-2)%鏈錘傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusSwordDamage",
+      "template": "#% increased damage with swords",
+      "template_zh": "增加#%劍的傷害",
+      "key": "(1-2)% increased damage with swords",
+      "key_zh": "增加(1-2)%劍的傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusSwordSpeed",
+      "template": "#% increased attack speed with swords",
+      "template_zh": "劍增加#%攻擊速度",
+      "key": "(1-2)% increased attack speed with swords",
+      "key_zh": "劍增加(1-2)%攻擊速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusTrapDamage",
+      "template": "#% increased trap damage",
+      "template_zh": "增加#%陷阱傷害",
+      "key": "(1-2)% increased trap damage",
+      "key_zh": "增加(1-2)%陷阱傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusTrapThrowSpeed",
+      "template": "#% increased trap throwing speed",
+      "template_zh": "增加#%陷阱投擲速度",
+      "key": "(2-4)% increased trap throwing speed",
+      "key_zh": "增加(2-4)%陷阱投擲速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusUnarmedDamage",
+      "template": "#% increased damage with unarmed attacks",
+      "template_zh": "增加#%空手攻擊傷害",
+      "key": "(1-2)% increased damage with unarmed attacks",
+      "key_zh": "增加(1-2)%空手攻擊傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusUnarmedAttackSpeed",
+      "template": "#% increased unarmed attack speed",
+      "template_zh": "增加#%空手攻擊速度",
+      "key": "(1-2)% increased unarmed attack speed",
+      "key_zh": "增加(1-2)%空手攻擊速度",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusIncisionChance",
+      "template": "#% chance for attack hits to apply incision",
+      "template_zh": "攻擊擊中時，有#%機率施加切割",
+      "key": "(3-5)% chance for attack hits to apply incision",
+      "key_zh": "攻擊擊中時，有(3-5)%機率施加切割",
+      "types": [
+        "jewel",
+        "ruby"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusIncLightningColdToFire",
+      "template": "increases and reductions to\\n cold and lightning damage in radius are transformed to apply to fire damage",
+      "template_zh": "範圍內對冰冷和閃電傷害的增減\\n會改為套用至火焰傷害",
+      "key": "increases and reductions to\\n cold and lightning damage in radius are transformed to apply to fire damage",
+      "key_zh": "範圍內對冰冷和閃電傷害的增減\\n會改為套用至火焰傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "liquid"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusIncLightningFireToCold",
+      "template": "increases and reductions to\\n fire and lightning damage in radius are transformed to apply to cold damage",
+      "template_zh": "範圍內對火焰和閃電傷害的增減\\n會改為套用至冰冷傷害",
+      "key": "increases and reductions to\\n fire and lightning damage in radius are transformed to apply to cold damage",
+      "key_zh": "範圍內對火焰和閃電傷害的增減\\n會改為套用至冰冷傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "liquid"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusIncColdFreToLightning",
+      "template": "increases and reductions to\\n cold and fire damage in radius are transformed to apply to lightning damage",
+      "template_zh": "範圍內對冰冷和火焰傷害的增減\\n會改為套用至閃電傷害",
+      "key": "increases and reductions to\\n cold and fire damage in radius are transformed to apply to lightning damage",
+      "key_zh": "範圍內對冰冷和火焰傷害的增減\\n會改為套用至閃電傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "liquid"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EssenceBreach",
+      "template": "{:+d}% to maximum quality",
+      "template_zh": "{:+d}%最大品質",
+      "key": "{:+d}% to maximum quality",
+      "key_zh": "{:+d}%最大品質",
+      "types": [
+        "ring",
+        "rings",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "essence"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ChaosNonAilmentDamageOverTimeMultiplierUber1",
+      "template": "#% to chaos damage over time multiplier",
+      "template_zh": "#%混沌持續傷害加成",
+      "key": "+(11-15)% to chaos damage over time multiplier",
+      "key_zh": "+(11-15)%混沌持續傷害加成",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "ChaosNonAilmentDamageOverTimeMultiplierUber2",
+      "template": "#% to chaos damage over time multiplier",
+      "template_zh": "#%混沌持續傷害加成",
+      "key": "+(16-20)% to chaos damage over time multiplier",
+      "key_zh": "+(16-20)%混沌持續傷害加成",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "80"
+    },
+    {
+      "modId": "ColdDamageOverTimeMultiplierUber1",
+      "template": "#% to cold damage over time multiplier",
+      "template_zh": "#%冰冷持續傷害加成",
+      "key": "+(11-15)% to cold damage over time multiplier",
+      "key_zh": "+(11-15)%冰冷持續傷害加成",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "ColdDamageOverTimeMultiplierUber2_",
+      "template": "#% to cold damage over time multiplier",
+      "template_zh": "#%冰冷持續傷害加成",
+      "key": "+(16-20)% to cold damage over time multiplier",
+      "key_zh": "+(16-20)%冰冷持續傷害加成",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "80"
+    },
+    {
+      "modId": "FireDamageOverTimeMultiplierUber1___",
+      "template": "#% to fire damage over time multiplier",
+      "template_zh": "#%火焰持續傷害加成",
+      "key": "+(11-15)% to fire damage over time multiplier",
+      "key_zh": "+(11-15)%火焰持續傷害加成",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "FireDamageOverTimeMultiplierUber2",
+      "template": "#% to fire damage over time multiplier",
+      "template_zh": "#%火焰持續傷害加成",
+      "key": "+(16-20)% to fire damage over time multiplier",
+      "key_zh": "+(16-20)%火焰持續傷害加成",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "80"
+    },
+    {
+      "modId": "PhysicalDamageOverTimeMultiplierUber1",
+      "template": "#% to physical damage over time multiplier",
+      "template_zh": "#%物理持續傷害加成",
+      "key": "+(11-15)% to physical damage over time multiplier",
+      "key_zh": "+(11-15)%物理持續傷害加成",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "PhysicalDamageOverTimeMultiplierUber2__",
+      "template": "#% to physical damage over time multiplier",
+      "template_zh": "#%物理持續傷害加成",
+      "key": "+(16-20)% to physical damage over time multiplier",
+      "key_zh": "+(16-20)%物理持續傷害加成",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "80"
+    },
+    {
+      "modId": "SanctumMonstersReducedDamage1",
+      "template": "#% increased monster damage",
+      "template_zh": "增加#%怪物傷害",
+      "key": "-6% increased monster damage",
+      "key_zh": "增加-6%怪物傷害",
+      "types": [
+        "relic",
+        "relics",
+        "tapestry-relic",
+        "incense-relic"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SanctumMonstersReducedDamage2",
+      "template": "#% increased monster damage",
+      "template_zh": "增加#%怪物傷害",
+      "key": "(-8--7)% increased monster damage",
+      "key_zh": "增加(-8--7)%怪物傷害",
+      "types": [
+        "relic",
+        "relics",
+        "tapestry-relic",
+        "incense-relic"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "56"
+    },
+    {
+      "modId": "SanctumMonstersReducedDamage3",
+      "template": "#% increased monster damage",
+      "template_zh": "增加#%怪物傷害",
+      "key": "(-12--9)% increased monster damage",
+      "key_zh": "增加(-12--9)%怪物傷害",
+      "types": [
+        "relic",
+        "relics",
+        "tapestry-relic",
+        "incense-relic"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "77"
+    },
+    {
+      "modId": "SanctumMovementSpeed1",
+      "template": "players have #% increased movement speed",
+      "template_zh": "玩家增加#%移動速度",
+      "key": "players have (3-4)% increased movement speed",
+      "key_zh": "玩家增加(3-4)%移動速度",
+      "types": [
+        "relic",
+        "relics",
+        "urn-relic",
+        "vase-relic"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SanctumMovementSpeed2",
+      "template": "players have #% increased movement speed",
+      "template_zh": "玩家增加#%移動速度",
+      "key": "players have (5-6)% increased movement speed",
+      "key_zh": "玩家增加(5-6)%移動速度",
+      "types": [
+        "relic",
+        "relics",
+        "urn-relic",
+        "vase-relic"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "55"
+    },
+    {
+      "modId": "SanctumMovementSpeed3",
+      "template": "players have #% increased movement speed",
+      "template_zh": "玩家增加#%移動速度",
+      "key": "players have (7-10)% increased movement speed",
+      "key_zh": "玩家增加(7-10)%移動速度",
+      "types": [
+        "relic",
+        "relics",
+        "urn-relic",
+        "vase-relic"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "78"
+    },
+    {
+      "modId": "AbyssModRadiusJewelPrefixRegeneratePercentLifePerSecond",
+      "template": "regenerate #% of maximum life per second",
+      "template_zh": "每秒回復#%生命",
+      "key": "regenerate (2-4)% of maximum life per second",
+      "key_zh": "每秒回復(2-4)%生命",
+      "types": [
+        "jewel",
+        "sapphire",
+        "ruby",
+        "emerald"
+      ],
+      "affinities": [
+        "desecrated"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AbyssModHelmAmanamuSuffixSpiritReservationEfficiency",
+      "template": "#% increased spirit reservation efficiency",
+      "template_zh": "增加#%精魂保留效用",
+      "key": "(4-8)% increased spirit reservation efficiency",
+      "key_zh": "增加(4-8)%精魂保留效用",
+      "types": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int"
+      ],
+      "affinities": [
+        "desecrated"
+      ],
+      "level": "65"
+    },
+    {
+      "modId": "AbyssModGlovesUlamanSuffixIncisionChance",
+      "template": "#% chance for attack hits to apply incision",
+      "template_zh": "攻擊擊中時，有#%機率施加切割",
+      "key": "(15-25)% chance for attack hits to apply incision",
+      "key_zh": "攻擊擊中時，有(15-25)%機率施加切割",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int"
+      ],
+      "affinities": [
+        "desecrated"
+      ],
+      "level": "65"
+    },
+    {
+      "modId": "AbyssModGlovesAmanamuSuffixDazeChance",
+      "template": "#% chance to daze on hit",
+      "template_zh": "擊中時有#%機率造成目眩",
+      "key": "(10-20)% chance to daze on hit",
+      "key_zh": "擊中時有(10-20)%機率造成目眩",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int"
+      ],
+      "affinities": [
+        "desecrated"
+      ],
+      "level": "65"
+    },
+    {
+      "modId": "AbyssModBodyArmourAmanamuSuffixSpiritReservationEfficiency",
+      "template": "#% increased spirit reservation efficiency",
+      "template_zh": "增加#%精魂保留效用",
+      "key": "(6-12)% increased spirit reservation efficiency",
+      "key_zh": "增加(6-12)%精魂保留效用",
+      "types": [
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int"
+      ],
+      "affinities": [
+        "desecrated"
+      ],
+      "level": "65"
+    },
+    {
+      "modId": "AbyssModFocusKurgalSuffixChanceForAdditionalInfusion",
+      "template": "#% chance when collecting an elemental infusion to gain an\\nadditional elemental infusion of the same type",
+      "template_zh": "拾取元素灌注時，有#%機率獲得額外一個同類型的元素灌注",
+      "key": "(15-25)% chance when collecting an elemental infusion to gain an\\nadditional elemental infusion of the same type",
+      "key_zh": "拾取元素灌注時，有(15-25)%機率獲得額外一個同類型的元素灌注",
+      "types": [
+        "focus",
+        "foci"
+      ],
+      "affinities": [
+        "desecrated"
+      ],
+      "level": "65"
+    },
+    {
+      "modId": "AbyssModRingAmuletKurgalSuffixRecoverPercentMaxManaOnKill",
+      "template": "recover #% of maximum mana on kill",
+      "template_zh": "擊殺時恢復#%魔力",
+      "key": "recover (2-3)% of maximum mana on kill",
+      "key_zh": "擊殺時恢復(2-3)%魔力",
+      "types": [
+        "ring",
+        "rings",
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "desecrated"
+      ],
+      "level": "65"
+    },
+    {
+      "modId": "AbyssModGenWeaponAmanamuSuffixSpiritReservationEfficiency",
+      "template": "#% increased spirit reservation efficiency",
+      "template_zh": "增加#%精魂保留效用",
+      "key": "(5-10)% increased spirit reservation efficiency",
+      "key_zh": "增加(5-10)%精魂保留效用",
+      "types": [
+        "claw",
+        "claws",
+        "dagger",
+        "daggers",
+        "wand",
+        "wands",
+        "one-hand-sword",
+        "one_hand_swords",
+        "one-hand-axe",
+        "one_hand_axes",
+        "one-hand-mace",
+        "one_hand_maces",
+        "sceptre",
+        "sceptres",
+        "spear",
+        "spears",
+        "flail",
+        "flails",
+        "bow",
+        "bows",
+        "staff",
+        "staves",
+        "two-hand-sword",
+        "two_hand_swords",
+        "two-hand-axe",
+        "two_hand_axes",
+        "two-hand-mace",
+        "two_hand_maces",
+        "quarterstaff",
+        "quarterstaves",
+        "crossbow",
+        "crossbows",
+        "talisman",
+        "talismans"
+      ],
+      "affinities": [
+        "desecrated"
+      ],
+      "level": "65"
+    },
+    {
+      "modId": "GenesisTreeAmuletAnaemiaOnHit",
+      "template": "inflict anaemia on hit\\nanaemia allows +# corrupted blood debuffs to be inflicted on enemies",
+      "template_zh": "擊中時施加缺血\\n缺血允許敵人被施加+#層腐化之血減益",
+      "key": "inflict anaemia on hit\\nanaemia allows +(2-3) corrupted blood debuffs to be inflicted on enemies",
+      "key_zh": "擊中時施加缺血\\n缺血允許敵人被施加+(2-3)層腐化之血減益",
+      "types": [
+        "amulet",
+        "amulets",
+        "ring",
+        "rings",
+        "belt",
+        "belts"
+      ],
+      "affinities": [
+        "breach_otherworldly"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "BerserkInfluenceRageLossDelay2",
+      "template": "inherent rage loss starts # seconds later",
+      "template_zh": "盛怒的固有損失延後#秒開始",
+      "key": "inherent rage loss starts (3000-5000) seconds later",
+      "key_zh": "盛怒的固有損失延後(3000-5000)秒開始",
+      "types": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int"
+      ],
+      "affinities": [
+        "berserking"
+      ],
+      "level": "75"
+    },
+    {
+      "modId": "SoulCore_210_socketable",
+      "template": "# to # physical thorns damage",
+      "template_zh": "#至#點物理荊棘傷害",
+      "key": "6 to 9 physical thorns damage",
+      "key_zh": "6至9點物理荊棘傷害",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex",
+        "boots_str_int",
+        "boots_dex_int",
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int",
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int",
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_212_socketable",
+      "template": "# to # physical thorns damage",
+      "template_zh": "#至#點物理荊棘傷害",
+      "key": "14 to 21 physical thorns damage",
+      "key_zh": "14至21點物理荊棘傷害",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex",
+        "boots_str_int",
+        "boots_dex_int",
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int",
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int",
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_214_socketable",
+      "template": "# to # physical thorns damage",
+      "template_zh": "#至#點物理荊棘傷害",
+      "key": "31 to 52 physical thorns damage",
+      "key_zh": "31至52點物理荊棘傷害",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex",
+        "boots_str_int",
+        "boots_dex_int",
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int",
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int",
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_239_bonded",
+      "template": "#% chance when collecting an elemental infusion to gain an\\nadditional elemental infusion of the same type",
+      "template_zh": "拾取元素灌注時，有#%機率獲得額外一個同類型的元素灌注",
+      "key": "12% chance when collecting an elemental infusion to gain an\\nadditional elemental infusion of the same type",
+      "key_zh": "拾取元素灌注時，有12%機率獲得額外一個同類型的元素灌注",
+      "types": [
+        "wand",
+        "wands",
+        "staff",
+        "staves"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_270_socketable",
+      "template": "# charm slot",
+      "template_zh": "#護符欄位",
+      "key": "+1 charm slot",
+      "key_zh": "+1護符欄位",
+      "types": [
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_336_socketable",
+      "template": "#% increased movement speed per 15 spirit, up to a maximum of 40%\\nother modifiers to movement speed except for sprinting do not apply",
+      "template_zh": "每15精魂增加#%移動速度，上限為40%。\\n除套用至衝刺的外其他移動速度詞墜將失效",
+      "key": "1% increased movement speed per 15 spirit, up to a maximum of 40%\\nother modifiers to movement speed except for sprinting do not apply",
+      "key_zh": "每15精魂增加1%移動速度，上限為40%。\\n除套用至衝刺的外其他移動速度詞墜將失效",
+      "types": [
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex",
+        "boots_str_int",
+        "boots_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_353_socketable",
+      "template": "energy shield recharge starts after spending a total of\\n 2000 mana, no more than once every 2 seconds",
+      "template_zh": "消耗2000魔力後開始充能能量護盾，\\n效果每2秒只能觸發一次",
+      "key": "energy shield recharge starts after spending a total of\\n 2000 mana, no more than once every 2 seconds",
+      "key_zh": "消耗2000魔力後開始充能能量護盾，\\n效果每2秒只能觸發一次",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_354_socketable",
+      "template": "increases and reductions to movement speed also\\n apply to energy shield recharge rate",
+      "template_zh": "移動速度的增減同時套用到\\n能量護盾充能率",
+      "key": "increases and reductions to movement speed also\\n apply to energy shield recharge rate",
+      "key_zh": "移動速度的增減同時套用到\\n能量護盾充能率",
+      "types": [
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex",
+        "boots_str_int",
+        "boots_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_359_socketable",
+      "template": "gain maximum energy shield equal to #% of total\\nstrength requirements of equipped armour items",
+      "template_zh": "獲得等同於所裝備護甲物品總力量需求#%的最大能量護盾",
+      "key": "gain maximum energy shield equal to 50% of total\\nstrength requirements of equipped armour items",
+      "key_zh": "獲得等同於所裝備護甲物品總力量需求50%的最大能量護盾",
+      "types": [
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_362_socketable",
+      "template": "gain #% of damage as extra damage of a random element per\\nrune socketed in equipped items",
+      "template_zh": "裝備的物品中每鑲嵌一個符文，即獲得等同於#%傷害的額外隨機元素傷害",
+      "key": "gain 1% of damage as extra damage of a random element per\\nrune socketed in equipped items",
+      "key_zh": "裝備的物品中每鑲嵌一個符文，即獲得等同於1%傷害的額外隨機元素傷害",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_371_socketable",
+      "template": "prevent +#% of damage from deflected hits if you've\\ndeflected no hits recently",
+      "template_zh": "若你近期沒有偏斜擊中，\\n避免+#%來自偏斜擊中的傷害",
+      "key": "prevent +5% of damage from deflected hits if you've\\ndeflected no hits recently",
+      "key_zh": "若你近期沒有偏斜擊中，\\n避免+5%來自偏斜擊中的傷害",
+      "types": [
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_374_socketable",
+      "template": "companions gain onslaught for # seconds on hitting your marked targets",
+      "template_zh": "盟友擊中你標記的目標時獲得猛攻，持續#秒",
+      "key": "companions gain onslaught for 4000 seconds on hitting your marked targets",
+      "key_zh": "盟友擊中你標記的目標時獲得猛攻，持續4000秒",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_382_socketable",
+      "template": "upgrades a socketed rune",
+      "template_zh": "升級插槽中的符文",
+      "key": "upgrades a socketed rune",
+      "key_zh": "升級插槽中的符文",
+      "types": [
+        "claw",
+        "claws",
+        "dagger",
+        "daggers",
+        "wand",
+        "wands",
+        "one-hand-sword",
+        "one_hand_swords",
+        "one-hand-axe",
+        "one_hand_axes",
+        "one-hand-mace",
+        "one_hand_maces",
+        "sceptre",
+        "sceptres",
+        "spear",
+        "spears",
+        "flail",
+        "flails",
+        "bow",
+        "bows",
+        "staff",
+        "staves",
+        "two-hand-sword",
+        "two_hand_swords",
+        "two-hand-axe",
+        "two_hand_axes",
+        "two-hand-mace",
+        "two_hand_maces",
+        "quarterstaff",
+        "quarterstaves",
+        "crossbow",
+        "crossbows",
+        "talisman",
+        "talismans",
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex",
+        "boots_str_int",
+        "boots_dex_int",
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int",
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int",
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_406_bonded",
+      "template": "damage of enemies hitting you is unlucky if\\nyour runic ward has been damaged recently",
+      "template_zh": "若你的符文保護近期被傷害\\n敵人擊中你的傷害很不幸",
+      "key": "damage of enemies hitting you is unlucky if\\nyour runic ward has been damaged recently",
+      "key_zh": "若你的符文保護近期被傷害\\n敵人擊中你的傷害很不幸",
+      "types": [
+        "sceptre",
+        "sceptres"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_419_bonded",
+      "template": "#% chance that when volatility on you explodes, you regain an equivalent amount of volatility",
+      "template_zh": "你身上的易爆引爆時，你有#%機率重新獲得等量的易爆",
+      "key": "15% chance that when volatility on you explodes, you regain an equivalent amount of volatility",
+      "key_zh": "你身上的易爆引爆時，你有15%機率重新獲得等量的易爆",
+      "types": [
+        "wand",
+        "wands"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_434_socketable",
+      "template": "when socketed into a unique kalguuran or ezomyte item, destroys the item to create a rune imbued with that item's power",
+      "template_zh": "當鑲嵌至一件傳奇卡爾葛或艾茲麥物品時，摧毀該物品並創造一枚灌注該物品能力的符文",
+      "key": "when socketed into a unique kalguuran or ezomyte item, destroys the item to create a rune imbued with that item's power",
+      "key_zh": "當鑲嵌至一件傳奇卡爾葛或艾茲麥物品時，摧毀該物品並創造一枚灌注該物品能力的符文",
+      "types": [
+        "claw",
+        "claws",
+        "dagger",
+        "daggers",
+        "wand",
+        "wands",
+        "one-hand-sword",
+        "one_hand_swords",
+        "one-hand-axe",
+        "one_hand_axes",
+        "one-hand-mace",
+        "one_hand_maces",
+        "sceptre",
+        "sceptres",
+        "spear",
+        "spears",
+        "flail",
+        "flails",
+        "bow",
+        "bows",
+        "staff",
+        "staves",
+        "two-hand-sword",
+        "two_hand_swords",
+        "two-hand-axe",
+        "two_hand_axes",
+        "two-hand-mace",
+        "two_hand_maces",
+        "quarterstaff",
+        "quarterstaves",
+        "crossbow",
+        "crossbows",
+        "talisman",
+        "talismans",
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int",
+        "boots",
+        "boots_str",
+        "boots_dex",
+        "boots_int",
+        "boots_str_dex",
+        "boots_str_int",
+        "boots_dex_int",
+        "body-armour",
+        "body_armours_str",
+        "body_armours_dex",
+        "body_armours_int",
+        "body_armours_str_dex",
+        "body_armours_str_int",
+        "body_armours_dex_int",
+        "body_armours_str_dex_int",
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int",
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_481_socketable",
+      "template": "aggravate bleeding on targets you critically hit with attacks",
+      "template_zh": "你的攻擊暴擊時，加劇目標身上的流血",
+      "key": "aggravate bleeding on targets you critically hit with attacks",
+      "key_zh": "你的攻擊暴擊時，加劇目標身上的流血",
+      "types": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_494_socketable",
+      "template": "intimidate enemies on block for # seconds",
+      "template_zh": "格擋時威嚇敵人，持續#秒",
+      "key": "intimidate enemies on block for 8000 seconds",
+      "key_zh": "格擋時威嚇敵人，持續8000秒",
+      "types": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_496_socketable",
+      "template": "#% of damage blocked is recouped as mana",
+      "template_zh": "格擋傷害的#%補償為魔力",
+      "key": "30% of damage blocked is recouped as mana",
+      "key_zh": "格擋傷害的30%補償為魔力",
+      "types": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_496_bonded",
+      "template": "#% of damage blocked is recouped as mana",
+      "template_zh": "格擋傷害的#%補償為魔力",
+      "key": "20% of damage blocked is recouped as mana",
+      "key_zh": "格擋傷害的20%補償為魔力",
+      "types": [
+        "shield",
+        "shields_str",
+        "shields_str_dex",
+        "shields_str_int",
+        "bucklers"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_498_bonded",
+      "template": "#% increased parry damage",
+      "template_zh": "增加#%招架傷害",
+      "key": "50% increased parry damage",
+      "key_zh": "增加50%招架傷害",
+      "types": [
+        "shield",
+        "bucklers"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_499_socketable",
+      "template": "curse enemies with enfeeble on block",
+      "template_zh": "格擋時，會對敵人施加衰弱衰弱詛咒",
+      "key": "curse enemies with enfeeble on block",
+      "key_zh": "格擋時，會對敵人施加衰弱衰弱詛咒",
+      "types": [
+        "shield",
+        "bucklers"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_499_bonded",
+      "template": "#% increased block chance against projectiles",
+      "template_zh": "增加#%投射物的格擋率",
+      "key": "100% increased block chance against projectiles",
+      "key_zh": "增加100%投射物的格擋率",
+      "types": [
+        "shield",
+        "bucklers"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_518_bonded",
+      "template": "attacks cannot cause bleeding",
+      "template_zh": "攻擊不能造成流血",
+      "key": "attacks cannot cause bleeding",
+      "key_zh": "攻擊不能造成流血",
+      "types": [
+        "talisman",
+        "talismans"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_520_socketable",
+      "template": "alternating every 5 seconds:\\ntake #% less damage from hits\\ntake #% less damage over time",
+      "template_zh": "每隔5秒替換：\\n承受#%更少擊中傷害\\n承受#%更少持續傷害",
+      "key": "alternating every 5 seconds:\\ntake 20% less damage from hits\\ntake 20% less damage over time",
+      "key_zh": "每隔5秒替換：\\n承受20%更少擊中傷害\\n承受20%更少持續傷害",
+      "types": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_521_socketable",
+      "template": "on hitting an enemy, gains maximum added lightning damage equal to\\nthe enemy's power for 20 seconds, up to a total of #",
+      "template_zh": "擊中敵人時，在20秒內獲得等同於敵人強度的最大附加閃電傷害，最高總計#",
+      "key": "on hitting an enemy, gains maximum added lightning damage equal to\\nthe enemy's power for 20 seconds, up to a total of 120",
+      "key_zh": "擊中敵人時，在20秒內獲得等同於敵人強度的最大附加閃電傷害，最高總計120",
+      "types": [
+        "one-hand-mace",
+        "one_hand_maces"
+      ],
+      "affinities": [
+        "socketable"
+      ],
+      "level": "1"
+    }
+  ]
+}
