@@ -1,0 +1,30 @@
+{
+  "name": "poexd-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsx src/index.ts all",
+    "build:atlas": "tsx src/index.ts atlas",
+    "build:all": "tsx src/index.ts all"
+  },
+  "keywords": [],
+  "author": "yehshune",
+  "license": "MIT",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.14.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^26.6.4",
+    "pathofexile-dat": "^15.2.0",
+    "pathofexile-dat-schema": "^8.0.0",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
