@@ -1,10 +1,10 @@
 {
   "gameVersion": "poe1",
-  "generatedAt": "2026-10-04T15:02:10.245Z",
+  "generatedAt": "2026-10-04T16:16:07.084Z",
   "totalTiers": 3560,
-  "matchedCount": 3411,
-  "unmatchedCount": 149,
-  "matchRate": "95.8%",
+  "matchedCount": 3385,
+  "unmatchedCount": 175,
+  "matchRate": "95.1%",
   "summaryByTemplate": [
     {
       "template": "#% 格擋率",
@@ -24,6 +24,31 @@
       ],
       "sampleTypes": [
         "jewel"
+      ]
+    },
+    {
+      "template": "附加 # 至 # 冰冷傷害|||||你的擊中將冰冷抗性視為比實際值高 #%",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex"
+      ]
+    },
+    {
+      "template": "#% 更少持續時間|||||效果持續時間免疫點燃\\n使用時移除燃燒狀態",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "flask",
+        "utility-flask"
       ]
     },
     {
@@ -147,6 +172,16 @@
       ]
     },
     {
+      "template": "地圖含有 # 個額外的保險箱|||||區域內的保險箱已被腐化|||||區域內的保險箱最低稀有度為稀有等級",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
       "template": "增加 #% 魔法怪物群大小",
       "count": 2,
       "affinities": [
@@ -158,6 +193,16 @@
     },
     {
       "template": "區域含有額外 # 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "地圖含有 1 個額外的保險箱|||||保險箱的怪物受到激怒效果影響|||||保險箱怪物增加 #% 掉落物品數量",
       "count": 2,
       "affinities": [
         "normal"
@@ -424,6 +469,28 @@
       ],
       "sampleTypes": [
         "jewel"
+      ]
+    },
+    {
+      "template": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "ring",
+        "rings"
+      ]
+    },
+    {
+      "template": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變|||||增加 #% 變動詞綴大小",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "amulet",
+        "amulets"
       ]
     },
     {
@@ -839,7 +906,37 @@
       ]
     },
     {
+      "template": "傳奇頭目增加 #% 傷害|||||地圖有 #% 品質",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "傳奇頭目增加 #% 生命|||||該地圖的品質加成將同時套用在掉落物品稀有度上",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
       "template": "此區域吸引人",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有額外#位盜賊流亡者|||||盜賊流亡者所造成傷害增加 #%|||||盜賊流亡者額外掉落 # 顆珠寶|||||盜賊流亡者生命增加 #%",
       "count": 1,
       "affinities": [
         "normal"
@@ -869,6 +966,16 @@
       ]
     },
     {
+      "template": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
       "template": "此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕",
       "count": 1,
       "affinities": [
@@ -879,7 +986,67 @@
       ]
     },
     {
+      "template": "此區域含 1 個額外深淵|||||區域內含有深淵",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
       "template": "此區域含 # 個額外深淵|||||區域內含有深淵",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有 1 個額外漆黑神殿|||||神殿持續時間增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有 1 個額外神殿|||||區域含有 1 個額外漆黑神殿|||||神殿持續時間增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有 1 個額外共振神殿|||||神殿持續時間增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "區域含有 1 個額外神殿|||||區域含有 1 個額外共振神殿|||||神殿持續時間增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "被精髓囚禁的怪物有 #% 機率含有 1 個遺忘的污染器皿|||||區域含有 # 個額外禁錮怪物",
       "count": 1,
       "affinities": [
         "normal"
@@ -1080,6 +1247,28 @@
         "staff",
         "staves",
         "warstaff"
+      ]
+    },
+    {
+      "template": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變|||||增加 #% 前綴大小",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "ring",
+        "rings"
+      ]
+    },
+    {
+      "template": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變|||||增加 #% 後綴大小",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "ring",
+        "rings"
       ]
     },
     {
@@ -1962,6 +2151,34 @@
       "level": "1"
     },
     {
+      "modId": "MapAtlasMapsHave20PercentQuality",
+      "template": "unique boss deals #% increased damage|||||map has #% quality",
+      "template_zh": "傳奇頭目增加 #% 傷害|||||地圖有 #% 品質",
+      "key": "unique boss deals 20% increased damage|||||map has 20% quality",
+      "key_zh": "傳奇頭目增加 20% 傷害|||||地圖有 20% 品質",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasMapQualityBonusAlsoAppliesToRarity",
+      "template": "unique boss has #% increased life|||||this map's quality also applies to rarity of items found",
+      "template_zh": "傳奇頭目增加 #% 生命|||||該地圖的品質加成將同時套用在掉落物品稀有度上",
+      "key": "unique boss has 20% increased life|||||this map's quality also applies to rarity of items found",
+      "key_zh": "傳奇頭目增加 20% 生命|||||該地圖的品質加成將同時套用在掉落物品稀有度上",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "MapAtlasFishy",
       "template": "area is alluring",
       "template_zh": "此區域吸引人",
@@ -2060,6 +2277,34 @@
       "level": "1"
     },
     {
+      "modId": "MapAtlasStrongboxesAreCorruptedAndUnided2_",
+      "template": "area contains # additional strongboxes|||||strongboxes in area are corrupted|||||strongboxes in area are at least rare",
+      "template_zh": "地圖含有 # 個額外的保險箱|||||區域內的保險箱已被腐化|||||區域內的保險箱最低稀有度為稀有等級",
+      "key": "area contains 2 additional strongboxes|||||strongboxes in area are corrupted|||||strongboxes in area are at least rare",
+      "key_zh": "地圖含有 2 個額外的保險箱|||||區域內的保險箱已被腐化|||||區域內的保險箱最低稀有度為稀有等級",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasStrongboxesAreCorruptedAndUnidedMaven_",
+      "template": "area contains # additional strongboxes|||||strongboxes in area are corrupted|||||strongboxes in area are at least rare",
+      "template_zh": "地圖含有 # 個額外的保險箱|||||區域內的保險箱已被腐化|||||區域內的保險箱最低稀有度為稀有等級",
+      "key": "area contains 3 additional strongboxes|||||strongboxes in area are corrupted|||||strongboxes in area are at least rare",
+      "key_zh": "地圖含有 3 個額外的保險箱|||||區域內的保險箱已被腐化|||||區域內的保險箱最低稀有度為稀有等級",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "MapAtlasMagicPackSize3",
       "template": "#% increased magic pack size",
       "template_zh": "增加 #% 魔法怪物群大小",
@@ -2088,6 +2333,20 @@
       "level": "1"
     },
     {
+      "modId": "MapAtlasRogueExilesDamageAndDropAdditionalJewels",
+      "template": "area is inhabited by # additional rogue exiles|||||rogue exiles deal #% increased damage|||||rogue exiles drop # additional jewels|||||rogue exiles have #% increased maximum life",
+      "template_zh": "區域含有額外#位盜賊流亡者|||||盜賊流亡者所造成傷害增加 #%|||||盜賊流亡者額外掉落 # 顆珠寶|||||盜賊流亡者生命增加 #%",
+      "key": "area is inhabited by 2 additional rogue exiles|||||rogue exiles deal 20% increased damage|||||rogue exiles drop 2 additional jewels|||||rogue exiles have 20% increased maximum life",
+      "key_zh": "區域含有額外2位盜賊流亡者|||||盜賊流亡者所造成傷害增加 20%|||||盜賊流亡者額外掉落 2 顆珠寶|||||盜賊流亡者生命增加 20%",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "MapAtlasReducedReflectedDamageTakenMirroredRares3",
       "template": "area contains # additional packs with mirrored rare monsters|||||players and their minions cannot take reflected damage",
       "template_zh": "區域含有額外 # 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
@@ -2107,6 +2366,34 @@
       "template_zh": "區域含有額外 # 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
       "key": "area contains 5 additional packs with mirrored rare monsters|||||players and their minions cannot take reflected damage",
       "key_zh": "區域含有額外 5 群複製的稀有怪物|||||玩家和他們的召喚物不能承受反射傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasStrongboxMonstersEnrageAndDrops",
+      "template": "area contains an additional strongbox|||||strongbox monsters are enraged|||||strongbox monsters have #% increased item quantity",
+      "template_zh": "地圖含有 1 個額外的保險箱|||||保險箱的怪物受到激怒效果影響|||||保險箱怪物增加 #% 掉落物品數量",
+      "key": "area contains an additional strongbox|||||strongbox monsters are enraged|||||strongbox monsters have 500% increased item quantity",
+      "key_zh": "地圖含有 1 個額外的保險箱|||||保險箱的怪物受到激怒效果影響|||||保險箱怪物增加 500% 掉落物品數量",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasStrongboxMonstersEnrageAndDropsMaven___",
+      "template": "area contains an additional strongbox|||||strongbox monsters are enraged|||||strongbox monsters have #% increased item quantity",
+      "template_zh": "地圖含有 1 個額外的保險箱|||||保險箱的怪物受到激怒效果影響|||||保險箱怪物增加 #% 掉落物品數量",
+      "key": "area contains an additional strongbox|||||strongbox monsters are enraged|||||strongbox monsters have 600% increased item quantity",
+      "key_zh": "地圖含有 1 個額外的保險箱|||||保險箱的怪物受到激怒效果影響|||||保險箱怪物增加 600% 掉落物品數量",
       "types": [
         "jewel"
       ],
@@ -2219,6 +2506,20 @@
       "template_zh": "傳奇頭目伴隨著護衛|||||完成此區域額外掉落 # 張地圖",
       "key": "unique boss is accompanied by bodyguards|||||2 additional maps drop on completing area",
       "key_zh": "傳奇頭目伴隨著護衛|||||完成此區域額外掉落 2 張地圖",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasAdditionalBreaches2",
+      "template": "area can contain breaches|||||area contains an additional unstable breach",
+      "template_zh": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "key": "area can contain breaches|||||area contains an additional unstable breach",
+      "key_zh": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
       "types": [
         "jewel"
       ],
@@ -2382,11 +2683,95 @@
       "level": "1"
     },
     {
+      "modId": "MapAtlasAdditionalAbysses2",
+      "template": "area contains an additional abyss|||||areas contain abysses",
+      "template_zh": "此區域含 1 個額外深淵|||||區域內含有深淵",
+      "key": "area contains an additional abyss|||||areas contain abysses",
+      "key_zh": "此區域含 1 個額外深淵|||||區域內含有深淵",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "MapAtlasAdditionalAbyssesMaven",
       "template": "area contains # additional abysses|||||areas contain abysses",
       "template_zh": "此區域含 # 個額外深淵|||||區域內含有深淵",
       "key": "area contains 2 additional abysses|||||areas contain abysses",
       "key_zh": "此區域含 2 個額外深淵|||||區域內含有深淵",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasGloomShrineEffectAndDuration2",
+      "template": "area contains an additional gloom shrine|||||#% increased duration of shrine effects on players",
+      "template_zh": "區域含有 1 個額外漆黑神殿|||||神殿持續時間增加 #%",
+      "key": "area contains an additional gloom shrine|||||50% increased duration of shrine effects on players",
+      "key_zh": "區域含有 1 個額外漆黑神殿|||||神殿持續時間增加 50%",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasGloomShrineEffectAndDurationMaven_",
+      "template": "area contains an additional shrine|||||area contains an additional gloom shrine|||||#% increased duration of shrine effects on players",
+      "template_zh": "區域含有 1 個額外神殿|||||區域含有 1 個額外漆黑神殿|||||神殿持續時間增加 #%",
+      "key": "area contains an additional shrine|||||area contains an additional gloom shrine|||||50% increased duration of shrine effects on players",
+      "key_zh": "區域含有 1 個額外神殿|||||區域含有 1 個額外漆黑神殿|||||神殿持續時間增加 50%",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasResonatingShrineEffectAndDuration2",
+      "template": "area contains an additional resonating shrine|||||#% increased duration of shrine effects on players",
+      "template_zh": "區域含有 1 個額外共振神殿|||||神殿持續時間增加 #%",
+      "key": "area contains an additional resonating shrine|||||50% increased duration of shrine effects on players",
+      "key_zh": "區域含有 1 個額外共振神殿|||||神殿持續時間增加 50%",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasResonatingShrineEffectAndDurationMaven_____",
+      "template": "area contains an additional shrine|||||area contains an additional resonating shrine|||||#% increased duration of shrine effects on players",
+      "template_zh": "區域含有 1 個額外神殿|||||區域含有 1 個額外共振神殿|||||神殿持續時間增加 #%",
+      "key": "area contains an additional shrine|||||area contains an additional resonating shrine|||||50% increased duration of shrine effects on players",
+      "key_zh": "區域含有 1 個額外神殿|||||區域含有 1 個額外共振神殿|||||神殿持續時間增加 50%",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAtlasAdditionalEssencesAndRemnantChanceMaven",
+      "template": "monsters imprisoned by essences have a #% chance to contain a remnant of corruption|||||area contains # additional imprisoned monsters",
+      "template_zh": "被精髓囚禁的怪物有 #% 機率含有 1 個遺忘的污染器皿|||||區域含有 # 個額外禁錮怪物",
+      "key": "monsters imprisoned by essences have a 50% chance to contain a remnant of corruption|||||area contains 2 additional imprisoned monsters",
+      "key_zh": "被精髓囚禁的怪物有 50% 機率含有 1 個遺忘的污染器皿|||||區域含有 2 個額外禁錮怪物",
       "types": [
         "jewel"
       ],
@@ -3240,6 +3625,96 @@
       "level": "1"
     },
     {
+      "modId": "MaxPrefixMaxSuffixImplicitE3",
+      "template": "# prefix modifiers allowed|||||# suffix modifiers allowed|||||implicit modifiers cannot be changed",
+      "template_zh": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變",
+      "key": "+3 prefix modifiers allowed|||||-3 suffix modifiers allowed|||||implicit modifiers cannot be changed",
+      "key_zh": "允許前綴 +3|||||允許後綴 -3|||||固定詞綴不能被改變",
+      "types": [
+        "ring",
+        "rings"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "30"
+    },
+    {
+      "modId": "MaxPrefixMaxSuffixImplicitE4",
+      "template": "# prefix modifier allowed|||||# suffix modifiers allowed|||||implicit modifiers cannot be changed|||||#% increased prefix modifier magnitudes",
+      "template_zh": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變|||||增加 #% 前綴大小",
+      "key": "+1 prefix modifier allowed|||||-2 suffix modifiers allowed|||||implicit modifiers cannot be changed|||||50% increased prefix modifier magnitudes",
+      "key_zh": "允許前綴 +1|||||允許後綴 -2|||||固定詞綴不能被改變|||||增加 50% 前綴大小",
+      "types": [
+        "ring",
+        "rings"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "30"
+    },
+    {
+      "modId": "MaxPrefixMaxSuffixImplicitE5",
+      "template": "# prefix modifiers allowed|||||# suffix modifiers allowed|||||implicit modifiers cannot be changed",
+      "template_zh": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變",
+      "key": "-3 prefix modifiers allowed|||||+3 suffix modifiers allowed|||||implicit modifiers cannot be changed",
+      "key_zh": "允許前綴 -3|||||允許後綴 +3|||||固定詞綴不能被改變",
+      "types": [
+        "ring",
+        "rings"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "30"
+    },
+    {
+      "modId": "MaxPrefixMaxSuffixImplicitE6",
+      "template": "# prefix modifiers allowed|||||# suffix modifier allowed|||||implicit modifiers cannot be changed|||||#% increased suffix modifier magnitudes",
+      "template_zh": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變|||||增加 #% 後綴大小",
+      "key": "-2 prefix modifiers allowed|||||+1 suffix modifier allowed|||||implicit modifiers cannot be changed|||||50% increased suffix modifier magnitudes",
+      "key_zh": "允許前綴 -2|||||允許後綴 +1|||||固定詞綴不能被改變|||||增加 50% 後綴大小",
+      "types": [
+        "ring",
+        "rings"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "30"
+    },
+    {
+      "modId": "MaxPrefixMaxSuffixModEffectImplicitE2",
+      "template": "# prefix modifiers allowed|||||# suffix modifier allowed|||||implicit modifiers cannot be changed|||||#% increased explicit modifier magnitudes",
+      "template_zh": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變|||||增加 #% 變動詞綴大小",
+      "key": "-2 prefix modifiers allowed|||||-1 suffix modifier allowed|||||implicit modifiers cannot be changed|||||100% increased explicit modifier magnitudes",
+      "key_zh": "允許前綴 -2|||||允許後綴 -1|||||固定詞綴不能被改變|||||增加 100% 變動詞綴大小",
+      "types": [
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "30"
+    },
+    {
+      "modId": "MaxPrefixMaxSuffixModEffectImplicitE3",
+      "template": "# prefix modifier allowed|||||# suffix modifiers allowed|||||implicit modifiers cannot be changed|||||#% increased explicit modifier magnitudes",
+      "template_zh": "允許前綴 +#|||||允許後綴 +#|||||固定詞綴不能被改變|||||增加 #% 變動詞綴大小",
+      "key": "-1 prefix modifier allowed|||||-2 suffix modifiers allowed|||||implicit modifiers cannot be changed|||||100% increased explicit modifier magnitudes",
+      "key_zh": "允許前綴 -1|||||允許後綴 -2|||||固定詞綴不能被改變|||||增加 100% 變動詞綴大小",
+      "types": [
+        "amulet",
+        "amulets"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "30"
+    },
+    {
       "modId": "ChanceToInflictScorchOnEnemyOnBlockImplicitE1",
       "template": "scorch enemies when you block their damage",
       "template_zh": "當你格擋敵人的傷害時，對他們造成焦灼",
@@ -3292,6 +3767,111 @@
         "normal"
       ],
       "level": "1"
+    },
+    {
+      "modId": "AddedColdDamageColdPenetration1",
+      "template": "adds # to # cold damage|||||your hits treat cold resistance as #% higher than actual value",
+      "template_zh": "附加 # 至 # 冰冷傷害|||||你的擊中將冰冷抗性視為比實際值高 #%",
+      "key": "adds (3-4) to (5-6) cold damage|||||your hits treat cold resistance as 10% higher than actual value",
+      "key_zh": "附加 (3-4) 至 (5-6) 冰冷傷害|||||你的擊中將冰冷抗性視為比實際值高 10%",
+      "types": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "15"
+    },
+    {
+      "modId": "AddedColdDamageColdPenetration2",
+      "template": "adds # to # cold damage|||||your hits treat cold resistance as #% higher than actual value",
+      "template_zh": "附加 # 至 # 冰冷傷害|||||你的擊中將冰冷抗性視為比實際值高 #%",
+      "key": "adds (15-20) to (28-35) cold damage|||||your hits treat cold resistance as 10% higher than actual value",
+      "key_zh": "附加 (15-20) 至 (28-35) 冰冷傷害|||||你的擊中將冰冷抗性視為比實際值高 10%",
+      "types": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "45"
+    },
+    {
+      "modId": "AddedColdDamageColdPenetration3",
+      "template": "adds # to # cold damage|||||your hits treat cold resistance as #% higher than actual value",
+      "template_zh": "附加 # 至 # 冰冷傷害|||||你的擊中將冰冷抗性視為比實際值高 #%",
+      "key": "adds (75-85) to (115-128) cold damage|||||your hits treat cold resistance as 10% higher than actual value",
+      "key_zh": "附加 (75-85) 至 (115-128) 冰冷傷害|||||你的擊中將冰冷抗性視為比實際值高 10%",
+      "types": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "75"
+    },
+    {
+      "modId": "FlaskIgniteImmunityDuringEffect_",
+      "template": "#% less duration|||||immunity to ignite during effect\\nremoves burning on use",
+      "template_zh": "#% 更少持續時間|||||效果持續時間免疫點燃\\n使用時移除燃燒狀態",
+      "key": "(45-49)% less duration|||||immunity to ignite during effect\\nremoves burning on use",
+      "key_zh": "(45-49)% 更少持續時間|||||效果持續時間免疫點燃\\n使用時移除燃燒狀態",
+      "types": [
+        "flask",
+        "utility-flask"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "6"
+    },
+    {
+      "modId": "FlaskIgniteImmunityDuringEffect2",
+      "template": "#% less duration|||||immunity to ignite during effect\\nremoves burning on use",
+      "template_zh": "#% 更少持續時間|||||效果持續時間免疫點燃\\n使用時移除燃燒狀態",
+      "key": "(40-44)% less duration|||||immunity to ignite during effect\\nremoves burning on use",
+      "key_zh": "(40-44)% 更少持續時間|||||效果持續時間免疫點燃\\n使用時移除燃燒狀態",
+      "types": [
+        "flask",
+        "utility-flask"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "40"
+    },
+    {
+      "modId": "FlaskIgniteImmunityDuringEffect3",
+      "template": "#% less duration|||||immunity to ignite during effect\\nremoves burning on use",
+      "template_zh": "#% 更少持續時間|||||效果持續時間免疫點燃\\n使用時移除燃燒狀態",
+      "key": "(35-39)% less duration|||||immunity to ignite during effect\\nremoves burning on use",
+      "key_zh": "(35-39)% 更少持續時間|||||效果持續時間免疫點燃\\n使用時移除燃燒狀態",
+      "types": [
+        "flask",
+        "utility-flask"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "74"
     }
   ]
 }
