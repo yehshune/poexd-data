@@ -51,10 +51,15 @@
       - 修正 `stat-descriptions.ts` 中 `formatStats`：多行複合詞綴（`renderedLines.length > 1`）時，無數值之布林詞綴保留 `[]` 佔位，具數值者填入對應數值區間（如 `["-10"]`），包含多佔位符之點傷子詞綴合併為該段區間（如 `["6", "10"]`），徹底根治布林詞綴誤套數值之問題。
       - 修正 `generate-mods-poe2.ts`：精髓複合詞綴僅在單一詞綴（`!tradeIds`）時追加 `craftedStatIds` 至 `allTierIds`，確保多段複合詞綴之 `ids.length` 與 `values.length` 永遠 1:1 精確一致。
       - 實測 PoE 1（760 筆複合詞綴）與 PoE 2（386 筆複合詞綴）全部達成 100% 索引對齊（0 筆 mismatch）。
+    - 命定 (Bonded) 語意一致性過濾修復：
+      - 修正 `TradeStatIndex.resolveStatIds` 的第 0 步 MurmurHash2 比對，增加 `isBondedContext` 與 `entry.text` 的 `bonded` 語意一致性過濾。
+      - 徹底解決 `base_maximum_life` 等底層相同屬性在第 0 步將命定詞綴搶先雜湊至常規 ID (`rune.stat_3299347043`) 的問題，順利回退第 1 步文本比對命中專屬 `rune.stat_2280525771`。
+      - 命定 Trade ID 匹配數自 131 筆大幅躍升至 209 筆（官方共 212 筆，命中率達 98.6%）。
   - 最新轉換指標：
-    - PoE 2: 3,437 階級，3,384 映射 (98.5%)，未配對降至 53 筆，924 範本，1,329 Trade IDs。
-    - PoE 1: 3,841 階級，3,652 映射 (95.1%)，未配對降至 189 筆，785 範本，797 Trade IDs。
+    - PoE 2: 3,437 階級，3,382 映射 (98.4%)，未配對 55 筆，924 範本，1,402 Trade IDs。
+    - PoE 1: 3,841 階級，3,652 映射 (95.1%)，未配對 189 筆，785 範本，797 Trade IDs。
 - **後續目標**:
+  - 將最新生成的 `output/poe2/mods-*.json` 視需要同步至 `PoeXD-Extension/public/json/poe2/`。
   - 在 `PoeXD-Extension` 中適配讀取 `ids` 陣列進行批次/單項多 ID 篩選器派發。
   - 精確提交 Git 變更並發布。
 

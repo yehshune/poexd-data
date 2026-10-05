@@ -200,6 +200,13 @@ export class TradeStatIndex {
   ): ResolvedStatIds | null {
     if (!templateText) return null;
 
+    const contexts = options.context
+      ? Array.isArray(options.context)
+        ? options.context.map((c) => c.toLowerCase())
+        : [options.context.toLowerCase()]
+      : [];
+    const isBondedContext = contexts.includes('bonded');
+
     // 0. 最高優先級 (GGG 官方底層數學對齊)：若具備內部 stat_descriptions 規則之 statId 陣列，嘗試透過 MurmurHash2 精確解析
     if (options.ruleStatIds && options.ruleStatIds.length > 0) {
       const preferredCats = options.preferredCategories || ['explicit'];
@@ -211,11 +218,20 @@ export class TradeStatIndex {
         for (const cat of preferredCats) {
           const map = this.indexByHashAndCategory.get(cat);
           if (map && map.has(hashStr)) {
-            return map.get(hashStr)!.id;
+            const entry = map.get(hashStr)!;
+            const isEntryBonded = entry.text.toLowerCase().startsWith('bonded');
+            if (isBondedContext !== isEntryBonded) {
+              continue;
+            }
+            return entry.id;
           }
         }
         if (options.fallbackGlobal && this.globalHashIndex.has(hashStr)) {
-          return this.globalHashIndex.get(hashStr)!.id;
+          const entry = this.globalHashIndex.get(hashStr)!;
+          const isEntryBonded = entry.text.toLowerCase().startsWith('bonded');
+          if (isBondedContext === isEntryBonded) {
+            return entry.id;
+          }
         }
         return null;
       };
