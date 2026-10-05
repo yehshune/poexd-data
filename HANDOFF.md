@@ -48,4 +48,5 @@
 ## 3. 不要踩的坑 (Pitfalls to Avoid)
 - **不可在 Windows pwsh 執行包含多行複雜雙引號的 `tsx -e`**: 引號轉義易導致 stdin 永久阻塞。
 - **不可假設 PoE 1 與 PoE 2 Dat 表格欄位同名**: PoE 1 為 `StatsKey`/`StatMin`/`StatMax`，PoE 2 為 `Stat`/`StatValue`。
+- **不可在 package.json 之 packageManager 或 devEngines.packageManager.version 使用版本範圍符號 (`^`, `~`)**: Corepack 僅接受嚴格精確之 semver 版本號（如 `11.28.4`），否則會拋出 `expected a semver version` 錯誤。
 - **不可使用 `git add .`**: 請只暫存與提交本輪修改的檔案。

@@ -6,25 +6,6 @@ Path of Exile (PoE 1 / PoE 2) 官方資料解析與自動化匯出管線。基�
 
 ## 系統架構與設計哲學 (Data Architecture)
 
-本專案堅持 **零爬蟲 (0 Web Scraping)** 原則，所有產出由「官方原生數據」結合「標準化語意比對」自動衍生：
-
-```
-[ GGG 官方 CDN (Dat & StatDescriptions) ] + [ GGG 官方 Trade API (/data/stats) ]
-                     │                                         │
-                     ▼                                         ▼
-           【自動解析核心 (85%)】                      【自動比對映射 (10%)】
-      - 詞綴數值、等級、前後綴                   - 官方 Trade Category 大類前綴
-      - 複合詞綴行排序與中英文渲染               - 語意標準化字串模糊比對 (findStatId)
-      - Dat 外鍵關聯 (精髓/液態情感/符文槽)      - (Local) 防禦屬性、Bonded: 前綴適配
-                     │                                         │
-                     └────────────────────┬────────────────────┘
-                                          │
-                                          ▼
-                             【精準維護轉接層 (5%)】
-      - gear-types.ts : 語意權重標籤 ➔ 前端物品下拉分類代號
-      - FilterPane.vue: 內部 Affinity ID ➔ 中文顯示名稱與 Tab 順序
-```
-
 ### 1. 詞綴大類與親和度 (Affinity Resolution)
 * **官方 Trade 命名空間 (自動)**：由 `tradeId.split('.')[0]` 自動提煉，如 `desecrated`（褻瀆）、`rune`（符文/增幅）、`enchant`（附魔）、`sanctum`（聖域）、`fractured`（破裂）、`crafted`（工藝）。
 * **官方 Dat 表格外鍵 (自動)**：
@@ -72,39 +53,40 @@ src/
     └── generate-atlas-icons.ts      # PoE 2 輿圖 DDS 紋理抽取與 PNG 轉換
 ```
 
-### 資料生成組裝流向
+### 官方資料生成組裝流向
 
 ```mermaid
 flowchart TD
-    subgraph CDN ["官方 CDN / API"]
-        A1[Mods.dat / Stats.dat / Tags.dat]
-        A2[stat_descriptions.txt]
-        A3[Trade API /data/stats]
+    subgraph GGG_CDN ["官方 CDN 數據與資產"]
+        DatMods["Mods.dat / Stats.dat / Tags.dat<br/>(詞綴數值、階級、權重)"]
+        DatGear["BaseItemTypes.dat / ItemClasses.dat<br/>(部位與基底關聯)"]
+        DatAffinity["外鍵親和度表<br/>(Essences / LiquidEmotion / SoulCore 等)"]
+        DatAtlas["輿圖數據表<br/>(EndgameMaps / WorldAreas / AtlasContent)"]
+        StatDesc["stat_descriptions.txt<br/>(語法規則、雙語文本、複合詞綴排序)"]
+        AtlasDDS["輿圖 DDS 紋理貼圖"]
     end
 
-    subgraph Core ["解析核心"]
-        B1[loader.ts] --> A1
-        B2[stat-descriptions.ts] --> A2
-        B3[trade-stats.ts] --> A3
+    subgraph GGG_API ["官方 Trade API"]
+        TradeStats["/data/stats<br/>(官方 Trade Stat ID 與 Category 大類)"]
     end
 
-    subgraph Assembly ["版本專屬管線"]
-        C1[generate-mods-poe2.ts]
-        C2[generate-mods-poe1.ts]
-        
-        B1 & B2 & B3 --> C1 & C2
-        D1[poe2/gear-types.ts & affinities.ts] --> C1
-        D2[poe1/gear-types.ts & affinities.ts] --> C2
+    subgraph Output_Mods ["詞綴資料 (poe1 & poe2)"]
+        OutModId["mods-id-data.json<br/>(以 Trade Stat ID 為鍵)"]
+        OutModData["mods-data.json<br/>(以屬性範本為鍵)"]
     end
 
-    subgraph Output ["產出檔案 (output/)"]
-        E1[poe1/mods-data.json & mods-id-data.json]
-        E2[poe2/mods-data.json & mods-id-data.json]
-        E3[poe1/unmatched-report.json & poe2/unmatched-report.json]
-        
-        C1 --> E2 & E3
-        C2 --> E1 & E3
+    subgraph Output_Atlas ["輿圖資料 (poe2)"]
+        OutMaps["atlas_maps.json<br/>(地圖、標籤、頭目資訊)"]
+        OutContent["atlas_content.json<br/>(機制內容與效果描述)"]
+        OutIcons["icons/*.png<br/>(透明機制圖示)"]
     end
+
+    %% 詞綴組合流向
+    DatMods & DatGear & DatAffinity & StatDesc & TradeStats --> Output_Mods
+
+    %% 輿圖組合流向
+    DatAtlas --> OutMaps & OutContent
+    AtlasDDS --> OutIcons
 ```
 
 ---
