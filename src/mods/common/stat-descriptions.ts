@@ -243,12 +243,32 @@ export class StatDescriptionIndex {
     // 依據 stat_descriptions 規則定義順序排序，確保複合詞綴順序符合 GGG 客戶端與 Trade 規範
     renderedLines.sort((a, b) => a.ruleIndex - b.ruleIndex);
 
+    let values: string[][];
+    if (renderedLines.length <= 1) {
+      values = renderedLines.flatMap((l) => l.values);
+    } else {
+      values = renderedLines.map((l) => {
+        if (l.values.length === 0) {
+          return [];
+        } else if (l.values.length === 1) {
+          return l.values[0];
+        } else {
+          // 子詞綴包含多個佔位符（如點傷附加 # 至 # 傷害）
+          const firstRange = l.values[0];
+          const lastRange = l.values[l.values.length - 1];
+          const min = firstRange[0];
+          const max = lastRange[lastRange.length - 1];
+          return min === max ? [min] : [min, max];
+        }
+      });
+    }
+
     return {
       key: renderedLines.map((l) => l.key).join('|||||'),
       key_zh: renderedLines.map((l) => l.key_zh).join('|||||'),
       template: renderedLines.map((l) => l.template).join('|||||'),
       template_zh: renderedLines.map((l) => l.template_zh).join('|||||'),
-      values: renderedLines.flatMap((l) => l.values),
+      values,
       ruleStatIds: renderedLines.map((l) => l.ruleStatIds),
     };
   }

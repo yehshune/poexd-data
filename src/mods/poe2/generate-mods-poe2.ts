@@ -279,8 +279,10 @@ export async function buildModsPoE2(
           .filter((id) => id.startsWith('explicit.'))
           .map((id) => id.replace('explicit.', 'crafted.'));
       }
-      for (const cid of craftedStatIds) {
-        allTierIds.add(cid);
+      if (!tradeIds) {
+        for (const cid of craftedStatIds) {
+          allTierIds.add(cid);
+        }
       }
     }
 

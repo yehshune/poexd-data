@@ -47,7 +47,10 @@
       - 實作 GGG 官方 Trade API 底層 Stat ID 雜湊算法（`murmurhash2` + 雙層鹽值 `0xC58F1A7B` 與 `0x02312233`），由 `stat_descriptions` 的內部 stat IDs 直接演算為 `stat_{hash}`。
       - `TradeStatIndex` 建立 `indexByHashAndCategory` 索引；`resolveStatIds` 第 0 步優先以雜湊直接精確命中 Trade ID，徹底根治官方 Trade API 筆誤、字串 typo、單複數、缺少 `(Global)`、缺少 `#% of` 等文字差異。
       - 符文詞綴（SoulCore）維持 `preferredCategories: ['rune']` 嚴格隔離，杜絕任何不當 fallback。
-      - 安全移除 `cleanStatString` 中已被雜湊機制完全接管的冗餘單複數與語法倒裝正則猜測（`charges`、`arrows`、`duration of bleeding` 等），維持 100% 相同匹配率。
+    - 複合詞綴 ids 與 values 1:1 索引對齊（Index Alignment）：
+      - 修正 `stat-descriptions.ts` 中 `formatStats`：多行複合詞綴（`renderedLines.length > 1`）時，無數值之布林詞綴保留 `[]` 佔位，具數值者填入對應數值區間（如 `["-10"]`），包含多佔位符之點傷子詞綴合併為該段區間（如 `["6", "10"]`），徹底根治布林詞綴誤套數值之問題。
+      - 修正 `generate-mods-poe2.ts`：精髓複合詞綴僅在單一詞綴（`!tradeIds`）時追加 `craftedStatIds` 至 `allTierIds`，確保多段複合詞綴之 `ids.length` 與 `values.length` 永遠 1:1 精確一致。
+      - 實測 PoE 1（760 筆複合詞綴）與 PoE 2（386 筆複合詞綴）全部達成 100% 索引對齊（0 筆 mismatch）。
   - 最新轉換指標：
     - PoE 2: 3,437 階級，3,384 映射 (98.5%)，未配對降至 53 筆，924 範本，1,329 Trade IDs。
     - PoE 1: 3,841 階級，3,652 映射 (95.1%)，未配對降至 189 筆，785 範本，797 Trade IDs。
