@@ -1,10 +1,10 @@
 {
   "gameVersion": "poe2",
-  "generatedAt": "2026-10-05T17:01:54.931Z",
+  "generatedAt": "2026-10-05T17:40:59.593Z",
   "totalTiers": 3437,
-  "matchedCount": 3384,
-  "unmatchedCount": 53,
-  "matchRate": "98.5%",
+  "matchedCount": 3382,
+  "unmatchedCount": 55,
+  "matchRate": "98.4%",
   "summaryByTemplate": [
     {
       "template": "攻擊附加#至#物理傷害|||||攻擊附加#至#閃電傷害",
@@ -232,6 +232,20 @@
         "gloves_dex",
         "gloves_int",
         "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "護符每秒獲得#充能",
+      "count": 2,
+      "affinities": [
+        "bonded"
+      ],
+      "sampleTypes": [
+        "wand",
+        "wands",
+        "staff",
+        "staves",
+        "sceptre"
       ]
     },
     {
@@ -1431,6 +1445,45 @@
         "wands",
         "staff",
         "staves"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_445_bonded",
+      "template": "charms gain # charges per second",
+      "template_zh": "護符每秒獲得#充能",
+      "key": "charms gain 15 charges per second",
+      "key_zh": "護符每秒獲得15充能",
+      "types": [
+        "wand",
+        "wands",
+        "staff",
+        "staves",
+        "sceptre",
+        "sceptres"
+      ],
+      "affinities": [
+        "bonded"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "SoulCore_476_bonded",
+      "template": "charms gain # charges per second",
+      "template_zh": "護符每秒獲得#充能",
+      "key": "charms gain 30 charges per second",
+      "key_zh": "護符每秒獲得30充能",
+      "types": [
+        "helmet",
+        "helmets_str",
+        "helmets_dex",
+        "helmets_int",
+        "helmets_str_dex",
+        "helmets_str_int",
+        "helmets_dex_int"
       ],
       "affinities": [
         "bonded"
