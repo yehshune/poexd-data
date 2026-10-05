@@ -222,9 +222,13 @@ export async function buildModsPoE2(
     if (!rendered) continue;
 
     // 依據機制偏好選取 Trade Stat 類別
+    const isNaturalDrop = types.length > 0 && !isBaseImplicit && (mod.GenerationType === 1 || mod.GenerationType === 2);
+    const isEssenceMod = essenceModIndices.has(modIdx) || (perfectEssenceModIndices?.has(modIdx) ?? false);
     const isDesecratedCandidate = mod.Id?.startsWith('AbyssMod');
     const preferredCategories: string[] = [];
-    if (isDesecratedCandidate) {
+    if (isEssenceMod && !isNaturalDrop) {
+      preferredCategories.push('crafted');
+    } else if (isDesecratedCandidate) {
       preferredCategories.push('desecrated');
     } else if (mod.GenerationType === 5) {
       preferredCategories.push('enchant');
@@ -246,10 +250,39 @@ export async function buildModsPoE2(
       preferredCategories,
       isLocal,
       context: contexts,
+      ruleStatIds: rendered.ruleStatIds,
     });
     const tradeId = resolvedIds?.singleId;
     const tradeIds = resolvedIds?.splitIds;
     const tradeCategory = resolvedIds?.allIds[0]?.split('.')[0];
+
+    // 精髓與完美精髓在 PoE 2 的 Trade ID 前綴只有一種，為 crafted
+    const allTierIds = new Set<string>();
+    if (tradeIds) {
+      for (const id of tradeIds) allTierIds.add(id);
+    } else if (tradeId) {
+      allTierIds.add(tradeId);
+    }
+
+    let craftedStatIds: string[] = [];
+    if (isEssenceMod) {
+      const craftedResolved = tradeStats.resolveStatIds(rendered.template, {
+        preferredCategories: ['crafted'],
+        isLocal,
+        context: contexts,
+        ruleStatIds: rendered.ruleStatIds,
+      });
+      if (craftedResolved && craftedResolved.allIds.length > 0) {
+        craftedStatIds = craftedResolved.allIds;
+      } else if (resolvedIds && resolvedIds.allIds.length > 0) {
+        craftedStatIds = resolvedIds.allIds
+          .filter((id) => id.startsWith('explicit.'))
+          .map((id) => id.replace('explicit.', 'crafted.'));
+      }
+      for (const cid of craftedStatIds) {
+        allTierIds.add(cid);
+      }
+    }
 
     // 方案 B：由 Trade 官方類別、官方 Dat 表格外鍵與符文機制標籤自動推導屬性標籤
     const activeTags = spawnWeights.filter((sw) => sw.weight > 0).map((sw) => sw.tag);
@@ -258,7 +291,8 @@ export async function buildModsPoE2(
       mod,
       { essenceModIndices, perfectEssenceModIndices, liquidModIndices },
       tradeCategory,
-      activeTags
+      activeTags,
+      isNaturalDrop
     );
 
     const tierItem: ModTierOutput = {
@@ -270,8 +304,8 @@ export async function buildModsPoE2(
       level: String(mod.Level ?? 1),
       values: rendered.values,
       types,
-      id: tradeId,
-      ids: tradeIds || (tradeId ? [tradeId] : undefined),
+      id: isEssenceMod && !isNaturalDrop && craftedStatIds.length === 1 ? craftedStatIds[0] : tradeId,
+      ids: allTierIds.size > 0 ? Array.from(allTierIds) : undefined,
     };
 
     // 歸類至 mods-data (以 template 為 key)
@@ -281,8 +315,9 @@ export async function buildModsPoE2(
     modsData[rendered.template].push(tierItem);
 
     // 歸類至 mods-id-data (以 Trade Stat ID 為 key)
-    if (resolvedIds && resolvedIds.allIds.length > 0) {
-      for (const statId of resolvedIds.allIds) {
+    const allTargetStatIds = new Set<string>([...(resolvedIds?.allIds || []), ...craftedStatIds]);
+    if (allTargetStatIds.size > 0) {
+      for (const statId of allTargetStatIds) {
         if (!modsIdData[statId]) {
           modsIdData[statId] = [];
         }
@@ -304,6 +339,16 @@ export async function buildModsPoE2(
 
     processedCount++;
   }
+
+  // 輔助函式：判斷是否為使用後即消耗/銷毀的特殊符文（非裝備詞綴）
+  const isConsumableSoulCoreRune = (template: string, templateZh: string): boolean => {
+    return (
+      template.includes('upgrades a socketed rune') ||
+      template.includes('unique kalguuran or ezomyte item') ||
+      templateZh.includes('升級插槽中的符文') ||
+      templateZh.includes('摧毀該物品並創造一枚')
+    );
+  };
 
   // 處理 SoulCoreStats 符文詞綴 (socketable 與 bonded)
   for (const sc of soulCoreStatsTable) {
@@ -344,10 +389,14 @@ export async function buildModsPoE2(
       if (activeStats.length > 0) {
         const rendered = statIndex.renderMod(activeStats);
         if (rendered) {
+          if (isConsumableSoulCoreRune(rendered.template, rendered.template_zh)) {
+            continue;
+          }
           const isLocal = activeStats.some((s) => s.id.startsWith('local_'));
           const resolvedIds = tradeStats.resolveStatIds(rendered.template, {
             preferredCategories: ['rune'],
             isLocal,
+            ruleStatIds: rendered.ruleStatIds,
           });
           const tradeId = resolvedIds?.singleId;
           const tradeIds = resolvedIds?.splitIds;
@@ -400,11 +449,15 @@ export async function buildModsPoE2(
       if (activeStats.length > 0) {
         const rendered = statIndex.renderMod(activeStats);
         if (rendered) {
+          if (isConsumableSoulCoreRune(rendered.template, rendered.template_zh)) {
+            continue;
+          }
           const isLocal = activeStats.some((s) => s.id.startsWith('local_'));
           const resolvedIds = tradeStats.resolveStatIds(rendered.template, {
             preferredCategories: ['rune'],
             context: 'bonded',
             isLocal,
+            ruleStatIds: rendered.ruleStatIds,
           });
           const tradeId = resolvedIds?.singleId;
           const tradeIds = resolvedIds?.splitIds;

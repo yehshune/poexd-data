@@ -1,5 +1,6 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
+import { computeGggStatHash } from './murmurhash2.js';
 
 export interface TradeStatEntry {
   id: string;
@@ -23,6 +24,7 @@ export interface FindStatOptions {
   context?: string | string[];
   fuzzyFallback?: boolean;
   fallbackGlobal?: boolean;
+  ruleStatIds?: string[][];
 }
 
 export interface ResolvedStatIds {
@@ -35,18 +37,11 @@ export function cleanStatString(text: string): string {
   if (!text) return '';
   return text
     .toLowerCase()
+    .replace(/\\r\\n|\\r|\\n/g, ' ')
+    .replace(/[\r\n]+/g, ' ')
     .replace(/^\+\s*/, '')
     .replace(/[+#%]+/g, '#')
     .replace(/#+/g, '#')
-    .replace(/\ban additional\b/g, '# additional')
-    .replace(/charges/g, 'charge')
-    .replace(/arrows/g, 'arrow')
-    .replace(/curses/g, 'curse')
-    .replace(/targets/g, 'target')
-    .replace(/duration of bleeding/g, 'bleeding duration')
-    .replace(/leeches/g, 'leech')
-    .replace(/regenerates/g, 'regenerate')
-    .replace(/metres/g, 'metre')
     .replace(/[^a-z0-9#()]/g, '')
     .trim();
 }
@@ -56,6 +51,10 @@ export class TradeStatIndex {
   private indexByCategory = new Map<string, Map<string, TradeStatEntry>>();
   // all categories -> cleaned text -> TradeStatEntry
   private globalIndex = new Map<string, TradeStatEntry>();
+  // category -> hash string -> TradeStatEntry
+  private indexByHashAndCategory = new Map<string, Map<string, TradeStatEntry>>();
+  // all categories -> hash string -> TradeStatEntry
+  private globalHashIndex = new Map<string, TradeStatEntry>();
 
   constructor(public readonly rawData: TradeStatsResponse) {
     this.buildIndex();
@@ -63,16 +62,27 @@ export class TradeStatIndex {
 
   private buildIndex() {
     for (const cat of this.rawData.result || []) {
-      const map = new Map<string, TradeStatEntry>();
+      const textMap = new Map<string, TradeStatEntry>();
+      const hashMap = new Map<string, TradeStatEntry>();
+
       for (const entry of cat.entries || []) {
         if (!entry.text) continue;
         const cleaned = cleanStatString(entry.text);
-        map.set(cleaned, entry);
+        textMap.set(cleaned, entry);
         if (!this.globalIndex.has(cleaned)) {
           this.globalIndex.set(cleaned, entry);
         }
+
+        const num = entry.id.split('_').pop();
+        if (num && /^\d+$/.test(num)) {
+          hashMap.set(num, entry);
+          if (!this.globalHashIndex.has(num)) {
+            this.globalHashIndex.set(num, entry);
+          }
+        }
       }
-      this.indexByCategory.set(cat.id, map);
+      this.indexByCategory.set(cat.id, textMap);
+      this.indexByHashAndCategory.set(cat.id, hashMap);
     }
   }
 
@@ -124,9 +134,18 @@ export class TradeStatIndex {
         .replace(/faster/g, 'slower');
       if (inv2 !== cleaned && !polarityVariants.includes(inv2)) polarityVariants.push(inv2);
 
+      // 若以 #of 開頭 (例如 #% of damage blocked is recouped as mana)，官方 Trade API 有時會省略 #% of
+      const baseVariants: string[] = [];
+      for (const p of polarityVariants) {
+        baseVariants.push(p);
+        if (p.startsWith('#of')) {
+          baseVariants.push(p.replace(/^#of/, ''));
+        }
+      }
+
       // 建立 Bonded 前綴變體 (符文詞綴)
       const semanticVariants: string[] = [];
-      for (const p of polarityVariants) {
+      for (const p of baseVariants) {
         if (isBondedContext) {
           if (p.startsWith('bonded')) {
             semanticVariants.push(p);
@@ -180,6 +199,53 @@ export class TradeStatIndex {
     options: FindStatOptions = {}
   ): ResolvedStatIds | null {
     if (!templateText) return null;
+
+    // 0. 最高優先級 (GGG 官方底層數學對齊)：若具備內部 stat_descriptions 規則之 statId 陣列，嘗試透過 MurmurHash2 精確解析
+    if (options.ruleStatIds && options.ruleStatIds.length > 0) {
+      const preferredCats = options.preferredCategories || ['explicit'];
+      const lookupHash = (statIds: string[]): string | null => {
+        if (!statIds || statIds.length === 0) return null;
+        const hash = computeGggStatHash(statIds);
+        const hashStr = String(hash);
+
+        for (const cat of preferredCats) {
+          const map = this.indexByHashAndCategory.get(cat);
+          if (map && map.has(hashStr)) {
+            return map.get(hashStr)!.id;
+          }
+        }
+        if (options.fallbackGlobal && this.globalHashIndex.has(hashStr)) {
+          return this.globalHashIndex.get(hashStr)!.id;
+        }
+        return null;
+      };
+
+      if (options.ruleStatIds.length === 1) {
+        const hitId = lookupHash(options.ruleStatIds[0]);
+        if (hitId) {
+          return {
+            singleId: hitId,
+            allIds: [hitId],
+          };
+        }
+      } else {
+        const matchedParts: string[] = [];
+        for (const lineStatIds of options.ruleStatIds) {
+          const hitId = lookupHash(lineStatIds);
+          if (hitId) {
+            matchedParts.push(hitId);
+          } else {
+            break;
+          }
+        }
+        if (matchedParts.length === options.ruleStatIds.length && matchedParts.length > 0) {
+          return {
+            splitIds: matchedParts,
+            allIds: matchedParts,
+          };
+        }
+      }
+    }
 
     // 1. 優先嘗試全範本解析 (包含官方複合詞合併條目)
     const fullMatch = this.findSingleStatId(templateText, options);

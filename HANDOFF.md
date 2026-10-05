@@ -31,9 +31,26 @@
       - 徹底移除「拿第一個子詞冒充整條複合詞」的殘缺 ID 邏輯。
       - 官方有合併條目者維持輸出單一 `id`；官方分開者，依序解析所有子詞條並輸出 `ids: string[]`（`id` 設為 undefined 避免前端短路）。
       - `mods-id-data.json` 支援多 ID 反向索引，每個子 ID 均可反向索引該 Tier。
+    - PoE 1 & PoE 2 自然掉落與親和度修復（胸甲最大生命 13 階完整回歸）：
+      - PoE 1: `resolvePoE1GearTypes` 補全 `default` 標籤與 `str_dex_int_armour` 等複合部位映射；支援 `default: > 0` 基礎集合搭配 `weight <= 0` 排除部位（如 `weapon: 0`, `fishing_rod: 0`）之官方權重機制。
+      - PoE 1 & PoE 2: 修正 `affinities.ts`，凡具備自然掉落部位權重（`isNaturalDrop: true`）且非特殊專屬工藝/污染/勢力之 Prefix/Suffix，必然具備 `normal` 親和度；解決被精髓（Essence）關聯時 `normal` 遭漏賦予導致前端 `explicit.` 查詢時缺失 5 階（PoE 2）或丟失階級（PoE 1）之問題。
+      - 驗證 PoE 1 與 PoE 2 胸甲純最大生命 (`explicit.stat_3299347043`) 均完整擁有 13 個 normal 階級，且 Extension 測試 18/18 通過。
+    - PoE 2 精髓與完美精髓 Trade ID 前綴正規化 (`crafted`):
+      - 依官方 Trade API 設計，PoE 2 精髓與完美精髓只有一種 ID 前綴即 `crafted`（PoE 1 維持 `explicit`）。
+      - `generate-mods-poe2.ts`: 純精髓專屬詞綴優先指定 `preferredCategories: ['crafted']`；可自然掉落之精髓詞綴保留 `explicit.` 主要 ID 同時於 `tierItem.ids` 補上對應 `crafted.stat_...`，並於 `mods-id-data.json` 建立雙向反向索引（共 103 筆 crafted keys）。
+      - `PoeXD-Extension`: `utils.ts` 對 `essence`/`perfect_essence` 優先嘗試 `crafted`；`tier-domain-service.ts` 支援 `crafted.` 前綴目標親和度為 `['essence', 'perfect_essence', 'crafted', 'liquid']`。
+    - PoE 2 符文與靈魂核心 (SoulCore) 匹配優化與消耗性符文剔除：
+      - 剔除消耗性符文（非裝備詞綴）：過濾「升級插槽中的符文」與「當鑲嵌至一件傳奇卡爾葛或艾茲麥物品時，摧毀該物品並創造一枚灌注該物品能力的符文」，不進入裝備詞綴資料庫。
+      - 多行換行轉義修復：`cleanStatString` 正確處理 `\r\n`、`\r`、`\n` 字面值與換行字元，解決多行符文詞綴因反斜線剝除殘留字母 `n` 導致的比對失敗。
+      - 官方 Trade API 缺少 `#% of` 變體相容：當範本以 `#of` 開頭時支援剝除 `#of` 比對，在維持 `preferredCategories: ['rune']` 且無任何危險 fallback 下，成功精準匹配 `rune.stat_2875218423` 與 `rune.stat_3475931631` 等詞綴。
+    - PoE 1 & PoE 2 官方 MurmurHash2 雜湊比對機制落地（長期終極解）：
+      - 實作 GGG 官方 Trade API 底層 Stat ID 雜湊算法（`murmurhash2` + 雙層鹽值 `0xC58F1A7B` 與 `0x02312233`），由 `stat_descriptions` 的內部 stat IDs 直接演算為 `stat_{hash}`。
+      - `TradeStatIndex` 建立 `indexByHashAndCategory` 索引；`resolveStatIds` 第 0 步優先以雜湊直接精確命中 Trade ID，徹底根治官方 Trade API 筆誤、字串 typo、單複數、缺少 `(Global)`、缺少 `#% of` 等文字差異。
+      - 符文詞綴（SoulCore）維持 `preferredCategories: ['rune']` 嚴格隔離，杜絕任何不當 fallback。
+      - 安全移除 `cleanStatString` 中已被雜湊機制完全接管的冗餘單複數與語法倒裝正則猜測（`charges`、`arrows`、`duration of bleeding` 等），維持 100% 相同匹配率。
   - 最新轉換指標：
-    - PoE 2: 3,439 階級，3,342 映射 (97.2%)，926 範本，1,264 Trade IDs。
-    - PoE 1: 3,560 階級，3,385 映射 (95.1%)，712 範本，690 Trade IDs。
+    - PoE 2: 3,437 階級，3,384 映射 (98.5%)，未配對降至 53 筆，924 範本，1,329 Trade IDs。
+    - PoE 1: 3,841 階級，3,652 映射 (95.1%)，未配對降至 189 筆，785 範本，797 Trade IDs。
 - **後續目標**:
   - 在 `PoeXD-Extension` 中適配讀取 `ids` 陣列進行批次/單項多 ID 篩選器派發。
   - 精確提交 Git 變更並發布。

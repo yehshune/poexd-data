@@ -196,17 +196,20 @@ export async function buildModsPoE1(
       preferredCategories,
       isLocal,
       context: contexts,
+      ruleStatIds: rendered.ruleStatIds,
     });
     const tradeId = resolvedIds?.singleId;
     const tradeIds = resolvedIds?.splitIds;
     const tradeCategory = resolvedIds?.allIds[0]?.split('.')[0];
 
     // 方案 B：由 Trade 官方類別與官方 Dat 表格外鍵自動推導屬性標籤
+    const isNaturalDrop = types.length > 0 && !isBaseImplicit && (mod.GenerationType === 1 || mod.GenerationType === 2);
     const affinities = resolvePoE1Affinities(
       modIdx,
       mod,
       { essenceModIndices, delveModIndices },
-      tradeCategory
+      tradeCategory,
+      isNaturalDrop
     );
 
     const tierItem: ModTierOutput = {

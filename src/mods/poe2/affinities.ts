@@ -9,7 +9,8 @@ export function resolvePoE2Affinities(
   mod: any,
   mechanismData: PoE2MechanismData,
   tradeCategory?: string,
-  activeTags: string[] = []
+  activeTags: string[] = [],
+  isNaturalDrop: boolean = false
 ): string[] {
   const affs = new Set<string>();
 
@@ -72,6 +73,19 @@ export function resolvePoE2Affinities(
   // 4. 深淵巫妖 / 褻瀆專屬詞綴判定 (Abyss Liches)
   if (mod.Id?.startsWith('AbyssMod')) {
     affs.add('desecrated');
+  }
+
+  // 5. 自然掉落詞綴判定
+  const isSpecialCraft =
+    tradeCategory === 'crafted' ||
+    tradeCategory === 'enchant' ||
+    tradeCategory === 'sanctum' ||
+    tradeCategory === 'desecrated' ||
+    mod.GenerationType === 5 ||
+    Boolean(mod.Id?.startsWith('AbyssMod'));
+
+  if (isNaturalDrop && !isSpecialCraft) {
+    affs.add('normal');
   }
 
   if (affs.size === 0) {

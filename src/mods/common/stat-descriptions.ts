@@ -19,6 +19,7 @@ export interface RenderedLine {
   template_zh: string;
   values: string[][];
   consumedStatIds: string[];
+  ruleStatIds: string[];
 }
 
 export interface RenderedModResult {
@@ -27,6 +28,7 @@ export interface RenderedModResult {
   template: string;
   template_zh: string;
   values: string[][];
+  ruleStatIds: string[][];
 }
 
 export function cleanMarkup(text: string, isZh = false): string {
@@ -188,7 +190,7 @@ export class StatDescriptionIndex {
       let bestLine: RenderedLine | null = null;
       let maxActiveConsumed = 0;
 
-      const currentActiveMap = new Map<string, { min: number; max: number }>();
+      const currentActiveMap = new Map<string, { id: string; min: number; max: number }>();
       for (const s of remainingStats) {
         currentActiveMap.set(s.id, s);
       }
@@ -247,6 +249,7 @@ export class StatDescriptionIndex {
       template: renderedLines.map((l) => l.template).join('|||||'),
       template_zh: renderedLines.map((l) => l.template_zh).join('|||||'),
       values: renderedLines.flatMap((l) => l.values),
+      ruleStatIds: renderedLines.map((l) => l.ruleStatIds),
     };
   }
 
@@ -322,6 +325,7 @@ export class StatDescriptionIndex {
       template_zh: cleanTmplZh(zhTemplate),
       values,
       consumedStatIds,
+      ruleStatIds: rule.statIds,
     };
   }
 

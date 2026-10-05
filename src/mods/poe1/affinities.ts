@@ -7,7 +7,8 @@ export function resolvePoE1Affinities(
   modIndex: number,
   mod: any,
   mechanismData: PoE1MechanismData,
-  tradeCategory?: string
+  tradeCategory?: string,
+  isNaturalDrop: boolean = false
 ): string[] {
   const affs = new Set<string>();
 
@@ -44,20 +45,40 @@ export function resolvePoE1Affinities(
 
   // 3. 勢力與特殊詞綴判定 (Influence Mods)
   const idLower = (mod.Id || '').toLowerCase();
+  let isInfluence = false;
   if (idLower.includes('elder')) {
     affs.add('elder');
+    isInfluence = true;
   } else if (idLower.includes('shaper')) {
     affs.add('shaper');
+    isInfluence = true;
   } else if (idLower.includes('crusader')) {
     affs.add('crusader');
+    isInfluence = true;
   } else if (idLower.includes('hunter')) {
     affs.add('hunter');
+    isInfluence = true;
   } else if (idLower.includes('eyrie') || idLower.includes('redeemer')) {
     affs.add('redeemer');
+    isInfluence = true;
   } else if (idLower.includes('conquest') || idLower.includes('warlord')) {
     affs.add('warlord');
+    isInfluence = true;
   } else if (idLower.includes('veiled')) {
     affs.add('veiled');
+    isInfluence = true;
+  }
+
+  // 4. 自然生成詞綴判定
+  const isSpecialExclusion =
+    isInfluence ||
+    mod.Domain === 10 ||
+    mod.GenerationType === 5 ||
+    tradeCategory === 'crafted' ||
+    tradeCategory === 'enchant';
+
+  if (isNaturalDrop && !isSpecialExclusion) {
+    affs.add('normal');
   }
 
   if (affs.size === 0) {

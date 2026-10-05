@@ -49,8 +49,16 @@ export const ALL_POE1_JEWELLERY = [
   'belt', 'belts',
 ];
 
+export const POE1_DEFAULT_GEAR_TYPES = [
+  ...ALL_POE1_WEAPONS,
+  ...ALL_POE1_ARMOUR,
+  ...ALL_POE1_JEWELLERY,
+  'quiver', 'quivers',
+];
+
 export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   // 通用類別標籤 (Broad Tags)
+  default: POE1_DEFAULT_GEAR_TYPES,
   weapon: ALL_POE1_WEAPONS,
   one_hand_weapon: ONE_HAND_POE1_WEAPONS,
   two_hand_weapon: TWO_HAND_POE1_WEAPONS,
@@ -84,6 +92,8 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   staff: ['staff', 'staves'],
   warstaff: ['staff', 'staves', 'warstaff'],
   fishing_rod: ['fishing-rod'],
+  attack_staff: ['staff', 'staves', 'warstaff'],
+  attack_dagger: ['dagger', 'daggers'],
 
   // 飾品與副手
   amulet: ['amulet', 'amulets'],
@@ -156,6 +166,16 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
     'helmet', 'helmets_dex_int',
     'shield', 'shields_str_dex',
   ],
+  str_dex_int_armour: [
+    'gloves', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int',
+    'boots', 'boots_str_dex', 'boots_str_int', 'boots_dex_int',
+    'body-armour', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int',
+    'helmet', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int',
+    'shield', 'shields_str_dex', 'shields_str_int',
+  ],
+  ward_armour: [
+    'gloves', 'boots', 'body-armour', 'helmet',
+  ],
 };
 
 export function resolvePoE1GearTypes(
@@ -168,13 +188,38 @@ export function resolvePoE1GearTypes(
     result.add('jewel');
   }
 
-  for (const { tag, weight } of spawnWeights) {
-    if (weight <= 0) continue;
-    const lower = tag.toLowerCase();
+  const defaultWeight = spawnWeights.find((sw) => sw.tag.toLowerCase() === 'default')?.weight ?? 0;
 
-    const matched = POE1_TAG_TO_GEAR_TYPES[lower];
-    if (matched) {
-      for (const t of matched) result.add(t);
+  if (defaultWeight > 0) {
+    for (const t of POE1_DEFAULT_GEAR_TYPES) {
+      result.add(t);
+    }
+
+    for (const { tag, weight } of spawnWeights) {
+      const lower = tag.toLowerCase();
+      if (lower === 'default') continue;
+
+      if (weight <= 0) {
+        const matched = POE1_TAG_TO_GEAR_TYPES[lower];
+        if (matched) {
+          for (const t of matched) result.delete(t);
+        }
+      } else {
+        const matched = POE1_TAG_TO_GEAR_TYPES[lower];
+        if (matched) {
+          for (const t of matched) result.add(t);
+        }
+      }
+    }
+  } else {
+    for (const { tag, weight } of spawnWeights) {
+      if (weight <= 0) continue;
+      const lower = tag.toLowerCase();
+
+      const matched = POE1_TAG_TO_GEAR_TYPES[lower];
+      if (matched) {
+        for (const t of matched) result.add(t);
+      }
     }
   }
 
