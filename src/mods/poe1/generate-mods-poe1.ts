@@ -4,7 +4,7 @@ import type { PoeDataLoader } from '../../cdn/loader.js';
 import type { ModTierOutput } from '../common/types.js';
 import { StatDescriptionIndex } from '../common/stat-descriptions.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
-import { resolvePoE1GearTypes, POE1_ITEM_CLASS_TO_GEAR_TYPES } from './gear-types.js';
+import { resolvePoE1GearTypes, getPoE1ItemClassGearTypes } from './gear-types.js';
 import { resolvePoE1Affinities } from './affinities.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
@@ -64,7 +64,7 @@ export async function buildModsPoE1(
   for (const item of baseItemsTable) {
     const classId = itemClassesMap.get(item.ItemClassesKey);
     if (!classId) continue;
-    const gearTypes = POE1_ITEM_CLASS_TO_GEAR_TYPES[classId];
+    const gearTypes = getPoE1ItemClassGearTypes(classId);
     if (!gearTypes || gearTypes.length === 0) continue;
 
     const imps = (item as any).Implicit_ModsKeys || (item as any).Implicit_Mods || [];
@@ -134,10 +134,10 @@ export async function buildModsPoE1(
   let matchedTradeIdCount = 0;
   const unmatchedList: UnmatchedModItem[] = [];
 
-  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、工藝(9)、珠寶(10)、深淵珠寶(13)
-  const allowedDomains = new Set([1, 2, 9, 10, 13]);
-  // 允許的 GenerationType 集合: 固有(0, 3)、前綴(1)、後綴(2)、瓦爾腐化(5)
-  const allowedGenTypes = new Set([0, 1, 2, 3, 5]);
+  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、工藝(9)、珠寶(10)、深淵珠寶(13)、星團珠寶(21)、密教工藝(28)
+  const allowedDomains = new Set([1, 2, 9, 10, 13, 21, 28]);
+  // 允許的 GenerationType 集合: 固有(0, 3)、前綴(1)、後綴(2)、瓦爾腐化(5)、灼烙總督古靈(28)、吞噬天地古靈(29)
+  const allowedGenTypes = new Set([0, 1, 2, 3, 5, 28, 29]);
 
   for (let modIdx = 0; modIdx < modsTable.length; modIdx++) {
     const mod = modsTable[modIdx];
@@ -206,6 +206,8 @@ export async function buildModsPoE1(
     const preferredCategories: string[] = [];
     if (mod.GenerationType === 5) {
       preferredCategories.push('implicit');
+    } else if (mod.GenerationType === 28 || mod.GenerationType === 29) {
+      preferredCategories.push('implicit', 'explicit');
     } else if (mod.Domain === 9 || mod.Domain === 28) {
       preferredCategories.push('crafted', 'explicit');
     } else if (isBaseImplicit || mod.GenerationType === 0 || mod.GenerationType === 3) {

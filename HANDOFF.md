@@ -69,15 +69,21 @@
       - 精華專屬部位補全：於 `generate-mods-poe1.ts` 依 `Essences.dat` 的 21 個部位欄位建立外鍵映射，挽回 573 筆無自然掉落權重之精華詞綴部位。
       - 擴展前置：於前端 `tier-domain-service.ts` 支援純勢力詞綴候選 fallback，使官方 Trade API 搜尋勢力詞綴時能精準呈現 T 階選單。
       - 成果：1,446 條勢力詞綴 100% 映射成功（塑界者 304、尊師 276、督軍 233、聖戰 232、狩獵 203、救贖 198 條），PoE 1 詞綴總量大幅暴增至 5,050 階級（+1,904 條），匹配率高達 98.8%。
+    - **PoE 1 全面 Audit 與古靈勢力/星團/密教/裝備類別補全 (9,166 條)**:
+      - 裝備類別正規化與固有詞綴修復：實作 `getPoE1ItemClassGearTypes` 消除 `ItemClasses.Id` 空白差異並支援細劍（`Thrusting One Hand Sword`），挽回胸甲、單手劍、細劍、雙手劍等 173 筆漏失之基底固有詞綴。
+      - 紅藍王古靈勢力詞綴（Eldritch Implicit Mods，3,360 條）：開放 `GenerationType: 28`（灼烙總督/紅王 1,635 條）與 `GenerationType: 29`（吞噬天地/藍王 1,725 條），指定 `preferredCategories: ['implicit', 'explicit']`，100% 映射至官方 Trade API `implicit.stat_...`，並賦予 `searing_exarch`、`eater_of_worlds`、`eldritch` 親和度。
+      - 星團珠寶詞綴（Cluster Jewels，531 條）：開放 `Domain: 21`，指派 `jewel` 與大小星團部位標籤，賦予 `cluster` 親和度。
+      - 密教解密大師工藝（Domain 28，150 條）：開放 `Domain: 28`，映射至 `crafted` / `explicit` 並標記 `master`。
+      - 成果：PoE 1 詞綴階級數自 5,050 暴增至 **9,166 階級**（+4,116 條），成功映射 **9,107 筆 Trade Stat ID**，匹配率由 98.8% 攀升至 **99.4%**！
   - 最新轉換指標：
     - PoE 2: 3,650 階級，3,591 映射 (98.4%)，未配對 59 筆，984 範本，1,555 Trade IDs (含 153 個 implicit ID)。
-    - PoE 1: 5,050 階級，4,991 映射 (98.8%)，未配對 59 筆，1,348 範本，1,490 Trade IDs（勢力 1,446 條全數收錄）。
+    - PoE 1: 9,166 階級，9,107 映射 (99.4%)，未配對 59 筆，1,889 範本，2,132 Trade IDs（勢力 4,806 條、星團 531 條、精華 573 條）。
   - 版本解析與快取自動更新管線升級 (Cache & Version Pipeline Upgrade)：
     - **版本強健容錯 (`PoeDataLoader.create`)**：防範第三方回傳 `"error"` 或過期 404 版號（如 ggpk.exposed 回傳已失效的 `4.5.5.2`），新增 `isVersionAccessible` 向 CDN 驗證 `_.index.bin` 可用性；依序實作 `obsoleet` ➔ `ggpk.exposed` ➔ `output/version.json` ➔ `.cache/bundles` 四級優雅降級回退，徹底告別 build 崩潰。
     - **Trade API 版本連動**：`fetchTradeStats` 綁定 `patchVersion`，快取存放於 `.cache/bundles/<patchVersion>/trade_stats_${ver}.json`，改版時自動向官方抓取最新 stats，下載失敗時支援舊快取防斷網降級。
     - **Schema 自動更新與 304 快取 (`getSchema`)**：支援 HTTP 條件式請求（`If-None-Match` / `If-Modified-Since`），向 GitHub release 自動比對；未變更時以 HTTP 304 秒級沿用本地快取，有新版時自動覆蓋寫入，兼顧零多餘流量與最新定義同步。
 - **後續目標**:
-  - 將最新生成的 `output/poe2/mods-*.json` 視需要同步至 `PoeXD-Extension/public/json/poe2/`。
+  - 將最新生成的 `output/poe1/mods-*.json` 與 `output/poe2/mods-*.json` 視需要同步至 `PoeXD-Extension/public/json/`。
   - 在 `PoeXD-Extension` 中適配讀取 `ids` 陣列進行批次/單項多 ID 篩選器派發。
   - 精確提交 Git 變更並發布。
 

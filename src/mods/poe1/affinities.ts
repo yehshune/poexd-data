@@ -47,6 +47,22 @@ export function resolvePoE1Affinities(
   // 3. 勢力與特殊詞綴判定 (Influence Mods)
   let isInfluence = false;
 
+  // 3.0 古靈勢力固有詞綴 (Eldritch Implicit: 灼烙總督 Gen 28, 吞噬天地 Gen 29)
+  if (mod.GenerationType === 28) {
+    affs.add('searing_exarch');
+    affs.add('eldritch');
+    isInfluence = true;
+  } else if (mod.GenerationType === 29) {
+    affs.add('eater_of_worlds');
+    affs.add('eldritch');
+    isInfluence = true;
+  }
+
+  // 3.0.1 星團珠寶 (Cluster Jewels)
+  if (mod.Domain === 21) {
+    affs.add('cluster');
+  }
+
   // 3.1 優先由權重標籤 (SpawnWeight Tags) 精準判定
   for (const { tag, weight } of spawnWeights) {
     if (weight <= 0) continue;
@@ -101,6 +117,7 @@ export function resolvePoE1Affinities(
   const isSpecialExclusion =
     isInfluence ||
     mod.Domain === 9 ||
+    mod.Domain === 21 ||
     mod.Domain === 28 ||
     mod.GenerationType === 5 ||
     tradeCategory === 'crafted' ||

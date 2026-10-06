@@ -236,6 +236,11 @@ export function resolvePoE1GearTypes(
   } else if (domain === 13) {
     result.add('jewel');
     result.add('abyss-jewel');
+  } else if (domain === 21) {
+    result.add('jewel');
+    result.add('large-cluster-jewel');
+    result.add('medium-cluster-jewel');
+    result.add('small-cluster-jewel');
   }
 
   const defaultWeight = spawnWeights.find((sw) => sw.tag.toLowerCase() === 'default')?.weight ?? 0;
@@ -277,18 +282,28 @@ export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   Claw: ['claw', 'claws'],
   Dagger: ['dagger', 'daggers'],
   RuneDagger: ['dagger', 'daggers', 'rune-dagger'],
+  'Rune Dagger': ['dagger', 'daggers', 'rune-dagger'],
   Wand: ['wand', 'wands'],
   OneHandSword: ['one-hand-sword', 'one_hand_swords'],
+  'One Hand Sword': ['one-hand-sword', 'one_hand_swords'],
+  ThrustingOneHandSword: ['one-hand-sword', 'one_hand_swords'],
+  'Thrusting One Hand Sword': ['one-hand-sword', 'one_hand_swords'],
   OneHandAxe: ['one-hand-axe', 'one_hand_axes'],
+  'One Hand Axe': ['one-hand-axe', 'one_hand_axes'],
   OneHandMace: ['one-hand-mace', 'one_hand_maces'],
+  'One Hand Mace': ['one-hand-mace', 'one_hand_maces'],
   Sceptre: ['sceptre', 'sceptres'],
   Bow: ['bow', 'bows'],
   Staff: ['staff', 'staves'],
   Warstaff: ['staff', 'staves', 'warstaff'],
   TwoHandSword: ['two-hand-sword', 'two_hand_swords'],
+  'Two Hand Sword': ['two-hand-sword', 'two_hand_swords'],
   TwoHandAxe: ['two-hand-axe', 'two_hand_axes'],
+  'Two Hand Axe': ['two-hand-axe', 'two_hand_axes'],
   TwoHandMace: ['two-hand-mace', 'two_hand_maces'],
+  'Two Hand Mace': ['two-hand-mace', 'two_hand_maces'],
   FishingRod: ['fishing-rod'],
+  'Fishing Rod': ['fishing-rod'],
   Amulet: ['amulet', 'amulets'],
   Ring: ['ring', 'rings'],
   Belt: ['belt', 'belts'],
@@ -297,12 +312,29 @@ export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   Gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
   Boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
   BodyArmour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
+  'Body Armour': ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
   Helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
   Flask: ['flask'],
   LifeFlask: ['life-flask', 'life_flasks', 'flask'],
+  'Life Flask': ['life-flask', 'life_flasks', 'flask'],
   ManaFlask: ['mana-flask', 'mana_flasks', 'flask'],
+  'Mana Flask': ['mana-flask', 'mana_flasks', 'flask'],
   HybridFlask: ['flask', 'hybrid-flask'],
+  'Hybrid Flask': ['flask', 'hybrid-flask'],
   UtilityFlask: ['flask', 'utility-flask'],
+  'Utility Flask': ['flask', 'utility-flask'],
   Jewel: ['jewel'],
   AbyssJewel: ['jewel', 'abyss-jewel'],
+  'Abyss Jewel': ['jewel', 'abyss-jewel'],
 };
+
+export function getPoE1ItemClassGearTypes(classId: string): string[] | undefined {
+  if (POE1_ITEM_CLASS_TO_GEAR_TYPES[classId]) {
+    return POE1_ITEM_CLASS_TO_GEAR_TYPES[classId];
+  }
+  const clean = classId.replace(/[\s_-]+/g, '');
+  if (POE1_ITEM_CLASS_TO_GEAR_TYPES[clean]) {
+    return POE1_ITEM_CLASS_TO_GEAR_TYPES[clean];
+  }
+  return undefined;
+}
