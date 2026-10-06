@@ -23,8 +23,11 @@
     - 識別 `Essences.dat` 之 `Perfect: true`，將完美精髓專屬詞綴獨立標記為 `affinities: ["perfect_essence"]`，使其在擴充功能側邊欄完美獨立大區展示。
   - Trade 檢索分類優先級校正與嚴格隔離機制：
     - 修復 `findStatId` 跨類別隨機 fallback 問題，指定 `preferredCategories` 時嚴禁 fallback 至其他無關類別。
-    - PoE 1 工藝台大師詞綴（`Domain === 10`）嚴格指派 `preferredCategories: ['crafted']`，100% 映射至 `crafted.stat_...`。
-    - PoE 1 污染固定詞綴（`GenerationType === 5`）優先指派 `preferredCategories: ['implicit']`，精準匹配至 `implicit.stat_...`。
+    - PoE 1 Domain 顛倒校正與珠寶/工藝/瓦爾腐化修復：
+      - 校正 Domain 定義：9 為工藝大師（1,636 條）、10 為珠寶（774 條）、13 為深淵珠寶（548 條）。
+      - 瓦爾腐化詞綴（`GenerationType === 5`）優先指定 `preferredCategories: ['implicit']`，精準匹配至 `implicit.stat_...`（解決腐化之血、阻礙免疫、癱瘓免疫等 43 條瓦爾珠寶詞墜入未配對問題）。
+      - 工藝台大師詞綴（`Domain === 9 || Domain === 28`）指定 `preferredCategories: ['crafted', 'explicit']`，並賦予 `affinities: ['master']`（非腐化）。
+      - 珠寶部位判定校正：`resolvePoE1GearTypes` 依 Domain 10 (珠寶) 與 13 (深淵珠寶) 賦予部位。
     - PoE 2 污染詞綴（`GenerationType === 5`）指派 `preferredCategories: ['enchant']`，100% 映射至 `enchant.stat_...`。
     - PoE 2 命定（`bonded`）與符文增幅（`socketable`）嚴格限定 `preferredCategories: ['rune']`，命定優先匹配 `Bonded: ` 前綴，100% 映射至 `rune.stat_...`。
     - 複合詞綴多 ID 解析升級（方案 A）：
@@ -62,7 +65,7 @@
       - PoE 2 `implicit.` 官方 Trade ID 自 0 筆回歸至 153 個，成功對齊 206 階級固有詞綴。
   - 最新轉換指標：
     - PoE 2: 3,650 階級，3,591 映射 (98.4%)，未配對 59 筆，984 範本，1,555 Trade IDs (含 153 個 implicit ID)。
-    - PoE 1: 3,841 階級，3,652 映射 (95.1%)，未配對 189 筆，785 範本，797 Trade IDs。
+    - PoE 1: 3,146 階級，3,087 映射 (98.1%)，未配對 59 筆（自 189 筆驟降），965 範本，1,053 Trade IDs（自 797 筆擴增）。
   - 版本解析與快取自動更新管線升級 (Cache & Version Pipeline Upgrade)：
     - **版本強健容錯 (`PoeDataLoader.create`)**：防範第三方回傳 `"error"` 或過期 404 版號（如 ggpk.exposed 回傳已失效的 `4.5.5.2`），新增 `isVersionAccessible` 向 CDN 驗證 `_.index.bin` 可用性；依序實作 `obsoleet` ➔ `ggpk.exposed` ➔ `output/version.json` ➔ `.cache/bundles` 四級優雅降級回退，徹底告別 build 崩潰。
     - **Trade API 版本連動**：`fetchTradeStats` 綁定 `patchVersion`，快取存放於 `.cache/bundles/<patchVersion>/trade_stats_${ver}.json`，改版時自動向官方抓取最新 stats，下載失敗時支援舊快取防斷網降級。

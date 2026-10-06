@@ -110,8 +110,8 @@ export async function buildModsPoE1(
   let matchedTradeIdCount = 0;
   const unmatchedList: UnmatchedModItem[] = [];
 
-  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、珠寶(9)、工藝(10)、深淵珠寶(11)
-  const allowedDomains = new Set([1, 2, 9, 10, 11]);
+  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、工藝(9)、珠寶(10)、深淵珠寶(13)
+  const allowedDomains = new Set([1, 2, 9, 10, 13]);
   // 允許的 GenerationType 集合: 固有(0, 3)、前綴(1)、後綴(2)、瓦爾腐化(5)
   const allowedGenTypes = new Set([0, 1, 2, 3, 5]);
 
@@ -174,10 +174,10 @@ export async function buildModsPoE1(
 
     // 偏好 Trade Stat 類別選取
     const preferredCategories: string[] = [];
-    if (mod.Domain === 10) {
-      preferredCategories.push('crafted');
-    } else if (mod.GenerationType === 5) {
+    if (mod.GenerationType === 5) {
       preferredCategories.push('implicit');
+    } else if (mod.Domain === 9 || mod.Domain === 28) {
+      preferredCategories.push('crafted', 'explicit');
     } else if (isBaseImplicit || mod.GenerationType === 0 || mod.GenerationType === 3) {
       preferredCategories.push('implicit', 'explicit');
     } else if (delveModIndices.has(modIdx)) {

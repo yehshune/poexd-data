@@ -184,8 +184,11 @@ export function resolvePoE1GearTypes(
 ): string[] {
   const result = new Set<string>();
 
-  if (domain === 9 || domain === 11) {
+  if (domain === 10) {
     result.add('jewel');
+  } else if (domain === 13) {
+    result.add('jewel');
+    result.add('abyss-jewel');
   }
 
   const defaultWeight = spawnWeights.find((sw) => sw.tag.toLowerCase() === 'default')?.weight ?? 0;

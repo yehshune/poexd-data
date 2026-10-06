@@ -22,7 +22,7 @@ export function resolvePoE1Affinities(
   if (mod.GenerationType === 5) {
     affs.add('corrupted');
   }
-  if (mod.Domain === 10) {
+  if ((mod.Domain === 9 || mod.Domain === 28) && mod.GenerationType !== 5) {
     affs.add('master');
   }
 
@@ -72,7 +72,8 @@ export function resolvePoE1Affinities(
   // 4. 自然生成詞綴判定
   const isSpecialExclusion =
     isInfluence ||
-    mod.Domain === 10 ||
+    mod.Domain === 9 ||
+    mod.Domain === 28 ||
     mod.GenerationType === 5 ||
     tradeCategory === 'crafted' ||
     tradeCategory === 'enchant';
