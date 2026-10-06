@@ -8,7 +8,8 @@ export function resolvePoE1Affinities(
   mod: any,
   mechanismData: PoE1MechanismData,
   tradeCategory?: string,
-  isNaturalDrop: boolean = false
+  isNaturalDrop: boolean = false,
+  spawnWeights: Array<{ tag: string; weight: number }> = []
 ): string[] {
   const affs = new Set<string>();
 
@@ -44,8 +45,35 @@ export function resolvePoE1Affinities(
   }
 
   // 3. 勢力與特殊詞綴判定 (Influence Mods)
-  const idLower = (mod.Id || '').toLowerCase();
   let isInfluence = false;
+
+  // 3.1 優先由權重標籤 (SpawnWeight Tags) 精準判定
+  for (const { tag, weight } of spawnWeights) {
+    if (weight <= 0) continue;
+    const lower = tag.toLowerCase();
+    if (lower.endsWith('_shaper') || lower === 'shaper' || lower === 'shaper_item') {
+      affs.add('shaper');
+      isInfluence = true;
+    } else if (lower.endsWith('_elder') || lower === 'elder' || lower === 'elder_item') {
+      affs.add('elder');
+      isInfluence = true;
+    } else if (lower.endsWith('_crusader') || lower === 'crusader') {
+      affs.add('crusader');
+      isInfluence = true;
+    } else if (lower.endsWith('_eyrie') || lower.endsWith('_redeemer') || lower === 'eyrie' || lower === 'redeemer') {
+      affs.add('redeemer');
+      isInfluence = true;
+    } else if (lower.endsWith('_basilisk') || lower.endsWith('_hunter') || lower === 'basilisk' || lower === 'hunter') {
+      affs.add('hunter');
+      isInfluence = true;
+    } else if (lower.endsWith('_adjudicator') || lower.endsWith('_warlord') || lower.endsWith('_conquest') || lower === 'adjudicator' || lower === 'warlord') {
+      affs.add('warlord');
+      isInfluence = true;
+    }
+  }
+
+  // 3.2 次之由 Mod.Id 名稱判定 (兜底相容)
+  const idLower = (mod.Id || '').toLowerCase();
   if (idLower.includes('elder')) {
     affs.add('elder');
     isInfluence = true;

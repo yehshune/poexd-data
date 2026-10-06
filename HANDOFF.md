@@ -63,9 +63,15 @@
       - 支援包含空格之部位 ID：使用 `getPoE2ItemClassGearTypes` 消除空格映射。
       - 補全 PoE 2 護符映射：`UtilityFlask: ['charm', 'charms']`。
       - PoE 2 `implicit.` 官方 Trade ID 自 0 筆回歸至 153 個，成功對齊 206 階級固有詞綴。
+    - **PoE 1 六大勢力詞綴（塑界者、救贖者、異界尊師、聖戰軍王、狩獵者、總督軍）全面回歸 (1,446 條)**:
+      - 標籤架構支援：於 `gear-types.ts` 實作 `matchPoE1TagGearTypes`，支援 `<gear>_<influence>` 勢力後綴標籤動態解構（`shaper`, `elder`, `crusader`, `eyrie`, `basilisk`, `adjudicator`），並補全盾牌、召喚物飾品、特殊基底等標籤映射。
+      - 親和度推導升級：於 `affinities.ts` 改由 `spawnWeights` 正式標籤判定勢力歸屬，徹底解決 GGG 官方 Dat 中多數勢力詞綴命名僅含 `...Influence` 而無法依 ID 比對的問題。
+      - 精華專屬部位補全：於 `generate-mods-poe1.ts` 依 `Essences.dat` 的 21 個部位欄位建立外鍵映射，挽回 573 筆無自然掉落權重之精華詞綴部位。
+      - 擴展前置：於前端 `tier-domain-service.ts` 支援純勢力詞綴候選 fallback，使官方 Trade API 搜尋勢力詞綴時能精準呈現 T 階選單。
+      - 成果：1,446 條勢力詞綴 100% 映射成功（塑界者 304、尊師 276、督軍 233、聖戰 232、狩獵 203、救贖 198 條），PoE 1 詞綴總量大幅暴增至 5,050 階級（+1,904 條），匹配率高達 98.8%。
   - 最新轉換指標：
     - PoE 2: 3,650 階級，3,591 映射 (98.4%)，未配對 59 筆，984 範本，1,555 Trade IDs (含 153 個 implicit ID)。
-    - PoE 1: 3,146 階級，3,087 映射 (98.1%)，未配對 59 筆（自 189 筆驟降），965 範本，1,053 Trade IDs（自 797 筆擴增）。
+    - PoE 1: 5,050 階級，4,991 映射 (98.8%)，未配對 59 筆，1,348 範本，1,490 Trade IDs（勢力 1,446 條全數收錄）。
   - 版本解析與快取自動更新管線升級 (Cache & Version Pipeline Upgrade)：
     - **版本強健容錯 (`PoeDataLoader.create`)**：防範第三方回傳 `"error"` 或過期 404 版號（如 ggpk.exposed 回傳已失效的 `4.5.5.2`），新增 `isVersionAccessible` 向 CDN 驗證 `_.index.bin` 可用性；依序實作 `obsoleet` ➔ `ggpk.exposed` ➔ `output/version.json` ➔ `.cache/bundles` 四級優雅降級回退，徹底告別 build 崩潰。
     - **Trade API 版本連動**：`fetchTradeStats` 綁定 `patchVersion`，快取存放於 `.cache/bundles/<patchVersion>/trade_stats_${ver}.json`，改版時自動向官方抓取最新 stats，下載失敗時支援舊快取防斷網降級。

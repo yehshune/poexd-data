@@ -75,18 +75,42 @@ export async function buildModsPoE1(
     }
   }
 
-  // 2. 精華外鍵索引 (Essences.dat)
+  // 2. 精華外鍵與部位索引 (Essences.dat)
   const essenceModIndices = new Set<number>();
+  const essenceModTypesMap = new Map<number, Set<string>>();
+  const essenceFieldToGearTypes: Record<string, string[]> = {
+    Helmet_ModsKey: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
+    BodyArmour_ModsKey: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
+    Boots_ModsKey: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
+    Gloves_ModsKey: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
+    Bow_ModsKey: ['bow', 'bows'],
+    Wand_ModsKey: ['wand', 'wands'],
+    Staff_ModsKey: ['staff', 'staves'],
+    TwoHandSword_ModsKey: ['two-hand-sword', 'two_hand_swords'],
+    TwoHandAxe_ModsKey: ['two-hand-axe', 'two_hand_axes'],
+    TwoHandMace_ModsKey: ['two-hand-mace', 'two_hand_maces'],
+    Claw_ModsKey: ['claw', 'claws'],
+    Dagger_ModsKey: ['dagger', 'daggers'],
+    OneHandSword_ModsKey: ['one-hand-sword', 'one_hand_swords'],
+    OneHandThrustingSword_ModsKey: ['one-hand-sword', 'one_hand_swords'],
+    OneHandAxe_ModsKey: ['one-hand-axe', 'one_hand_axes'],
+    OneHandMace_ModsKey: ['one-hand-mace', 'one_hand_maces'],
+    Sceptre_ModsKey: ['sceptre', 'sceptres'],
+    Belt_ModsKey: ['belt', 'belts'],
+    Amulet_ModsKey: ['amulet', 'amulets'],
+    Ring_ModsKey: ['ring', 'rings'],
+    Shield_ModsKey: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'bucklers'],
+  };
+
   for (const row of essencesTable) {
-    for (const key of [
-      'Helmet_ModsKey', 'BodyArmour_ModsKey', 'Boots_ModsKey', 'Gloves_ModsKey',
-      'Bow_ModsKey', 'Wand_ModsKey', 'Staff_ModsKey', 'TwoHandSword_ModsKey',
-      'Claw_ModsKey', 'Dagger_ModsKey', 'OneHandSword_ModsKey', 'Belt_ModsKey',
-      'Amulet_ModsKey', 'Ring_ModsKey', 'Shield_ModsKey', 'Display_Weapon_ModsKey',
-      'Display_Armour_ModsKey', 'Display_Jewellery_ModsKey'
-    ]) {
+    for (const [key, gearTypes] of Object.entries(essenceFieldToGearTypes)) {
       const mIdx = (row as any)[key];
-      if (mIdx != null) essenceModIndices.add(mIdx);
+      if (mIdx != null) {
+        essenceModIndices.add(mIdx);
+        if (!essenceModTypesMap.has(mIdx)) essenceModTypesMap.set(mIdx, new Set());
+        const s = essenceModTypesMap.get(mIdx)!;
+        gearTypes.forEach((t) => s.add(t));
+      }
     }
   }
 
@@ -124,10 +148,11 @@ export async function buildModsPoE1(
 
     // 解析裝備部位標籤
     let types: string[] = [];
+    const spawnWeights: Array<{ tag: string; weight: number }> = [];
+
     if (isBaseImplicit) {
       types = Array.from(implicitModTypesMap.get(modIdx)!);
     } else {
-      const spawnWeights: Array<{ tag: string; weight: number }> = [];
       const tagIndices = (mod as any).SpawnWeight_TagsKeys || (mod as any).SpawnWeight_Tags || [];
       const tagWeights = mod.SpawnWeight_Values || [];
       for (let i = 0; i < tagIndices.length; i++) {
@@ -139,6 +164,11 @@ export async function buildModsPoE1(
         }
       }
       types = resolvePoE1GearTypes(spawnWeights, mod.Domain);
+    }
+
+    // 若詞綴無自然掉落部位，但屬於精華專屬詞綴，由精華外鍵關聯補全部位
+    if (types.length === 0 && essenceModTypesMap.has(modIdx)) {
+      types = Array.from(essenceModTypesMap.get(modIdx)!);
     }
 
     if (types.length === 0) continue;
@@ -209,7 +239,8 @@ export async function buildModsPoE1(
       mod,
       { essenceModIndices, delveModIndices },
       tradeCategory,
-      isNaturalDrop
+      isNaturalDrop,
+      spawnWeights
     );
 
     const tierItem: ModTierOutput = {

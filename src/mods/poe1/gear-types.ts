@@ -176,7 +176,54 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   ward_armour: [
     'gloves', 'boots', 'body-armour', 'helmet',
   ],
+
+  // 盾牌細分
+  str_shield: ['shield', 'shields_str'],
+  dex_shield: ['shield', 'shields_str_dex', 'bucklers'],
+  int_shield: ['shield', 'shields_str_int'],
+  str_dex_shield: ['shield', 'shields_str_dex', 'bucklers'],
+  str_int_shield: ['shield', 'shields_str_int'],
+  dex_int_shield: ['shield', 'shields_str_dex', 'bucklers'],
+  focus: ['shield', 'shields_str_int'],
+
+  // 召喚物裝備標籤
+  weapon_can_roll_minion_modifiers: ['wand', 'wands', 'sceptre', 'sceptres'],
+  focus_can_roll_minion_modifiers: ['shield', 'shields_str_int'],
+  ring_can_roll_minion_modifiers: ['ring', 'rings'],
+  helmet_can_roll_minion_modifiers: [
+    'helmet', 'helmets_str', 'helmets_dex', 'helmets_int',
+    'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'
+  ],
+
+  // 特殊基底與機制裝備
+  unset_ring: ['ring', 'rings'],
+  deepwater_sword: ['two-hand-sword', 'two_hand_swords'],
+  necropolis_boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
+  necropolis_gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
+  necropolis_body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
+  necropolis_helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
 };
+
+const INFLUENCE_SUFFIXES = ['shaper', 'elder', 'crusader', 'eyrie', 'basilisk', 'adjudicator'];
+
+export function matchPoE1TagGearTypes(tagLower: string): string[] | undefined {
+  if (POE1_TAG_TO_GEAR_TYPES[tagLower]) {
+    return POE1_TAG_TO_GEAR_TYPES[tagLower];
+  }
+
+  // 匹配 6 大勢力標籤格式 (<gear>_shaper, <gear>_elder 等)
+  for (const suffix of INFLUENCE_SUFFIXES) {
+    if (tagLower.endsWith(`_${suffix}`)) {
+      let basePart = tagLower.slice(0, -(suffix.length + 1));
+      if (basePart === '2h_sword') basePart = 'two_hand_sword';
+      else if (basePart === '2h_axe') basePart = 'two_hand_axe';
+      else if (basePart === '2h_mace') basePart = 'two_hand_mace';
+      return POE1_TAG_TO_GEAR_TYPES[basePart];
+    }
+  }
+
+  return undefined;
+}
 
 export function resolvePoE1GearTypes(
   spawnWeights: Array<{ tag: string; weight: number }>,
@@ -202,14 +249,11 @@ export function resolvePoE1GearTypes(
       const lower = tag.toLowerCase();
       if (lower === 'default') continue;
 
-      if (weight <= 0) {
-        const matched = POE1_TAG_TO_GEAR_TYPES[lower];
-        if (matched) {
+      const matched = matchPoE1TagGearTypes(lower);
+      if (matched) {
+        if (weight <= 0) {
           for (const t of matched) result.delete(t);
-        }
-      } else {
-        const matched = POE1_TAG_TO_GEAR_TYPES[lower];
-        if (matched) {
+        } else {
           for (const t of matched) result.add(t);
         }
       }
@@ -219,7 +263,7 @@ export function resolvePoE1GearTypes(
       if (weight <= 0) continue;
       const lower = tag.toLowerCase();
 
-      const matched = POE1_TAG_TO_GEAR_TYPES[lower];
+      const matched = matchPoE1TagGearTypes(lower);
       if (matched) {
         for (const t of matched) result.add(t);
       }
