@@ -312,10 +312,14 @@ export class TradeStatIndex {
 
 export async function fetchTradeStats(
   gameVersion: 'poe1' | 'poe2',
+  patchVersion?: string,
   cacheDir = path.join(process.cwd(), '.cache')
 ): Promise<TradeStatIndex> {
-  const cacheFile = path.join(cacheDir, `trade_stats_${gameVersion}.json`);
-  await fs.mkdir(cacheDir, { recursive: true });
+  const versionFolder = patchVersion ? path.join(cacheDir, 'bundles', patchVersion) : cacheDir;
+  const cacheFile = patchVersion
+    ? path.join(versionFolder, `trade_stats_${gameVersion}.json`)
+    : path.join(cacheDir, `trade_stats_${gameVersion}.json`);
+  await fs.mkdir(versionFolder, { recursive: true });
 
   try {
     const cached = await fs.readFile(cacheFile, 'utf-8');
@@ -330,20 +334,32 @@ export async function fetchTradeStats(
       ? 'https://www.pathofexile.com/api/trade2/data/stats'
       : 'https://www.pathofexile.com/api/trade/data/stats';
 
-  console.log(`[TradeAPI] 抓取 ${gameVersion} 官方 Trade Stats (${url})...`);
-  const resp = await fetch(url, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) poexd-data',
-    },
-  });
+  console.log(`[TradeAPI] 抓取 ${gameVersion} (版本: ${patchVersion || '最新'}) 官方 Trade Stats (${url})...`);
+  try {
+    const resp = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) poexd-data',
+      },
+      signal: AbortSignal.timeout(10000),
+    });
 
-  if (!resp.ok) {
-    throw new Error(`無法取得 Trade Stats (${resp.status} ${resp.statusText})`);
+    if (!resp.ok) {
+      throw new Error(`無法取得 Trade Stats (${resp.status} ${resp.statusText})`);
+    }
+
+    const json = (await resp.json()) as TradeStatsResponse;
+    await fs.writeFile(cacheFile, JSON.stringify(json, null, 2), 'utf-8');
+    console.log(`[TradeAPI] ${gameVersion} Trade Stats 已寫入快取: ${cacheFile}`);
+
+    return new TradeStatIndex(json);
+  } catch (err) {
+    const fallbackPath = path.join(cacheDir, `trade_stats_${gameVersion}.json`);
+    try {
+      const fallbackCached = await fs.readFile(fallbackPath, 'utf-8');
+      console.warn(`[TradeAPI] 抓取最新 Trade Stats 失敗，回退使用備用舊快取: ${fallbackPath}`);
+      return new TradeStatIndex(JSON.parse(fallbackCached));
+    } catch {
+      throw err;
+    }
   }
-
-  const json = (await resp.json()) as TradeStatsResponse;
-  await fs.writeFile(cacheFile, JSON.stringify(json, null, 2), 'utf-8');
-  console.log(`[TradeAPI] ${gameVersion} Trade Stats 已寫入快取: ${cacheFile}`);
-
-  return new TradeStatIndex(json);
 }

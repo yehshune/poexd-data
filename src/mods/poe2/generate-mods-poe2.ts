@@ -21,7 +21,7 @@ export async function buildModsPoE2(
   await fs.mkdir(outputDir, { recursive: true });
 
   console.log('[PoE 2 Mods] [1/4] 抓取官方 Trade API Filter 檢索表...');
-  const tradeStats = await fetchTradeStats('poe2');
+  const tradeStats = await fetchTradeStats('poe2', loader.patchVersion);
 
   console.log('[PoE 2 Mods] [2/4] 自官方 CDN 載入並解析 StatDescriptions...');
   const csdBytes = await loader.getFile('data/statdescriptions/stat_descriptions.csd');

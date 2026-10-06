@@ -58,6 +58,10 @@
   - 最新轉換指標：
     - PoE 2: 3,437 階級，3,382 映射 (98.4%)，未配對 55 筆，924 範本，1,402 Trade IDs。
     - PoE 1: 3,841 階級，3,652 映射 (95.1%)，未配對 189 筆，785 範本，797 Trade IDs。
+  - 版本解析與快取自動更新管線升級 (Cache & Version Pipeline Upgrade)：
+    - **版本強健容錯 (`PoeDataLoader.create`)**：防範第三方回傳 `"error"` 或過期 404 版號（如 ggpk.exposed 回傳已失效的 `4.5.5.2`），新增 `isVersionAccessible` 向 CDN 驗證 `_.index.bin` 可用性；依序實作 `obsoleet` ➔ `ggpk.exposed` ➔ `output/version.json` ➔ `.cache/bundles` 四級優雅降級回退，徹底告別 build 崩潰。
+    - **Trade API 版本連動**：`fetchTradeStats` 綁定 `patchVersion`，快取存放於 `.cache/bundles/<patchVersion>/trade_stats_${ver}.json`，改版時自動向官方抓取最新 stats，下載失敗時支援舊快取防斷網降級。
+    - **Schema 自動更新與 304 快取 (`getSchema`)**：支援 HTTP 條件式請求（`If-None-Match` / `If-Modified-Since`），向 GitHub release 自動比對；未變更時以 HTTP 304 秒級沿用本地快取，有新版時自動覆蓋寫入，兼顧零多餘流量與最新定義同步。
 - **後續目標**:
   - 將最新生成的 `output/poe2/mods-*.json` 視需要同步至 `PoeXD-Extension/public/json/poe2/`。
   - 在 `PoeXD-Extension` 中適配讀取 `ids` 陣列進行批次/單項多 ID 篩選器派發。

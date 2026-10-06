@@ -15,7 +15,7 @@ export async function buildModsPoE1(
   await fs.mkdir(outputDir, { recursive: true });
 
   console.log('[PoE 1 Mods] [1/4] 抓取官方 Trade API Filter 檢索表...');
-  const tradeStats = await fetchTradeStats('poe1');
+  const tradeStats = await fetchTradeStats('poe1', loader.patchVersion);
 
   console.log('[PoE 1 Mods] [2/4] 自官方 CDN 載入並解析 StatDescriptions...');
   const txtBytes = await loader.getFile('metadata/statdescriptions/stat_descriptions.txt');
