@@ -55,8 +55,13 @@
       - 修正 `TradeStatIndex.resolveStatIds` 的第 0 步 MurmurHash2 比對，增加 `isBondedContext` 與 `entry.text` 的 `bonded` 語意一致性過濾。
       - 徹底解決 `base_maximum_life` 等底層相同屬性在第 0 步將命定詞綴搶先雜湊至常規 ID (`rune.stat_3299347043`) 的問題，順利回退第 1 步文本比對命中專屬 `rune.stat_2280525771`。
       - 命定 Trade ID 匹配數自 131 筆大幅躍升至 209 筆（官方共 212 筆，命中率達 98.6%）。
+    - PoE 2 基底固有詞綴 (Implicit Mods) 解析修復：
+      - 修復 `BaseItemTypes` 欄位名稱相容：PoE 2 為 `ItemClass`（而非 PoE 1 之 `ItemClassesKey`）。
+      - 支援包含空格之部位 ID：使用 `getPoE2ItemClassGearTypes` 消除空格映射。
+      - 補全 PoE 2 護符映射：`UtilityFlask: ['charm', 'charms']`。
+      - PoE 2 `implicit.` 官方 Trade ID 自 0 筆回歸至 153 個，成功對齊 206 階級固有詞綴。
   - 最新轉換指標：
-    - PoE 2: 3,437 階級，3,382 映射 (98.4%)，未配對 55 筆，924 範本，1,402 Trade IDs。
+    - PoE 2: 3,650 階級，3,591 映射 (98.4%)，未配對 59 筆，984 範本，1,555 Trade IDs (含 153 個 implicit ID)。
     - PoE 1: 3,841 階級，3,652 映射 (95.1%)，未配對 189 筆，785 範本，797 Trade IDs。
   - 版本解析與快取自動更新管線升級 (Cache & Version Pipeline Upgrade)：
     - **版本強健容錯 (`PoeDataLoader.create`)**：防範第三方回傳 `"error"` 或過期 404 版號（如 ggpk.exposed 回傳已失效的 `4.5.5.2`），新增 `isVersionAccessible` 向 CDN 驗證 `_.index.bin` 可用性；依序實作 `obsoleet` ➔ `ggpk.exposed` ➔ `output/version.json` ➔ `.cache/bundles` 四級優雅降級回退，徹底告別 build 崩潰。

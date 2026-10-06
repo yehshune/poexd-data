@@ -277,6 +277,7 @@ export const POE2_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   Flask: ['flask'],
   LifeFlask: ['life-flask', 'life_flasks', 'flask'],
   ManaFlask: ['mana-flask', 'mana_flasks', 'flask'],
+  UtilityFlask: ['charm', 'charms'],
   Charm: ['charm', 'charms'],
   Jewel: ['jewel'],
   Relic: ['relic', 'relics'],

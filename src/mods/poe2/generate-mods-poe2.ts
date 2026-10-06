@@ -6,7 +6,6 @@ import { StatDescriptionIndex } from '../common/stat-descriptions.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
 import {
   resolvePoE2GearTypes,
-  POE2_ITEM_CLASS_TO_GEAR_TYPES,
   getPoE2ItemClassGearTypes,
   ALL_POE2_WEAPONS,
   ALL_POE2_ARMOUR,
@@ -76,9 +75,10 @@ export async function buildModsPoE2(
   // 1. 基底固有詞綴對應的裝備類別映射表 (BaseItemTypes.Implicit_Mods)
   const implicitModTypesMap = new Map<number, Set<string>>();
   for (const item of baseItemsTable) {
-    const classId = itemClassesMap.get(item.ItemClassesKey);
+    const classIdx = (item as any).ItemClass ?? item.ItemClassesKey;
+    const classId = itemClassesMap.get(classIdx);
     if (!classId) continue;
-    const gearTypes = POE2_ITEM_CLASS_TO_GEAR_TYPES[classId];
+    const gearTypes = getPoE2ItemClassGearTypes(classId);
     if (!gearTypes || gearTypes.length === 0) continue;
 
     const imps = (item as any).Implicit_Mods || (item as any).Implicit_ModsKeys || [];
