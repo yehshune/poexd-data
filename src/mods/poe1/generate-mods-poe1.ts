@@ -4,7 +4,13 @@ import type { PoeDataLoader } from '../../cdn/loader.js';
 import type { ModTierOutput } from '../common/types.js';
 import { StatDescriptionIndex } from '../common/stat-descriptions.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
-import { resolvePoE1GearTypes, getPoE1ItemClassGearTypes } from './gear-types.js';
+import {
+  resolvePoE1GearTypes,
+  getPoE1ItemClassGearTypes,
+  POE1_DEFAULT_GEAR_TYPES,
+  resolveRecombinatorSpecialGearTypes,
+  resolveHarvestQualityGearTypes
+} from './gear-types.js';
 import { resolvePoE1Affinities } from './affinities.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
@@ -134,10 +140,10 @@ export async function buildModsPoE1(
   let matchedTradeIdCount = 0;
   const unmatchedList: UnmatchedModItem[] = [];
 
-  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、工藝(9)、珠寶(10)、深淵珠寶(13)、星團珠寶(21)、密教工藝(28)
-  const allowedDomains = new Set([1, 2, 9, 10, 13, 21, 28]);
-  // 允許的 GenerationType 集合: 固有(0, 3)、前綴(1)、後綴(2)、瓦爾腐化(5)、灼烙總督古靈(28)、吞噬天地古靈(29)
-  const allowedGenTypes = new Set([0, 1, 2, 3, 5, 28, 29]);
+  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、工藝(9)、珠寶(10)、深淵珠寶(13)、掘獄(16)、星團珠寶(21)、密教工藝(28)
+  const allowedDomains = new Set([1, 2, 9, 10, 13, 16, 21, 28]);
+  // 允許的 GenerationType 集合: 固有(0, 3)、前綴(1)、後綴(2)、瓦爾腐化(5)、附魔(10)、塗油(19)、藥劑附魔(21, 22)、灼烙總督古靈(28)、吞噬天地古靈(29)
+  const allowedGenTypes = new Set([0, 1, 2, 3, 5, 10, 19, 21, 22, 28, 29]);
 
   for (let modIdx = 0; modIdx < modsTable.length; modIdx++) {
     const mod = modsTable[modIdx];
@@ -169,6 +175,26 @@ export async function buildModsPoE1(
     // 若詞綴無自然掉落部位，但屬於精華專屬詞綴，由精華外鍵關聯補全部位
     if (types.length === 0 && essenceModTypesMap.has(modIdx)) {
       types = Array.from(essenceModTypesMap.get(modIdx)!);
+    }
+
+    // 重組裝置專屬詞綴依部位精準補全
+    if (types.length === 0 && mod.Id?.startsWith('RecombinatorSpecial')) {
+      types = resolveRecombinatorSpecialGearTypes(mod.Id);
+    }
+
+    // 豐收/劫盜替代品質附魔依武器/防具精準補全
+    if (types.length === 0 && mod.Id?.startsWith('HarvestAlternate')) {
+      types = resolveHarvestQualityGearTypes(mod.Id);
+    }
+
+    // 枯疫防禦塔附魔補全為戒指/護身符
+    if (types.length === 0 && mod.GenerationType === 19) {
+      types = ['ring', 'rings', 'amulet', 'amulets'];
+    }
+
+    // 藥劑附魔補全為藥劑
+    if (types.length === 0 && (mod.GenerationType === 21 || mod.GenerationType === 22)) {
+      types = ['flask'];
     }
 
     if (types.length === 0) continue;
@@ -212,8 +238,10 @@ export async function buildModsPoE1(
       preferredCategories.push('crafted', 'explicit');
     } else if (isBaseImplicit || mod.GenerationType === 0 || mod.GenerationType === 3) {
       preferredCategories.push('implicit', 'explicit');
-    } else if (delveModIndices.has(modIdx)) {
+    } else if (delveModIndices.has(modIdx) || mod.Domain === 16) {
       preferredCategories.push('delve', 'explicit');
+    } else if ([10, 19, 21, 22].includes(mod.GenerationType) || mod.Id?.startsWith('HarvestAlternate')) {
+      preferredCategories.push('enchant', 'explicit');
     } else {
       preferredCategories.push('explicit');
     }

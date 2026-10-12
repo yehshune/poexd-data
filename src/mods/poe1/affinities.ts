@@ -17,8 +17,14 @@ export function resolvePoE1Affinities(
   if (mechanismData.essenceModIndices.has(modIndex)) {
     affs.add('essence');
   }
-  if (mechanismData.delveModIndices.has(modIndex)) {
+  if (mod.Domain === 16 || mechanismData.delveModIndices.has(modIndex)) {
     affs.add('delve');
+  }
+  if ([10, 19, 21, 22].includes(mod.GenerationType) || mod.Id?.startsWith('HarvestAlternate')) {
+    affs.add('enchant');
+  }
+  if (mod.Id?.startsWith('RecombinatorSpecial')) {
+    affs.add('sentinel');
   }
   if (mod.GenerationType === 5) {
     affs.add('corrupted');
@@ -117,11 +123,16 @@ export function resolvePoE1Affinities(
   const isSpecialExclusion =
     isInfluence ||
     mod.Domain === 9 ||
+    mod.Domain === 16 ||
     mod.Domain === 21 ||
     mod.Domain === 28 ||
     mod.GenerationType === 5 ||
+    [10, 19, 21, 22].includes(mod.GenerationType) ||
+    Boolean(mod.Id?.startsWith('RecombinatorSpecial')) ||
+    Boolean(mod.Id?.startsWith('HarvestAlternate')) ||
     tradeCategory === 'crafted' ||
-    tradeCategory === 'enchant';
+    tradeCategory === 'enchant' ||
+    tradeCategory === 'delve';
 
   if (isNaturalDrop && !isSpecialExclusion) {
     affs.add('normal');

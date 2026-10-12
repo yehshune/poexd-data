@@ -392,3 +392,61 @@ export function getPoE1ItemClassGearTypes(classId: string): string[] | undefined
   }
   return undefined;
 }
+
+export function resolveRecombinatorSpecialGearTypes(modId: string): string[] {
+  if (modId.includes('MaximumEnduranceCharge')) {
+    return ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'];
+  }
+  if (modId.includes('MaximumFrenzyCharge')) {
+    return ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'];
+  }
+  if (modId.includes('MaximumPowerCharge')) {
+    return ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'];
+  }
+  if (modId.includes('MagicUtilityFlaskEffect')) {
+    return ['belt', 'belts'];
+  }
+  if (modId.includes('Keystone')) {
+    return [
+      'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int',
+      'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int',
+      'amulet', 'amulets'
+    ];
+  }
+  if (modId.includes('AuraEffect') || modId.includes('SupportedByLevelFour')) {
+    return ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'];
+  }
+  if (modId.includes('MarkEffect')) {
+    return ['ring', 'rings'];
+  }
+  if (modId.endsWith('1H') || modId.includes('ArcaneSurgeEffect1H') || modId.includes('OnslaughtEffect1H')) {
+    return ONE_HAND_POE1_WEAPONS;
+  }
+  if (modId.endsWith('2H') || modId.includes('ArcaneSurgeEffect2H') || modId.includes('OnslaughtEffect2H')) {
+    return TWO_HAND_POE1_WEAPONS;
+  }
+  if (
+    modId.includes('DamageToAttacksPer') ||
+    modId.includes('CanShock') ||
+    modId.includes('CanIgnite') ||
+    modId.includes('CanFreeze') ||
+    modId.includes('TriggerSkillsDoubleDamage')
+  ) {
+    return ALL_POE1_WEAPONS;
+  }
+  return [];
+}
+
+export function resolveHarvestQualityGearTypes(modId: string): string[] {
+  if (modId.startsWith('HarvestAlternateWeaponQuality')) {
+    return ALL_POE1_WEAPONS;
+  }
+  if (modId.startsWith('HarvestAlternateArmourQuality')) {
+    return [
+      'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int',
+      'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'
+    ];
+  }
+  return [];
+}
+
