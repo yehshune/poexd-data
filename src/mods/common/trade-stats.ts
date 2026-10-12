@@ -134,12 +134,39 @@ export class TradeStatIndex {
         .replace(/faster/g, 'slower');
       if (inv2 !== cleaned && !polarityVariants.includes(inv2)) polarityVariants.push(inv2);
 
+      // 單複數常規化變體 (例如 charges <-> charge, arrows <-> arrow, seconds <-> second)
+      const countVariants: string[] = [...polarityVariants];
+      for (const p of polarityVariants) {
+        if (p.includes('charges')) {
+          const v = p.replace(/charges/g, 'charge');
+          if (!countVariants.includes(v)) countVariants.push(v);
+        } else if (p.includes('charge')) {
+          const v = p.replace(/charge/g, 'charges');
+          if (!countVariants.includes(v)) countVariants.push(v);
+        }
+        if (p.includes('arrows')) {
+          const v = p.replace(/arrows/g, 'arrow');
+          if (!countVariants.includes(v)) countVariants.push(v);
+        } else if (p.includes('arrow')) {
+          const v = p.replace(/arrow/g, 'arrows');
+          if (!countVariants.includes(v)) countVariants.push(v);
+        }
+        if (p.includes('seconds')) {
+          const v = p.replace(/seconds/g, 'second');
+          if (!countVariants.includes(v)) countVariants.push(v);
+        } else if (p.includes('second')) {
+          const v = p.replace(/second/g, 'seconds');
+          if (!countVariants.includes(v)) countVariants.push(v);
+        }
+      }
+
       // 若以 #of 開頭 (例如 #% of damage blocked is recouped as mana)，官方 Trade API 有時會省略 #% of
       const baseVariants: string[] = [];
-      for (const p of polarityVariants) {
+      for (const p of countVariants) {
         baseVariants.push(p);
         if (p.startsWith('#of')) {
-          baseVariants.push(p.replace(/^#of/, ''));
+          const v = p.replace(/^#of/, '');
+          if (!baseVariants.includes(v)) baseVariants.push(v);
         }
       }
 
