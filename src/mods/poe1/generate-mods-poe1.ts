@@ -156,8 +156,8 @@ export async function buildModsPoE1(
         const gearTypes = getPoE1ItemClassGearTypes(itemClassRow.Id);
         if (gearTypes) {
           if (!benchModTypesMap.has(modIdx)) benchModTypesMap.set(modIdx, new Set());
-          const s = benchModTypesMap.get(modIdx)!;
-          for (const gt of gearTypes) s.add(gt);
+          const gearTypeSet = benchModTypesMap.get(modIdx)!;
+          for (const gearType of gearTypes) gearTypeSet.add(gearType);
         }
       }
     }
