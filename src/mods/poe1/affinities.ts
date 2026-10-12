@@ -35,8 +35,11 @@ export function resolvePoE1Affinities(
   if (mod.GenerationType === 5) {
     affs.add('corrupted');
   }
-  if ((mod.Domain === 9 || mod.Domain === 28) && mod.GenerationType !== 5) {
+  if (mod.Domain === 9 && mod.GenerationType !== 5) {
     affs.add('master');
+  }
+  if (mod.Domain === 28) {
+    affs.add('veiled');
   }
 
   // 2. 官方 Trade API 大類判定
@@ -46,7 +49,9 @@ export function resolvePoE1Affinities(
     } else if (tradeCategory === 'fractured') {
       affs.add('fractured');
     } else if (tradeCategory === 'crafted') {
-      affs.add('master');
+      if (mod.Domain !== 28) {
+        affs.add('master');
+      }
     } else if (tradeCategory === 'veiled') {
       affs.add('veiled');
     } else if (tradeCategory === 'delve') {

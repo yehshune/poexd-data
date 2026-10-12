@@ -31,7 +31,7 @@ export async function buildModsPoE1(
   const txtContent = Buffer.from(txtBytes.buffer, txtBytes.byteOffset, txtBytes.byteLength).toString('utf16le');
   const statIndex = StatDescriptionIndex.parse(txtContent);
 
-  console.log('[PoE 1 Mods] [3/4] 載入關聯 Dat 表格 (Mods, Stats, Tags, BaseItemTypes, ItemClasses, Essences, DelveCraftingModifiers)...');
+  console.log('[PoE 1 Mods] [3/4] 載入關聯 Dat 表格 (Mods, Stats, Tags, BaseItemTypes, ItemClasses, Essences, DelveCraftingModifiers, CraftingBenchOptions, CraftingItemClassCategories)...');
   const [
     modsTable,
     statsTable,
@@ -40,6 +40,8 @@ export async function buildModsPoE1(
     itemClassesTable,
     essencesTable,
     delveTable,
+    craftingBenchTable,
+    craftingCategoriesTable,
   ] = await Promise.all([
     loader.loadTable('Mods'),
     loader.loadTable('Stats'),
@@ -48,6 +50,8 @@ export async function buildModsPoE1(
     loader.loadTable('ItemClasses'),
     loader.loadTable('Essences'),
     loader.loadTable('DelveCraftingModifiers'),
+    loader.loadTable('CraftingBenchOptions'),
+    loader.loadTable('CraftingItemClassCategories'),
   ]);
 
   const statsMap = new Map<number, string>();
@@ -131,6 +135,34 @@ export async function buildModsPoE1(
     }
   }
 
+  // 4. 工藝台外鍵索引 (CraftingBenchOptions.dat -> CraftingItemClassCategories.dat -> ItemClasses.dat)
+  const benchModTypesMap = new Map<number, Set<string>>();
+  for (const benchRow of craftingBenchTable) {
+    const modIdx = (benchRow as any).AddModKey ?? (benchRow as any).AddMod;
+    if (modIdx == null) continue;
+
+    const catKeys = (benchRow as any).CraftingItemClassCategoriesKeys ?? (benchRow as any).CraftingItemClassCategories;
+    if (!catKeys || !Array.isArray(catKeys)) continue;
+
+    for (const catIdx of catKeys) {
+      const catRow = craftingCategoriesTable[catIdx];
+      if (!catRow) continue;
+      const icKeys = (catRow as any).ItemClassesKeys ?? (catRow as any).ItemClasses;
+      if (!icKeys || !Array.isArray(icKeys)) continue;
+
+      for (const icIdx of icKeys) {
+        const itemClassRow = itemClassesTable[icIdx];
+        if (!itemClassRow || !itemClassRow.Id) continue;
+        const gearTypes = getPoE1ItemClassGearTypes(itemClassRow.Id);
+        if (gearTypes) {
+          if (!benchModTypesMap.has(modIdx)) benchModTypesMap.set(modIdx, new Set());
+          const s = benchModTypesMap.get(modIdx)!;
+          for (const gt of gearTypes) s.add(gt);
+        }
+      }
+    }
+  }
+
   console.log(`[PoE 1 Mods] [4/4] 運算裝備與物品詞綴階級 (共 ${modsTable.length} 筆原始 Mod 定義)...`);
 
   const modsData: Record<string, ModTierOutput[]> = {};
@@ -175,6 +207,11 @@ export async function buildModsPoE1(
     // 若詞綴無自然掉落部位，但屬於精華專屬詞綴，由精華外鍵關聯補全部位
     if (types.length === 0 && essenceModTypesMap.has(modIdx)) {
       types = Array.from(essenceModTypesMap.get(modIdx)!);
+    }
+
+    // 若詞綴無自然掉落部位，但屬於藏身處大師工藝台詞綴，由工藝台外鍵關聯補全部位
+    if (types.length === 0 && benchModTypesMap.has(modIdx)) {
+      types = Array.from(benchModTypesMap.get(modIdx)!);
     }
 
     // 重組裝置專屬詞綴依部位精準補全

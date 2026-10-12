@@ -2,6 +2,10 @@
 
 ## 1. 當前狀態與目標 (Status & Goals)
 - **已完成**:
+  - **PoE 1 大師工藝 (Domain 9, 藏身處工藝台) 與密教隱匿 (Domain 28, Jun 隱匿解密) 完整收錄與精確分離**:
+    - 載入官方 Dat 表格 `CraftingBenchOptions.dat` 與 `CraftingItemClassCategories.dat`，藉由 `AddMod` 外鍵索引與 `ItemClasses` 建立 `benchModTypesMap`，成功補全 732 條藏身處大師工藝部位。
+    - 徹底解除 Domain 28 雙重標籤污染：Domain 9 獨立標記為 `master`（732 條，227 範本），Domain 28 獨立標記為 `veiled`（150 條，114 範本），兩者重疊數為 0，徹底解決前端「工藝與隱匿完全相同」問題。
+    - PoE 1 詞綴總量達到 11,756 階 (+732 階)，Trade Stat ID 提升至 3,275 條 (+160 條)，匹配率達 99.5%。
   - **PoE 1 獵魔勢技能 (Bestiary Aspects) 與傭兵/深水神君 (Domain 41/42) 詞綴全面收錄與補全**:
     - 開放 Domain 41 (傭兵 28 條) 與 Domain 42 (深水神君 39 條)，賦予 `infamous` (傭兵) 與 `bestiary` (獸獵) 親和度。
     - 補全獵魔工藝勢技能 (`Grants*AspectCrafted` / `Grants*AspectCrafted30` 共 8 階，含蟹將、傲貓、毒蛛、飛羽祝福) 及深水神君祝福 (`Grants*AspectCrafted` 4 階，含海洋王祝福、月影女神、日耀女神、亞拉卡力祝福) 之裝備部位映射至全常規裝備 (`POE1_DEFAULT_GEAR_TYPES`)。
