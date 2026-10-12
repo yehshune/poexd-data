@@ -26,6 +26,12 @@ export function resolvePoE1Affinities(
   if (mod.Id?.startsWith('RecombinatorSpecial')) {
     affs.add('sentinel');
   }
+  if (mod.Id?.includes('AspectCrafted')) {
+    affs.add('bestiary');
+  }
+  if (mod.Domain === 41 || mod.Id?.startsWith('MercenaryMod') || mod.Id?.startsWith('DeepwaterHazardMod')) {
+    affs.add('infamous');
+  }
   if (mod.GenerationType === 5) {
     affs.add('corrupted');
   }
@@ -126,10 +132,13 @@ export function resolvePoE1Affinities(
     mod.Domain === 16 ||
     mod.Domain === 21 ||
     mod.Domain === 28 ||
+    mod.Domain === 41 ||
+    mod.Domain === 42 ||
     mod.GenerationType === 5 ||
     [10, 19, 21, 22].includes(mod.GenerationType) ||
     Boolean(mod.Id?.startsWith('RecombinatorSpecial')) ||
     Boolean(mod.Id?.startsWith('HarvestAlternate')) ||
+    Boolean(mod.Id?.includes('AspectCrafted')) ||
     tradeCategory === 'crafted' ||
     tradeCategory === 'enchant' ||
     tradeCategory === 'delve';

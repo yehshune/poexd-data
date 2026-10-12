@@ -2,6 +2,11 @@
 
 ## 1. 當前狀態與目標 (Status & Goals)
 - **已完成**:
+  - **PoE 1 獵魔勢技能 (Bestiary Aspects) 與傭兵/深水神君 (Domain 41/42) 詞綴全面收錄與補全**:
+    - 開放 Domain 41 (傭兵 28 條) 與 Domain 42 (深水神君 39 條)，賦予 `infamous` (傭兵) 與 `bestiary` (獸獵) 親和度。
+    - 補全獵魔工藝勢技能 (`Grants*AspectCrafted` / `Grants*AspectCrafted30` 共 8 階，含蟹將、傲貓、毒蛛、飛羽祝福) 及深水神君祝福 (`Grants*AspectCrafted` 4 階，含海洋王祝福、月影女神、日耀女神、亞拉卡力祝福) 之裝備部位映射至全常規裝備 (`POE1_DEFAULT_GEAR_TYPES`)。
+    - 成功收錄「你所創造的奉獻地面賦予你和友方 +(1-3)% 最大混沌抗性」(`explicit.stat_1235229114`) 等 28 筆傭兵裝備詞綴，以及「獲得等級 # 的海洋王祝福技能」(`explicit.stat_3054487153`)、「獲得等級 # 的蟹將祝福技能」(`explicit.stat_4102318278`) 等 12 階祝福技能詞綴。
+    - PoE 1 詞綴總量達到 11,024 階，Trade Stat ID 提升至 3,190 條 (+45 條)，匹配率達 99.5%。
   - 詞綴解析管線完全重構：PoE 1 與 PoE 2 獨立分離 (`src/mods/common/`, `src/mods/poe1/`, `src/mods/poe2/`)。
   - 產出檔案分別存放於 `output/poe1/` 與 `output/poe2/`，移除所有舊相容檔與別名。
   - 方案 B 自動分組實作：依據官方 Trade API 類別前綴 (`desecrated`, `rune`, `enchant`, `sanctum`) 及官方 Dat 表格外鍵 (`EssenceMods`, `LiquidEmotionOutcomes`, `SoulCoreStats`, `Essences`, `DelveCraftingModifiers`) 自動精準分類，完全擺脫人工硬編碼。

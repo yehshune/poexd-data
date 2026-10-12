@@ -140,8 +140,8 @@ export async function buildModsPoE1(
   let matchedTradeIdCount = 0;
   const unmatchedList: UnmatchedModItem[] = [];
 
-  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、工藝(9)、珠寶(10)、深淵珠寶(13)、掘獄(16)、星團珠寶(21)、密教工藝(28)
-  const allowedDomains = new Set([1, 2, 9, 10, 13, 16, 21, 28]);
+  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、工藝(9)、珠寶(10)、深淵珠寶(13)、掘獄(16)、星團珠寶(21)、密教工藝(28)、傭兵(41)、深水神君(42)
+  const allowedDomains = new Set([1, 2, 9, 10, 13, 16, 21, 28, 41, 42]);
   // 允許的 GenerationType 集合: 固有(0, 3)、前綴(1)、後綴(2)、瓦爾腐化(5)、附魔(10)、塗油(19)、藥劑附魔(21, 22)、灼烙總督古靈(28)、吞噬天地古靈(29)
   const allowedGenTypes = new Set([0, 1, 2, 3, 5, 10, 19, 21, 22, 28, 29]);
 
@@ -195,6 +195,11 @@ export async function buildModsPoE1(
     // 藥劑附魔補全為藥劑
     if (types.length === 0 && (mod.GenerationType === 21 || mod.GenerationType === 22)) {
       types = ['flask'];
+    }
+
+    // 獵魔工藝勢技能 (Aspect Skills) 補全為全裝備部位
+    if (types.length === 0 && mod.Id?.includes('AspectCrafted')) {
+      types = POE1_DEFAULT_GEAR_TYPES;
     }
 
     if (types.length === 0) continue;

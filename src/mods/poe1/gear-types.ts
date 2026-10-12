@@ -66,6 +66,8 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   ranged: ['bow', 'bows', 'quiver', 'quivers'],
   armour: ALL_POE1_ARMOUR,
   jewellery: ALL_POE1_JEWELLERY,
+  deepwater_pantheon_aspect: POE1_DEFAULT_GEAR_TYPES,
+  deepwater_hazard_belt: ['belt', 'belts'],
 
   // 防具部位通用標籤
   gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
