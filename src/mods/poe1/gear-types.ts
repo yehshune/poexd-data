@@ -394,46 +394,119 @@ export function getPoE1ItemClassGearTypes(classId: string): string[] | undefined
 }
 
 export function resolveRecombinatorSpecialGearTypes(modId: string): string[] {
-  if (modId.includes('MaximumEnduranceCharge')) {
-    return ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'];
+  // 1. 球數上限：限定戒指 (Rings)
+  if (
+    modId.includes('MaximumEnduranceCharge') ||
+    modId.includes('MaximumFrenzyCharge') ||
+    modId.includes('MaximumPowerCharge')
+  ) {
+    return ['ring', 'rings'];
   }
-  if (modId.includes('MaximumFrenzyCharge')) {
-    return ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'];
-  }
-  if (modId.includes('MaximumPowerCharge')) {
-    return ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'];
-  }
+
+  // 2. 藥劑效果：限定腰帶 (Belts)
   if (modId.includes('MagicUtilityFlaskEffect')) {
     return ['belt', 'belts'];
   }
+
+  // 3. 屬性附加攻擊點傷：限定鞋子 (Boots: 力量->力量鞋、敏捷->閃避鞋、智慧->能量護盾鞋)
+  if (modId.includes('FireDamageToAttacksPerStrength')) {
+    return ['boots', 'boots_str'];
+  }
+  if (modId.includes('ColdDamageToAttacksPerDexterity')) {
+    return ['boots', 'boots_dex'];
+  }
+  if (modId.includes('LightningDamageToAttacksPerIntelligence')) {
+    return ['boots', 'boots_int'];
+  }
+
+  // 4. 輔助寶石等級：限定手套 (Gloves: 賦予->力量手、增幅->閃避手、啟蒙->能量護盾手)
+  if (modId.includes('SupportedByLevelFourEmpower')) {
+    return ['gloves', 'gloves_str'];
+  }
+  if (modId.includes('SupportedByLevelFourEnhance')) {
+    return ['gloves', 'gloves_dex'];
+  }
+  if (modId.includes('SupportedByLevelFourEnlighten')) {
+    return ['gloves', 'gloves_int'];
+  }
+
+  // 5. 插槽觸發雙倍傷害：限定武器 (Weapons)
+  if (modId.includes('TriggerSkillsDoubleDamage')) {
+    return ALL_POE1_WEAPONS;
+  }
+
+  // 6. 光環效果：限定項鍊 (Amulets)
+  if (modId.includes('AuraEffect')) {
+    return ['amulet', 'amulets'];
+  }
+
+  // 7. 異常狀態轉化：限定頭盔 (Helmets)
+  if (
+    modId.includes('AllFireDamageCanShock') ||
+    modId.includes('AllColdDamageCanIgnite') ||
+    modId.includes('AllLightningDamageCanFreeze')
+  ) {
+    return ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'];
+  }
+
+  // 8. 標記效果：限定箭袋 (Quivers)
+  if (modId.includes('MarkEffect')) {
+    return ['quiver', 'quivers'];
+  }
+
+  // 9. 秘能波動效果：限定法系武器 (Caster Weapons: Wand, Sceptre, Rune Dagger, Staff)
+  if (modId.includes('ArcaneSurgeEffect1H')) {
+    return ['wand', 'wands', 'sceptre', 'sceptres', 'rune_dagger', 'rune-dagger'];
+  }
+  if (modId.includes('ArcaneSurgeEffect2H')) {
+    return ['staff', 'staves'];
+  }
+
+  // 10. 猛攻效果：限定弓、爪、劍、斧
+  if (modId.includes('OnslaughtEffect1H')) {
+    return [
+      'claw', 'claws',
+      'one-hand-sword', 'one_hand_swords',
+      'one-hand-axe', 'one_hand_axes'
+    ];
+  }
+  if (modId.includes('OnslaughtEffect2H')) {
+    return [
+      'bow', 'bows',
+      'two-hand-sword', 'two_hand_swords',
+      'two-hand-axe', 'two_hand_axes'
+    ];
+  }
+
+  // 11. 戰吼嘲諷增傷：限定近戰武器 (Melee Weapons)
+  if (modId.includes('IncreasedDamageVsWarcryTauntedEnemies1H')) {
+    return [
+      'claw', 'claws',
+      'dagger', 'daggers',
+      'rune_dagger', 'rune-dagger',
+      'one-hand-sword', 'one_hand_swords',
+      'one-hand-axe', 'one_hand_axes',
+      'one-hand-mace', 'one_hand_maces',
+      'sceptre', 'sceptres'
+    ];
+  }
+  if (modId.includes('IncreasedDamageVsWarcryTauntedEnemies2H')) {
+    return [
+      'two-hand-sword', 'two_hand_swords',
+      'two-hand-axe', 'two_hand_axes',
+      'two-hand-mace', 'two_hand_maces',
+      'staff', 'staves', 'warstaff'
+    ];
+  }
+
+  // 12. 基石天賦：限定身體護甲 (Body Armours)
   if (modId.includes('Keystone')) {
     return [
       'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int',
-      'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int',
-      'amulet', 'amulets'
+      'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'
     ];
   }
-  if (modId.includes('AuraEffect') || modId.includes('SupportedByLevelFour')) {
-    return ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'];
-  }
-  if (modId.includes('MarkEffect')) {
-    return ['ring', 'rings'];
-  }
-  if (modId.endsWith('1H') || modId.includes('ArcaneSurgeEffect1H') || modId.includes('OnslaughtEffect1H')) {
-    return ONE_HAND_POE1_WEAPONS;
-  }
-  if (modId.endsWith('2H') || modId.includes('ArcaneSurgeEffect2H') || modId.includes('OnslaughtEffect2H')) {
-    return TWO_HAND_POE1_WEAPONS;
-  }
-  if (
-    modId.includes('DamageToAttacksPer') ||
-    modId.includes('CanShock') ||
-    modId.includes('CanIgnite') ||
-    modId.includes('CanFreeze') ||
-    modId.includes('TriggerSkillsDoubleDamage')
-  ) {
-    return ALL_POE1_WEAPONS;
-  }
+
   return [];
 }
 

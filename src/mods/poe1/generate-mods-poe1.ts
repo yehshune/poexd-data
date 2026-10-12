@@ -230,7 +230,9 @@ export async function buildModsPoE1(
 
     // 偏好 Trade Stat 類別選取
     const preferredCategories: string[] = [];
-    if (mod.GenerationType === 5) {
+    if ([10, 19, 21, 22].includes(mod.GenerationType) || mod.Id?.startsWith('HarvestAlternate')) {
+      preferredCategories.push('enchant', 'explicit');
+    } else if (mod.GenerationType === 5) {
       preferredCategories.push('implicit');
     } else if (mod.GenerationType === 28 || mod.GenerationType === 29) {
       preferredCategories.push('implicit', 'explicit');
@@ -240,8 +242,6 @@ export async function buildModsPoE1(
       preferredCategories.push('implicit', 'explicit');
     } else if (delveModIndices.has(modIdx) || mod.Domain === 16) {
       preferredCategories.push('delve', 'explicit');
-    } else if ([10, 19, 21, 22].includes(mod.GenerationType) || mod.Id?.startsWith('HarvestAlternate')) {
-      preferredCategories.push('enchant', 'explicit');
     } else {
       preferredCategories.push('explicit');
     }
