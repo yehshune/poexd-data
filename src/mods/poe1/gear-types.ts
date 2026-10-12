@@ -233,14 +233,68 @@ export function resolvePoE1GearTypes(
 
   if (domain === 10) {
     result.add('jewel');
+    for (const { tag, weight } of spawnWeights) {
+      if (weight <= 0) continue;
+      const lower = tag.toLowerCase();
+      if (lower === 'strjewel') {
+        result.add('crimson-jewel');
+        result.add('crimson_jewel');
+      } else if (lower === 'dexjewel') {
+        result.add('viridian-jewel');
+        result.add('viridian_jewel');
+      } else if (lower === 'intjewel') {
+        result.add('cobalt-jewel');
+        result.add('cobalt_jewel');
+      }
+    }
+    return Array.from(result);
   } else if (domain === 13) {
     result.add('jewel');
     result.add('abyss-jewel');
+    result.add('abyss_jewel');
+    for (const { tag, weight } of spawnWeights) {
+      if (weight <= 0) continue;
+      const lower = tag.toLowerCase();
+      if (lower === 'abyss_jewel_melee') {
+        result.add('murderous-eye-jewel');
+        result.add('murderous_eye_jewel');
+      } else if (lower === 'abyss_jewel_ranged') {
+        result.add('searching-eye-jewel');
+        result.add('searching_eye_jewel');
+      } else if (lower === 'abyss_jewel_caster') {
+        result.add('hypnotic-eye-jewel');
+        result.add('hypnotic_eye_jewel');
+      } else if (lower === 'abyss_jewel_summoner') {
+        result.add('ghastly-eye-jewel');
+        result.add('ghastly_eye_jewel');
+      }
+    }
+    return Array.from(result);
   } else if (domain === 21) {
     result.add('jewel');
+    result.add('cluster-jewel');
+    result.add('cluster_jewel');
     result.add('large-cluster-jewel');
+    result.add('large_cluster_jewel');
     result.add('medium-cluster-jewel');
+    result.add('medium_cluster_jewel');
     result.add('small-cluster-jewel');
+    result.add('small_cluster_jewel');
+    for (const { tag, weight } of spawnWeights) {
+      if (weight <= 0) continue;
+      const lower = tag.toLowerCase();
+      if (lower === 'expansion_jewel_large') {
+        result.add('large-cluster-jewel');
+        result.add('large_cluster_jewel');
+      } else if (lower === 'expansion_jewel_medium') {
+        result.add('medium-cluster-jewel');
+        result.add('medium_cluster_jewel');
+      } else if (lower === 'expansion_jewel_small') {
+        result.add('small-cluster-jewel');
+        result.add('small_cluster_jewel');
+      }
+    }
+    return Array.from(result);
   }
 
   const defaultWeight = spawnWeights.find((sw) => sw.tag.toLowerCase() === 'default')?.weight ?? 0;
