@@ -256,36 +256,6 @@ export async function buildModsPoE2(
     const tradeIds = resolvedIds?.splitIds;
     const tradeCategory = resolvedIds?.allIds[0]?.split('.')[0];
 
-    // 精髓與完美精髓在 PoE 2 的 Trade ID 前綴只有一種，為 crafted
-    const allTierIds = new Set<string>();
-    if (tradeIds) {
-      for (const id of tradeIds) allTierIds.add(id);
-    } else if (tradeId) {
-      allTierIds.add(tradeId);
-    }
-
-    let craftedStatIds: string[] = [];
-    if (isEssenceMod) {
-      const craftedResolved = tradeStats.resolveStatIds(rendered.template, {
-        preferredCategories: ['crafted'],
-        isLocal,
-        context: contexts,
-        ruleStatIds: rendered.ruleStatIds,
-      });
-      if (craftedResolved && craftedResolved.allIds.length > 0) {
-        craftedStatIds = craftedResolved.allIds;
-      } else if (resolvedIds && resolvedIds.allIds.length > 0) {
-        craftedStatIds = resolvedIds.allIds
-          .filter((id) => id.startsWith('explicit.'))
-          .map((id) => id.replace('explicit.', 'crafted.'));
-      }
-      if (!tradeIds) {
-        for (const cid of craftedStatIds) {
-          allTierIds.add(cid);
-        }
-      }
-    }
-
     // 方案 B：由 Trade 官方類別、官方 Dat 表格外鍵與符文機制標籤自動推導屬性標籤
     const activeTags = spawnWeights.filter((sw) => sw.weight > 0).map((sw) => sw.tag);
     const affinities = resolvePoE2Affinities(
@@ -297,46 +267,126 @@ export async function buildModsPoE2(
       isNaturalDrop
     );
 
-    const tierItem: ModTierOutput = {
-      affinities,
-      generation_type: isBaseImplicit ? '0' : String(mod.GenerationType),
-      key: rendered.key,
-      key_zh: rendered.key_zh,
-      template_zh: rendered.template_zh,
-      level: String(mod.Level ?? 1),
-      values: rendered.values,
-      types,
-      id: isEssenceMod && !isNaturalDrop && craftedStatIds.length === 1 ? craftedStatIds[0] : tradeId,
-      ids: allTierIds.size > 0 ? Array.from(allTierIds) : undefined,
-    };
+    let craftedStatIds: string[] = [];
+    let craftedTradeId: string | undefined = undefined;
+    let craftedTradeIds: string[] | undefined = undefined;
 
-    // 歸類至 mods-data (以 template 為 key)
+    if (isEssenceMod) {
+      const craftedResolved = tradeStats.resolveStatIds(rendered.template, {
+        preferredCategories: ['crafted'],
+        isLocal,
+        context: contexts,
+        ruleStatIds: rendered.ruleStatIds,
+      });
+      if (craftedResolved && craftedResolved.allIds.length > 0) {
+        craftedStatIds = craftedResolved.allIds;
+        craftedTradeId = craftedResolved.singleId;
+        craftedTradeIds = craftedResolved.splitIds;
+      } else if (resolvedIds && resolvedIds.allIds.length > 0) {
+        craftedStatIds = resolvedIds.allIds
+          .filter((id) => id.startsWith('explicit.'))
+          .map((id) => id.replace('explicit.', 'crafted.'));
+        craftedTradeId = tradeId ? tradeId.replace('explicit.', 'crafted.') : undefined;
+        craftedTradeIds = tradeIds ? tradeIds.map((id) => id.replace('explicit.', 'crafted.')) : undefined;
+      }
+    }
+
     if (!modsData[rendered.template]) {
       modsData[rendered.template] = [];
     }
-    modsData[rendered.template].push(tierItem);
 
-    // 歸類至 mods-id-data (以 Trade Stat ID 為 key)
-    const allTargetStatIds = new Set<string>([...(resolvedIds?.allIds || []), ...craftedStatIds]);
-    if (allTargetStatIds.size > 0) {
-      for (const statId of allTargetStatIds) {
-        if (!modsIdData[statId]) {
-          modsIdData[statId] = [];
-        }
-        modsIdData[statId].push(tierItem);
+    const hasEssenceAffinity = affinities.some((a) => a === 'essence' || a === 'perfect_essence');
+
+    if (isNaturalDrop && hasEssenceAffinity) {
+      // 若詞綴既可自然掉落，又是精髓/完美精髓，分立為兩筆明確 TierItem，嚴禁混雜跨前綴別名至 ids：
+      // 1. 自然掉落 TierItem (保留 normal 標籤，Trade ID 為 explicit.)
+      const naturalAffinities = affinities.filter((a) => a !== 'essence' && a !== 'perfect_essence');
+      if (!naturalAffinities.includes('normal')) naturalAffinities.push('normal');
+
+      const naturalTierItem: ModTierOutput = {
+        affinities: naturalAffinities,
+        generation_type: isBaseImplicit ? '0' : String(mod.GenerationType),
+        key: rendered.key,
+        key_zh: rendered.key_zh,
+        template_zh: rendered.template_zh,
+        level: String(mod.Level ?? 1),
+        values: rendered.values,
+        types,
+        id: tradeId,
+        ids: tradeIds || (tradeId ? [tradeId] : undefined),
+      };
+      modsData[rendered.template].push(naturalTierItem);
+      const naturalIds = tradeIds || (tradeId ? [tradeId] : []);
+      for (const sid of naturalIds) {
+        if (!modsIdData[sid]) modsIdData[sid] = [];
+        modsIdData[sid].push(naturalTierItem);
+      }
+
+      // 2. 精髓工藝 TierItem (僅具精髓標籤，Trade ID 為 crafted.)
+      const essenceAffinities = affinities.filter((a) => a === 'essence' || a === 'perfect_essence');
+      const effCraftedId =
+        craftedTradeId ||
+        (craftedStatIds.length === 1 ? craftedStatIds[0] : tradeId?.replace('explicit.', 'crafted.'));
+      const effCraftedIds = craftedTradeIds || (effCraftedId ? [effCraftedId] : undefined);
+
+      const essenceTierItem: ModTierOutput = {
+        affinities: essenceAffinities,
+        generation_type: isBaseImplicit ? '0' : String(mod.GenerationType),
+        key: rendered.key,
+        key_zh: rendered.key_zh,
+        template_zh: rendered.template_zh,
+        level: String(mod.Level ?? 1),
+        values: rendered.values,
+        types,
+        id: effCraftedId,
+        ids: effCraftedIds,
+      };
+      modsData[rendered.template].push(essenceTierItem);
+      const essenceTargetIds = effCraftedIds || (effCraftedId ? [effCraftedId] : []);
+      for (const sid of essenceTargetIds) {
+        if (!modsIdData[sid]) modsIdData[sid] = [];
+        modsIdData[sid].push(essenceTierItem);
       }
       matchedTradeIdCount++;
     } else {
-      unmatchedList.push({
-        modId: mod.Id,
-        template: rendered.template,
-        template_zh: rendered.template_zh,
+      // 一般單一身分詞綴
+      const targetId =
+        isEssenceMod && !isNaturalDrop && craftedStatIds.length === 1 ? craftedStatIds[0] : tradeId;
+      const targetIds = tradeIds || (targetId ? [targetId] : undefined);
+
+      const tierItem: ModTierOutput = {
+        affinities,
+        generation_type: isBaseImplicit ? '0' : String(mod.GenerationType),
         key: rendered.key,
         key_zh: rendered.key_zh,
-        types,
-        affinities,
+        template_zh: rendered.template_zh,
         level: String(mod.Level ?? 1),
-      });
+        values: rendered.values,
+        types,
+        id: targetId,
+        ids: targetIds,
+      };
+      modsData[rendered.template].push(tierItem);
+
+      const allTargetStatIds = tradeIds || (targetId ? [targetId] : []);
+      if (allTargetStatIds.length > 0) {
+        for (const statId of allTargetStatIds) {
+          if (!modsIdData[statId]) modsIdData[statId] = [];
+          modsIdData[statId].push(tierItem);
+        }
+        matchedTradeIdCount++;
+      } else {
+        unmatchedList.push({
+          modId: mod.Id,
+          template: rendered.template,
+          template_zh: rendered.template_zh,
+          key: rendered.key,
+          key_zh: rendered.key_zh,
+          types,
+          affinities,
+          level: String(mod.Level ?? 1),
+        });
+      }
     }
 
     processedCount++;

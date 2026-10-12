@@ -2,6 +2,10 @@
 
 ## 1. 當前狀態與目標 (Status & Goals)
 - **已完成**:
+  - **PoE 2 精髓/完美精髓與自然掉落詞綴完全分立 (消除跨前綴別名假複合詞)**:
+    - 根因：先前可自然掉落之精髓詞綴錯誤將 `explicit.` 與 `crafted.` 同時塞入 `tierItem.ids`，導致前端將 194 筆單行精髓詞綴誤判為多行複合詞並重複插入。
+    - 修復：`generate-mods-poe2.ts` 將自然掉落身分（`normal`, `explicit.`）與精髓工藝身分（`essence`/`perfect_essence`, `crafted.`）明確分立為兩筆獨立 TierItem。
+    - 驗證：全庫掃描單行非複合詞綴卻有多個 ids 筆數完全歸零（194 筆 ➔ 0 筆），完美精髓詞綴單一 ID 為 `crafted.stat_...`，徹底根治同時插入兩筆問題。
   - **PoE 1 大師工藝 (Domain 9, 藏身處工藝台) 與密教隱匿 (Domain 28, Jun 隱匿解密) 完整收錄與精確分離**:
     - 載入官方 Dat 表格 `CraftingBenchOptions.dat` 與 `CraftingItemClassCategories.dat`，藉由 `AddMod` 外鍵索引與 `ItemClasses` 建立 `benchModTypesMap`，成功補全 732 條藏身處大師工藝部位。
     - 徹底解除 Domain 28 雙重標籤污染：Domain 9 獨立標記為 `master`（732 條，227 範本），Domain 28 獨立標記為 `veiled`（150 條，114 範本），兩者重疊數為 0，徹底解決前端「工藝與隱匿完全相同」問題。
