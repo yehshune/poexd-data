@@ -1,9 +1,9 @@
 {
   "gameVersion": "poe2",
-  "generatedAt": "2026-10-05T17:40:59.593Z",
-  "totalTiers": 3437,
-  "matchedCount": 3382,
-  "unmatchedCount": 55,
+  "generatedAt": "2026-11-06T11:06:22.505Z",
+  "totalTiers": 3650,
+  "matchedCount": 3593,
+  "unmatchedCount": 57,
   "matchRate": "98.4%",
   "summaryByTemplate": [
     {
@@ -235,17 +235,25 @@
       ]
     },
     {
-      "template": "護符每秒獲得#充能",
-      "count": 2,
+      "template": "當你被詛咒時使用",
+      "count": 1,
       "affinities": [
-        "bonded"
+        "normal"
       ],
       "sampleTypes": [
-        "wand",
-        "wands",
-        "staff",
-        "staves",
-        "sceptre"
+        "charm",
+        "charms"
+      ]
+    },
+    {
+      "template": "擊中時有#%機率致盲敵人",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "claw",
+        "claws"
       ]
     },
     {
@@ -259,6 +267,34 @@
         "sapphire",
         "ruby",
         "emerald"
+      ]
+    },
+    {
+      "template": "每一玩家等級+#閃避值|||||每一玩家等級+#最大能量護盾",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
+      ]
+    },
+    {
+      "template": "每一玩家等級+#閃避值|||||每一玩家等級+#最大能量護盾|||||每一玩家等級擁有+#最大符文保護",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex"
       ]
     },
     {
@@ -345,6 +381,36 @@
     }
   ],
   "unmatchedDetails": [
+    {
+      "modId": "CharmImplicitUseOnCurse1",
+      "template": "used when you become cursed",
+      "template_zh": "當你被詛咒時使用",
+      "key": "used when you become cursed",
+      "key_zh": "當你被詛咒時使用",
+      "types": [
+        "charm",
+        "charms"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ClawImplicitLocalChanceToBlind1",
+      "template": "#% chance to blind enemies on hit",
+      "template_zh": "擊中時有#%機率致盲敵人",
+      "key": "(15-25)% chance to blind enemies on hit",
+      "key_zh": "擊中時有(15-25)%機率致盲敵人",
+      "types": [
+        "claw",
+        "claws"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
     {
       "modId": "JewelAxeDamage",
       "template": "#% increased damage with axes",
@@ -903,6 +969,46 @@
       "level": "1"
     },
     {
+      "modId": "HandWrapsImplicitLocalBaseEvasionAndEnergyShieldPerLevel",
+      "template": "has +# to evasion rating per player level|||||has +# to maximum energy shield per player level",
+      "template_zh": "每一玩家等級+#閃避值|||||每一玩家等級+#最大能量護盾",
+      "key": "has +3 to evasion rating per player level|||||has +1 to maximum energy shield per player level",
+      "key_zh": "每一玩家等級+3閃避值|||||每一玩家等級+1最大能量護盾",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "HandWrapsImplicitLocalBaseEvasionEnergyShieldAndWardPerLevel",
+      "template": "has +# to evasion rating per player level|||||has +# to maximum energy shield per player level|||||has +# to maximum runic ward per player level",
+      "template_zh": "每一玩家等級+#閃避值|||||每一玩家等級+#最大能量護盾|||||每一玩家等級擁有+#最大符文保護",
+      "key": "has +2 to evasion rating per player level|||||has +1 to maximum energy shield per player level|||||has +1 to maximum runic ward per player level",
+      "key_zh": "每一玩家等級+2閃避值|||||每一玩家等級+1最大能量護盾|||||每一玩家等級擁有+1最大符文保護",
+      "types": [
+        "gloves",
+        "gloves_str",
+        "gloves_dex",
+        "gloves_int",
+        "gloves_str_dex",
+        "gloves_str_int",
+        "gloves_dex_int"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "SoulCore_178_bonded",
       "template": "adds # to # physical damage to attacks|||||adds # to # lightning damage to attacks",
       "template_zh": "攻擊附加#至#物理傷害|||||攻擊附加#至#閃電傷害",
@@ -1445,45 +1551,6 @@
         "wands",
         "staff",
         "staves"
-      ],
-      "affinities": [
-        "bonded"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "SoulCore_445_bonded",
-      "template": "charms gain # charges per second",
-      "template_zh": "護符每秒獲得#充能",
-      "key": "charms gain 15 charges per second",
-      "key_zh": "護符每秒獲得15充能",
-      "types": [
-        "wand",
-        "wands",
-        "staff",
-        "staves",
-        "sceptre",
-        "sceptres"
-      ],
-      "affinities": [
-        "bonded"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "SoulCore_476_bonded",
-      "template": "charms gain # charges per second",
-      "template_zh": "護符每秒獲得#充能",
-      "key": "charms gain 30 charges per second",
-      "key_zh": "護符每秒獲得30充能",
-      "types": [
-        "helmet",
-        "helmets_str",
-        "helmets_dex",
-        "helmets_int",
-        "helmets_str_dex",
-        "helmets_str_int",
-        "helmets_dex_int"
       ],
       "affinities": [
         "bonded"

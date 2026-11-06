@@ -3061,5 +3061,18 @@
         "name_en": "Serath, the Scaled One"
       }
     ]
+  },
+  "PlayerAtlasHideout": {
+    "name": "Player Hideout",
+    "group": "map",
+    "IsUniqueMapArea": false,
+    "IsHideout": true,
+    "tags": [
+      "hideout"
+    ],
+    "translates": {
+      "english": "Player Hideout",
+      "traditional chinese": "玩家藏身處"
+    }
   }
 }

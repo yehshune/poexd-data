@@ -769,6 +769,61 @@
       }
     }
   },
+  "170": {
+    "name": "Player Hideout",
+    "icon": "AtlasIconContentArchon",
+    "desc": "",
+    "translates": {
+      "traditional chinese": {
+        "name": "Player Hideout",
+        "desc": ""
+      }
+    }
+  },
+  "171": {
+    "name": "Player Hideout Modifier",
+    "icon": "AtlasIconContentArchon",
+    "desc": "Complete all Player Hideout Modified Maps to receive a Reward",
+    "translates": {
+      "traditional chinese": {
+        "name": "Player Hideout Modifier",
+        "desc": "Complete all Player Hideout Modified Maps to receive a Reward"
+      }
+    }
+  },
+  "172": {
+    "name": "Merchant",
+    "icon": "AtlasIconContentTrader",
+    "desc": "Area contains a Wandering Trader",
+    "translates": {
+      "traditional chinese": {
+        "name": "商人",
+        "desc": "區域含有一名流浪商人"
+      }
+    }
+  },
+  "173": {
+    "name": "Unique Map",
+    "icon": "AtlasIconContentUniqueMap",
+    "desc": "Area is a Unique Map",
+    "translates": {
+      "traditional chinese": {
+        "name": "傳奇地圖",
+        "desc": "區域為傳奇地圖"
+      }
+    }
+  },
+  "174": {
+    "name": "Hideout",
+    "icon": "AtlasIconContentHideout",
+    "desc": "Area can be claimed as a Hideout when cleared",
+    "translates": {
+      "traditional chinese": {
+        "name": "藏身處",
+        "desc": "區域清空時可以作為藏身處"
+      }
+    }
+  },
   "1000": {
     "name": "Corruption",
     "icon": "AtlasIconContentCorruption",
