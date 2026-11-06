@@ -1,0 +1,565 @@
+import * as fs from 'fs/promises';
+import type { PoeDataLoader } from '../../cdn/loader.js';
+import { StatDescriptionIndex } from '../common/stat-descriptions.js';
+import {
+  buildModsLexiconArtifacts,
+  writeModsLexiconArtifacts,
+  type CollectedModTierRecord,
+} from '../common/lexicon-builder.js';
+import { fetchTradeStats } from '../common/trade-stats.js';
+import {
+  resolvePoE2GearTypes,
+  getPoE2ItemClassGearTypes,
+  ALL_POE2_WEAPONS,
+  ALL_POE2_ARMOUR,
+} from './gear-types.js';
+import { resolvePoE2Affinities } from './affinities.js';
+import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
+
+export async function buildModsPoE2(
+  loader: PoeDataLoader,
+  outputDir: string
+) {
+  await fs.mkdir(outputDir, { recursive: true });
+
+  console.log('[PoE 2 Mods] [1/4] 抓取官方 Trade API Filter 檢索表...');
+  const tradeStats = await fetchTradeStats('poe2', loader.patchVersion);
+
+  console.log('[PoE 2 Mods] [2/4] 自官方 CDN 載入並解析 StatDescriptions...');
+  const csdBytes = await loader.getFile('data/statdescriptions/stat_descriptions.csd');
+  if (!csdBytes) {
+    throw new Error('無法自官方 CDN 取得 stat_descriptions.csd');
+  }
+  const csdText = Buffer.from(csdBytes.buffer, csdBytes.byteOffset, csdBytes.byteLength).toString('utf16le');
+  const statIndex = StatDescriptionIndex.parse(csdText);
+
+  console.log('[PoE 2 Mods] [3/4] 載入關聯 Dat 表格 (Mods, Stats, Tags, BaseItemTypes, ItemClasses, SoulCoreStats, EssenceMods, LiquidEmotionOutcomes)...');
+  const [
+    modsTable,
+    statsTable,
+    tagsTable,
+    baseItemsTable,
+    itemClassesTable,
+    soulCoreStatsTable,
+    soulCoreCatsTable,
+    essenceModsTable,
+    liquidOutcomesTable,
+    essenceTargetCatsTable,
+    essencesTable,
+  ] = await Promise.all([
+    loader.loadTable('Mods'),
+    loader.loadTable('Stats'),
+    loader.loadTable('Tags'),
+    loader.loadTable('BaseItemTypes'),
+    loader.loadTable('ItemClasses'),
+    loader.loadTable('SoulCoreStats'),
+    loader.loadTable('SoulCoreStatCategories'),
+    loader.loadTable('EssenceMods'),
+    loader.loadTable('LiquidEmotionOutcomes'),
+    loader.loadTable('EssenceTargetItemCategories'),
+    loader.loadTable('Essences'),
+  ]);
+
+  const statsMap = new Map<number, string>();
+  statsTable.forEach((row, idx) => {
+    if (row.Id) statsMap.set(idx, row.Id);
+  });
+
+  const tagsMap = new Map<number, string>();
+  tagsTable.forEach((row, idx) => {
+    if (row.Id) tagsMap.set(idx, row.Id);
+  });
+
+  const itemClassesMap = new Map<number, string>();
+  itemClassesTable.forEach((row, idx) => {
+    if (row.Id) itemClassesMap.set(idx, row.Id);
+  });
+
+  // 1. 基底固有詞綴對應的裝備類別映射表 (BaseItemTypes.Implicit_Mods)
+  const implicitModTypesMap = new Map<number, Set<string>>();
+  for (const item of baseItemsTable) {
+    const classIdx = (item as any).ItemClass ?? item.ItemClassesKey;
+    const classId = itemClassesMap.get(classIdx);
+    if (!classId) continue;
+    const gearTypes = getPoE2ItemClassGearTypes(classId);
+    if (!gearTypes || gearTypes.length === 0) continue;
+
+    const imps = (item as any).Implicit_Mods || (item as any).Implicit_ModsKeys || [];
+    for (const mIdx of imps) {
+      if (!implicitModTypesMap.has(mIdx)) implicitModTypesMap.set(mIdx, new Set());
+      const s = implicitModTypesMap.get(mIdx)!;
+      for (const gt of gearTypes) s.add(gt);
+    }
+  }
+
+  // 2. 精華外鍵索引與部位映射表 (EssenceMods.dat + EssenceTargetItemCategories.dat)
+  const essenceModIndices = new Set<number>();
+  const perfectEssenceModIndices = new Set<number>();
+  const essenceModTypesMap = new Map<number, Set<string>>();
+
+  for (const em of essenceModsTable) {
+    const ess = essencesTable[em.Essence];
+    const isPerfect = ess ? ess.Perfect === true : false;
+    const allModIndices = [em.Mod, em.DisplayMod, ...(em.OutcomeMods || [])].filter((x) => x != null);
+    for (const mIdx of allModIndices) {
+      if (isPerfect) {
+        perfectEssenceModIndices.add(mIdx);
+      } else {
+        essenceModIndices.add(mIdx);
+      }
+    }
+
+    const cat = essenceTargetCatsTable[em.TargetItemCategory];
+    if (!cat || !cat.ItemClasses) continue;
+
+    const gearTypes = new Set<string>();
+    for (const icIdx of cat.ItemClasses) {
+      const classId = itemClassesMap.get(icIdx);
+      const gts = classId ? getPoE2ItemClassGearTypes(classId) : undefined;
+      if (gts) {
+        for (const gt of gts) {
+          gearTypes.add(gt);
+        }
+      } else if (classId) {
+        console.warn(`[PoE 2 Mods] 未知的精華目標 ItemClass: ${classId}`);
+      }
+    }
+    if (gearTypes.size === 0) continue;
+
+    for (const mIdx of allModIndices) {
+      if (!essenceModTypesMap.has(mIdx)) {
+        essenceModTypesMap.set(mIdx, new Set());
+      }
+      const set = essenceModTypesMap.get(mIdx)!;
+      for (const gt of gearTypes) set.add(gt);
+    }
+  }
+
+  // 3. 蒸餾情緒外鍵索引 (LiquidEmotionOutcomes.dat)
+  const liquidModIndices = new Set<number>();
+  for (const lo of liquidOutcomesTable) {
+    for (const key of [
+      'RubyPrefix',
+      'RubySuffix',
+      'EmeraldPrefix',
+      'EmeraldSuffix',
+      'SapphirePrefix',
+      'SapphireSuffix',
+      'DiamondPrefix',
+      'DiamondSuffix',
+    ]) {
+      const mIdx = (lo as any)[key];
+      if (mIdx != null) liquidModIndices.add(mIdx);
+    }
+  }
+
+  console.log(`[PoE 2 Mods] [4/4] 運算裝備與物品詞綴階級 (共 ${modsTable.length} 筆原始 Mod 定義)...`);
+
+  const collectedRecords: CollectedModTierRecord[] = [];
+
+  let processedCount = 0;
+  let matchedTradeIdCount = 0;
+  const unmatchedList: UnmatchedModItem[] = [];
+
+  // 允許的 Domain 集合: 裝備(1)、藥劑與護符(2)、聖物(8)、珠寶(11)、換界石與石碑(28)
+  const allowedDomains = new Set([1, 2, 8, 11, 28]);
+  // 允許的 GenerationType 集合: 固有(0)、前綴(1)、後綴(2)、瓦爾腐化(5)、符文(14, 15)
+  const allowedGenTypes = new Set([0, 1, 2, 5, 14, 15]);
+
+  for (let modIdx = 0; modIdx < modsTable.length; modIdx++) {
+    const mod = modsTable[modIdx];
+    const isBaseImplicit = implicitModTypesMap.has(modIdx);
+
+    if (!allowedDomains.has(mod.Domain)) continue;
+    if (!isBaseImplicit && !allowedGenTypes.has(mod.GenerationType)) continue;
+
+    // 解析裝備部位標籤
+    let types: string[] = [];
+    const spawnWeights: Array<{ tag: string; weight: number }> = [];
+    if (isBaseImplicit) {
+      types = Array.from(implicitModTypesMap.get(modIdx)!);
+    } else {
+      const tagIndices = (mod as any).SpawnWeight_TagsKeys || (mod as any).SpawnWeight_Tags || [];
+      const tagWeights = mod.SpawnWeight_Values || [];
+      for (let i = 0; i < tagIndices.length; i++) {
+        const tagIdx = tagIndices[i];
+        const weight = tagWeights[i];
+        const tagName = tagsMap.get(tagIdx);
+        if (tagName) {
+          spawnWeights.push({ tag: tagName, weight });
+        }
+      }
+      types = resolvePoE2GearTypes(spawnWeights, mod.Domain);
+
+      // 若該詞綴屬於精華外鍵關聯詞綴，合併精華目標部位
+      if (essenceModTypesMap.has(modIdx)) {
+        const essenceTypes = essenceModTypesMap.get(modIdx)!;
+        const mergedTypes = new Set([...types, ...essenceTypes]);
+        types = Array.from(mergedTypes);
+      }
+    }
+
+    if (types.length === 0) continue;
+
+    // 收集該 Mod 包含的所有活躍數值欄位 (支援複合詞綴聯合解析)
+    const activeStats: Array<{ id: string; min: number; max: number }> = [];
+    for (let slot = 1; slot <= 8; slot++) {
+      const statIdx = (mod as any)[`Stat${slot}`];
+      if (statIdx == null) continue;
+      const statId = statsMap.get(statIdx);
+      if (!statId) continue;
+
+      const valArr = (mod as any)[`Stat${slot}Value`] || [0, 0];
+      const min = Number(valArr[0]) || 0;
+      const max = Number(valArr[1]) || 0;
+      if (min === 0 && max === 0) continue;
+
+      activeStats.push({ id: statId, min, max });
+    }
+
+    if (activeStats.length === 0) continue;
+
+    // 透過 StatDescriptionIndex 聯合解析
+    const rendered = statIndex.renderMod(activeStats);
+    if (!rendered) continue;
+
+    // 依據機制偏好選取 Trade Stat 類別
+    const isNaturalDrop = types.length > 0 && !isBaseImplicit && (mod.GenerationType === 1 || mod.GenerationType === 2);
+    const isEssenceMod = essenceModIndices.has(modIdx) || (perfectEssenceModIndices?.has(modIdx) ?? false);
+    const isDesecratedCandidate = mod.Id?.startsWith('AbyssMod');
+    const preferredCategories: string[] = [];
+    if (isEssenceMod && !isNaturalDrop) {
+      preferredCategories.push('crafted');
+    } else if (isDesecratedCandidate) {
+      preferredCategories.push('desecrated');
+    } else if (mod.GenerationType === 5) {
+      preferredCategories.push('enchant');
+    } else if (types.some((t) => t.includes('relic'))) {
+      preferredCategories.push('sanctum');
+    } else if (isBaseImplicit || mod.GenerationType === 0) {
+      preferredCategories.push('implicit', 'explicit');
+    } else {
+      preferredCategories.push('explicit');
+    }
+
+    const isLocal = activeStats.some((s) => s.id.startsWith('local_'));
+    const contexts: string[] = [];
+    if (types.some((t) => t.includes('charm'))) contexts.push('charm');
+    if (types.some((t) => t.includes('flask'))) contexts.push('flask');
+    if (types.some((t) => t.includes('shield'))) contexts.push('shields');
+
+    const resolvedIds = tradeStats.resolveStatIds(rendered.template, {
+      preferredCategories,
+      isLocal,
+      context: contexts,
+      ruleStatIds: rendered.ruleStatIds,
+    });
+    const tradeId = resolvedIds?.singleId;
+    const tradeIds = resolvedIds?.splitIds;
+    const tradeCategory = resolvedIds?.allIds[0]?.split('.')[0];
+
+    // 方案 B：由 Trade 官方類別、官方 Dat 表格外鍵與符文機制標籤自動推導屬性標籤
+    const activeTags = spawnWeights.filter((sw) => sw.weight > 0).map((sw) => sw.tag);
+    const affinities = resolvePoE2Affinities(
+      modIdx,
+      mod,
+      { essenceModIndices, perfectEssenceModIndices, liquidModIndices },
+      tradeCategory,
+      activeTags,
+      isNaturalDrop
+    );
+
+    let craftedStatIds: string[] = [];
+    let craftedTradeId: string | undefined = undefined;
+    let craftedTradeIds: string[] | undefined = undefined;
+
+    if (isEssenceMod) {
+      const craftedResolved = tradeStats.resolveStatIds(rendered.template, {
+        preferredCategories: ['crafted'],
+        isLocal,
+        context: contexts,
+        ruleStatIds: rendered.ruleStatIds,
+      });
+      if (craftedResolved && craftedResolved.allIds.length > 0) {
+        craftedStatIds = craftedResolved.allIds;
+        craftedTradeId = craftedResolved.singleId;
+        craftedTradeIds = craftedResolved.splitIds;
+      } else if (resolvedIds && resolvedIds.allIds.length > 0) {
+        craftedStatIds = resolvedIds.allIds
+          .filter((id) => id.startsWith('explicit.'))
+          .map((id) => id.replace('explicit.', 'crafted.'));
+        craftedTradeId = tradeId ? tradeId.replace('explicit.', 'crafted.') : undefined;
+        craftedTradeIds = tradeIds ? tradeIds.map((id) => id.replace('explicit.', 'crafted.')) : undefined;
+      }
+    }
+
+    const hasEssenceAffinity = affinities.some((a) => a === 'essence' || a === 'perfect_essence');
+
+    if (isNaturalDrop && hasEssenceAffinity) {
+      // 若詞綴既可自然掉落，又是精髓/完美精髓，分立為兩筆明確 TierItem，嚴禁混雜跨前綴別名至 ids：
+      // 1. 自然掉落 TierItem (保留 normal 標籤，Trade ID 為 explicit.)
+      const naturalAffinities = affinities.filter((a) => a !== 'essence' && a !== 'perfect_essence');
+      if (!naturalAffinities.includes('normal')) naturalAffinities.push('normal');
+
+      const naturalIds = tradeIds || (tradeId ? [tradeId] : []);
+      collectedRecords.push({
+        modId: String(mod.Id || `Mod_${modIdx}`),
+        affinities: naturalAffinities,
+        generation_type: isBaseImplicit ? '0' : String(mod.GenerationType),
+        level: Number(mod.Level ?? 1),
+        values: rendered.values,
+        params: rendered.params,
+        types,
+        id: tradeId,
+        ids: tradeIds || (tradeId ? [tradeId] : undefined),
+        statIds: naturalIds,
+        groupKey: rendered.template,
+        templatesByLocale: rendered.templatesByLocale,
+        legacyKey: rendered.key,
+        legacyKeyZh: rendered.key_zh,
+        legacyTemplateZh: rendered.template_zh,
+      });
+
+      // 2. 精髓工藝 TierItem (僅具精髓標籤，Trade ID 為 crafted.)
+      const essenceAffinities = affinities.filter((a) => a === 'essence' || a === 'perfect_essence');
+      const effCraftedId =
+        craftedTradeId ||
+        (craftedStatIds.length === 1 ? craftedStatIds[0] : tradeId?.replace('explicit.', 'crafted.'));
+      const effCraftedIds = craftedTradeIds || (effCraftedId ? [effCraftedId] : undefined);
+      const essenceTargetIds = effCraftedIds || (effCraftedId ? [effCraftedId] : []);
+
+      collectedRecords.push({
+        modId: `${mod.Id || `Mod_${modIdx}`}_essence`,
+        affinities: essenceAffinities,
+        generation_type: isBaseImplicit ? '0' : String(mod.GenerationType),
+        level: Number(mod.Level ?? 1),
+        values: rendered.values,
+        params: rendered.params,
+        types,
+        id: effCraftedId,
+        ids: effCraftedIds,
+        statIds: essenceTargetIds,
+        groupKey: rendered.template,
+        templatesByLocale: rendered.templatesByLocale,
+        legacyKey: rendered.key,
+        legacyKeyZh: rendered.key_zh,
+        legacyTemplateZh: rendered.template_zh,
+      });
+      matchedTradeIdCount++;
+    } else {
+      // 一般單一身分詞綴
+      const targetId =
+        isEssenceMod && !isNaturalDrop && craftedStatIds.length === 1 ? craftedStatIds[0] : tradeId;
+      const targetIds = tradeIds || (targetId ? [targetId] : undefined);
+      const allTargetStatIds = tradeIds || (targetId ? [targetId] : []);
+
+      collectedRecords.push({
+        modId: String(mod.Id || `Mod_${modIdx}`),
+        affinities,
+        generation_type: isBaseImplicit ? '0' : String(mod.GenerationType),
+        level: Number(mod.Level ?? 1),
+        values: rendered.values,
+        params: rendered.params,
+        types,
+        id: targetId,
+        ids: targetIds,
+        statIds: allTargetStatIds,
+        groupKey: rendered.template,
+        templatesByLocale: rendered.templatesByLocale,
+        legacyKey: rendered.key,
+        legacyKeyZh: rendered.key_zh,
+        legacyTemplateZh: rendered.template_zh,
+      });
+
+      if (allTargetStatIds.length > 0) {
+        matchedTradeIdCount++;
+      } else {
+        unmatchedList.push({
+          modId: mod.Id,
+          template: rendered.template,
+          template_zh: rendered.template_zh,
+          key: rendered.key,
+          key_zh: rendered.key_zh,
+          types,
+          affinities,
+          level: String(mod.Level ?? 1),
+        });
+      }
+    }
+
+    processedCount++;
+  }
+
+  // 輔助函式：判斷是否為使用後即消耗/銷毀的特殊符文（非裝備詞綴）
+  const isConsumableSoulCoreRune = (template: string, templateZh: string): boolean => {
+    return (
+      template.includes('upgrades a socketed rune') ||
+      template.includes('unique kalguuran or ezomyte item') ||
+      templateZh.includes('升級插槽中的符文') ||
+      templateZh.includes('摧毀該物品並創造一枚')
+    );
+  };
+
+  // 處理 SoulCoreStats 符文詞綴 (socketable 與 bonded)
+  for (const sc of soulCoreStatsTable) {
+    const catIdx = sc.StatCategory;
+    const cat = soulCoreCatsTable[catIdx];
+    let catTypes: string[] = [];
+    if (cat) {
+      const targetClassIndices: number[] = cat.TargetItemClasses || [];
+      const typeSet = new Set<string>();
+      for (const tci of targetClassIndices) {
+        const cId = itemClassesMap.get(tci);
+        const gts = cId ? getPoE2ItemClassGearTypes(cId) : undefined;
+        if (gts) {
+          for (const gt of gts) typeSet.add(gt);
+        }
+      }
+      if (typeSet.size === 0 && cat.Id) {
+        const lowerId = cat.Id.toLowerCase();
+        if (lowerId.includes('weapon') || lowerId.includes('all')) {
+          for (const gt of ALL_POE2_WEAPONS) typeSet.add(gt);
+        }
+        if (lowerId.includes('armour') || lowerId.includes('all')) {
+          for (const gt of ALL_POE2_ARMOUR) typeSet.add(gt);
+        }
+      }
+      catTypes = Array.from(typeSet);
+    }
+    if (catTypes.length === 0) continue;
+
+    // 處理 socketable 數值 (增幅)
+    if (sc.Stats && sc.Stats.length > 0) {
+      const activeStats: Array<{ id: string; min: number; max: number }> = [];
+      for (let i = 0; i < sc.Stats.length; i++) {
+        const sId = statsMap.get(sc.Stats[i]);
+        const val = sc.StatsValues?.[i] ?? 0;
+        if (sId) activeStats.push({ id: sId, min: val, max: val });
+      }
+      if (activeStats.length > 0) {
+        const rendered = statIndex.renderMod(activeStats);
+        if (rendered) {
+          if (isConsumableSoulCoreRune(rendered.template, rendered.template_zh)) {
+            continue;
+          }
+          const isLocal = activeStats.some((s) => s.id.startsWith('local_'));
+          const resolvedIds = tradeStats.resolveStatIds(rendered.template, {
+            preferredCategories: ['rune'],
+            isLocal,
+            ruleStatIds: rendered.ruleStatIds,
+          });
+          const tradeId = resolvedIds?.singleId;
+          const tradeIds = resolvedIds?.splitIds;
+          const statIds = resolvedIds?.allIds || [];
+
+          collectedRecords.push({
+            modId: `SoulCore_${sc._index}_socketable`,
+            affinities: ['socketable'],
+            generation_type: '0',
+            level: 1,
+            values: rendered.values,
+            params: rendered.params,
+            types: catTypes,
+            id: tradeId,
+            ids: tradeIds || (tradeId ? [tradeId] : undefined),
+            statIds,
+            groupKey: rendered.template,
+            templatesByLocale: rendered.templatesByLocale,
+            legacyKey: rendered.key,
+            legacyKeyZh: rendered.key_zh,
+            legacyTemplateZh: rendered.template_zh,
+          });
+          if (statIds.length > 0) {
+            matchedTradeIdCount++;
+          } else {
+            unmatchedList.push({
+              modId: `SoulCore_${sc._index}_socketable`,
+              template: rendered.template,
+              template_zh: rendered.template_zh,
+              key: rendered.key,
+              key_zh: rendered.key_zh,
+              types: catTypes,
+              affinities: ['socketable'],
+              level: '1',
+            });
+          }
+          processedCount++;
+        }
+      }
+    }
+
+    // 處理 bonded 數值 (命定詞綴)
+    if (sc.BondedStats && sc.BondedStats.length > 0) {
+      const activeStats: Array<{ id: string; min: number; max: number }> = [];
+      for (let i = 0; i < sc.BondedStats.length; i++) {
+        const sId = statsMap.get(sc.BondedStats[i]);
+        const val = sc.BondedStatsValues?.[i] ?? 0;
+        if (sId) activeStats.push({ id: sId, min: val, max: val });
+      }
+      if (activeStats.length > 0) {
+        const rendered = statIndex.renderMod(activeStats);
+        if (rendered) {
+          if (isConsumableSoulCoreRune(rendered.template, rendered.template_zh)) {
+            continue;
+          }
+          const isLocal = activeStats.some((s) => s.id.startsWith('local_'));
+          const resolvedIds = tradeStats.resolveStatIds(rendered.template, {
+            preferredCategories: ['rune'],
+            context: 'bonded',
+            isLocal,
+            ruleStatIds: rendered.ruleStatIds,
+          });
+          const tradeId = resolvedIds?.singleId;
+          const tradeIds = resolvedIds?.splitIds;
+          const statIds = resolvedIds?.allIds || [];
+
+          collectedRecords.push({
+            modId: `SoulCore_${sc._index}_bonded`,
+            affinities: ['bonded'],
+            generation_type: '0',
+            level: 1,
+            values: rendered.values,
+            params: rendered.params,
+            types: catTypes,
+            id: tradeId,
+            ids: tradeIds || (tradeId ? [tradeId] : undefined),
+            statIds,
+            groupKey: rendered.template,
+            templatesByLocale: rendered.templatesByLocale,
+            legacyKey: rendered.key,
+            legacyKeyZh: rendered.key_zh,
+            legacyTemplateZh: rendered.template_zh,
+          });
+          if (statIds.length > 0) {
+            matchedTradeIdCount++;
+          } else {
+            unmatchedList.push({
+              modId: `SoulCore_${sc._index}_bonded`,
+              template: rendered.template,
+              template_zh: rendered.template_zh,
+              key: rendered.key,
+              key_zh: rendered.key_zh,
+              types: catTypes,
+              affinities: ['bonded'],
+              level: '1',
+            });
+          }
+          processedCount++;
+        }
+      }
+    }
+  }
+
+  const { modsTiers, shardsByLocale } = buildModsLexiconArtifacts(collectedRecords);
+  const { modsTiersFile, localeFiles } = await writeModsLexiconArtifacts(
+    outputDir,
+    modsTiers,
+    shardsByLocale
+  );
+
+  console.log(`[PoE 2 Mods] 完成！共轉換 ${processedCount} 筆詞綴階級，成功映射 ${matchedTradeIdCount} 筆 Trade Stat ID`);
+  console.log(`  -> 寫入: ${modsTiersFile} (共 ${modsTiers.groups.length} 個屬性分組範本, ${modsTiers.typeTable.length} 種部位組合)`);
+  console.log(`  -> 寫入: ${localeFiles.length} 份語系詞綴分片 (locales/*/stats.json)`);
+
+  await writeUnmatchedReport('poe2', outputDir, processedCount, matchedTradeIdCount, unmatchedList);
+}

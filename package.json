@@ -1,0 +1,31 @@
+{
+  "name": "poexd-data",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@12.18.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsx src/index.ts all",
+    "build:atlas": "tsx src/index.ts atlas",
+    "build:mods": "tsx src/index.ts mods",
+    "build:all": "tsx src/index.ts all",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "yehshune",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^26.6.4",
+    "pathofexile-dat": "^16.0.1",
+    "pathofexile-dat-schema": "^8.0.0",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "texture2ddecoder-wasm": "^1.2.5"
+  }
+}
