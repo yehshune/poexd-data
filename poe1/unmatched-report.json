@@ -1,8 +1,8 @@
 {
   "gameVersion": "poe1",
-  "generatedAt": "2026-11-06T11:06:25.607Z",
-  "totalTiers": 11756,
-  "matchedCount": 11696,
+  "generatedAt": "2026-11-07T07:29:42.192Z",
+  "totalTiers": 11758,
+  "matchedCount": 11698,
   "unmatchedCount": 60,
   "matchRate": "99.5%",
   "summaryByTemplate": [
@@ -648,8 +648,8 @@
       "modId": "SpellLifeLeechJewel",
       "template": "#% of spell damage leeched as life",
       "template_zh": "#% 法術傷害偷取生命",
-      "key": "1% of spell damage leeched as life",
-      "key_zh": "1% 法術傷害偷取生命",
+      "key": "0.2% of spell damage leeched as life",
+      "key_zh": "0.2% 法術傷害偷取生命",
       "types": [
         "jewel"
       ],
@@ -662,8 +662,8 @@
       "modId": "SpellLifeLeechPermyriadJewel",
       "template": "#% of spell damage leeched as life",
       "template_zh": "#% 法術傷害偷取生命",
-      "key": "20% of spell damage leeched as life",
-      "key_zh": "20% 法術傷害偷取生命",
+      "key": "0.2% of spell damage leeched as life",
+      "key_zh": "0.2% 法術傷害偷取生命",
       "types": [
         "jewel"
       ],
@@ -676,8 +676,8 @@
       "modId": "SpellManaLeechJewel",
       "template": "#% of spell damage leeched as mana",
       "template_zh": "#% 法術傷害偷取魔力",
-      "key": "1% of spell damage leeched as mana",
-      "key_zh": "1% 法術傷害偷取魔力",
+      "key": "0.2% of spell damage leeched as mana",
+      "key_zh": "0.2% 法術傷害偷取魔力",
       "types": [
         "jewel"
       ],
@@ -690,8 +690,8 @@
       "modId": "SpellManaLeechPermyriadJewel",
       "template": "#% of spell damage leeched as mana",
       "template_zh": "#% 法術傷害偷取魔力",
-      "key": "20% of spell damage leeched as mana",
-      "key_zh": "20% 法術傷害偷取魔力",
+      "key": "0.2% of spell damage leeched as mana",
+      "key_zh": "0.2% 法術傷害偷取魔力",
       "types": [
         "jewel"
       ],
@@ -1054,8 +1054,8 @@
       "modId": "CorruptThresholdSoulEaterOnVaalSkillUseUniqueCorruptedJewel11",
       "template": "with 5 corrupted items equipped: gain soul eater for # seconds on vaal skill use",
       "template_zh": "裝備 5 個已汙染物品時，瓦爾技能獲得 # 秒噬魂者",
-      "key": "with 5 corrupted items equipped: gain soul eater for 10000 seconds on vaal skill use",
-      "key_zh": "裝備 5 個已汙染物品時，瓦爾技能獲得 10000 秒噬魂者",
+      "key": "with 5 corrupted items equipped: gain soul eater for 10 seconds on vaal skill use",
+      "key_zh": "裝備 5 個已汙染物品時，瓦爾技能獲得 10 秒噬魂者",
       "types": [
         "jewel"
       ],
@@ -1124,8 +1124,8 @@
       "modId": "IceShotThresholdJewel__1",
       "template": "with at least 40 dexterity in radius, ice shot pierces # additional targets|||||with at least 40 dexterity in radius, ice shot has #% increased area of effect",
       "template_zh": "若範圍內含 40 點敏捷，冰霜射擊穿透 # 個額外目標|||||若範圍內含 40 點敏捷，冰霜射擊增加 #% 範圍",
-      "key": "with at least 40 dexterity in radius, ice shot pierces 50 additional targets|||||with at least 40 dexterity in radius, ice shot has 25% increased area of effect",
-      "key_zh": "若範圍內含 40 點敏捷，冰霜射擊穿透 50 個額外目標|||||若範圍內含 40 點敏捷，冰霜射擊增加 25% 範圍",
+      "key": "with at least 40 dexterity in radius, ice shot pierces 5 additional targets|||||with at least 40 dexterity in radius, ice shot has 25% increased area of effect",
+      "key_zh": "若範圍內含 40 點敏捷，冰霜射擊穿透 5 個額外目標|||||若範圍內含 40 點敏捷，冰霜射擊增加 25% 範圍",
       "types": [
         "jewel"
       ],
@@ -1320,8 +1320,8 @@
       "modId": "UniqueJewelAlternateTreeInRadiusEternal",
       "template": "commissioned # coins to commemorate cadiro\\npassives in radius are conquered by the eternal empire|||||historic",
       "template_zh": "授銜 # 個硬幣以紀念卡迪羅\\n範圍內的天賦臣服於不朽帝國|||||威宏史觀",
-      "key": "commissioned (100-8000) coins to commemorate cadiro\\npassives in radius are conquered by the eternal empire|||||historic",
-      "key_zh": "授銜 (100-8000) 個硬幣以紀念卡迪羅\\n範圍內的天賦臣服於不朽帝國|||||威宏史觀",
+      "key": "commissioned (2000-160000) coins to commemorate cadiro\\npassives in radius are conquered by the eternal empire|||||historic",
+      "key_zh": "授銜 (2000-160000) 個硬幣以紀念卡迪羅\\n範圍內的天賦臣服於不朽帝國|||||威宏史觀",
       "types": [
         "jewel"
       ],

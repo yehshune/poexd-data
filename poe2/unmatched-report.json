@@ -1,10 +1,10 @@
 {
   "gameVersion": "poe2",
-  "generatedAt": "2026-11-06T11:06:22.505Z",
-  "totalTiers": 3650,
+  "generatedAt": "2026-11-07T07:29:37.413Z",
+  "totalTiers": 3657,
   "matchedCount": 3593,
-  "unmatchedCount": 57,
-  "matchRate": "98.4%",
+  "unmatchedCount": 64,
+  "matchRate": "98.2%",
   "summaryByTemplate": [
     {
       "template": "攻擊附加#至#物理傷害|||||攻擊附加#至#閃電傷害",
@@ -14,10 +14,10 @@
       ],
       "sampleTypes": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
-        "wand"
+        "wand",
+        "one-hand-sword",
+        "one-hand-axe"
       ]
     },
     {
@@ -28,10 +28,10 @@
       ],
       "sampleTypes": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
-        "wand"
+        "wand",
+        "one-hand-sword",
+        "one-hand-axe"
       ]
     },
     {
@@ -241,8 +241,7 @@
         "normal"
       ],
       "sampleTypes": [
-        "charm",
-        "charms"
+        "charm"
       ]
     },
     {
@@ -252,8 +251,77 @@
         "normal"
       ],
       "sampleTypes": [
-        "claw",
-        "claws"
+        "claw"
+      ]
+    },
+    {
+      "template": "增加#%釣魚線力量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "fishing-rod"
+      ]
+    },
+    {
+      "template": "減少#%釣魚池消耗量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "fishing-rod"
+      ]
+    },
+    {
+      "template": "恐喙鳥羽毛魚餌",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "fishing-rod"
+      ]
+    },
+    {
+      "template": "卡魯石魚鉤",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "fishing-rod"
+      ]
+    },
+    {
+      "template": "增加#%釣魚範圍",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "fishing-rod"
+      ]
+    },
+    {
+      "template": "增加#%釣魚數量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "fishing-rod"
+      ]
+    },
+    {
+      "template": "增加#%釣魚稀有度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "fishing-rod"
       ]
     },
     {
@@ -304,8 +372,7 @@
         "bonded"
       ],
       "sampleTypes": [
-        "wand",
-        "wands"
+        "wand"
       ]
     },
     {
@@ -316,9 +383,7 @@
       ],
       "sampleTypes": [
         "wand",
-        "wands",
-        "staff",
-        "staves"
+        "staff"
       ]
     },
     {
@@ -332,7 +397,7 @@
         "shields_str",
         "shields_str_dex",
         "shields_str_int",
-        "bucklers"
+        "buckler"
       ]
     },
     {
@@ -343,7 +408,7 @@
       ],
       "sampleTypes": [
         "shield",
-        "bucklers"
+        "buckler"
       ]
     },
     {
@@ -354,7 +419,7 @@
       ],
       "sampleTypes": [
         "shield",
-        "bucklers"
+        "buckler"
       ]
     },
     {
@@ -365,7 +430,7 @@
       ],
       "sampleTypes": [
         "shield",
-        "bucklers"
+        "buckler"
       ]
     },
     {
@@ -375,8 +440,7 @@
         "bonded"
       ],
       "sampleTypes": [
-        "talisman",
-        "talismans"
+        "talisman"
       ]
     }
   ],
@@ -388,8 +452,7 @@
       "key": "used when you become cursed",
       "key_zh": "當你被詛咒時使用",
       "types": [
-        "charm",
-        "charms"
+        "charm"
       ],
       "affinities": [
         "normal"
@@ -403,8 +466,7 @@
       "key": "(15-25)% chance to blind enemies on hit",
       "key_zh": "擊中時有(15-25)%機率致盲敵人",
       "types": [
-        "claw",
-        "claws"
+        "claw"
       ],
       "affinities": [
         "normal"
@@ -776,6 +838,104 @@
       "level": "1"
     },
     {
+      "modId": "FishingLineStrength",
+      "template": "#% increased fishing line strength",
+      "template_zh": "增加#%釣魚線力量",
+      "key": "(20-40)% increased fishing line strength",
+      "key_zh": "增加(20-40)%釣魚線力量",
+      "types": [
+        "fishing-rod"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "FishingPoolConsumption",
+      "template": "#% reduced fishing pool consumption",
+      "template_zh": "減少#%釣魚池消耗量",
+      "key": "(15-30)% reduced fishing pool consumption",
+      "key_zh": "減少(15-30)%釣魚池消耗量",
+      "types": [
+        "fishing-rod"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "FishingLureType",
+      "template": "rhoa feather lure",
+      "template_zh": "恐喙鳥羽毛魚餌",
+      "key": "rhoa feather lure",
+      "key_zh": "恐喙鳥羽毛魚餌",
+      "types": [
+        "fishing-rod"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "FishingHookType",
+      "template": "karui stone hook",
+      "template_zh": "卡魯石魚鉤",
+      "key": "karui stone hook",
+      "key_zh": "卡魯石魚鉤",
+      "types": [
+        "fishing-rod"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "FishingCastDistance",
+      "template": "#% increased fishing range",
+      "template_zh": "增加#%釣魚範圍",
+      "key": "(30-50)% increased fishing range",
+      "key_zh": "增加(30-50)%釣魚範圍",
+      "types": [
+        "fishing-rod"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "FishingQuantity",
+      "template": "#% increased quantity of fish caught",
+      "template_zh": "增加#%釣魚數量",
+      "key": "(15-20)% increased quantity of fish caught",
+      "key_zh": "增加(15-20)%釣魚數量",
+      "types": [
+        "fishing-rod"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "FishingRarity",
+      "template": "#% increased rarity of fish caught",
+      "template_zh": "增加#%釣魚稀有度",
+      "key": "(25-40)% increased rarity of fish caught",
+      "key_zh": "增加(25-40)%釣魚稀有度",
+      "types": [
+        "fishing-rod"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "ChaosNonAilmentDamageOverTimeMultiplierUber1",
       "template": "#% to chaos damage over time multiplier",
       "template_zh": "#%混沌持續傷害加成",
@@ -789,8 +949,7 @@
         "gloves_str_dex",
         "gloves_str_int",
         "gloves_dex_int",
-        "amulet",
-        "amulets"
+        "amulet"
       ],
       "affinities": [
         "normal"
@@ -811,8 +970,7 @@
         "gloves_str_dex",
         "gloves_str_int",
         "gloves_dex_int",
-        "amulet",
-        "amulets"
+        "amulet"
       ],
       "affinities": [
         "normal"
@@ -833,8 +991,7 @@
         "gloves_str_dex",
         "gloves_str_int",
         "gloves_dex_int",
-        "amulet",
-        "amulets"
+        "amulet"
       ],
       "affinities": [
         "normal"
@@ -855,8 +1012,7 @@
         "gloves_str_dex",
         "gloves_str_int",
         "gloves_dex_int",
-        "amulet",
-        "amulets"
+        "amulet"
       ],
       "affinities": [
         "normal"
@@ -877,8 +1033,7 @@
         "gloves_str_dex",
         "gloves_str_int",
         "gloves_dex_int",
-        "amulet",
-        "amulets"
+        "amulet"
       ],
       "affinities": [
         "normal"
@@ -899,8 +1054,7 @@
         "gloves_str_dex",
         "gloves_str_int",
         "gloves_dex_int",
-        "amulet",
-        "amulets"
+        "amulet"
       ],
       "affinities": [
         "normal"
@@ -921,8 +1075,7 @@
         "gloves_str_dex",
         "gloves_str_int",
         "gloves_dex_int",
-        "amulet",
-        "amulets"
+        "amulet"
       ],
       "affinities": [
         "normal"
@@ -943,8 +1096,7 @@
         "gloves_str_dex",
         "gloves_str_int",
         "gloves_dex_int",
-        "amulet",
-        "amulets"
+        "amulet"
       ],
       "affinities": [
         "normal"
@@ -955,8 +1107,8 @@
       "modId": "AbyssModRadiusJewelPrefixRegeneratePercentLifePerSecond",
       "template": "regenerate #% of maximum life per second",
       "template_zh": "每秒回復#%生命",
-      "key": "regenerate (2-4)% of maximum life per second",
-      "key_zh": "每秒回復(2-4)%生命",
+      "key": "regenerate (0.03-0.07)% of maximum life per second",
+      "key_zh": "每秒回復(0.03-0.07)%生命",
       "types": [
         "jewel",
         "sapphire",
@@ -1016,39 +1168,22 @@
       "key_zh": "攻擊附加6至10物理傷害|||||攻擊附加1至16閃電傷害",
       "types": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
         "wand",
-        "wands",
         "one-hand-sword",
-        "one_hand_swords",
         "one-hand-axe",
-        "one_hand_axes",
         "one-hand-mace",
-        "one_hand_maces",
         "sceptre",
-        "sceptres",
         "spear",
-        "spears",
         "flail",
-        "flails",
         "bow",
-        "bows",
         "staff",
-        "staves",
         "two-hand-sword",
-        "two_hand_swords",
         "two-hand-axe",
-        "two_hand_axes",
         "two-hand-mace",
-        "two_hand_maces",
         "quarterstaff",
-        "quarterstaves",
         "crossbow",
-        "crossbows",
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
@@ -1063,39 +1198,22 @@
       "key_zh": "攻擊附加6至10物理傷害|||||攻擊附加1至16閃電傷害",
       "types": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
         "wand",
-        "wands",
         "one-hand-sword",
-        "one_hand_swords",
         "one-hand-axe",
-        "one_hand_axes",
         "one-hand-mace",
-        "one_hand_maces",
         "sceptre",
-        "sceptres",
         "spear",
-        "spears",
         "flail",
-        "flails",
         "bow",
-        "bows",
         "staff",
-        "staves",
         "two-hand-sword",
-        "two_hand_swords",
         "two-hand-axe",
-        "two_hand_axes",
         "two-hand-mace",
-        "two_hand_maces",
         "quarterstaff",
-        "quarterstaves",
         "crossbow",
-        "crossbows",
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
@@ -1110,39 +1228,22 @@
       "key_zh": "攻擊附加6至10物理傷害|||||攻擊附加1至16閃電傷害",
       "types": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
         "wand",
-        "wands",
         "one-hand-sword",
-        "one_hand_swords",
         "one-hand-axe",
-        "one_hand_axes",
         "one-hand-mace",
-        "one_hand_maces",
         "sceptre",
-        "sceptres",
         "spear",
-        "spears",
         "flail",
-        "flails",
         "bow",
-        "bows",
         "staff",
-        "staves",
         "two-hand-sword",
-        "two_hand_swords",
         "two-hand-axe",
-        "two_hand_axes",
         "two-hand-mace",
-        "two_hand_maces",
         "quarterstaff",
-        "quarterstaves",
         "crossbow",
-        "crossbows",
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
@@ -1157,39 +1258,22 @@
       "key_zh": "攻擊附加6至10物理傷害|||||攻擊附加1至16閃電傷害",
       "types": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
         "wand",
-        "wands",
         "one-hand-sword",
-        "one_hand_swords",
         "one-hand-axe",
-        "one_hand_axes",
         "one-hand-mace",
-        "one_hand_maces",
         "sceptre",
-        "sceptres",
         "spear",
-        "spears",
         "flail",
-        "flails",
         "bow",
-        "bows",
         "staff",
-        "staves",
         "two-hand-sword",
-        "two_hand_swords",
         "two-hand-axe",
-        "two_hand_axes",
         "two-hand-mace",
-        "two_hand_maces",
         "quarterstaff",
-        "quarterstaves",
         "crossbow",
-        "crossbows",
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
@@ -1204,39 +1288,22 @@
       "key_zh": "攻擊附加6至10物理傷害|||||攻擊附加5至8冰冷傷害",
       "types": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
         "wand",
-        "wands",
         "one-hand-sword",
-        "one_hand_swords",
         "one-hand-axe",
-        "one_hand_axes",
         "one-hand-mace",
-        "one_hand_maces",
         "sceptre",
-        "sceptres",
         "spear",
-        "spears",
         "flail",
-        "flails",
         "bow",
-        "bows",
         "staff",
-        "staves",
         "two-hand-sword",
-        "two_hand_swords",
         "two-hand-axe",
-        "two_hand_axes",
         "two-hand-mace",
-        "two_hand_maces",
         "quarterstaff",
-        "quarterstaves",
         "crossbow",
-        "crossbows",
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
@@ -1251,39 +1318,22 @@
       "key_zh": "攻擊附加6至10物理傷害|||||攻擊附加5至8冰冷傷害",
       "types": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
         "wand",
-        "wands",
         "one-hand-sword",
-        "one_hand_swords",
         "one-hand-axe",
-        "one_hand_axes",
         "one-hand-mace",
-        "one_hand_maces",
         "sceptre",
-        "sceptres",
         "spear",
-        "spears",
         "flail",
-        "flails",
         "bow",
-        "bows",
         "staff",
-        "staves",
         "two-hand-sword",
-        "two_hand_swords",
         "two-hand-axe",
-        "two_hand_axes",
         "two-hand-mace",
-        "two_hand_maces",
         "quarterstaff",
-        "quarterstaves",
         "crossbow",
-        "crossbows",
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
@@ -1298,39 +1348,22 @@
       "key_zh": "攻擊附加6至10物理傷害|||||攻擊附加5至8冰冷傷害",
       "types": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
         "wand",
-        "wands",
         "one-hand-sword",
-        "one_hand_swords",
         "one-hand-axe",
-        "one_hand_axes",
         "one-hand-mace",
-        "one_hand_maces",
         "sceptre",
-        "sceptres",
         "spear",
-        "spears",
         "flail",
-        "flails",
         "bow",
-        "bows",
         "staff",
-        "staves",
         "two-hand-sword",
-        "two_hand_swords",
         "two-hand-axe",
-        "two_hand_axes",
         "two-hand-mace",
-        "two_hand_maces",
         "quarterstaff",
-        "quarterstaves",
         "crossbow",
-        "crossbows",
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
@@ -1345,39 +1378,22 @@
       "key_zh": "攻擊附加6至10物理傷害|||||攻擊附加5至8冰冷傷害",
       "types": [
         "claw",
-        "claws",
         "dagger",
-        "daggers",
         "wand",
-        "wands",
         "one-hand-sword",
-        "one_hand_swords",
         "one-hand-axe",
-        "one_hand_axes",
         "one-hand-mace",
-        "one_hand_maces",
         "sceptre",
-        "sceptres",
         "spear",
-        "spears",
         "flail",
-        "flails",
         "bow",
-        "bows",
         "staff",
-        "staves",
         "two-hand-sword",
-        "two_hand_swords",
         "two-hand-axe",
-        "two_hand_axes",
         "two-hand-mace",
-        "two_hand_maces",
         "quarterstaff",
-        "quarterstaves",
         "crossbow",
-        "crossbows",
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
@@ -1424,7 +1440,7 @@
         "shields_str",
         "shields_str_dex",
         "shields_str_int",
-        "bucklers"
+        "buckler"
       ],
       "affinities": [
         "socketable"
@@ -1471,7 +1487,7 @@
         "shields_str",
         "shields_str_dex",
         "shields_str_int",
-        "bucklers"
+        "buckler"
       ],
       "affinities": [
         "socketable"
@@ -1518,7 +1534,7 @@
         "shields_str",
         "shields_str_dex",
         "shields_str_int",
-        "bucklers"
+        "buckler"
       ],
       "affinities": [
         "socketable"
@@ -1532,8 +1548,7 @@
       "key": "15% chance that when volatility on you explodes, you regain an equivalent amount of volatility",
       "key_zh": "你身上的易爆引爆時，你有15%機率重新獲得等量的易爆",
       "types": [
-        "wand",
-        "wands"
+        "wand"
       ],
       "affinities": [
         "bonded"
@@ -1548,9 +1563,7 @@
       "key_zh": "減少30%魔力消耗效用|||||貧魔時增加12%技能速度",
       "types": [
         "wand",
-        "wands",
-        "staff",
-        "staves"
+        "staff"
       ],
       "affinities": [
         "bonded"
@@ -1561,14 +1574,14 @@
       "modId": "SoulCore_494_socketable",
       "template": "intimidate enemies on block for # seconds",
       "template_zh": "格擋時威嚇敵人，持續#秒",
-      "key": "intimidate enemies on block for 8000 seconds",
-      "key_zh": "格擋時威嚇敵人，持續8000秒",
+      "key": "intimidate enemies on block for 8 seconds",
+      "key_zh": "格擋時威嚇敵人，持續8秒",
       "types": [
         "shield",
         "shields_str",
         "shields_str_dex",
         "shields_str_int",
-        "bucklers"
+        "buckler"
       ],
       "affinities": [
         "socketable"
@@ -1583,7 +1596,7 @@
       "key_zh": "增加50%招架傷害",
       "types": [
         "shield",
-        "bucklers"
+        "buckler"
       ],
       "affinities": [
         "bonded"
@@ -1598,7 +1611,7 @@
       "key_zh": "格擋時，會對敵人施加衰弱衰弱詛咒",
       "types": [
         "shield",
-        "bucklers"
+        "buckler"
       ],
       "affinities": [
         "socketable"
@@ -1613,7 +1626,7 @@
       "key_zh": "增加100%投射物的格擋率",
       "types": [
         "shield",
-        "bucklers"
+        "buckler"
       ],
       "affinities": [
         "bonded"
@@ -1627,8 +1640,7 @@
       "key": "attacks cannot cause bleeding",
       "key_zh": "攻擊不能造成流血",
       "types": [
-        "talisman",
-        "talismans"
+        "talisman"
       ],
       "affinities": [
         "bonded"
