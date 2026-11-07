@@ -246,7 +246,7 @@ export class PoeDataLoader {
   async loadTable(
     tableName: string,
     options: {
-      language?: 'English' | 'Traditional Chinese';
+      language?: string;
       basePath?: string;
     } = {}
   ): Promise<Record<string, any>[]> {
@@ -254,7 +254,7 @@ export class PoeDataLoader {
     const lang = options.language ?? 'English';
     const basePath = options.basePath ?? (this.gameVersion === 'poe1' ? 'Data' : 'Data/Balance');
 
-    const dirPath = lang === 'Traditional Chinese' ? `${basePath}/Traditional Chinese` : basePath;
+    const dirPath = lang === 'English' ? basePath : `${basePath}/${lang}`;
     const datPath = `${dirPath}/${tableName}.datc64`;
 
     let fileBytes = await this.fileLoader.tryGetFileContents(datPath);

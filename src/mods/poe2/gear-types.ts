@@ -1,44 +1,44 @@
 export const ALL_POE2_WEAPONS = [
-  'claw', 'claws',
-  'dagger', 'daggers',
-  'wand', 'wands',
-  'one-hand-sword', 'one_hand_swords',
-  'one-hand-axe', 'one_hand_axes',
-  'one-hand-mace', 'one_hand_maces',
-  'sceptre', 'sceptres',
-  'spear', 'spears',
-  'flail', 'flails',
-  'bow', 'bows',
-  'staff', 'staves',
-  'two-hand-sword', 'two_hand_swords',
-  'two-hand-axe', 'two_hand_axes',
-  'two-hand-mace', 'two_hand_maces',
-  'quarterstaff', 'quarterstaves',
-  'crossbow', 'crossbows',
-  'talisman', 'talismans',
+  'claw',
+  'dagger',
+  'wand',
+  'one-hand-sword',
+  'one-hand-axe',
+  'one-hand-mace',
+  'sceptre',
+  'spear',
+  'flail',
+  'bow',
+  'staff',
+  'two-hand-sword',
+  'two-hand-axe',
+  'two-hand-mace',
+  'quarterstaff',
+  'crossbow',
+  'talisman',
 ];
 
 export const ONE_HAND_POE2_WEAPONS = [
-  'claw', 'claws',
-  'dagger', 'daggers',
-  'wand', 'wands',
-  'one-hand-sword', 'one_hand_swords',
-  'one-hand-axe', 'one_hand_axes',
-  'one-hand-mace', 'one_hand_maces',
-  'sceptre', 'sceptres',
-  'spear', 'spears',
-  'flail', 'flails',
-  'talisman', 'talismans',
+  'claw',
+  'dagger',
+  'wand',
+  'one-hand-sword',
+  'one-hand-axe',
+  'one-hand-mace',
+  'sceptre',
+  'spear',
+  'flail',
+  'talisman',
 ];
 
 export const TWO_HAND_POE2_WEAPONS = [
-  'bow', 'bows',
-  'staff', 'staves',
-  'two-hand-sword', 'two_hand_swords',
-  'two-hand-axe', 'two_hand_axes',
-  'two-hand-mace', 'two_hand_maces',
-  'quarterstaff', 'quarterstaves',
-  'crossbow', 'crossbows',
+  'bow',
+  'staff',
+  'two-hand-sword',
+  'two-hand-axe',
+  'two-hand-mace',
+  'quarterstaff',
+  'crossbow',
 ];
 
 export const ALL_POE2_ARMOUR = [
@@ -46,13 +46,13 @@ export const ALL_POE2_ARMOUR = [
   'boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int',
   'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_str_dex_int',
   'helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int',
-  'shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'bucklers',
+  'shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler',
 ];
 
 export const ALL_POE2_JEWELLERY = [
-  'amulet', 'amulets',
-  'ring', 'rings',
-  'belt', 'belts',
+  'amulet',
+  'ring',
+  'belt',
 ];
 
 export const POE2_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
@@ -61,7 +61,7 @@ export const POE2_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   one_hand_weapon: ONE_HAND_POE2_WEAPONS,
   two_hand_weapon: TWO_HAND_POE2_WEAPONS,
   melee: ALL_POE2_WEAPONS.filter((w) => !w.includes('bow') && !w.includes('crossbow') && !w.includes('wand')),
-  ranged: ['bow', 'bows', 'crossbow', 'crossbows', 'quiver', 'quivers'],
+  ranged: ['bow', 'crossbow', 'quiver'],
   armour: ALL_POE2_ARMOUR,
   jewellery: ALL_POE2_JEWELLERY,
 
@@ -72,39 +72,40 @@ export const POE2_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
 
   // 武器細分
-  claw: ['claw', 'claws'],
-  dagger: ['dagger', 'daggers'],
-  wand: ['wand', 'wands'],
-  sword: ['one-hand-sword', 'one_hand_swords', 'two-hand-sword', 'two_hand_swords'],
-  one_hand_sword: ['one-hand-sword', 'one_hand_swords'],
-  two_hand_sword: ['two-hand-sword', 'two_hand_swords'],
-  axe: ['one-hand-axe', 'one_hand_axes', 'two-hand-axe', 'two_hand_axes'],
-  one_hand_axe: ['one-hand-axe', 'one_hand_axes'],
-  two_hand_axe: ['two-hand-axe', 'two_hand_axes'],
-  mace: ['one-hand-mace', 'one_hand_maces', 'two-hand-mace', 'two_hand_maces'],
-  one_hand_mace: ['one-hand-mace', 'one_hand_maces'],
-  two_hand_mace: ['two-hand-mace', 'two_hand_maces'],
-  sceptre: ['sceptre', 'sceptres'],
-  spear: ['spear', 'spears'],
-  flail: ['flail', 'flails'],
-  bow: ['bow', 'bows'],
-  staff: ['staff', 'staves'],
-  quarterstaff: ['quarterstaff', 'quarterstaves'],
-  crossbow: ['crossbow', 'crossbows'],
-  warstaff: ['quarterstaff', 'quarterstaves', 'staff', 'staves'],
-  cannon: ['crossbow', 'crossbows'],
-  talisman: ['talisman', 'talismans'],
+  claw: ['claw'],
+  dagger: ['dagger'],
+  wand: ['wand'],
+  sword: ['one-hand-sword', 'two-hand-sword'],
+  one_hand_sword: ['one-hand-sword'],
+  two_hand_sword: ['two-hand-sword'],
+  axe: ['one-hand-axe', 'two-hand-axe'],
+  one_hand_axe: ['one-hand-axe'],
+  two_hand_axe: ['two-hand-axe'],
+  mace: ['one-hand-mace', 'two-hand-mace'],
+  one_hand_mace: ['one-hand-mace'],
+  two_hand_mace: ['two-hand-mace'],
+  sceptre: ['sceptre'],
+  spear: ['spear'],
+  flail: ['flail'],
+  bow: ['bow'],
+  staff: ['staff'],
+  quarterstaff: ['quarterstaff'],
+  crossbow: ['crossbow'],
+  warstaff: ['quarterstaff', 'staff'],
+  cannon: ['crossbow'],
+  talisman: ['talisman'],
+  fishing_rod: ['fishing-rod'],
 
   // 飾品與副手
-  amulet: ['amulet', 'amulets'],
-  ring: ['ring', 'rings'],
-  belt: ['belt', 'belts'],
-  quiver: ['quiver', 'quivers'],
-  focus: ['focus', 'foci'],
-  shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'bucklers'],
+  amulet: ['amulet'],
+  ring: ['ring'],
+  belt: ['belt'],
+  quiver: ['quiver'],
+  focus: ['focus'],
+  shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler'],
   str_shield: ['shield', 'shields_str'],
-  str_dex_shield: ['shield', 'shields_str_dex', 'bucklers'],
-  buckler: ['shield', 'bucklers'],
+  str_dex_shield: ['shield', 'shields_str_dex', 'buckler'],
+  buckler: ['shield', 'buckler'],
 
   // 符文影響力標籤 (Rune Warping Influences)
   destruction: ALL_POE2_WEAPONS,
@@ -121,16 +122,16 @@ export const POE2_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
 
   // 勢力防具與飾品標籤補全
   gloves_elder: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
-  amulet_elder: ['amulet', 'amulets'],
+  amulet_elder: ['amulet'],
   gloves_shaper: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
-  amulet_shaper: ['amulet', 'amulets'],
+  amulet_shaper: ['amulet'],
 
   // 藥劑與護符
   flask: ['flask'],
-  utility_flask: ['charm', 'charms'],
-  life_flask: ['life-flask', 'life_flasks', 'flask'],
-  mana_flask: ['mana-flask', 'mana_flasks', 'flask'],
-  charm: ['charm', 'charms'],
+  utility_flask: ['charm'],
+  life_flask: ['life-flask', 'flask'],
+  mana_flask: ['mana-flask', 'flask'],
+  charm: ['charm'],
 
   // 珠寶
   jewel: ['jewel'],
@@ -141,21 +142,29 @@ export const POE2_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   dexjewel: ['jewel', 'emerald'],
   intjewel: ['jewel', 'sapphire'],
   radius_jewel: ['jewel', 'diamond'],
-  historic_abyss_jewel_1: ['jewel', 'time-lost-ruby'],
-  historic_abyss_jewel_2: ['jewel', 'time-lost-emerald'],
-  historic_abyss_jewel_3: ['jewel', 'time-lost-sapphire'],
-  historic_abyss_jewel_4: ['jewel', 'time-lost-diamond'],
+  historic_abyss_jewel_1: ['jewel', 'time_lost_ruby'],
+  historic_abyss_jewel_2: ['jewel', 'time_lost_emerald'],
+  historic_abyss_jewel_3: ['jewel', 'time_lost_sapphire'],
+  historic_abyss_jewel_4: ['jewel', 'time_lost_diamond'],
 
   // 聖物
-  relic: ['relic', 'relics'],
+  relic: ['relic'],
   small_sanctum_relic: ['relic', 'urn-relic', 'vase-relic'],
   medium_sanctum_relic: ['relic', 'seal-relic', 'coffer-relic'],
   large_sanctum_relic: ['relic', 'tapestry-relic', 'incense-relic'],
+  urn_relic: ['relic', 'urn-relic'],
+  amphora_relic: ['relic', 'amphora-relic'],
+  vase_relic: ['relic', 'vase-relic'],
+  seal_relic: ['relic', 'seal-relic'],
+  coffer_relic: ['relic', 'coffer-relic'],
+  tapestry_relic: ['relic', 'tapestry-relic'],
+  incense_relic: ['relic', 'incense-relic'],
 
   // 換界石
-  low_tier_map: ['waystone-t1', 'waystones_low_tier'],
-  mid_tier_map: ['waystone-t2', 'waystones_mid_tier'],
-  top_tier_map: ['waystone-t3', 'waystones_top_tier'],
+  waystone: ['waystone'],
+  low_tier_map: ['waystone-t1'],
+  mid_tier_map: ['waystone-t2'],
+  top_tier_map: ['waystone-t3'],
 
   // 防具細分標籤
   str_armour: [
@@ -170,7 +179,7 @@ export const POE2_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
     'boots', 'boots_dex',
     'body-armour', 'body_armours_dex',
     'helmet', 'helmets_dex',
-    'shield', 'shields_str_dex', 'bucklers',
+    'shield', 'shields_str_dex', 'buckler',
   ],
   int_armour: [
     'gloves', 'gloves_int',
@@ -198,7 +207,7 @@ export const POE2_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
     'boots', 'boots_dex_int',
     'body-armour', 'body_armours_dex_int',
     'helmet', 'helmets_dex_int',
-    'shield', 'shields_str_dex', 'bucklers',
+    'shield', 'shields_str_dex', 'buckler',
   ],
   str_dex_int_armour: [
     'body-armour', 'body_armours_str_dex_int',
@@ -214,7 +223,6 @@ export function resolvePoE2GearTypes(
   // 根據 Domain 特殊補齊
   if (domain === 8) {
     result.add('relic');
-    result.add('relics');
   } else if (domain === 11) {
     result.add('jewel');
   }
@@ -236,10 +244,10 @@ export function resolvePoE2GearTypes(
       if (lower.includes('expedition')) result.add('expedition-tablet');
       if (lower.includes('delirium')) result.add('delirium-tablet');
       if (lower.includes('ritual')) result.add('ritual-tablet');
-      if (lower.includes('irradiated')) result.add('irradiated-tablet');
+      if (lower.includes('irradiated') || lower.includes('precursor')) result.add('irradiated-tablet');
       if (lower.includes('overseer')) result.add('overseer-tablet');
       if (lower.includes('abyss')) result.add('abyss-tablet');
-      if (lower.includes('temple')) result.add('temple-tablet');
+      if (lower.includes('temple') || lower.includes('incursion')) result.add('temple-tablet');
     }
   }
 
@@ -247,48 +255,53 @@ export function resolvePoE2GearTypes(
 }
 
 export const POE2_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
-  Claw: ['claw', 'claws'],
-  Dagger: ['dagger', 'daggers'],
-  Wand: ['wand', 'wands'],
-  OneHandSword: ['one-hand-sword', 'one_hand_swords'],
-  OneHandAxe: ['one-hand-axe', 'one_hand_axes'],
-  OneHandMace: ['one-hand-mace', 'one_hand_maces'],
-  Sceptre: ['sceptre', 'sceptres'],
-  Spear: ['spear', 'spears'],
-  Flail: ['flail', 'flails'],
-  Bow: ['bow', 'bows'],
-  Staff: ['staff', 'staves'],
-  TwoHandSword: ['two-hand-sword', 'two_hand_swords'],
-  TwoHandAxe: ['two-hand-axe', 'two_hand_axes'],
-  TwoHandMace: ['two-hand-mace', 'two_hand_maces'],
-  Quarterstaff: ['quarterstaff', 'quarterstaves'],
-  Crossbow: ['crossbow', 'crossbows'],
-  Amulet: ['amulet', 'amulets'],
-  Ring: ['ring', 'rings'],
-  Belt: ['belt', 'belts'],
-  Quiver: ['quiver', 'quivers'],
-  Focus: ['focus', 'foci'],
-  Shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'bucklers'],
-  Buckler: ['shield', 'bucklers'],
+  Claw: ['claw'],
+  Dagger: ['dagger'],
+  Wand: ['wand'],
+  OneHandSword: ['one-hand-sword'],
+  OneHandAxe: ['one-hand-axe'],
+  OneHandMace: ['one-hand-mace'],
+  Sceptre: ['sceptre'],
+  Spear: ['spear'],
+  Flail: ['flail'],
+  Bow: ['bow'],
+  Staff: ['staff'],
+  TwoHandSword: ['two-hand-sword'],
+  TwoHandAxe: ['two-hand-axe'],
+  TwoHandMace: ['two-hand-mace'],
+  Quarterstaff: ['quarterstaff'],
+  Crossbow: ['crossbow'],
+  FishingRod: ['fishing-rod'],
+  Amulet: ['amulet'],
+  Ring: ['ring'],
+  Belt: ['belt'],
+  Quiver: ['quiver'],
+  Focus: ['focus'],
+  Shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler'],
+  Buckler: ['shield', 'buckler'],
   Gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
   Boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
   BodyArmour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_str_dex_int'],
   Helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
   Flask: ['flask'],
-  LifeFlask: ['life-flask', 'life_flasks', 'flask'],
-  ManaFlask: ['mana-flask', 'mana_flasks', 'flask'],
-  UtilityFlask: ['charm', 'charms'],
-  Charm: ['charm', 'charms'],
+  LifeFlask: ['life-flask', 'flask'],
+  ManaFlask: ['mana-flask', 'flask'],
+  UtilityFlask: ['charm'],
+  Charm: ['charm'],
   Jewel: ['jewel'],
-  Relic: ['relic', 'relics'],
+  Relic: ['relic'],
   UrnRelic: ['relic', 'urn-relic'],
+  AmphoraRelic: ['relic', 'amphora-relic'],
   VaseRelic: ['relic', 'vase-relic'],
   SealRelic: ['relic', 'seal-relic'],
   CofferRelic: ['relic', 'coffer-relic'],
   TapestryRelic: ['relic', 'tapestry-relic'],
-  Warstaff: ['staff', 'staves'],
-  Talisman: ['talisman', 'talismans'],
-  Waystone: ['waystone-t1', 'waystones_low_tier'],
+  IncenseRelic: ['relic', 'incense-relic'],
+  TowerAugmentation: ['tablet'],
+  Map: ['waystone'],
+  Warstaff: ['staff'],
+  Talisman: ['talisman'],
+  Waystone: ['waystone', 'waystone-t1'],
 };
 
 export function getPoE2ItemClassGearTypes(classId: string): string[] | undefined {

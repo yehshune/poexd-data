@@ -1,37 +1,41 @@
 export const ALL_POE1_WEAPONS = [
-  'claw', 'claws',
-  'dagger', 'daggers',
-  'rune_dagger', 'rune-dagger',
-  'wand', 'wands',
-  'one-hand-sword', 'one_hand_swords',
-  'two-hand-sword', 'two_hand_swords',
-  'one-hand-axe', 'one_hand_axes',
-  'two-hand-axe', 'two_hand_axes',
-  'one-hand-mace', 'one_hand_maces',
-  'two-hand-mace', 'two_hand_maces',
-  'sceptre', 'sceptres',
-  'bow', 'bows',
-  'staff', 'staves', 'warstaff',
+  'claw',
+  'dagger',
+  'rune-dagger',
+  'wand',
+  'one-hand-sword',
+  'thrusting-one-hand-sword',
+  'two-hand-sword',
+  'one-hand-axe',
+  'two-hand-axe',
+  'one-hand-mace',
+  'two-hand-mace',
+  'sceptre',
+  'bow',
+  'staff',
+  'warstaff',
   'fishing-rod',
 ];
 
 export const ONE_HAND_POE1_WEAPONS = [
-  'claw', 'claws',
-  'dagger', 'daggers',
-  'rune_dagger', 'rune-dagger',
-  'wand', 'wands',
-  'one-hand-sword', 'one_hand_swords',
-  'one-hand-axe', 'one_hand_axes',
-  'one-hand-mace', 'one_hand_maces',
-  'sceptre', 'sceptres',
+  'claw',
+  'dagger',
+  'rune-dagger',
+  'wand',
+  'one-hand-sword',
+  'thrusting-one-hand-sword',
+  'one-hand-axe',
+  'one-hand-mace',
+  'sceptre',
 ];
 
 export const TWO_HAND_POE1_WEAPONS = [
-  'bow', 'bows',
-  'staff', 'staves', 'warstaff',
-  'two-hand-sword', 'two_hand_swords',
-  'two-hand-axe', 'two_hand_axes',
-  'two-hand-mace', 'two_hand_maces',
+  'bow',
+  'staff',
+  'warstaff',
+  'two-hand-sword',
+  'two-hand-axe',
+  'two-hand-mace',
   'fishing-rod',
 ];
 
@@ -40,20 +44,20 @@ export const ALL_POE1_ARMOUR = [
   'boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int',
   'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int',
   'helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int',
-  'shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'bucklers',
+  'shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler',
 ];
 
 export const ALL_POE1_JEWELLERY = [
-  'amulet', 'amulets',
-  'ring', 'rings',
-  'belt', 'belts',
+  'amulet',
+  'ring',
+  'belt',
 ];
 
 export const POE1_DEFAULT_GEAR_TYPES = [
   ...ALL_POE1_WEAPONS,
   ...ALL_POE1_ARMOUR,
   ...ALL_POE1_JEWELLERY,
-  'quiver', 'quivers',
+  'quiver',
 ];
 
 export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
@@ -63,11 +67,11 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   one_hand_weapon: ONE_HAND_POE1_WEAPONS,
   two_hand_weapon: TWO_HAND_POE1_WEAPONS,
   melee: ALL_POE1_WEAPONS.filter((w) => !w.includes('bow') && !w.includes('wand')),
-  ranged: ['bow', 'bows', 'quiver', 'quivers'],
+  ranged: ['bow', 'quiver'],
   armour: ALL_POE1_ARMOUR,
   jewellery: ALL_POE1_JEWELLERY,
   deepwater_pantheon_aspect: POE1_DEFAULT_GEAR_TYPES,
-  deepwater_hazard_belt: ['belt', 'belts'],
+  deepwater_hazard_belt: ['belt'],
 
   // 防具部位通用標籤
   gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
@@ -76,54 +80,60 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
 
   // 武器
-  claw: ['claw', 'claws'],
-  dagger: ['dagger', 'daggers'],
-  rune_dagger: ['dagger', 'daggers', 'rune-dagger'],
-  wand: ['wand', 'wands'],
-  sword: ['one-hand-sword', 'one_hand_swords', 'two-hand-sword', 'two_hand_swords'],
-  one_hand_sword: ['one-hand-sword', 'one_hand_swords'],
-  two_hand_sword: ['two-hand-sword', 'two_hand_swords'],
-  axe: ['one-hand-axe', 'one_hand_axes', 'two-hand-axe', 'two_hand_axes'],
-  one_hand_axe: ['one-hand-axe', 'one_hand_axes'],
-  two_hand_axe: ['two-hand-axe', 'two_hand_axes'],
-  mace: ['one-hand-mace', 'one_hand_maces', 'two-hand-mace', 'two_hand_maces'],
-  one_hand_mace: ['one-hand-mace', 'one_hand_maces'],
-  two_hand_mace: ['two-hand-mace', 'two_hand_maces'],
-  sceptre: ['sceptre', 'sceptres'],
-  bow: ['bow', 'bows'],
-  staff: ['staff', 'staves'],
-  warstaff: ['staff', 'staves', 'warstaff'],
+  claw: ['claw'],
+  dagger: ['dagger'],
+  rune_dagger: ['dagger', 'rune-dagger'],
+  wand: ['wand'],
+  sword: ['one-hand-sword', 'thrusting-one-hand-sword', 'two-hand-sword'],
+  one_hand_sword: ['one-hand-sword', 'thrusting-one-hand-sword'],
+  rapier: ['one-hand-sword', 'thrusting-one-hand-sword'],
+  two_hand_sword: ['two-hand-sword'],
+  axe: ['one-hand-axe', 'two-hand-axe'],
+  one_hand_axe: ['one-hand-axe'],
+  two_hand_axe: ['two-hand-axe'],
+  mace: ['one-hand-mace', 'two-hand-mace'],
+  one_hand_mace: ['one-hand-mace'],
+  two_hand_mace: ['two-hand-mace'],
+  sceptre: ['sceptre'],
+  bow: ['bow'],
+  staff: ['staff'],
+  warstaff: ['staff', 'warstaff'],
   fishing_rod: ['fishing-rod'],
-  attack_staff: ['staff', 'staves', 'warstaff'],
-  attack_dagger: ['dagger', 'daggers'],
+  attack_staff: ['staff', 'warstaff'],
+  attack_dagger: ['dagger'],
 
   // 飾品與副手
-  amulet: ['amulet', 'amulets'],
-  ring: ['ring', 'rings'],
-  belt: ['belt', 'belts'],
-  quiver: ['quiver', 'quivers'],
-  shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'bucklers'],
+  amulet: ['amulet'],
+  ring: ['ring'],
+  belt: ['belt'],
+  quiver: ['quiver'],
+  shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler'],
 
-  // 藥劑
+  // 藥劑與獵魔塗劑
   flask: ['flask'],
-  life_flask: ['life-flask', 'life_flasks', 'flask'],
-  mana_flask: ['mana-flask', 'mana_flasks', 'flask'],
+  life_flask: ['life-flask', 'flask'],
+  mana_flask: ['mana-flask', 'flask'],
   hybrid_flask: ['flask', 'hybrid-flask'],
   utility_flask: ['flask', 'utility-flask'],
+  tincture: ['tincture'],
 
   // 珠寶
   jewel: ['jewel'],
-  strjewel: ['jewel', 'crimson-jewel'],
-  dexjewel: ['jewel', 'viridian-jewel'],
-  intjewel: ['jewel', 'cobalt-jewel'],
-  abyss_jewel: ['jewel', 'abyss-jewel'],
-  abyss_jewel_melee: ['jewel', 'murderous-eye-jewel'],
-  abyss_jewel_ranged: ['jewel', 'searching-eye-jewel'],
-  abyss_jewel_caster: ['jewel', 'hypnotic-eye-jewel'],
-  abyss_jewel_summoner: ['jewel', 'ghastly-eye-jewel'],
-  expansion_jewel_large: ['jewel', 'large-cluster-jewel'],
-  expansion_jewel_medium: ['jewel', 'medium-cluster-jewel'],
-  expansion_jewel_small: ['jewel', 'small-cluster-jewel'],
+  strjewel: ['jewel', 'crimson_jewel'],
+  str_jewel: ['jewel', 'crimson_jewel'],
+  dexjewel: ['jewel', 'viridian_jewel'],
+  dex_jewel: ['jewel', 'viridian_jewel'],
+  intjewel: ['jewel', 'cobalt_jewel'],
+  int_jewel: ['jewel', 'cobalt_jewel'],
+  prismatic_jewel: ['jewel', 'prismatic_jewel'],
+  abyss_jewel: ['jewel', 'abyss_jewel'],
+  abyss_jewel_melee: ['jewel', 'murderous_eye_jewel'],
+  abyss_jewel_ranged: ['jewel', 'searching_eye_jewel'],
+  abyss_jewel_caster: ['jewel', 'hypnotic_eye_jewel'],
+  abyss_jewel_summoner: ['jewel', 'ghastly_eye_jewel'],
+  expansion_jewel_large: ['jewel', 'large_cluster_jewel'],
+  expansion_jewel_medium: ['jewel', 'medium_cluster_jewel'],
+  expansion_jewel_small: ['jewel', 'small_cluster_jewel'],
 
   // 防具細分標籤
   str_armour: [
@@ -181,25 +191,25 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
 
   // 盾牌細分
   str_shield: ['shield', 'shields_str'],
-  dex_shield: ['shield', 'shields_str_dex', 'bucklers'],
+  dex_shield: ['shield', 'shields_str_dex', 'buckler'],
   int_shield: ['shield', 'shields_str_int'],
-  str_dex_shield: ['shield', 'shields_str_dex', 'bucklers'],
+  str_dex_shield: ['shield', 'shields_str_dex', 'buckler'],
   str_int_shield: ['shield', 'shields_str_int'],
-  dex_int_shield: ['shield', 'shields_str_dex', 'bucklers'],
+  dex_int_shield: ['shield', 'shields_str_dex', 'buckler'],
   focus: ['shield', 'shields_str_int'],
 
   // 召喚物裝備標籤
-  weapon_can_roll_minion_modifiers: ['wand', 'wands', 'sceptre', 'sceptres'],
+  weapon_can_roll_minion_modifiers: ['wand', 'sceptre'],
   focus_can_roll_minion_modifiers: ['shield', 'shields_str_int'],
-  ring_can_roll_minion_modifiers: ['ring', 'rings'],
+  ring_can_roll_minion_modifiers: ['ring'],
   helmet_can_roll_minion_modifiers: [
     'helmet', 'helmets_str', 'helmets_dex', 'helmets_int',
     'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'
   ],
 
   // 特殊基底與機制裝備
-  unset_ring: ['ring', 'rings'],
-  deepwater_sword: ['two-hand-sword', 'two_hand_swords'],
+  unset_ring: ['ring'],
+  deepwater_sword: ['two-hand-sword'],
   necropolis_boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
   necropolis_gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
   necropolis_body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
@@ -238,61 +248,46 @@ export function resolvePoE1GearTypes(
     for (const { tag, weight } of spawnWeights) {
       if (weight <= 0) continue;
       const lower = tag.toLowerCase();
-      if (lower === 'strjewel') {
-        result.add('crimson-jewel');
+      if (lower === 'strjewel' || lower === 'str_jewel') {
         result.add('crimson_jewel');
-      } else if (lower === 'dexjewel') {
-        result.add('viridian-jewel');
+      } else if (lower === 'dexjewel' || lower === 'dex_jewel') {
         result.add('viridian_jewel');
-      } else if (lower === 'intjewel') {
-        result.add('cobalt-jewel');
+      } else if (lower === 'intjewel' || lower === 'int_jewel') {
         result.add('cobalt_jewel');
       }
     }
     return Array.from(result);
   } else if (domain === 13) {
     result.add('jewel');
-    result.add('abyss-jewel');
     result.add('abyss_jewel');
     for (const { tag, weight } of spawnWeights) {
       if (weight <= 0) continue;
       const lower = tag.toLowerCase();
       if (lower === 'abyss_jewel_melee') {
-        result.add('murderous-eye-jewel');
         result.add('murderous_eye_jewel');
       } else if (lower === 'abyss_jewel_ranged') {
-        result.add('searching-eye-jewel');
         result.add('searching_eye_jewel');
       } else if (lower === 'abyss_jewel_caster') {
-        result.add('hypnotic-eye-jewel');
         result.add('hypnotic_eye_jewel');
       } else if (lower === 'abyss_jewel_summoner') {
-        result.add('ghastly-eye-jewel');
         result.add('ghastly_eye_jewel');
       }
     }
     return Array.from(result);
   } else if (domain === 21) {
     result.add('jewel');
-    result.add('cluster-jewel');
     result.add('cluster_jewel');
-    result.add('large-cluster-jewel');
     result.add('large_cluster_jewel');
-    result.add('medium-cluster-jewel');
     result.add('medium_cluster_jewel');
-    result.add('small-cluster-jewel');
     result.add('small_cluster_jewel');
     for (const { tag, weight } of spawnWeights) {
       if (weight <= 0) continue;
       const lower = tag.toLowerCase();
       if (lower === 'expansion_jewel_large') {
-        result.add('large-cluster-jewel');
         result.add('large_cluster_jewel');
       } else if (lower === 'expansion_jewel_medium') {
-        result.add('medium-cluster-jewel');
         result.add('medium_cluster_jewel');
       } else if (lower === 'expansion_jewel_small') {
-        result.add('small-cluster-jewel');
         result.add('small_cluster_jewel');
       }
     }
@@ -335,53 +330,54 @@ export function resolvePoE1GearTypes(
 }
 
 export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
-  Claw: ['claw', 'claws'],
-  Dagger: ['dagger', 'daggers'],
-  RuneDagger: ['dagger', 'daggers', 'rune-dagger'],
-  'Rune Dagger': ['dagger', 'daggers', 'rune-dagger'],
-  Wand: ['wand', 'wands'],
-  OneHandSword: ['one-hand-sword', 'one_hand_swords'],
-  'One Hand Sword': ['one-hand-sword', 'one_hand_swords'],
-  ThrustingOneHandSword: ['one-hand-sword', 'one_hand_swords'],
-  'Thrusting One Hand Sword': ['one-hand-sword', 'one_hand_swords'],
-  OneHandAxe: ['one-hand-axe', 'one_hand_axes'],
-  'One Hand Axe': ['one-hand-axe', 'one_hand_axes'],
-  OneHandMace: ['one-hand-mace', 'one_hand_maces'],
-  'One Hand Mace': ['one-hand-mace', 'one_hand_maces'],
-  Sceptre: ['sceptre', 'sceptres'],
-  Bow: ['bow', 'bows'],
-  Staff: ['staff', 'staves'],
-  Warstaff: ['staff', 'staves', 'warstaff'],
-  TwoHandSword: ['two-hand-sword', 'two_hand_swords'],
-  'Two Hand Sword': ['two-hand-sword', 'two_hand_swords'],
-  TwoHandAxe: ['two-hand-axe', 'two_hand_axes'],
-  'Two Hand Axe': ['two-hand-axe', 'two_hand_axes'],
-  TwoHandMace: ['two-hand-mace', 'two_hand_maces'],
-  'Two Hand Mace': ['two-hand-mace', 'two_hand_maces'],
+  Claw: ['claw'],
+  Dagger: ['dagger'],
+  RuneDagger: ['dagger', 'rune-dagger'],
+  'Rune Dagger': ['dagger', 'rune-dagger'],
+  Wand: ['wand'],
+  OneHandSword: ['one-hand-sword'],
+  'One Hand Sword': ['one-hand-sword'],
+  ThrustingOneHandSword: ['one-hand-sword', 'thrusting-one-hand-sword'],
+  'Thrusting One Hand Sword': ['one-hand-sword', 'thrusting-one-hand-sword'],
+  OneHandAxe: ['one-hand-axe'],
+  'One Hand Axe': ['one-hand-axe'],
+  OneHandMace: ['one-hand-mace'],
+  'One Hand Mace': ['one-hand-mace'],
+  Sceptre: ['sceptre'],
+  Bow: ['bow'],
+  Staff: ['staff'],
+  Warstaff: ['staff', 'warstaff'],
+  TwoHandSword: ['two-hand-sword'],
+  'Two Hand Sword': ['two-hand-sword'],
+  TwoHandAxe: ['two-hand-axe'],
+  'Two Hand Axe': ['two-hand-axe'],
+  TwoHandMace: ['two-hand-mace'],
+  'Two Hand Mace': ['two-hand-mace'],
   FishingRod: ['fishing-rod'],
   'Fishing Rod': ['fishing-rod'],
-  Amulet: ['amulet', 'amulets'],
-  Ring: ['ring', 'rings'],
-  Belt: ['belt', 'belts'],
-  Quiver: ['quiver', 'quivers'],
-  Shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'bucklers'],
+  Amulet: ['amulet'],
+  Ring: ['ring'],
+  Belt: ['belt'],
+  Quiver: ['quiver'],
+  Shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler'],
   Gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
   Boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
   BodyArmour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
   'Body Armour': ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
   Helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
   Flask: ['flask'],
-  LifeFlask: ['life-flask', 'life_flasks', 'flask'],
-  'Life Flask': ['life-flask', 'life_flasks', 'flask'],
-  ManaFlask: ['mana-flask', 'mana_flasks', 'flask'],
-  'Mana Flask': ['mana-flask', 'mana_flasks', 'flask'],
+  LifeFlask: ['life-flask', 'flask'],
+  'Life Flask': ['life-flask', 'flask'],
+  ManaFlask: ['mana-flask', 'flask'],
+  'Mana Flask': ['mana-flask', 'flask'],
   HybridFlask: ['flask', 'hybrid-flask'],
   'Hybrid Flask': ['flask', 'hybrid-flask'],
   UtilityFlask: ['flask', 'utility-flask'],
   'Utility Flask': ['flask', 'utility-flask'],
+  Tincture: ['tincture'],
   Jewel: ['jewel'],
-  AbyssJewel: ['jewel', 'abyss-jewel'],
-  'Abyss Jewel': ['jewel', 'abyss-jewel'],
+  AbyssJewel: ['jewel', 'abyss_jewel'],
+  'Abyss Jewel': ['jewel', 'abyss_jewel'],
 };
 
 export function getPoE1ItemClassGearTypes(classId: string): string[] | undefined {
@@ -402,12 +398,12 @@ export function resolveRecombinatorSpecialGearTypes(modId: string): string[] {
     modId.includes('MaximumFrenzyCharge') ||
     modId.includes('MaximumPowerCharge')
   ) {
-    return ['ring', 'rings'];
+    return ['ring'];
   }
 
   // 2. 藥劑效果：限定腰帶 (Belts)
   if (modId.includes('MagicUtilityFlaskEffect')) {
-    return ['belt', 'belts'];
+    return ['belt'];
   }
 
   // 3. 屬性附加攻擊點傷：限定鞋子 (Boots: 力量->力量鞋、敏捷->閃避鞋、智慧->能量護盾鞋)
@@ -439,7 +435,7 @@ export function resolveRecombinatorSpecialGearTypes(modId: string): string[] {
 
   // 6. 光環效果：限定項鍊 (Amulets)
   if (modId.includes('AuraEffect')) {
-    return ['amulet', 'amulets'];
+    return ['amulet'];
   }
 
   // 7. 異常狀態轉化：限定頭盔 (Helmets)
@@ -453,51 +449,54 @@ export function resolveRecombinatorSpecialGearTypes(modId: string): string[] {
 
   // 8. 標記效果：限定箭袋 (Quivers)
   if (modId.includes('MarkEffect')) {
-    return ['quiver', 'quivers'];
+    return ['quiver'];
   }
 
   // 9. 秘能波動效果：限定法系武器 (Caster Weapons: Wand, Sceptre, Rune Dagger, Staff)
   if (modId.includes('ArcaneSurgeEffect1H')) {
-    return ['wand', 'wands', 'sceptre', 'sceptres', 'rune_dagger', 'rune-dagger'];
+    return ['wand', 'sceptre', 'rune-dagger'];
   }
   if (modId.includes('ArcaneSurgeEffect2H')) {
-    return ['staff', 'staves'];
+    return ['staff'];
   }
 
   // 10. 猛攻效果：限定弓、爪、劍、斧
   if (modId.includes('OnslaughtEffect1H')) {
     return [
-      'claw', 'claws',
-      'one-hand-sword', 'one_hand_swords',
-      'one-hand-axe', 'one_hand_axes'
+      'claw',
+      'one-hand-sword',
+      'thrusting-one-hand-sword',
+      'one-hand-axe',
     ];
   }
   if (modId.includes('OnslaughtEffect2H')) {
     return [
-      'bow', 'bows',
-      'two-hand-sword', 'two_hand_swords',
-      'two-hand-axe', 'two_hand_axes'
+      'bow',
+      'two-hand-sword',
+      'two-hand-axe',
     ];
   }
 
   // 11. 戰吼嘲諷增傷：限定近戰武器 (Melee Weapons)
   if (modId.includes('IncreasedDamageVsWarcryTauntedEnemies1H')) {
     return [
-      'claw', 'claws',
-      'dagger', 'daggers',
-      'rune_dagger', 'rune-dagger',
-      'one-hand-sword', 'one_hand_swords',
-      'one-hand-axe', 'one_hand_axes',
-      'one-hand-mace', 'one_hand_maces',
-      'sceptre', 'sceptres'
+      'claw',
+      'dagger',
+      'rune-dagger',
+      'one-hand-sword',
+      'thrusting-one-hand-sword',
+      'one-hand-axe',
+      'one-hand-mace',
+      'sceptre',
     ];
   }
   if (modId.includes('IncreasedDamageVsWarcryTauntedEnemies2H')) {
     return [
-      'two-hand-sword', 'two_hand_swords',
-      'two-hand-axe', 'two_hand_axes',
-      'two-hand-mace', 'two_hand_maces',
-      'staff', 'staves', 'warstaff'
+      'two-hand-sword',
+      'two-hand-axe',
+      'two-hand-mace',
+      'staff',
+      'warstaff',
     ];
   }
 
@@ -524,4 +523,3 @@ export function resolveHarvestQualityGearTypes(modId: string): string[] {
   }
   return [];
 }
-

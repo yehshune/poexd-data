@@ -6,6 +6,7 @@ import {
   writeModsLexiconArtifacts,
   type CollectedModTierRecord,
 } from '../common/lexicon-builder.js';
+import { loadAndWriteItemLexiconShards } from '../common/item-lexicon.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
 import {
   resolvePoE2GearTypes,
@@ -560,6 +561,9 @@ export async function buildModsPoE2(
   console.log(`[PoE 2 Mods] 完成！共轉換 ${processedCount} 筆詞綴階級，成功映射 ${matchedTradeIdCount} 筆 Trade Stat ID`);
   console.log(`  -> 寫入: ${modsTiersFile} (共 ${modsTiers.groups.length} 個屬性分組範本, ${modsTiers.typeTable.length} 種部位組合)`);
   console.log(`  -> 寫入: ${localeFiles.length} 份語系詞綴分片 (locales/*/stats.json)`);
+
+  const itemShards = await loadAndWriteItemLexiconShards(loader, outputDir);
+  console.log(`  -> 寫入: 11 份語系物品名稱分片 (locales/*/items.json, 共 ${itemShards.en.items.length} 筆物品名稱)`);
 
   await writeUnmatchedReport('poe2', outputDir, processedCount, matchedTradeIdCount, unmatchedList);
 }

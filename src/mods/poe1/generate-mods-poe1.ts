@@ -6,6 +6,7 @@ import {
   writeModsLexiconArtifacts,
   type CollectedModTierRecord,
 } from '../common/lexicon-builder.js';
+import { loadAndWriteItemLexiconShards } from '../common/item-lexicon.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
 import {
   resolvePoE1GearTypes,
@@ -96,23 +97,23 @@ export async function buildModsPoE1(
     BodyArmour_ModsKey: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
     Boots_ModsKey: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
     Gloves_ModsKey: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
-    Bow_ModsKey: ['bow', 'bows'],
-    Wand_ModsKey: ['wand', 'wands'],
-    Staff_ModsKey: ['staff', 'staves'],
-    TwoHandSword_ModsKey: ['two-hand-sword', 'two_hand_swords'],
-    TwoHandAxe_ModsKey: ['two-hand-axe', 'two_hand_axes'],
-    TwoHandMace_ModsKey: ['two-hand-mace', 'two_hand_maces'],
-    Claw_ModsKey: ['claw', 'claws'],
-    Dagger_ModsKey: ['dagger', 'daggers'],
-    OneHandSword_ModsKey: ['one-hand-sword', 'one_hand_swords'],
-    OneHandThrustingSword_ModsKey: ['one-hand-sword', 'one_hand_swords'],
-    OneHandAxe_ModsKey: ['one-hand-axe', 'one_hand_axes'],
-    OneHandMace_ModsKey: ['one-hand-mace', 'one_hand_maces'],
-    Sceptre_ModsKey: ['sceptre', 'sceptres'],
-    Belt_ModsKey: ['belt', 'belts'],
-    Amulet_ModsKey: ['amulet', 'amulets'],
-    Ring_ModsKey: ['ring', 'rings'],
-    Shield_ModsKey: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'bucklers'],
+    Bow_ModsKey: ['bow'],
+    Wand_ModsKey: ['wand'],
+    Staff_ModsKey: ['staff', 'warstaff'],
+    TwoHandSword_ModsKey: ['two-hand-sword'],
+    TwoHandAxe_ModsKey: ['two-hand-axe'],
+    TwoHandMace_ModsKey: ['two-hand-mace'],
+    Claw_ModsKey: ['claw'],
+    Dagger_ModsKey: ['dagger', 'rune-dagger'],
+    OneHandSword_ModsKey: ['one-hand-sword'],
+    OneHandThrustingSword_ModsKey: ['one-hand-sword', 'thrusting-one-hand-sword'],
+    OneHandAxe_ModsKey: ['one-hand-axe'],
+    OneHandMace_ModsKey: ['one-hand-mace'],
+    Sceptre_ModsKey: ['sceptre'],
+    Belt_ModsKey: ['belt'],
+    Amulet_ModsKey: ['amulet'],
+    Ring_ModsKey: ['ring'],
+    Shield_ModsKey: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler'],
   };
 
   for (const row of essencesTable) {
@@ -228,7 +229,7 @@ export async function buildModsPoE1(
 
     // 枯疫防禦塔附魔補全為戒指/護身符
     if (types.length === 0 && mod.GenerationType === 19) {
-      types = ['ring', 'rings', 'amulet', 'amulets'];
+      types = ['ring', 'amulet'];
     }
 
     // 藥劑附魔補全為藥劑
@@ -364,6 +365,9 @@ export async function buildModsPoE1(
   console.log(`[PoE 1 Mods] 完成！共轉換 ${processedCount} 筆詞綴階級，成功映射 ${matchedTradeIdCount} 筆 Trade Stat ID`);
   console.log(`  -> 寫入: ${modsTiersFile} (共 ${modsTiers.groups.length} 個屬性分組範本, ${modsTiers.typeTable.length} 種部位組合)`);
   console.log(`  -> 寫入: ${localeFiles.length} 份語系詞綴分片 (locales/*/stats.json)`);
+
+  const itemShards = await loadAndWriteItemLexiconShards(loader, outputDir);
+  console.log(`  -> 寫入: 11 份語系物品名稱分片 (locales/*/items.json, 共 ${itemShards.en.items.length} 筆物品名稱)`);
 
   await writeUnmatchedReport('poe1', outputDir, processedCount, matchedTradeIdCount, unmatchedList);
 }

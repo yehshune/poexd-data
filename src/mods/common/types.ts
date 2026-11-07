@@ -37,3 +37,7 @@ export interface LocaleStatsShard {
   tierTemplates: number[];
   statTemplates: Record<string, number>;
 }
+
+export interface LocaleItemsShard {
+  items: string[];
+}
