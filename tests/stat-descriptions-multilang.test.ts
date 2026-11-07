@@ -282,3 +282,93 @@ describe('Seam 1: StatDescriptionIndex multilingual parsing & template rendering
     );
   });
 });
+
+const SAMPLE_VALUE_HANDLERS_CSD = `
+description
+\t1 allies_in_presence_life_regeneration_rate_per_minute
+\t1
+\t\t# "[Allies|Allies] in your [Presence|Presence] Regenerate {0} Life per second" per_minute_to_per_second 1
+\tlang "Traditional Chinese"
+\t1
+\t\t# "[Presence|範圍]內的[Allies|友軍]每秒再生 {0} 生命" per_minute_to_per_second 1
+
+description
+\t1 base_skill_effect_duration
+\t1
+\t\t# "Base duration is {0} seconds" milliseconds_to_seconds 1
+
+description
+\t1 chance_%_to_drop_additional_ancient_orb
+\t1
+\t\t1|# "{0}% chance to drop an additional Ancient Orb" divide_by_ten_1dp_if_required 1
+
+description
+\t1 life_leech_permyriad
+\t1
+\t\t1|# "{0}% of Damage Leeched as Life" divide_by_one_hundred 1 reminderstring ReminderTextLifeLeech
+
+description
+\t1 attack_speed_+%_halved
+\t2
+\t\t1|# "{0}% increased Attack Speed"
+\t\t#|-1 "{0}% reduced Attack Speed" negate_and_double 1
+
+description
+\t1 life_regeneration_rate_per_minute_threshold
+\t2
+\t\t1|59 "Regenerate {0} Life per second (low)" per_minute_to_per_second 1
+\t\t60|# "Regenerate {0} Life per second" per_minute_to_per_second 1
+`;
+
+describe('stat_descriptions trailing value handlers', () => {
+  const index = StatDescriptionIndex.parse(SAMPLE_VALUE_HANDLERS_CSD);
+
+  it('converts per_minute_to_per_second (1386-1740 -> 23.1-29) in params, values, keys and locale templates', () => {
+    const rendered = index.renderMod([
+      { id: 'allies_in_presence_life_regeneration_rate_per_minute', min: 1386, max: 1740 },
+    ]);
+    assert.ok(rendered);
+    assert.deepEqual(rendered.params, [[23.1, 29]]);
+    assert.deepEqual(rendered.values, [['23.1', '29']]);
+    assert.equal(rendered.key, 'allies in your presence regenerate (23.1-29) life per second');
+    assert.equal(rendered.key_zh, '範圍內的友軍每秒再生 (23.1-29) 生命');
+    assert.equal(renderTierKey(rendered.templatesByLocale['en'], rendered.params, 'en'), rendered.key);
+    assert.equal(renderTierKey(rendered.templatesByLocale['zh-TW'], rendered.params, 'zh-TW'), rendered.key_zh);
+    assert.equal(rendered.template, 'allies in your presence regenerate # life per second');
+
+    const t1 = index.renderMod([
+      { id: 'allies_in_presence_life_regeneration_rate_per_minute', min: 1746, max: 1980 },
+    ]);
+    assert.deepEqual(t1?.params, [[29.1, 33]]);
+  });
+
+  it('converts milliseconds_to_seconds, divide_by_ten_1dp_if_required and divide_by_one_hundred', () => {
+    const duration = index.renderMod([{ id: 'base_skill_effect_duration', min: 1250, max: 2500 }]);
+    assert.deepEqual(duration?.params, [[1.25, 2.5]]);
+    assert.equal(duration?.key, 'base duration is (1.25-2.5) seconds');
+
+    const orb = index.renderMod([{ id: 'chance_%_to_drop_additional_ancient_orb', min: 5, max: 5 }]);
+    assert.deepEqual(orb?.params, [[0.5]]);
+    assert.deepEqual(orb?.values, [['0.5']]);
+
+    const leech = index.renderMod([{ id: 'life_leech_permyriad', min: 20, max: 40 }]);
+    assert.deepEqual(leech?.params, [[0.2, 0.4]]);
+    assert.equal(leech?.key, '(0.2-0.4)% of damage leeched as life');
+  });
+
+  it('applies negate_and_double as negation plus x2 while keeping templates in sync', () => {
+    const rendered = index.renderMod([{ id: 'attack_speed_+%_halved', min: -10, max: -5 }]);
+    assert.ok(rendered);
+    assert.deepEqual(rendered.params, [[-20, -10]]);
+    assert.deepEqual(rendered.values, [['10', '20']]);
+    assert.equal(rendered.key, '(10-20)% reduced attack speed');
+    assert.equal(renderTierKey(rendered.templatesByLocale['en'], rendered.params, 'en'), rendered.key);
+  });
+
+  it('matches variant conditions against raw (unconverted) values', () => {
+    const low = index.renderMod([{ id: 'life_regeneration_rate_per_minute_threshold', min: 30, max: 30 }]);
+    assert.equal(low?.key, 'regenerate 0.5 life per second (low)');
+    const high = index.renderMod([{ id: 'life_regeneration_rate_per_minute_threshold', min: 120, max: 120 }]);
+    assert.equal(high?.key, 'regenerate 2 life per second');
+  });
+});

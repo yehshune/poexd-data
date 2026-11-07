@@ -32,6 +32,89 @@ export interface StatRuleVariant {
   conditions: Array<{ min: number; max: number }>;
   format: string;
   negatedIndices: Set<number>; // 0-indexed parameter indices to negate
+  // 0-indexed parameter index -> 依序套用之無號數值換算處理器名稱 (例如 per_minute_to_per_second)
+  valueHandlers: Map<number, string[]>;
+}
+
+const roundTo = (value: number, dp: number): number => {
+  const factor = 10 ** dp;
+  const rounded = Math.round((value + Number.EPSILON * Math.sign(value)) * factor) / factor;
+  // 消除 IEEE 754 浮點尾數 (例如 23.100000000000005) 並避免 -0
+  const normalized = Number(rounded.toFixed(dp));
+  return normalized === 0 ? 0 : normalized;
+};
+
+const truncate = (value: number): number => {
+  const t = Math.trunc(value);
+  return t === 0 ? 0 : t;
+};
+
+/**
+ * stat_descriptions 尾端數值處理器 (`<handler> <1-based index>`) 的無號換算邏輯。
+ * 條件比對 (`findMatchingVariant`) 一律使用 Mods.datc64 原始整數，僅於輸出顯示數值時套用。
+ * 取負部分 (negate / negate_and_double / divide_by_one_hundred_and_negate) 由 negatedIndices 處理。
+ */
+export const STAT_VALUE_HANDLERS: Readonly<Record<string, (value: number) => number>> = Object.freeze({
+  negate_and_double: (v: number) => v * 2,
+  divide_by_one_hundred_and_negate: (v: number) => roundTo(v / 100, 2),
+  per_minute_to_per_second: (v: number) => roundTo(v / 60, 1),
+  per_minute_to_per_second_0dp: (v: number) => roundTo(v / 60, 0),
+  per_minute_to_per_second_1dp: (v: number) => roundTo(v / 60, 1),
+  per_minute_to_per_second_2dp: (v: number) => roundTo(v / 60, 2),
+  per_minute_to_per_second_2dp_if_required: (v: number) => roundTo(v / 60, 2),
+  'permyriad_per_minute_to_%_per_second': (v: number) => roundTo(v / 6000, 2),
+  milliseconds_to_seconds: (v: number) => roundTo(v / 1000, 2),
+  milliseconds_to_seconds_0dp: (v: number) => roundTo(v / 1000, 0),
+  milliseconds_to_seconds_1dp: (v: number) => roundTo(v / 1000, 1),
+  milliseconds_to_seconds_2dp: (v: number) => roundTo(v / 1000, 2),
+  milliseconds_to_seconds_2dp_if_required: (v: number) => roundTo(v / 1000, 2),
+  deciseconds_to_seconds: (v: number) => roundTo(v / 10, 2),
+  divide_by_ten_0dp: (v: number) => truncate(v / 10),
+  divide_by_ten_1dp: (v: number) => roundTo(v / 10, 1),
+  divide_by_ten_1dp_if_required: (v: number) => roundTo(v / 10, 1),
+  locations_to_metres: (v: number) => roundTo(v / 10, 1),
+  divide_by_one_hundred: (v: number) => roundTo(v / 100, 2),
+  divide_by_one_hundred_1dp: (v: number) => roundTo(v / 100, 1),
+  divide_by_one_hundred_2dp: (v: number) => roundTo(v / 100, 2),
+  divide_by_one_hundred_2dp_if_required: (v: number) => roundTo(v / 100, 2),
+  divide_by_one_thousand: (v: number) => roundTo(v / 1000, 3),
+  divide_by_two_0dp: (v: number) => truncate(v / 2),
+  divide_by_three: (v: number) => roundTo(v / 3, 2),
+  divide_by_four: (v: number) => roundTo(v / 4, 2),
+  divide_by_five: (v: number) => roundTo(v / 5, 1),
+  divide_by_six: (v: number) => roundTo(v / 6, 1),
+  divide_by_twelve: (v: number) => roundTo(v / 12, 2),
+  divide_by_fifteen_0dp: (v: number) => truncate(v / 15),
+  divide_by_twenty: (v: number) => roundTo(v / 20, 2),
+  divide_by_twenty_then_double_0dp: (v: number) => truncate(v / 20) * 2,
+  divide_by_fifty: (v: number) => roundTo(v / 50, 2),
+  double: (v: number) => v * 2,
+  times_one_point_five: (v: number) => roundTo(v * 1.5, 1),
+  times_twenty: (v: number) => v * 20,
+  plus_two_hundred: (v: number) => v + 200,
+  add_one: (v: number) => v + 1,
+  subtract_one: (v: number) => v - 1,
+  multiplicative_damage_modifier: (v: number) => v + 100,
+  '60%_of_value': (v: number) => roundTo(v * 0.6, 1),
+  '30%_of_value': (v: number) => roundTo(v * 0.3, 1),
+  old_leech_percent: (v: number) => roundTo(v / 5, 2),
+  old_leech_permyriad: (v: number) => roundTo(v / 500, 2),
+});
+
+const NEGATING_HANDLERS: ReadonlySet<string> = new Set([
+  'negate',
+  'negate_and_double',
+  'divide_by_one_hundred_and_negate',
+]);
+
+export function applyValueHandlers(value: number, handlers: readonly string[] | undefined): number {
+  if (!handlers || handlers.length === 0) return value;
+  let v = value;
+  for (const name of handlers) {
+    const fn = STAT_VALUE_HANDLERS[name];
+    if (fn) v = fn(v);
+  }
+  return v;
 }
 
 export interface StatDescriptionRule {
@@ -172,13 +255,26 @@ function parseVariantLine(rawLine: string, isNonAscii: boolean, statCount: numbe
     conditions.push({ min: -Infinity, max: Infinity });
   }
 
-  // 解析尾部的修飾符 (例如 negate 1, negate 2)
+  // 解析尾部的數值處理器 (例如 negate 1, per_minute_to_per_second 1, milliseconds_to_seconds 2)
+  // 非數值型修飾符 (reminderstring、canonical_line、passive_hash 等) 不影響數值，直接略過
   const negatedIndices = new Set<number>();
-  const negateMatches = tailPart.matchAll(/negate\s+(\d+)/g);
-  for (const match of negateMatches) {
-    const idx = parseInt(match[1], 10) - 1; // 轉為 0-indexed
-    if (idx >= 0 && idx < statCount) {
-      negatedIndices.add(idx);
+  const valueHandlers = new Map<number, string[]>();
+  const tailTokens = tailPart.split(/\s+/).filter(Boolean);
+  for (let t = 0; t < tailTokens.length - 1; t++) {
+    const name = tailTokens[t];
+    const idxToken = tailTokens[t + 1];
+    if (!/^\d+$/.test(idxToken)) continue;
+    const isNegating = NEGATING_HANDLERS.has(name);
+    const hasTransform = Object.prototype.hasOwnProperty.call(STAT_VALUE_HANDLERS, name);
+    if (!isNegating && !hasTransform) continue;
+    const idx = parseInt(idxToken, 10) - 1; // 轉為 0-indexed
+    t++;
+    if (idx < 0 || idx >= statCount) continue;
+    if (isNegating) negatedIndices.add(idx);
+    if (hasTransform) {
+      const list = valueHandlers.get(idx);
+      if (list) list.push(name);
+      else valueHandlers.set(idx, [name]);
     }
   }
 
@@ -186,6 +282,7 @@ function parseVariantLine(rawLine: string, isNonAscii: boolean, statCount: numbe
     conditions,
     format: cleanMarkup(textPart, isNonAscii),
     negatedIndices,
+    valueHandlers,
   };
 }
 
@@ -453,8 +550,10 @@ export class StatDescriptionIndex {
     let zhTemplate = zhVar.format;
 
     for (let i = 0; i < allStats.length; i++) {
-      const rawMin = allStats[i].min;
-      const rawMax = allStats[i].max;
+      // 條件比對已使用原始整數完成，此處才依尾端處理器換算為顯示數值 (例如每分鐘 -> 每秒)
+      const handlers = enVar.valueHandlers.get(i);
+      const rawMin = applyValueHandlers(allStats[i].min, handlers);
+      const rawMax = applyValueHandlers(allStats[i].max, handlers);
       params.push(rawMin === rawMax ? [rawMin] : [rawMin, rawMax]);
 
       let min = rawMin;
