@@ -1,10 +1,10 @@
 {
   "gameVersion": "poe2",
-  "generatedAt": "2026-11-07T07:29:37.413Z",
-  "totalTiers": 3657,
-  "matchedCount": 3593,
+  "generatedAt": "2026-11-09T14:33:10.831Z",
+  "totalTiers": 3833,
+  "matchedCount": 3769,
   "unmatchedCount": 64,
-  "matchRate": "98.2%",
+  "matchRate": "98.3%",
   "summaryByTemplate": [
     {
       "template": "攻擊附加#至#物理傷害|||||攻擊附加#至#閃電傷害",
