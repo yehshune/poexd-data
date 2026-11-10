@@ -24,6 +24,8 @@ import {
   resolveDomainProfileKeys,
   type BaseRecord,
 } from './base-profiles.js';
+import { buildGearBaseIndex, resolveGearKeysByBases } from './gear-base-index.js';
+import { decodeItBytes, resolveInheritedTags } from './item-inheritance.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
 export async function buildModsPoE1(
@@ -89,6 +91,7 @@ export async function buildModsPoE1(
     loader.loadTable('CraftingBenchOptions'),
     loader.loadTable('CraftingItemClassCategories'),
   ]);
+  const influenceTagsTable = await loader.loadTable('InfluenceTags');
 
   const statsMap = new Map<number, string>();
   statsTable.forEach((row, idx) => {
@@ -106,16 +109,35 @@ export async function buildModsPoE1(
   });
 
   // 0. 基底輪廓：依各基底實際標籤評估詞綴（藥劑、珠寶、劫盜裝備與特殊基底）
+  // 基底完整標籤 = .it 繼承鏈標籤 + BaseItemTypes 自身標籤
+  const itCache = new Map<string, Promise<readonly string[]>>();
+  const readIt = async (path: string) => decodeItBytes(await loader.getFile(path).catch(() => null));
+  const influenceTagsByClass = new Map<string, string[]>();
+  for (const row of influenceTagsTable as any[]) {
+    const classId = itemClassesMap.get(row.ItemClass ?? row.ItemClassesKey);
+    const tagName = tagsMap.get(row.Tag ?? row.TagsKey);
+    if (!classId || !tagName) continue;
+    influenceTagsByClass.set(classId, [...(influenceTagsByClass.get(classId) ?? []), tagName]);
+  }
   const baseRecords: BaseRecord[] = [];
   for (const item of baseItemsTable) {
     const classId = itemClassesMap.get(item.ItemClassesKey);
     const name = (item as any).Name as string | undefined;
     if (!classId || !name) continue;
     const tagKeys: number[] = (item as any).TagsKeys ?? (item as any).Tags ?? [];
-    const tags = tagKeys.map((k) => tagsMap.get(k)).filter((t): t is string => !!t);
-    baseRecords.push({ classId, name, tags });
+    const ownTags = tagKeys.map((k) => tagsMap.get(k)).filter((t): t is string => !!t);
+    const parent = (item as any).InheritsFrom as string | undefined;
+    const inherited = parent ? await resolveInheritedTags(parent, readIt, itCache) : [];
+    baseRecords.push({
+      classId,
+      name,
+      tags: [...new Set([...inherited, ...ownTags])],
+      influenceTags: influenceTagsByClass.get(classId) ?? [],
+    });
   }
   const baseProfiles = buildPoE1BaseProfiles(baseRecords);
+  const gearBaseIndex = buildGearBaseIndex(baseRecords);
+  let gearFallbackCount = 0;
 
   // 1. 基底固有詞綴對應的裝備類別映射表 (BaseItemTypes.Implicit_ModsKeys)
   const implicitModTypesMap = new Map<number, Set<string>>();
@@ -254,11 +276,15 @@ export async function buildModsPoE1(
       } else if (profileKeys) {
         // 沒有一般基底能骰出（傳奇、星團附魔、劫盜成員專屬等），沿用網域預設類別
         types = resolvePoE1GearTypes(spawnWeights, mod.Domain);
+      } else if (mod.Domain === 1 && spawnWeights.length > 0) {
+        types = resolveGearKeysByBases(spawnWeights, gearBaseIndex);
+        if (types.length === 0) {
+          // 只靠製作情境賦予的標籤才能出現（無任何基底原生擁有），沿用標籤映射
+          types = applySpecialBaseKeys(resolvePoE1GearTypes(spawnWeights, mod.Domain), spawnWeights, baseProfiles);
+          if (types.length > 0) gearFallbackCount++;
+        }
       } else {
         types = resolvePoE1GearTypes(spawnWeights, mod.Domain);
-        if (mod.Domain === 1 && spawnWeights.length > 0) {
-          types = applySpecialBaseKeys(types, spawnWeights, baseProfiles);
-        }
       }
     }
 
@@ -431,6 +457,7 @@ export async function buildModsPoE1(
     loader.patchVersion
   );
 
+  console.log(`[PoE 1 Mods] 一般裝備詞綴中有 ${gearFallbackCount} 筆無基底原生可骰，沿用標籤映射`);
   console.log(`[PoE 1 Mods] 完成！共轉換 ${processedCount} 筆詞綴階級，成功映射 ${matchedTradeIdCount} 筆 Trade Stat ID`);
   console.log(`  -> 寫入: ${modsTiersFile} (共 ${modsTiers.groups.length} 個屬性分組範本, ${modsTiers.typeTable.length} 種部位組合)`);
   console.log(`  -> 寫入: ${localeFiles.length} 份語系詞綴分片 (locales/*/stats.json)`);

@@ -18,6 +18,8 @@ export interface BaseRecord {
   readonly classId: string;
   readonly name: string;
   readonly tags: readonly string[];
+  /** 該物品種類各勢力的標籤（InfluenceTags 表）；未提供時以 `<tag>_<勢力>` 推估 */
+  readonly influenceTags?: readonly string[];
 }
 
 interface ProfileEntry {
