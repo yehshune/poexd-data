@@ -1,11 +1,151 @@
 {
   "gameVersion": "poe1",
-  "generatedAt": "2026-11-09T14:33:21.670Z",
-  "totalTiers": 11758,
-  "matchedCount": 11698,
-  "unmatchedCount": 60,
-  "matchRate": "99.5%",
+  "generatedAt": "2026-11-10T08:20:27.406Z",
+  "totalTiers": 15186,
+  "matchedCount": 14877,
+  "unmatchedCount": 309,
+  "matchRate": "98.0%",
   "summaryByTemplate": [
+    {
+      "template": "玩家 +#% 全部抗性",
+      "count": 5,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內長滿腐蝕性的植物",
+      "count": 4,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內含神秘的神諭|||||此區域含 # 個額外神諭",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域的普通怪物秒回復 #% 生命|||||此區域的魔法怪物每秒回復 #% 生命|||||此區域的稀有怪物每秒回復 #% 生命",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "減少 #% 怪物身上非傷害型異常狀態的效果|||||擊中時，怪物有 #% 機率點燃、冰凍和感電",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物擊中時有 #% 機率移除 1 藥劑充能",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "巡守群成員有 #% 機率為魔法|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||提升 #% 更少警戒等級|||||增加 #% 封鎖前的時間",
+      "count": 3,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "contract"
+      ]
+    },
+    {
+      "template": "地圖含有焦油地面",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有額外 # 群已汙染瓦爾怪物",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "玩家被懲戒詛咒|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||增加 #% 怪物群大小",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物死亡造成燃燒地面",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "回城鎮裡不會補充生命、魔力、能量護盾和藥劑",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "地圖有盜賊流亡者",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
     {
       "template": "#% 法術傷害偷取生命",
       "count": 2,
@@ -27,6 +167,586 @@
       ]
     },
     {
+      "template": "被魔符附身的怪物散佈在瓦爾克拉斯大陸",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物的掉落物提高 # 物品等級",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域含有 1 個譫妄之鏡",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "不會掉落魔法和稀有物品",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域有短暫的穿越任務",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域可能含有永恆密教活動",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "每個戰亂伴隨 1 位將軍|||||每個戰亂含有 1 個征戰儲物箱",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有記憶碎片",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物有 #% 機率造成易碎",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物有 #% 機率造成焦灼",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物有 #% 機率造成殘喘",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物擊中移除 #% 魔力",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物擊中時有 #% 機率移除能量球",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物擊中時有 #% 機率造成 1 個隨機咒術|||||對怪物的詛咒有 #% 更少效果",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內掉落的命運卡增加 #%",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內掉落的聖甲蟲增加 {}%",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內掉落的通貨增加 {}%",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內勢力怪物群大小增加 #%",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內額外 +# 個開創者怪物群",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "最終頭目掉落額外 # 個通貨物品",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "最終頭目會掉落額外 1 個傳奇物品",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "最終頭目會掉落額外 # 個聖甲蟲物品",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有 1 個絕望深淵",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有攻擊性圖騰",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內含 # 隻額外紅色野獸",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的豐收含有 # 個作物|||||區域內的作物較大|||||區域內的豐收種子階級至少為 2|||||區域內階級 2 的豐收種子有 #% 機率升級至階級 3|||||區域內階級 3 的豐收種子有 #% 機率升級至階級 4",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個額外瓦爾寶石",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個額外等級 21 的已汙染寶石",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個額外有 23% 品質的已汙染寶石",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個額外等級 20 的瓦爾寶石",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 格額外有兩個固定詞綴的已汙染傳奇道具",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個有 1 個固定詞綴的已汙染傳奇物品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個額外給予已汙染道具的命運卡",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個額外有 1 個穿越詞綴的已汙染稀有物品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個額外瓦爾寶珠",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 張額外有許多瓦爾人民的地圖",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 張瓦爾密殿",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器包含 1 個額外最後通牒祝福",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "最終的傳送們有 #% 機率帶你至其它無盡夢魘",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有 # 阿茲瓦特建師的記憶",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "傳奇頭目被瓦爾女王阿茲里取代",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾容器含有假掰",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "傳奇頭目掉落 1 個額外有 1 個破裂詞綴的穿越物品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域裡有許多蜘蛛",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域裡有許多烏旗守衛|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "玩家被懲戒詛咒|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "DNT Sirus' Meteors rain down in Area|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||增加 #% 怪物群大小",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "前綴詞綴沒有效果",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "後綴詞綴沒有效果",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "裂痕增加 #% 範圍效果|||||此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "玩家造成 #% 更少投射物傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "投射物減少 #% 速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "玩家所有物理傷害轉換成火焰傷害|||||怪物所有物理傷害轉換成火焰傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "所有玩家都有相同的地圖布局|||||迷你地圖全開",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "迷你地圖全開",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "強力的神殿會同時影響怪物和你",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "在瓦爾克拉斯有怪物和首領在隱密處伏擊",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
       "template": "投射物穿透一個額外目標",
       "count": 1,
       "affinities": [
@@ -34,6 +754,76 @@
       ],
       "sampleTypes": [
         "jewel"
+      ]
+    },
+    {
+      "template": "保險箱會有伏擊的怪物守衛著",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物 #% 的傷害轉換為火焰屬性|||||怪物造成 #% 額外物理傷害視為火焰",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物 #% 的傷害轉換為冰冷屬性|||||怪物造成 #% 額外物理傷害視為冰冷",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物 #% 的傷害轉換為閃電屬性|||||怪物造成 #% 額外物理傷害視為閃電",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "罪魂縈繞在瓦爾克拉斯的大地上",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "強力的風暴同時影響怪物和你|||||增加 #% 此區域物品數量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "阿茲里之息",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
       ]
     },
     {
@@ -257,6 +1047,16 @@
       ]
     },
     {
+      "template": "地圖含有額外 # 個軍團",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
       "template": "範圍內配置的天賦能力值由你的召喚物獲得",
       "count": 1,
       "affinities": [
@@ -337,6 +1137,26 @@
       ]
     },
     {
+      "template": "怪物有 #% 機率避免被冰緩或冰凍|||||增加 #% 此區域物品數量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物有 #% 機率避免被點燃|||||增加 #% 此區域物品數量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
       "template": "範圍內每配置 # 點智慧增加 1% 火焰傷害",
       "count": 1,
       "affinities": [
@@ -364,6 +1184,26 @@
       ],
       "sampleTypes": [
         "jewel"
+      ]
+    },
+    {
+      "template": "此區域有 # 個額外被魔符附身的怪物",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "流亡者擁有腐化之血",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
       ]
     },
     {
@@ -457,6 +1297,136 @@
       ]
     },
     {
+      "template": "玩家每 10 秒被 1 個隨機咒術詛咒",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域有 # 個額外被魔符附身的怪物|||||此區域有一個石陣",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "神殿被黑影所污染",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "殺死稀有怪物時獲得噬魂者 # 秒",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "玩家獲得被擊殺的稀有怪物詞綴，持續 # 秒",
+      "count": 1,
+      "affinities": [
+        "hunter"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "玩家擊殺稀有怪物時，隨機獲得 1 個它的詞綴 # 秒",
+      "count": 1,
+      "affinities": [
+        "hunter"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "被冰緩時，玩家增加 #% 行動速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "瓦爾克拉斯充斥著藏有普蘭德斯財寶的保險箱",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有札娜",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有埃哈",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有尼科",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有瓊恩",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "地圖有 1 個瓦爾地區",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
       "template": "敵人每高過你一等，增加 #% 擊中傷害",
       "count": 1,
       "affinities": [
@@ -464,6 +1434,316 @@
       ],
       "sampleTypes": [
         "jewel"
+      ]
+    },
+    {
+      "template": "區域內有許多衛士陷阱",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域可含有禁錮怪物",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域可能含有裂痕",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕|||||區域內掉落的聖甲蟲為裂痕聖甲蟲的機率增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物承受 {}% 更少傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "你地圖中的譫妄迷霧永不消散\\n你的地圖不會掉落譫妄玉\\n你的地圖不會掉落幻像斷片|||||此區域含有 1 個譫妄之鏡",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內含神秘的神諭|||||此區域含一個額外神諭",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "伊澤洛死亡時額外掉落一把古銅鑰匙",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "伊澤洛死亡時額外掉落一個傳奇物品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "你獲得額外使用 1 次神聖之泉的機會",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "在帝王迷宮的玩家將受到迅速神殿影響",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "在帝王迷宮的玩家將受到鑽石神殿影響",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "在帝王迷宮的玩家將受到狂擊神殿影響",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "在帝王迷宮的玩家將受到回復神殿影響",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "在帝王迷宮的玩家將受到威猛神殿影響",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "在帝王迷宮的玩家將受到無畏神殿影響",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "昇華試煉帝王迷宮陷阱已經失效",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "減少 #% 被帝王迷宮陷阱擊中傷害\\n對玩家減少 #% 帝王迷宮陷阱持續傷害效果",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "增加 #% 被帝王迷宮陷阱擊中傷害\\n對玩家增加 #% 帝王迷宮陷阱持續傷害效果",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內含有深淵",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域被大型腐蝕植物蔓延",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域被寄生腐蝕植物蔓延",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "神廟建築師掉落 1 個額外聖甲蟲",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有沉積的魔暴硫酸",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "不能使用倉庫",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "不能透過 NPC 販賣或購買物品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的傳奇怪物貧血時會被激怒",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "全部鍊魔怪物都有獎勵|||||掉落物品化樣本的鍊魔頭目掉落 1 個額外物品化樣本",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "凋落事件最多含有 # 個額外凋落頭目",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "神諭有 #% 機率掉落 1 個額外有疊層的通貨碎片",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "每個戰亂含有 1 個征戰儲物箱",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
       ]
     },
     {
@@ -517,13 +1797,737 @@
       ]
     },
     {
+      "template": "區域含有額外鍊魔怪物",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此區域含有 1 個譫妄之鏡|||||區域內掉落的聖甲蟲為譫妄聖甲蟲的機率增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "來自怪物擊中的所有傷害都可造成冰緩",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物擊中時造成 1 個隨機咒術|||||對怪物的詛咒有 #% 更少效果",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "帝王迷宮的獎勵變豐富了",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "帝王迷宮持有者獲得額外使用 # 次神聖之泉",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "神聖之泉可以祝福腰帶",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "帝王迷宮怪物增加 #% 攻擊、施放和移動速度|||||帝王迷宮怪物增加 #% 傷害|||||帝王迷宮怪物增加 #% 最大生命",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "伊澤洛增加 #% 傷害|||||伊澤洛增加 #% 最大生命",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "帝王迷宮怪物增加 #% 傷害|||||帝王迷宮怪物增加 #% 最大生命",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "伊澤洛增加 #% 範圍效果|||||伊澤洛增加 #% 攻擊、施放和移動速度|||||伊澤洛增加 #% 傷害|||||伊澤洛增加 #% 最大生命",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "守衛有 #% 機率為稀有|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||提升 #% 更少警戒等級|||||增加 #% 封鎖前的時間",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "contract"
+      ]
+    },
+    {
+      "template": "劫盜中有 #% 機率使掉落的混沌石改為掉落古變石",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "trinket"
+      ]
+    },
+    {
+      "template": "此區域掉落物品皆已鑑定",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
       "template": "當你失去守衛技能增益效果時使用",
       "count": 1,
       "affinities": [
         "enchant"
       ],
       "sampleTypes": [
-        "flask"
+        "flask",
+        "life-flask",
+        "mana-flask",
+        "hybrid-flask",
+        "utility-flask"
+      ]
+    },
+    {
+      "template": "區域增加 #% 遺跡數量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有墮落英雄．梅德偉",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有最後生還．沃拉娜",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有貪婪叛徒．烏特雷",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有失落起源．奧爾羅斯",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "發掘的保險箱有 #% 機率含有 2 倍的物品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域增加 #% 怪物標記的數量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有 1 個額外地下區域",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內包含#個額外阿法魯德怪物標記",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內包含#個額外阿法魯德指揮官怪物標記",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有 # 個額外保險箱標記",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "DNT Area contains # additional Epic Chest Markers",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "DNT Area contains # additional Uncommon Chest Markers",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "DNT Area contains # additional Common Chest Marker",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有 # 個額外地圖頭目",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "傳奇怪物增加 #% 最大生命",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內稀有怪物有 #% 機率被附身",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "此地圖的地圖工藝選項無消耗",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "在區域內怪物身上找到的花瓣數量增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內含有一個額外記憶之瓣技能的機率 +#%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "擊殺稀有怪物時若允許，會消耗#枚花瓣並將掉落的裝備轉化成同樣種類",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "擊殺稀有怪物時若允許，會消耗#枚花瓣並避免掉落可以有稀有度的物品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "擊殺稀有怪物時若允許，會消耗#枚花瓣並復活該怪物一次",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "擊殺稀有怪物時若允許，會消耗#枚花瓣並將掉落的非傳奇裝備轉化成金幣",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "擊殺稀有怪物時若允許，會消耗#枚花瓣並獲得該怪物的詞綴，持續30秒",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的開創者怪物群為魔法的機率增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的開創者怪物群為稀有的機率增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內階級 2 的豐收種子有 #% 機率升級至階級 3",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內階級 3 的豐收種子有 #% 機率升級至階級 4",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的豐收種子階級至少為 2",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的深淵含有額外#個坑洞",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "祭祀所提供的恩賜之物增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "祭祀神壇重骰恩賜之物前 # 次免費",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "若可能，最後通牒事件便會產生 1 個傳奇頭目",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "譫妄事件內含有所有的傳奇譫妄頭目",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "譫妄事件產生 1 個額外獎勵類型",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的軍團寶箱在從凝滯狀態被釋放時\\n有#%機率會擴散其獎勵至周遭的軍團怪物上\\n以此方式獲得獎勵的軍團怪物會增加難度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "遺跡有 1 個額外後綴",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內掉落的聖甲蟲為裂痕聖甲蟲的機率增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的全部怪物至少為魔法|||||#% 更多怪物傷害|||||瓦爾容器含有凡人碎片",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "獎勵 1 個優化的女神祭品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有 1 個誘人的瓦爾區域|||||含有 1 個瓦爾地區",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有 1 個獎勵優化女神祭品的迷宮試煉",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "獎勵 1 個女神祭品",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "增加 #% 怪物掉落聖物的數量",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "其他玩家被歸類為敵人",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "玩家只能在附近有 # 名其他玩家時造成傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "玩家只能對符合極性的敵人造成傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "對你的擊中必定暴擊|||||擊殺怪物掉落的傳奇物品有 #% 機率被複製",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "移除所有護甲|||||增加 #% 行動速度|||||移除全部閃避",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "若可能，聖殿密園含有每種最多 1 個額外階級 4 種子",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內的埃哈任務將含有黑色莫里根",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域含有 # 個額外礦床|||||區域內掉落的聖甲蟲為卡爾葛聖甲蟲的機率增加 #%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "怪物有機率受到 # 個荒林妖精強化",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域內含有一名傭兵",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "{}% 更少發現的物品數量|||||找到帶有記憶絲縷的物品時，其具有 {:+d} 記憶絲縷",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域受到詛咒",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "區域會包含一座含有整張地圖的強化蜃景",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
       ]
     },
     {
@@ -589,6 +2593,622 @@
   ],
   "unmatchedDetails": [
     {
+      "modId": "MapTotemsStrMission_",
+      "template": "area has damaging totems",
+      "template_zh": "區域含有攻擊性圖騰",
+      "key": "area has damaging totems",
+      "key_zh": "區域含有攻擊性圖騰",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapTarredGround",
+      "template": "area has patches of tar",
+      "template_zh": "地圖含有焦油地面",
+      "key": "area has patches of tar",
+      "key_zh": "地圖含有焦油地面",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapInhabitedByEinharUniqueMap11",
+      "template": "area contains # additional red beasts",
+      "template_zh": "區域內含 # 隻額外紅色野獸",
+      "key": "area contains (4-7) additional red beasts",
+      "key_zh": "區域內含 (4-7) 隻額外紅色野獸",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapGiantHarvest",
+      "template": "harvests in area contain # crops|||||crops in area are larger in size|||||harvest seeds in area are at least tier 2|||||tier 2 harvest seeds in area have #% chance to be upgraded to tier 3|||||tier 3 harvest seeds in area have #% chance to be upgraded to tier 4",
+      "template_zh": "區域內的豐收含有 # 個作物|||||區域內的作物較大|||||區域內的豐收種子階級至少為 2|||||區域內階級 2 的豐收種子有 #% 機率升級至階級 3|||||區域內階級 3 的豐收種子有 #% 機率升級至階級 4",
+      "key": "harvests in area contain 5 crops|||||crops in area are larger in size|||||harvest seeds in area are at least tier 2|||||tier 2 harvest seeds in area have (14-20)% chance to be upgraded to tier 3|||||tier 3 harvest seeds in area have 3% chance to be upgraded to tier 4",
+      "key_zh": "區域內的豐收含有 5 個作物|||||區域內的作物較大|||||區域內的豐收種子階級至少為 2|||||區域內階級 2 的豐收種子有 (14-20)% 機率升級至階級 3|||||區域內階級 3 的豐收種子有 3% 機率升級至階級 4",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapCorruptedSideAreaImplicit",
+      "template": "area contains # additional packs of corrupted vaal monsters",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物",
+      "key": "area contains (4-8) additional packs of corrupted vaal monsters",
+      "key_zh": "區域含有額外 (4-8) 群已汙染瓦爾怪物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapCorruptedSideAreaAdditionalVaalPacks",
+      "template": "area contains # additional packs of corrupted vaal monsters",
+      "template_zh": "區域含有額外 # 群已汙染瓦爾怪物",
+      "key": "area contains (6-12) additional packs of corrupted vaal monsters",
+      "key_zh": "區域含有額外 (6-12) 群已汙染瓦爾怪物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "69"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselVaalGemDrop",
+      "template": "vaal vessel contains an additional vaal gem",
+      "template_zh": "瓦爾容器包含 1 個額外瓦爾寶石",
+      "key": "vaal vessel contains an additional vaal gem",
+      "key_zh": "瓦爾容器包含 1 個額外瓦爾寶石",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "69"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselLevel21GemDrop",
+      "template": "vaal vessel contains an additional level 21 corrupted gem",
+      "template_zh": "瓦爾容器包含 1 個額外等級 21 的已汙染寶石",
+      "key": "vaal vessel contains an additional level 21 corrupted gem",
+      "key_zh": "瓦爾容器包含 1 個額外等級 21 的已汙染寶石",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "78"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselQuality23GemDrop",
+      "template": "vaal vessel contains an additional corrupted gem with 23% quality",
+      "template_zh": "瓦爾容器包含 1 個額外有 23% 品質的已汙染寶石",
+      "key": "vaal vessel contains an additional corrupted gem with 23% quality",
+      "key_zh": "瓦爾容器包含 1 個額外有 23% 品質的已汙染寶石",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "78"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselLevelledGemDrop",
+      "template": "vaal vessel contains an additional level 20 vaal gem",
+      "template_zh": "瓦爾容器包含 1 個額外等級 20 的瓦爾寶石",
+      "key": "vaal vessel contains an additional level 20 vaal gem",
+      "key_zh": "瓦爾容器包含 1 個額外等級 20 的瓦爾寶石",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "74"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselDoubleImplicitDrop_",
+      "template": "vaal vessel contains an additional corrupted unique item with two implicit modifiers",
+      "template_zh": "瓦爾容器包含 1 格額外有兩個固定詞綴的已汙染傳奇道具",
+      "key": "vaal vessel contains an additional corrupted unique item with two implicit modifiers",
+      "key_zh": "瓦爾容器包含 1 格額外有兩個固定詞綴的已汙染傳奇道具",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "74"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselSingleImplicitDrop",
+      "template": "vaal vessel contains an additional corrupted unique item with an implicit modifier",
+      "template_zh": "瓦爾容器包含 1 個有 1 個固定詞綴的已汙染傳奇物品",
+      "key": "vaal vessel contains an additional corrupted unique item with an implicit modifier",
+      "key_zh": "瓦爾容器包含 1 個有 1 個固定詞綴的已汙染傳奇物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "69"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselDivinationCardDrop",
+      "template": "vaal vessel contains an additional divination card that give corrupted items",
+      "template_zh": "瓦爾容器包含 1 個額外給予已汙染道具的命運卡",
+      "key": "vaal vessel contains an additional divination card that give corrupted items",
+      "key_zh": "瓦爾容器包含 1 個額外給予已汙染道具的命運卡",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "69"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselTempleItemDrop_",
+      "template": "vaal vessel contains an additional corrupted rare item with an incursion modifier",
+      "template_zh": "瓦爾容器包含 1 個額外有 1 個穿越詞綴的已汙染稀有物品",
+      "key": "vaal vessel contains an additional corrupted rare item with an incursion modifier",
+      "key_zh": "瓦爾容器包含 1 個額外有 1 個穿越詞綴的已汙染稀有物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "69"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselVaalOrbDrop_",
+      "template": "vaal vessel contains an additional vaal orb",
+      "template_zh": "瓦爾容器包含 1 個額外瓦爾寶珠",
+      "key": "vaal vessel contains an additional vaal orb",
+      "key_zh": "瓦爾容器包含 1 個額外瓦爾寶珠",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "69"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVaalImplicitMapDrop",
+      "template": "vaal vessel contains an additional map that is inhabited by the vaal",
+      "template_zh": "瓦爾容器包含 1 張額外有許多瓦爾人民的地圖",
+      "key": "vaal vessel contains an additional map that is inhabited by the vaal",
+      "key_zh": "瓦爾容器包含 1 張額外有許多瓦爾人民的地圖",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "69"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVaalTempleDrop",
+      "template": "vaal vessel contains an additional vaal temple map",
+      "template_zh": "瓦爾容器包含 1 張瓦爾密殿",
+      "key": "vaal vessel contains an additional vaal temple map",
+      "key_zh": "瓦爾容器包含 1 張瓦爾密殿",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "80"
+    },
+    {
+      "modId": "MapCorruptedSideAreaTrialmasterFragmentDrop",
+      "template": "vaal vessel contains an additional ultimatum aspect",
+      "template_zh": "瓦爾容器包含 1 個額外最後通牒祝福",
+      "key": "vaal vessel contains an additional ultimatum aspect",
+      "key_zh": "瓦爾容器包含 1 個額外最後通牒祝福",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "80"
+    },
+    {
+      "modId": "MapCorruptedSideAreaRecursiveUnique1",
+      "template": "#% chance for end portal to take you to another endless nightmare",
+      "template_zh": "最終的傳送們有 #% 機率帶你至其它無盡夢魘",
+      "key": "80% chance for end portal to take you to another endless nightmare",
+      "key_zh": "最終的傳送們有 80% 機率帶你至其它無盡夢魘",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapCorruptedSideAreaSpawnIncursionArchitectsUnique1",
+      "template": "area contains memories of # atzoatl architects",
+      "template_zh": "區域含有 # 阿茲瓦特建師的記憶",
+      "key": "area contains memories of 20 atzoatl architects",
+      "key_zh": "區域含有 20 阿茲瓦特建師的記憶",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapCorruptedSideAreaAtziriBossUnique1",
+      "template": "unique boss is replaced by atziri, queen of the vaal",
+      "template_zh": "傳奇頭目被瓦爾女王阿茲里取代",
+      "key": "unique boss is replaced by atziri, queen of the vaal",
+      "key_zh": "傳奇頭目被瓦爾女王阿茲里取代",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselTrialmasterMapDropUnique1",
+      "template": "vaal vessel contains the adorned",
+      "template_zh": "瓦爾容器含有假掰",
+      "key": "vaal vessel contains the adorned",
+      "key_zh": "瓦爾容器含有假掰",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapCorruptedSideAreaVesselFracturedIncrusionItemDropUnique1",
+      "template": "unique boss drops an additional incursion item with a fractured modifier",
+      "template_zh": "傳奇頭目掉落 1 個額外有 1 個破裂詞綴的穿越物品",
+      "key": "unique boss drops an additional incursion item with a fractured modifier",
+      "key_zh": "傳奇頭目掉落 1 個額外有 1 個破裂詞綴的穿越物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapTarredGroundStrDexIntMission",
+      "template": "area has patches of tar",
+      "template_zh": "地圖含有焦油地面",
+      "key": "area has patches of tar",
+      "key_zh": "地圖含有焦油地面",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMonsterPacksSpidersMap2Tier",
+      "template": "area is inhabited by spiders",
+      "template_zh": "區域裡有許多蜘蛛",
+      "key": "area is inhabited by spiders",
+      "key_zh": "區域裡有許多蜘蛛",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapMonsterPacksBlackguardsMap2Tier",
+      "template": "area is inhabited by blackguards|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area",
+      "template_zh": "區域裡有許多烏旗守衛|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度",
+      "key": "area is inhabited by blackguards|||||10% increased quantity of items found in this area|||||5% increased rarity of items found in this area",
+      "key_zh": "區域裡有許多烏旗守衛|||||增加 10% 此區域物品數量|||||此地圖增加 5% 物品稀有度",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapPlayerCursePunishment1Map2Tier",
+      "template": "players are cursed with punishment|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area|||||#% increased pack size",
+      "template_zh": "玩家被懲戒詛咒|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||增加 #% 怪物群大小",
+      "key": "players are cursed with punishment|||||18% increased quantity of items found in this area|||||9% increased rarity of items found in this area|||||14% increased pack size",
+      "key_zh": "玩家被懲戒詛咒|||||增加 18% 此區域物品數量|||||此地圖增加 9% 物品稀有度|||||增加 14% 怪物群大小",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapPlayerCursePunishment2Map2Tier",
+      "template": "players are cursed with punishment|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area|||||#% increased pack size",
+      "template_zh": "玩家被懲戒詛咒|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||增加 #% 怪物群大小",
+      "key": "players are cursed with punishment|||||18% increased quantity of items found in this area|||||9% increased rarity of items found in this area|||||14% increased pack size",
+      "key_zh": "玩家被懲戒詛咒|||||增加 18% 此區域物品數量|||||此地圖增加 9% 物品稀有度|||||增加 14% 怪物群大小",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapPlayerCursePunishmentUniqueMap__1",
+      "template": "players are cursed with punishment|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area",
+      "template_zh": "玩家被懲戒詛咒|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度",
+      "key": "players are cursed with punishment|||||18% increased quantity of items found in this area|||||9% increased rarity of items found in this area",
+      "key_zh": "玩家被懲戒詛咒|||||增加 18% 此區域物品數量|||||此地圖增加 9% 物品稀有度",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapUberModSirusMeteors",
+      "template": "dnt sirus' meteors rain down in area|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area|||||#% increased pack size",
+      "template_zh": "DNT Sirus' Meteors rain down in Area|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||增加 #% 怪物群大小",
+      "key": "dnt sirus' meteors rain down in area|||||16% increased quantity of items found in this area|||||11% increased rarity of items found in this area|||||20% increased pack size",
+      "key_zh": "DNT Sirus' Meteors rain down in Area|||||增加 16% 此區域物品數量|||||此地圖增加 11% 物品稀有度|||||增加 20% 怪物群大小",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapUberScarabCraftPrefixes",
+      "template": "prefix modifiers have no effect",
+      "template_zh": "前綴詞綴沒有效果",
+      "key": "prefix modifiers have no effect",
+      "key_zh": "前綴詞綴沒有效果",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapUberScarabCraftSuffixes",
+      "template": "suffix modifiers have no effect",
+      "template_zh": "後綴詞綴沒有效果",
+      "key": "suffix modifiers have no effect",
+      "key_zh": "後綴詞綴沒有效果",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapUberScarabCraftBreach",
+      "template": "breaches have #% increased area of effect|||||area can contain breaches|||||area contains # additional unstable breaches",
+      "template_zh": "裂痕增加 #% 範圍效果|||||此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕",
+      "key": "breaches have 100% increased area of effect|||||area can contain breaches|||||area contains 3 additional unstable breaches",
+      "key_zh": "裂痕增加 100% 範圍效果|||||此區域可能含有裂痕|||||區域內含有3道額外的不穩定裂痕",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapPlayerNoProjectileDamage",
+      "template": "players deal #% less projectile damage",
+      "template_zh": "玩家造成 #% 更少投射物傷害",
+      "key": "players deal 100% less projectile damage",
+      "key_zh": "玩家造成 100% 更少投射物傷害",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapProjectileSpeed",
+      "template": "projectiles move at #% reduced speed",
+      "template_zh": "投射物減少 #% 速度",
+      "key": "projectiles move at 50% reduced speed",
+      "key_zh": "投射物減少 50% 速度",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LeagueOfFireConvertDamage",
+      "template": "players convert all physical damage to fire|||||monsters convert all physical damage to fire",
+      "template_zh": "玩家所有物理傷害轉換成火焰傷害|||||怪物所有物理傷害轉換成火焰傷害",
+      "key": "players convert all physical damage to fire|||||monsters convert all physical damage to fire",
+      "key_zh": "玩家所有物理傷害轉換成火焰傷害|||||怪物所有物理傷害轉換成火焰傷害",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LeagueOfFireGroundFire",
+      "template": "monsters drop burning ground on death",
+      "template_zh": "怪物死亡造成燃燒地面",
+      "key": "monsters drop burning ground on death",
+      "key_zh": "怪物死亡造成燃燒地面",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapFixedSeed",
+      "template": "areas have the same layout for all players|||||minimap is revealed",
+      "template_zh": "所有玩家都有相同的地圖布局|||||迷你地圖全開",
+      "key": "areas have the same layout for all players|||||minimap is revealed",
+      "key_zh": "所有玩家都有相同的地圖布局|||||迷你地圖全開",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapRevealedMap",
+      "template": "minimap is revealed",
+      "template_zh": "迷你地圖全開",
+      "key": "minimap is revealed",
+      "key_zh": "迷你地圖全開",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapNoRefills",
+      "template": "life, mana, energy shield and flasks are not refilled in towns",
+      "template_zh": "回城鎮裡不會補充生命、魔力、能量護盾和藥劑",
+      "key": "life, mana, energy shield and flasks are not refilled in towns",
+      "key_zh": "回城鎮裡不會補充生命、魔力、能量護盾和藥劑",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapExiles",
+      "template": "rogue exiles roam wraeclast",
+      "template_zh": "地圖有盜賊流亡者",
+      "key": "rogue exiles roam wraeclast",
+      "key_zh": "地圖有盜賊流亡者",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ExilesEverywhereLeague",
+      "template": "rogue exiles roam wraeclast",
+      "template_zh": "地圖有盜賊流亡者",
+      "key": "rogue exiles roam wraeclast",
+      "key_zh": "地圖有盜賊流亡者",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAllowShrinesToSpawn",
+      "template": "powerful shrines can affect both monsters and you",
+      "template_zh": "強力的神殿會同時影響怪物和你",
+      "key": "powerful shrines can affect both monsters and you",
+      "key_zh": "強力的神殿會同時影響怪物和你",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapInvasionMonsterPacks",
+      "template": "monsters and bosses invade from elsewhere in wraeclast",
+      "template_zh": "在瓦爾克拉斯有怪物和首領在隱密處伏擊",
+      "key": "monsters and bosses invade from elsewhere in wraeclast",
+      "key_zh": "在瓦爾克拉斯有怪物和首領在隱密處伏擊",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "PierceChanceUniqueJewel41",
       "template": "projectiles pierce an additional target",
       "template_zh": "投射物穿透一個額外目標",
@@ -596,6 +3216,118 @@
       "key_zh": "投射物穿透一個額外目標",
       "types": [
         "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAmbushChests",
+      "template": "strongboxes are guarded by ambushing monsters",
+      "template_zh": "保險箱會有伏擊的怪物守衛著",
+      "key": "strongboxes are guarded by ambushing monsters",
+      "key_zh": "保險箱會有伏擊的怪物守衛著",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "StrMissionMonsterFireDamage",
+      "template": "#% of monster damage is converted to fire|||||monsters deal #% extra physical damage as fire",
+      "template_zh": "怪物 #% 的傷害轉換為火焰屬性|||||怪物造成 #% 額外物理傷害視為火焰",
+      "key": "(20-30)% of monster damage is converted to fire|||||monsters deal (30-40)% extra physical damage as fire",
+      "key_zh": "怪物 (20-30)% 的傷害轉換為火焰屬性|||||怪物造成 (30-40)% 額外物理傷害視為火焰",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "35"
+    },
+    {
+      "modId": "StrMissionMonsterColdDamage",
+      "template": "#% of monster damage is converted to cold|||||monsters deal #% extra physical damage as cold",
+      "template_zh": "怪物 #% 的傷害轉換為冰冷屬性|||||怪物造成 #% 額外物理傷害視為冰冷",
+      "key": "(20-30)% of monster damage is converted to cold|||||monsters deal (30-40)% extra physical damage as cold",
+      "key_zh": "怪物 (20-30)% 的傷害轉換為冰冷屬性|||||怪物造成 (30-40)% 額外物理傷害視為冰冷",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "35"
+    },
+    {
+      "modId": "StrMissionMonsterLightningDamage",
+      "template": "#% of monster damage is converted to lightning|||||monsters deal #% extra physical damage as lightning",
+      "template_zh": "怪物 #% 的傷害轉換為閃電屬性|||||怪物造成 #% 額外物理傷害視為閃電",
+      "key": "(20-30)% of monster damage is converted to lightning|||||monsters deal (30-40)% extra physical damage as lightning",
+      "key_zh": "怪物 (20-30)% 的傷害轉換為閃電屬性|||||怪物造成 (30-40)% 額外物理傷害視為閃電",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "35"
+    },
+    {
+      "modId": "StrMissionGroundFireOnEnemyDeath",
+      "template": "monsters drop burning ground on death",
+      "template_zh": "怪物死亡造成燃燒地面",
+      "key": "monsters drop burning ground on death",
+      "key_zh": "怪物死亡造成燃燒地面",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "10"
+    },
+    {
+      "modId": "MapTorment",
+      "template": "tormented spirits haunt wraeclast",
+      "template_zh": "罪魂縈繞在瓦爾克拉斯的大地上",
+      "key": "tormented spirits haunt wraeclast",
+      "key_zh": "罪魂縈繞在瓦爾克拉斯的大地上",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapWeatherCrafted",
+      "template": "powerful tempests can affect both monsters and you|||||#% increased quantity of items found in this area",
+      "template_zh": "強力的風暴同時影響怪物和你|||||增加 #% 此區域物品數量",
+      "key": "powerful tempests can affect both monsters and you|||||20% increased quantity of items found in this area",
+      "key_zh": "強力的風暴同時影響怪物和你|||||增加 20% 此區域物品數量",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapEclipseItemsDropCorrupted",
+      "template": "atziri's influence",
+      "template_zh": "阿茲里之息",
+      "key": "atziri's influence",
+      "key_zh": "阿茲里之息",
+      "types": [
+        "map"
       ],
       "affinities": [
         "normal"
@@ -967,6 +3699,20 @@
       "level": "1"
     },
     {
+      "modId": "MapWbCrafted_",
+      "template": "area is inhabited by # additional warbands",
+      "template_zh": "地圖含有額外 # 個軍團",
+      "key": "area is inhabited by 3 additional warbands",
+      "key_zh": "地圖含有額外 3 個軍團",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
       "modId": "PassivesApplyToMinionsUniqueJewel7",
       "template": "passives in radius apply to minions instead of you",
       "template_zh": "範圍內配置的天賦能力值由你的召喚物獲得",
@@ -1079,6 +3825,34 @@
       "level": "1"
     },
     {
+      "modId": "MapMonsterFreezeAndChillAvoidance_Test",
+      "template": "monsters have #% chance to avoid being chilled or frozen|||||#% increased quantity of items found in this area",
+      "template_zh": "怪物有 #% 機率避免被冰緩或冰凍|||||增加 #% 此區域物品數量",
+      "key": "monsters have 10000% chance to avoid being chilled or frozen|||||30% increased quantity of items found in this area",
+      "key_zh": "怪物有 10000% 機率避免被冰緩或冰凍|||||增加 30% 此區域物品數量",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMonsterIgniteAvoidance_Test",
+      "template": "monsters have #% chance to avoid being ignited|||||#% increased quantity of items found in this area",
+      "template_zh": "怪物有 #% 機率避免被點燃|||||增加 #% 此區域物品數量",
+      "key": "monsters have 10000% chance to avoid being ignited|||||30% increased quantity of items found in this area",
+      "key_zh": "怪物有 10000% 機率避免被點燃|||||增加 30% 此區域物品數量",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "IncreasedFireballRadiusUniqueJewel57",
       "template": "fire damage is increased by 1% per # intelligence from allocated passives in radius",
       "template_zh": "範圍內每配置 # 點智慧增加 1% 火焰傷害",
@@ -1114,6 +3888,48 @@
       "key_zh": "範圍內每 5 點已配置敏捷，增加 {1}% 投射物傷害|||||範圍內有 50 點敏捷，裂化箭矢發射 1 個額外投射物",
       "types": [
         "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSpawnTalismans",
+      "template": "ancient talismans possess monsters throughout wraeclast",
+      "template_zh": "被魔符附身的怪物散佈在瓦爾克拉斯大陸",
+      "key": "ancient talismans possess monsters throughout wraeclast",
+      "key_zh": "被魔符附身的怪物散佈在瓦爾克拉斯大陸",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSpawnExtraTalismans",
+      "template": "area contains # additional monsters possessed by ancient talismans",
+      "template_zh": "此區域有 # 個額外被魔符附身的怪物",
+      "key": "area contains 3 additional monsters possessed by ancient talismans",
+      "key_zh": "此區域有 3 個額外被魔符附身的怪物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapPlayerCorruptingBlood",
+      "template": "players have corrupting blood",
+      "template_zh": "流亡者擁有腐化之血",
+      "key": "players have corrupting blood",
+      "key_zh": "流亡者擁有腐化之血",
+      "types": [
+        "map"
       ],
       "affinities": [
         "normal"
@@ -1247,6 +4063,216 @@
       "level": "1"
     },
     {
+      "modId": "MapCurseEvery10Seconds",
+      "template": "players are cursed with a random hex every 10 seconds",
+      "template_zh": "玩家每 10 秒被 1 個隨機咒術詛咒",
+      "key": "players are cursed with a random hex every 10 seconds",
+      "key_zh": "玩家每 10 秒被 1 個隨機咒術詛咒",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapTalismanLeague",
+      "template": "ancient talismans possess monsters throughout wraeclast",
+      "template_zh": "被魔符附身的怪物散佈在瓦爾克拉斯大陸",
+      "key": "ancient talismans possess monsters throughout wraeclast",
+      "key_zh": "被魔符附身的怪物散佈在瓦爾克拉斯大陸",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapTalismanLeagueCrafted",
+      "template": "area contains # additional monsters possessed by ancient talismans|||||area contains a stone circle",
+      "template_zh": "此區域有 # 個額外被魔符附身的怪物|||||此區域有一個石陣",
+      "key": "area contains 3 additional monsters possessed by ancient talismans|||||area contains a stone circle",
+      "key_zh": "此區域有 3 個額外被魔符附身的怪物|||||此區域有一個石陣",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapDarkShrine",
+      "template": "shrines are corrupted by darkness",
+      "template_zh": "神殿被黑影所污染",
+      "key": "shrines are corrupted by darkness",
+      "key_zh": "神殿被黑影所污染",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSoulEaterOnRareKill",
+      "template": "players gain soul eater for # seconds on rare monster kill",
+      "template_zh": "殺死稀有怪物時獲得噬魂者 # 秒",
+      "key": "players gain soul eater for 10 seconds on rare monster kill",
+      "key_zh": "殺死稀有怪物時獲得噬魂者 10 秒",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapHeadhunter",
+      "template": "players gain modifiers from slain rare monsters for # seconds",
+      "template_zh": "玩家獲得被擊殺的稀有怪物詞綴，持續 # 秒",
+      "key": "players gain modifiers from slain rare monsters for 15 seconds",
+      "key_zh": "玩家獲得被擊殺的稀有怪物詞綴，持續 15 秒",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "hunter"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapHeadhunterCustomLeague",
+      "template": "players gain a random mod from slain rare monsters for # seconds",
+      "template_zh": "玩家擊殺稀有怪物時，隨機獲得 1 個它的詞綴 # 秒",
+      "key": "players gain a random mod from slain rare monsters for 20 seconds",
+      "key_zh": "玩家擊殺稀有怪物時，隨機獲得 1 個它的詞綴 20 秒",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "hunter"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapActionSpeedWhileChilled",
+      "template": "players have #% increased action speed while chilled",
+      "template_zh": "被冰緩時，玩家增加 #% 行動速度",
+      "key": "players have 45% increased action speed while chilled",
+      "key_zh": "被冰緩時，玩家增加 45% 行動速度",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapDroppedItemLevel",
+      "template": "monsters drop items # level higher",
+      "template_zh": "怪物的掉落物提高 # 物品等級",
+      "key": "monsters drop items (1-5) level higher",
+      "key_zh": "怪物的掉落物提高 (1-5) 物品等級",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapPerandusLeague",
+      "template": "caches of perandus wealth can be found throughout wraeclast",
+      "template_zh": "瓦爾克拉斯充斥著藏有普蘭德斯財寶的保險箱",
+      "key": "caches of perandus wealth can be found throughout wraeclast",
+      "key_zh": "瓦爾克拉斯充斥著藏有普蘭德斯財寶的保險箱",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapProphecyZana",
+      "template": "area contains zana",
+      "template_zh": "區域含有札娜",
+      "key": "area contains zana",
+      "key_zh": "區域含有札娜",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapProphecyEinhar",
+      "template": "area contains einhar",
+      "template_zh": "區域含有埃哈",
+      "key": "area contains einhar",
+      "key_zh": "區域含有埃哈",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapProphecyNiko",
+      "template": "area contains niko",
+      "template_zh": "區域含有尼科",
+      "key": "area contains niko",
+      "key_zh": "區域含有尼科",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapProphecyJun",
+      "template": "area contains jun",
+      "template_zh": "區域含有瓊恩",
+      "key": "area contains jun",
+      "key_zh": "區域含有瓊恩",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapForceCorruptedSideArea",
+      "template": "map has a vaal side area",
+      "template_zh": "地圖有 1 個瓦爾地區",
+      "key": "map has a vaal side area",
+      "key_zh": "地圖有 1 個瓦爾地區",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "IncreasedDamagePerLevelDifferenceAgainstHigherLevelEnemiesUnique___1",
       "template": "#% increased damage with hits for each level higher the enemy is than you",
       "template_zh": "敵人每高過你一等，增加 #% 擊中傷害",
@@ -1254,6 +4280,916 @@
       "key_zh": "敵人每高過你一等，增加 20% 擊中傷害",
       "types": [
         "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapLabyrinthPopUpTraps",
+      "template": "area contains many sentinel traps",
+      "template_zh": "區域內有許多衛士陷阱",
+      "key": "area contains many sentinel traps",
+      "key_zh": "區域內有許多衛士陷阱",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapEssenceLeague",
+      "template": "areas can contain imprisoned monsters",
+      "template_zh": "區域可含有禁錮怪物",
+      "key": "areas can contain imprisoned monsters",
+      "key_zh": "區域可含有禁錮怪物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapBreachLeague",
+      "template": "area can contain breaches",
+      "template_zh": "此區域可能含有裂痕",
+      "key": "area can contain breaches",
+      "key_zh": "此區域可能含有裂痕",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapBreachLeagueCrafted",
+      "template": "area can contain breaches|||||area contains # additional unstable breaches|||||scarabs dropped in area have #% increased chance to be breach scarabs",
+      "template_zh": "此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕|||||區域內掉落的聖甲蟲為裂痕聖甲蟲的機率增加 #%",
+      "key": "area can contain breaches|||||area contains 3 additional unstable breaches|||||scarabs dropped in area have 50% increased chance to be breach scarabs",
+      "key_zh": "此區域可能含有裂痕|||||區域內含有3道額外的不穩定裂痕|||||區域內掉落的聖甲蟲為裂痕聖甲蟲的機率增加 50%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapBreachCustomLeague",
+      "template": "area can contain breaches|||||area contains an additional unstable breach",
+      "template_zh": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "key": "area can contain breaches|||||area contains an additional unstable breach",
+      "key_zh": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "EverythingEverywhereBreaches",
+      "template": "area can contain breaches|||||area contains # additional unstable breaches",
+      "template_zh": "此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕",
+      "key": "area can contain breaches|||||area contains 10 additional unstable breaches",
+      "key_zh": "此區域可能含有裂痕|||||區域內含有10道額外的不穩定裂痕",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EverythingSomewhereBreaches",
+      "template": "area can contain breaches|||||area contains # additional unstable breaches",
+      "template_zh": "此區域可能含有裂痕|||||區域內含有#道額外的不穩定裂痕",
+      "key": "area can contain breaches|||||area contains 3 additional unstable breaches",
+      "key_zh": "此區域可能含有裂痕|||||區域內含有3道額外的不穩定裂痕",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EverythingSomewhereBreachesSingle",
+      "template": "area can contain breaches|||||area contains an additional unstable breach",
+      "template_zh": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "key": "area can contain breaches|||||area contains an additional unstable breach",
+      "key_zh": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueBreaches",
+      "template": "area can contain breaches|||||area contains an additional unstable breach",
+      "template_zh": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "key": "area can contain breaches|||||area contains an additional unstable breach",
+      "key_zh": "此區域可能含有裂痕|||||區域內含有一道額外的不穩定裂痕",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EverythingSomewhereHarbingersSingle_",
+      "template": "area can contain mysterious harbingers|||||area contains # additional harbingers",
+      "template_zh": "區域內含神秘的神諭|||||此區域含 # 個額外神諭",
+      "key": "area can contain mysterious harbingers|||||area contains 2 additional harbingers",
+      "key_zh": "區域內含神秘的神諭|||||此區域含 2 個額外神諭",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EverythingEverywhereHarbingers",
+      "template": "area can contain mysterious harbingers|||||area contains # additional harbingers",
+      "template_zh": "區域內含神秘的神諭|||||此區域含 # 個額外神諭",
+      "key": "area can contain mysterious harbingers|||||area contains 20 additional harbingers",
+      "key_zh": "區域內含神秘的神諭|||||此區域含 20 個額外神諭",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EverythingEverywhereDelirium",
+      "template": "areas contain a mirror of delirium",
+      "template_zh": "此區域含有 1 個譫妄之鏡",
+      "key": "areas contain a mirror of delirium",
+      "key_zh": "此區域含有 1 個譫妄之鏡",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EverythingSomewhereDeliriumSingle__",
+      "template": "areas contain a mirror of delirium",
+      "template_zh": "此區域含有 1 個譫妄之鏡",
+      "key": "areas contain a mirror of delirium",
+      "key_zh": "此區域含有 1 個譫妄之鏡",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MayhemEventDifficultyDecreasedMonsterDamageTaken",
+      "template": "monsters take {}% less damage",
+      "template_zh": "怪物承受 {}% 更少傷害",
+      "key": "monsters take {}% less damage",
+      "key_zh": "怪物承受 {}% 更少傷害",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AltLeaguesEverywhereDelirium",
+      "template": "delirium fog in your maps never dissipates\\ndelirium orbs cannot be found in your maps\\nsimulacrum splinters cannot be found in your maps|||||areas contain a mirror of delirium",
+      "template_zh": "你地圖中的譫妄迷霧永不消散\\n你的地圖不會掉落譫妄玉\\n你的地圖不會掉落幻像斷片|||||此區域含有 1 個譫妄之鏡",
+      "key": "delirium fog in your maps never dissipates\\ndelirium orbs cannot be found in your maps\\nsimulacrum splinters cannot be found in your maps|||||areas contain a mirror of delirium",
+      "key_zh": "你地圖中的譫妄迷霧永不消散\\n你的地圖不會掉落譫妄玉\\n你的地圖不會掉落幻像斷片|||||此區域含有 1 個譫妄之鏡",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueHarbingers",
+      "template": "area can contain mysterious harbingers|||||area contains # additional harbingers",
+      "template_zh": "區域內含神秘的神諭|||||此區域含 # 個額外神諭",
+      "key": "area can contain mysterious harbingers|||||area contains 2 additional harbingers",
+      "key_zh": "區域內含神秘的神諭|||||此區域含 2 個額外神諭",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueImbue",
+      "template": "items cannot drop as magic or rare",
+      "template_zh": "不會掉落魔法和稀有物品",
+      "key": "items cannot drop as magic or rare",
+      "key_zh": "不會掉落魔法和稀有物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapHarbingerCustomLeague",
+      "template": "area can contain mysterious harbingers|||||area contains an additional harbinger",
+      "template_zh": "區域內含神秘的神諭|||||此區域含一個額外神諭",
+      "key": "area can contain mysterious harbingers|||||area contains an additional harbinger",
+      "key_zh": "區域內含神秘的神諭|||||此區域含一個額外神諭",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrineIzaroDropsAdditionalKeys",
+      "template": "izaro will drop an additional treasure key on death",
+      "template_zh": "伊澤洛死亡時額外掉落一把古銅鑰匙",
+      "key": "izaro will drop an additional treasure key on death",
+      "key_zh": "伊澤洛死亡時額外掉落一把古銅鑰匙",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrineIzaroDropsAdditionalUnique",
+      "template": "izaro will drop an additional unique item on death",
+      "template_zh": "伊澤洛死亡時額外掉落一個傳奇物品",
+      "key": "izaro will drop an additional unique item on death",
+      "key_zh": "伊澤洛死亡時額外掉落一個傳奇物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrineAdditionalDivineFontUseDisplay",
+      "template": "you will receive an additional use of the divine font",
+      "template_zh": "你獲得額外使用 1 次神聖之泉的機會",
+      "key": "you will receive an additional use of the divine font",
+      "key_zh": "你獲得額外使用 1 次神聖之泉的機會",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrinePlayersHaveShrineRowEffect",
+      "template": "players in the labyrinth will be affected by acceleration shrine",
+      "template_zh": "在帝王迷宮的玩家將受到迅速神殿影響",
+      "key": "players in the labyrinth will be affected by acceleration shrine",
+      "key_zh": "在帝王迷宮的玩家將受到迅速神殿影響",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrinePlayersHaveShrineRowEffect2",
+      "template": "players in the labyrinth will be affected by diamond shrine",
+      "template_zh": "在帝王迷宮的玩家將受到鑽石神殿影響",
+      "key": "players in the labyrinth will be affected by diamond shrine",
+      "key_zh": "在帝王迷宮的玩家將受到鑽石神殿影響",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrinePlayersHaveShrineRowEffect3_",
+      "template": "players in the labyrinth will be affected by brutal shrine",
+      "template_zh": "在帝王迷宮的玩家將受到狂擊神殿影響",
+      "key": "players in the labyrinth will be affected by brutal shrine",
+      "key_zh": "在帝王迷宮的玩家將受到狂擊神殿影響",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrinePlayersHaveShrineRowEffect4",
+      "template": "players in the labyrinth will be affected by replenishing shrine",
+      "template_zh": "在帝王迷宮的玩家將受到回復神殿影響",
+      "key": "players in the labyrinth will be affected by replenishing shrine",
+      "key_zh": "在帝王迷宮的玩家將受到回復神殿影響",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrinePlayersHaveShrineRowEffect5",
+      "template": "players in the labyrinth will be affected by massive shrine",
+      "template_zh": "在帝王迷宮的玩家將受到威猛神殿影響",
+      "key": "players in the labyrinth will be affected by massive shrine",
+      "key_zh": "在帝王迷宮的玩家將受到威猛神殿影響",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrinePlayersHaveShrineRowEffect6",
+      "template": "players in the labyrinth will be affected by impenetrable shrine",
+      "template_zh": "在帝王迷宮的玩家將受到無畏神殿影響",
+      "key": "players in the labyrinth will be affected by impenetrable shrine",
+      "key_zh": "在帝王迷宮的玩家將受到無畏神殿影響",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrineBossRoomTrapsAreDisabled",
+      "template": "labyrinth traps are disabled in the aspirant's trial",
+      "template_zh": "昇華試煉帝王迷宮陷阱已經失效",
+      "key": "labyrinth traps are disabled in the aspirant's trial",
+      "key_zh": "昇華試煉帝王迷宮陷阱已經失效",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrinePlayersTakeReducedDamageFromLabyrinthTraps__",
+      "template": "#% reduced damage taken from hits from labyrinth traps\\n#% reduced effectiveness of damage over time debuffs from labyrinth traps on players",
+      "template_zh": "減少 #% 被帝王迷宮陷阱擊中傷害\\n對玩家減少 #% 帝王迷宮陷阱持續傷害效果",
+      "key": "50% reduced damage taken from hits from labyrinth traps\\n50% reduced effectiveness of damage over time debuffs from labyrinth traps on players",
+      "key_zh": "減少 50% 被帝王迷宮陷阱擊中傷害\\n對玩家減少 50% 帝王迷宮陷阱持續傷害效果",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthDarkshrinePlayersTakeIncreasedDamageFromLabyrinthTraps__",
+      "template": "#% increased damage taken from hits from labyrinth traps\\n#% increased effectiveness of damage over time debuffs from labyrinth traps on players",
+      "template_zh": "增加 #% 被帝王迷宮陷阱擊中傷害\\n對玩家增加 #% 帝王迷宮陷阱持續傷害效果",
+      "key": "50% increased damage taken from hits from labyrinth traps\\n50% increased effectiveness of damage over time debuffs from labyrinth traps on players",
+      "key_zh": "增加 50% 被帝王迷宮陷阱擊中傷害\\n對玩家增加 50% 帝王迷宮陷阱持續傷害效果",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AbyssLeague",
+      "template": "areas contain abysses",
+      "template_zh": "區域內含有深淵",
+      "key": "areas contain abysses",
+      "key_zh": "區域內含有深淵",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionLeague",
+      "template": "areas contain temporal incursions",
+      "template_zh": "此區域有短暫的穿越任務",
+      "key": "areas contain temporal incursions",
+      "key_zh": "此區域有短暫的穿越任務",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionLeagueCrafted",
+      "template": "areas contain temporal incursions",
+      "template_zh": "此區域有短暫的穿越任務",
+      "key": "areas contain temporal incursions",
+      "key_zh": "此區域有短暫的穿越任務",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTemplePoisonClusters1",
+      "template": "area is overgrown with caustic plants",
+      "template_zh": "區域內長滿腐蝕性的植物",
+      "key": "area is overgrown with caustic plants",
+      "key_zh": "區域內長滿腐蝕性的植物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTemplePoisonClusters2",
+      "template": "area is overgrown with large caustic plants",
+      "template_zh": "區域被大型腐蝕植物蔓延",
+      "key": "area is overgrown with large caustic plants",
+      "key_zh": "區域被大型腐蝕植物蔓延",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTemplePoisonClusters3",
+      "template": "area is overgrown with parasitic caustic plants",
+      "template_zh": "區域被寄生腐蝕植物蔓延",
+      "key": "area is overgrown with parasitic caustic plants",
+      "key_zh": "區域被寄生腐蝕植物蔓延",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTemplePoisonClustersBonus1",
+      "template": "area is overgrown with caustic plants",
+      "template_zh": "區域內長滿腐蝕性的植物",
+      "key": "area is overgrown with caustic plants",
+      "key_zh": "區域內長滿腐蝕性的植物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTemplePoisonClustersBonus2",
+      "template": "area is overgrown with caustic plants",
+      "template_zh": "區域內長滿腐蝕性的植物",
+      "key": "area is overgrown with caustic plants",
+      "key_zh": "區域內長滿腐蝕性的植物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTemplePoisonClustersBonus3",
+      "template": "area is overgrown with caustic plants",
+      "template_zh": "區域內長滿腐蝕性的植物",
+      "key": "area is overgrown with caustic plants",
+      "key_zh": "區域內長滿腐蝕性的植物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionMonsterRegen1",
+      "template": "normal monsters in this area regenerate #% of life per second|||||magic monsters in this area regenerate #% of life per second|||||rare monsters in this area regenerate #% of life per second",
+      "template_zh": "此區域的普通怪物秒回復 #% 生命|||||此區域的魔法怪物每秒回復 #% 生命|||||此區域的稀有怪物每秒回復 #% 生命",
+      "key": "normal monsters in this area regenerate 4% of life per second|||||magic monsters in this area regenerate 3% of life per second|||||rare monsters in this area regenerate 2% of life per second",
+      "key_zh": "此區域的普通怪物秒回復 4% 生命|||||此區域的魔法怪物每秒回復 3% 生命|||||此區域的稀有怪物每秒回復 2% 生命",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionMonsterRegen2",
+      "template": "normal monsters in this area regenerate #% of life per second|||||magic monsters in this area regenerate #% of life per second|||||rare monsters in this area regenerate #% of life per second",
+      "template_zh": "此區域的普通怪物秒回復 #% 生命|||||此區域的魔法怪物每秒回復 #% 生命|||||此區域的稀有怪物每秒回復 #% 生命",
+      "key": "normal monsters in this area regenerate 6% of life per second|||||magic monsters in this area regenerate 4.5% of life per second|||||rare monsters in this area regenerate 3% of life per second",
+      "key_zh": "此區域的普通怪物秒回復 6% 生命|||||此區域的魔法怪物每秒回復 4.5% 生命|||||此區域的稀有怪物每秒回復 3% 生命",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionMonsterRegen3",
+      "template": "normal monsters in this area regenerate #% of life per second|||||magic monsters in this area regenerate #% of life per second|||||rare monsters in this area regenerate #% of life per second",
+      "template_zh": "此區域的普通怪物秒回復 #% 生命|||||此區域的魔法怪物每秒回復 #% 生命|||||此區域的稀有怪物每秒回復 #% 生命",
+      "key": "normal monsters in this area regenerate 8% of life per second|||||magic monsters in this area regenerate 6% of life per second|||||rare monsters in this area regenerate 4% of life per second",
+      "key_zh": "此區域的普通怪物秒回復 8% 生命|||||此區域的魔法怪物每秒回復 6% 生命|||||此區域的稀有怪物每秒回復 4% 生命",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTempleItemLevel1__",
+      "template": "monsters drop items # level higher",
+      "template_zh": "怪物的掉落物提高 # 物品等級",
+      "key": "monsters drop items 1 level higher",
+      "key_zh": "怪物的掉落物提高 1 物品等級",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionArchitectMapCurrency1",
+      "template": "temple architects drop an additional scarab",
+      "template_zh": "神廟建築師掉落 1 個額外聖甲蟲",
+      "key": "temple architects drop an additional scarab",
+      "key_zh": "神廟建築師掉落 1 個額外聖甲蟲",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapDelveLeague",
+      "template": "areas contain deposits of voltaxic sulphite",
+      "template_zh": "區域含有沉積的魔暴硫酸",
+      "key": "areas contain deposits of voltaxic sulphite",
+      "key_zh": "區域含有沉積的魔暴硫酸",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapBetrayalLeague",
+      "template": "area contains immortal syndicate activity",
+      "template_zh": "此區域可能含有永恆密教活動",
+      "key": "area contains immortal syndicate activity",
+      "key_zh": "此區域可能含有永恆密教活動",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapBetrayalLeagueCrafted",
+      "template": "area contains immortal syndicate activity",
+      "template_zh": "此區域可能含有永恆密教活動",
+      "key": "area contains immortal syndicate activity",
+      "key_zh": "此區域可能含有永恆密教活動",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueFamine",
+      "template": "life, mana, energy shield and flasks are not refilled in towns",
+      "template_zh": "回城鎮裡不會補充生命、魔力、能量護盾和藥劑",
+      "key": "life, mana, energy shield and flasks are not refilled in towns",
+      "key_zh": "回城鎮裡不會補充生命、魔力、能量護盾和藥劑",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueResistances1",
+      "template": "players have +#% to all resistances",
+      "template_zh": "玩家 +#% 全部抗性",
+      "key": "players have -20% to all resistances",
+      "key_zh": "玩家 -20% 全部抗性",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueResistances2_",
+      "template": "players have +#% to all resistances",
+      "template_zh": "玩家 +#% 全部抗性",
+      "key": "players have -40% to all resistances",
+      "key_zh": "玩家 -40% 全部抗性",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueResistances3",
+      "template": "players have +#% to all resistances",
+      "template_zh": "玩家 +#% 全部抗性",
+      "key": "players have -60% to all resistances",
+      "key_zh": "玩家 -60% 全部抗性",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueResistances4",
+      "template": "players have +#% to all resistances",
+      "template_zh": "玩家 +#% 全部抗性",
+      "key": "players have -80% to all resistances",
+      "key_zh": "玩家 -80% 全部抗性",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueResistances5",
+      "template": "players have +#% to all resistances",
+      "template_zh": "玩家 +#% 全部抗性",
+      "key": "players have -100% to all resistances",
+      "key_zh": "玩家 -100% 全部抗性",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueNoStashes",
+      "template": "stashes cannot be used",
+      "template_zh": "不能使用倉庫",
+      "key": "stashes cannot be used",
+      "key_zh": "不能使用倉庫",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueNoMagicOrRareDrops",
+      "template": "items cannot drop as magic or rare",
+      "template_zh": "不會掉落魔法和稀有物品",
+      "key": "items cannot drop as magic or rare",
+      "key_zh": "不會掉落魔法和稀有物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeagueNoVendors_",
+      "template": "items cannot be sold to or purchased from npcs",
+      "template_zh": "不能透過 NPC 販賣或購買物品",
+      "key": "items cannot be sold to or purchased from npcs",
+      "key_zh": "不能透過 NPC 販賣或購買物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "CustomLeaguePhreciaTwoBosses",
+      "template": "unique monsters in area enrage on low life",
+      "template_zh": "區域內的傳奇怪物貧血時會被激怒",
+      "key": "unique monsters in area enrage on low life",
+      "key_zh": "區域內的傳奇怪物貧血時會被激怒",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMissionJuiceMetamorph",
+      "template": "all metamorph monsters have rewards|||||metamorph bosses which drop an itemised sample drop an additional itemised sample",
+      "template_zh": "全部鍊魔怪物都有獎勵|||||掉落物品化樣本的鍊魔頭目掉落 1 個額外物品化樣本",
+      "key": "all metamorph monsters have rewards|||||metamorph bosses which drop an itemised sample drop an additional itemised sample",
+      "key_zh": "全部鍊魔怪物都有獎勵|||||掉落物品化樣本的鍊魔頭目掉落 1 個額外物品化樣本",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMissionJuiceLegion",
+      "template": "each legion is accompanied by a general|||||each legion contains a war hoard",
+      "template_zh": "每個戰亂伴隨 1 位將軍|||||每個戰亂含有 1 個征戰儲物箱",
+      "key": "each legion is accompanied by a general|||||each legion contains a war hoard",
+      "key_zh": "每個戰亂伴隨 1 位將軍|||||每個戰亂含有 1 個征戰儲物箱",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMissionJuiceBlight",
+      "template": "blight encounters contain up to # additional blight boss",
+      "template_zh": "凋落事件最多含有 # 個額外凋落頭目",
+      "key": "blight encounters contain up to 1 additional blight boss",
+      "key_zh": "凋落事件最多含有 1 個額外凋落頭目",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMissionJuiceHarbinger",
+      "template": "harbingers have #% chance to drop an additional stack of currency shards",
+      "template_zh": "神諭有 #% 機率掉落 1 個額外有疊層的通貨碎片",
+      "key": "harbingers have 100% chance to drop an additional stack of currency shards",
+      "key_zh": "神諭有 100% 機率掉落 1 個額外有疊層的通貨碎片",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTempleLegion2",
+      "template": "each legion contains a war hoard",
+      "template_zh": "每個戰亂含有 1 個征戰儲物箱",
+      "key": "each legion contains a war hoard",
+      "key_zh": "每個戰亂含有 1 個征戰儲物箱",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "IncursionTempleLegion3",
+      "template": "each legion is accompanied by a general|||||each legion contains a war hoard",
+      "template_zh": "每個戰亂伴隨 1 位將軍|||||每個戰亂含有 1 個征戰儲物箱",
+      "key": "each legion is accompanied by a general|||||each legion contains a war hoard",
+      "key_zh": "每個戰亂伴隨 1 位將軍|||||每個戰亂含有 1 個征戰儲物箱",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapGenesisLeague",
+      "template": "areas contain memory fragments",
+      "template_zh": "區域含有記憶碎片",
+      "key": "areas contain memory fragments",
+      "key_zh": "區域含有記憶碎片",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapGenesisLeagueCrafted",
+      "template": "areas contain memory fragments",
+      "template_zh": "區域含有記憶碎片",
+      "key": "areas contain memory fragments",
+      "key_zh": "區域含有記憶碎片",
+      "types": [
+        "map"
       ],
       "affinities": [
         "normal"
@@ -1331,16 +5267,1575 @@
       "level": "1"
     },
     {
+      "modId": "MapMetamorphosisLeague",
+      "template": "areas contain additional metamorph monsters",
+      "template_zh": "區域含有額外鍊魔怪物",
+      "key": "areas contain additional metamorph monsters",
+      "key_zh": "區域含有額外鍊魔怪物",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapDeliriumCrafted",
+      "template": "areas contain a mirror of delirium|||||scarabs dropped in area have #% increased chance to be delirium scarabs",
+      "template_zh": "此區域含有 1 個譫妄之鏡|||||區域內掉落的聖甲蟲為譫妄聖甲蟲的機率增加 #%",
+      "key": "areas contain a mirror of delirium|||||scarabs dropped in area have 50% increased chance to be delirium scarabs",
+      "key_zh": "此區域含有 1 個譫妄之鏡|||||區域內掉落的聖甲蟲為譫妄聖甲蟲的機率增加 50%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "MapSimulacrumAllDamageChills",
+      "template": "all damage from monsters' hits inflicts chill",
+      "template_zh": "來自怪物擊中的所有傷害都可造成冰緩",
+      "key": "all damage from monsters' hits inflicts chill",
+      "key_zh": "來自怪物擊中的所有傷害都可造成冰緩",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictBrittle1___",
+      "template": "monsters have #% chance to inflict brittle",
+      "template_zh": "怪物有 #% 機率造成易碎",
+      "key": "monsters have 50% chance to inflict brittle",
+      "key_zh": "怪物有 50% 機率造成易碎",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictBrittle2_",
+      "template": "monsters have #% chance to inflict brittle",
+      "template_zh": "怪物有 #% 機率造成易碎",
+      "key": "monsters have 80% chance to inflict brittle",
+      "key_zh": "怪物有 80% 機率造成易碎",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictScorch1",
+      "template": "monsters have #% chance to inflict scorch",
+      "template_zh": "怪物有 #% 機率造成焦灼",
+      "key": "monsters have 50% chance to inflict scorch",
+      "key_zh": "怪物有 50% 機率造成焦灼",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictScorch2_",
+      "template": "monsters have #% chance to inflict scorch",
+      "template_zh": "怪物有 #% 機率造成焦灼",
+      "key": "monsters have 80% chance to inflict scorch",
+      "key_zh": "怪物有 80% 機率造成焦灼",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictSapped1",
+      "template": "monsters have #% chance to inflict sapped",
+      "template_zh": "怪物有 #% 機率造成殘喘",
+      "key": "monsters have 50% chance to inflict sapped",
+      "key_zh": "怪物有 50% 機率造成殘喘",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictSapped2",
+      "template": "monsters have #% chance to inflict sapped",
+      "template_zh": "怪物有 #% 機率造成殘喘",
+      "key": "monsters have 80% chance to inflict sapped",
+      "key_zh": "怪物有 80% 機率造成殘喘",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictAilmentsAndAilmentResistance1",
+      "template": "#% reduced effect of non-damaging ailments on monsters|||||monsters have a #% chance to ignite, freeze and shock on hit",
+      "template_zh": "減少 #% 怪物身上非傷害型異常狀態的效果|||||擊中時，怪物有 #% 機率點燃、冰凍和感電",
+      "key": "33% reduced effect of non-damaging ailments on monsters|||||monsters have a 15% chance to ignite, freeze and shock on hit",
+      "key_zh": "減少 33% 怪物身上非傷害型異常狀態的效果|||||擊中時，怪物有 15% 機率點燃、冰凍和感電",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictAilmentsAndAilmentResistance2",
+      "template": "#% reduced effect of non-damaging ailments on monsters|||||monsters have a #% chance to ignite, freeze and shock on hit",
+      "template_zh": "減少 #% 怪物身上非傷害型異常狀態的效果|||||擊中時，怪物有 #% 機率點燃、冰凍和感電",
+      "key": "50% reduced effect of non-damaging ailments on monsters|||||monsters have a 20% chance to ignite, freeze and shock on hit",
+      "key_zh": "減少 50% 怪物身上非傷害型異常狀態的效果|||||擊中時，怪物有 20% 機率點燃、冰凍和感電",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumInflictAilmentsAndAilmentResistance3__",
+      "template": "#% reduced effect of non-damaging ailments on monsters|||||monsters have a #% chance to ignite, freeze and shock on hit",
+      "template_zh": "減少 #% 怪物身上非傷害型異常狀態的效果|||||擊中時，怪物有 #% 機率點燃、冰凍和感電",
+      "key": "66% reduced effect of non-damaging ailments on monsters|||||monsters have a 30% chance to ignite, freeze and shock on hit",
+      "key_zh": "減少 66% 怪物身上非傷害型異常狀態的效果|||||擊中時，怪物有 30% 機率點燃、冰凍和感電",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumManaDrain1____",
+      "template": "monsters remove #% of mana on hit",
+      "template_zh": "怪物擊中移除 #% 魔力",
+      "key": "monsters remove 2% of mana on hit",
+      "key_zh": "怪物擊中移除 2% 魔力",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumManaDrain2",
+      "template": "monsters remove #% of mana on hit",
+      "template_zh": "怪物擊中移除 #% 魔力",
+      "key": "monsters remove 4% of mana on hit",
+      "key_zh": "怪物擊中移除 4% 魔力",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumFlaskDrain1",
+      "template": "monsters have #% chance to remove a flask charge on hit",
+      "template_zh": "怪物擊中時有 #% 機率移除 1 藥劑充能",
+      "key": "monsters have 20% chance to remove a flask charge on hit",
+      "key_zh": "怪物擊中時有 20% 機率移除 1 藥劑充能",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumFlaskDrain2",
+      "template": "monsters have #% chance to remove a flask charge on hit",
+      "template_zh": "怪物擊中時有 #% 機率移除 1 藥劑充能",
+      "key": "monsters have 40% chance to remove a flask charge on hit",
+      "key_zh": "怪物擊中時有 40% 機率移除 1 藥劑充能",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumChargeDrain1",
+      "template": "monsters have #% chance to remove charges on hit",
+      "template_zh": "怪物擊中時有 #% 機率移除能量球",
+      "key": "monsters have 5% chance to remove charges on hit",
+      "key_zh": "怪物擊中時有 5% 機率移除能量球",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumChargeDrain2",
+      "template": "monsters have #% chance to remove charges on hit",
+      "template_zh": "怪物擊中時有 #% 機率移除能量球",
+      "key": "monsters have 10% chance to remove charges on hit",
+      "key_zh": "怪物擊中時有 10% 機率移除能量球",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumCurseResistanceAndCurseOnHit1",
+      "template": "monsters have #% chance to inflict a random hex on hit|||||#% less effect of curses on monsters",
+      "template_zh": "怪物擊中時有 #% 機率造成 1 個隨機咒術|||||對怪物的詛咒有 #% 更少效果",
+      "key": "monsters have 20% chance to inflict a random hex on hit|||||40% less effect of curses on monsters",
+      "key_zh": "怪物擊中時有 20% 機率造成 1 個隨機咒術|||||對怪物的詛咒有 40% 更少效果",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumCurseResistanceAndCurseOnHit2",
+      "template": "monsters have #% chance to inflict a random hex on hit|||||#% less effect of curses on monsters",
+      "template_zh": "怪物擊中時有 #% 機率造成 1 個隨機咒術|||||對怪物的詛咒有 #% 更少效果",
+      "key": "monsters have 50% chance to inflict a random hex on hit|||||50% less effect of curses on monsters",
+      "key_zh": "怪物擊中時有 50% 機率造成 1 個隨機咒術|||||對怪物的詛咒有 50% 更少效果",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSimulacrumCurseResistanceAndCurseOnHit3",
+      "template": "monsters inflict a random hex on hit|||||#% less effect of curses on monsters",
+      "template_zh": "怪物擊中時造成 1 個隨機咒術|||||對怪物的詛咒有 #% 更少效果",
+      "key": "monsters inflict a random hex on hit|||||66% less effect of curses on monsters",
+      "key_zh": "怪物擊中時造成 1 個隨機咒術|||||對怪物的詛咒有 66% 更少效果",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "UberSimulacrumFlaskDrain1",
+      "template": "monsters have #% chance to remove a flask charge on hit",
+      "template_zh": "怪物擊中時有 #% 機率移除 1 藥劑充能",
+      "key": "monsters have (41-50)% chance to remove a flask charge on hit",
+      "key_zh": "怪物擊中時有 (41-50)% 機率移除 1 藥劑充能",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthChestsOverride5",
+      "template": "the labyrinth's rewards have been enriched",
+      "template_zh": "帝王迷宮的獎勵變豐富了",
+      "key": "the labyrinth's rewards have been enriched",
+      "key_zh": "帝王迷宮的獎勵變豐富了",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthOwnerExtraEnchants_",
+      "template": "labyrinth owner receives # additional uses of the divine font",
+      "template_zh": "帝王迷宮持有者獲得額外使用 # 次神聖之泉",
+      "key": "labyrinth owner receives 6 additional uses of the divine font",
+      "key_zh": "帝王迷宮持有者獲得額外使用 6 次神聖之泉",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthEnchantModLevelRangeUp",
+      "template": "the divine font may bless belts",
+      "template_zh": "神聖之泉可以祝福腰帶",
+      "key": "the divine font may bless belts",
+      "key_zh": "神聖之泉可以祝福腰帶",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthCommonMonsterScaling_",
+      "template": "labyrinth monsters have #% increased attack, cast, and movement speed|||||labyrinth monsters deal #% increased damage|||||labyrinth monsters have #% increased maximum life",
+      "template_zh": "帝王迷宮怪物增加 #% 攻擊、施放和移動速度|||||帝王迷宮怪物增加 #% 傷害|||||帝王迷宮怪物增加 #% 最大生命",
+      "key": "labyrinth monsters have 30% increased attack, cast, and movement speed|||||labyrinth monsters deal 50% increased damage|||||labyrinth monsters have 200% increased maximum life",
+      "key_zh": "帝王迷宮怪物增加 30% 攻擊、施放和移動速度|||||帝王迷宮怪物增加 50% 傷害|||||帝王迷宮怪物增加 200% 最大生命",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthCommonIzaroScaling",
+      "template": "izaro deals #% increased damage|||||izaro has #% increased maximum life",
+      "template_zh": "伊澤洛增加 #% 傷害|||||伊澤洛增加 #% 最大生命",
+      "key": "izaro deals 30% increased damage|||||izaro has 300% increased maximum life",
+      "key_zh": "伊澤洛增加 30% 傷害|||||伊澤洛增加 300% 最大生命",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthExtraMonsterScaling_",
+      "template": "labyrinth monsters deal #% increased damage|||||labyrinth monsters have #% increased maximum life",
+      "template_zh": "帝王迷宮怪物增加 #% 傷害|||||帝王迷宮怪物增加 #% 最大生命",
+      "key": "labyrinth monsters deal 50% increased damage|||||labyrinth monsters have 100% increased maximum life",
+      "key_zh": "帝王迷宮怪物增加 50% 傷害|||||帝王迷宮怪物增加 100% 最大生命",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "LabyrinthExtraIzaroScaling",
+      "template": "izaro has #% increased area of effect|||||izaro has #% increased attack, cast, and movement speed|||||izaro deals #% increased damage|||||izaro has #% increased maximum life",
+      "template_zh": "伊澤洛增加 #% 範圍效果|||||伊澤洛增加 #% 攻擊、施放和移動速度|||||伊澤洛增加 #% 傷害|||||伊澤洛增加 #% 最大生命",
+      "key": "izaro has 50% increased area of effect|||||izaro has 30% increased attack, cast, and movement speed|||||izaro deals 30% increased damage|||||izaro has 100% increased maximum life",
+      "key_zh": "伊澤洛增加 50% 範圍效果|||||伊澤洛增加 30% 攻擊、施放和移動速度|||||伊澤洛增加 30% 傷害|||||伊澤洛增加 100% 最大生命",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "HeistContractPatrolsMagic1",
+      "template": "patrol pack members have #% chance to be magic|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area|||||#% less raising of alert level|||||#% increased time before lockdown",
+      "template_zh": "巡守群成員有 #% 機率為魔法|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||提升 #% 更少警戒等級|||||增加 #% 封鎖前的時間",
+      "key": "patrol pack members have 50% chance to be magic|||||10% increased quantity of items found in this area|||||6% increased rarity of items found in this area|||||4% less raising of alert level|||||4% increased time before lockdown",
+      "key_zh": "巡守群成員有 50% 機率為魔法|||||增加 10% 此區域物品數量|||||此地圖增加 6% 物品稀有度|||||提升 4% 更少警戒等級|||||增加 4% 封鎖前的時間",
+      "types": [
+        "contract"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "HeistContractPatrolsMagic2",
+      "template": "patrol pack members have #% chance to be magic|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area|||||#% less raising of alert level|||||#% increased time before lockdown",
+      "template_zh": "巡守群成員有 #% 機率為魔法|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||提升 #% 更少警戒等級|||||增加 #% 封鎖前的時間",
+      "key": "patrol pack members have 75% chance to be magic|||||10% increased quantity of items found in this area|||||6% increased rarity of items found in this area|||||4% less raising of alert level|||||4% increased time before lockdown",
+      "key_zh": "巡守群成員有 75% 機率為魔法|||||增加 10% 此區域物品數量|||||此地圖增加 6% 物品稀有度|||||提升 4% 更少警戒等級|||||增加 4% 封鎖前的時間",
+      "types": [
+        "contract"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "73"
+    },
+    {
+      "modId": "HeistContractPatrolsMagic3",
+      "template": "patrol pack members have #% chance to be magic|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area|||||#% less raising of alert level|||||#% increased time before lockdown",
+      "template_zh": "巡守群成員有 #% 機率為魔法|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||提升 #% 更少警戒等級|||||增加 #% 封鎖前的時間",
+      "key": "patrol pack members have 100% chance to be magic|||||10% increased quantity of items found in this area|||||6% increased rarity of items found in this area|||||4% less raising of alert level|||||4% increased time before lockdown",
+      "key_zh": "巡守群成員有 100% 機率為魔法|||||增加 10% 此區域物品數量|||||此地圖增加 6% 物品稀有度|||||提升 4% 更少警戒等級|||||增加 4% 封鎖前的時間",
+      "types": [
+        "contract"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "78"
+    },
+    {
+      "modId": "HeistContractGuardsRare1___",
+      "template": "guards have #% chance to be rare|||||#% increased quantity of items found in this area|||||#% increased rarity of items found in this area|||||#% less raising of alert level|||||#% increased time before lockdown",
+      "template_zh": "守衛有 #% 機率為稀有|||||增加 #% 此區域物品數量|||||此地圖增加 #% 物品稀有度|||||提升 #% 更少警戒等級|||||增加 #% 封鎖前的時間",
+      "key": "guards have 5% chance to be rare|||||10% increased quantity of items found in this area|||||6% increased rarity of items found in this area|||||4% less raising of alert level|||||4% increased time before lockdown",
+      "key_zh": "守衛有 5% 機率為稀有|||||增加 10% 此區域物品數量|||||此地圖增加 6% 物品稀有度|||||提升 4% 更少警戒等級|||||增加 4% 封鎖前的時間",
+      "types": [
+        "contract"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "HeistTrinketCurrencyChaosDropsAsAncient1",
+      "template": "#% chance in heists for chaos orbs to drop as ancient orbs instead",
+      "template_zh": "劫盜中有 #% 機率使掉落的混沌石改為掉落古變石",
+      "key": "1% chance in heists for chaos orbs to drop as ancient orbs instead",
+      "key_zh": "劫盜中有 1% 機率使掉落的混沌石改為掉落古變石",
+      "types": [
+        "trinket"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "83"
+    },
+    {
+      "modId": "MapItemsDropIdentified",
+      "template": "found items drop identified in area",
+      "template_zh": "此區域掉落物品皆已鑑定",
+      "key": "found items drop identified in area",
+      "key_zh": "此區域掉落物品皆已鑑定",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "FlaskEnchantmentInjectorOnGuardSkillExpired",
       "template": "used when you lose a guard skill buff",
       "template_zh": "當你失去守衛技能增益效果時使用",
       "key": "used when you lose a guard skill buff",
       "key_zh": "當你失去守衛技能增益效果時使用",
       "types": [
-        "flask"
+        "flask",
+        "life-flask",
+        "mana-flask",
+        "hybrid-flask",
+        "utility-flask",
+        "iron-flask"
       ],
       "affinities": [
         "enchant"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionRelics",
+      "template": "area contains #% increased number of remnants",
+      "template_zh": "區域增加 #% 遺跡數量",
+      "key": "area contains (10-40)% increased number of remnants",
+      "key_zh": "區域增加 (10-40)% 遺跡數量",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionSagaContainsBoss_",
+      "template": "area contains medved, feller of heroes",
+      "template_zh": "區域含有墮落英雄．梅德偉",
+      "key": "area contains medved, feller of heroes",
+      "key_zh": "區域含有墮落英雄．梅德偉",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionSagaContainsBoss2_",
+      "template": "area contains vorana, last to fall",
+      "template_zh": "區域含有最後生還．沃拉娜",
+      "key": "area contains vorana, last to fall",
+      "key_zh": "區域含有最後生還．沃拉娜",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionSagaContainsBoss3",
+      "template": "area contains uhtred, covetous traitor",
+      "template_zh": "區域含有貪婪叛徒．烏特雷",
+      "key": "area contains uhtred, covetous traitor",
+      "key_zh": "區域含有貪婪叛徒．烏特雷",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "75"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionSagaContainsBoss4",
+      "template": "area contains olroth, origin of the fall",
+      "template_zh": "區域含有失落起源．奧爾羅斯",
+      "key": "area contains olroth, origin of the fall",
+      "key_zh": "區域含有失落起源．奧爾羅斯",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "81"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionChestDoubleDropsChance_",
+      "template": "excavated chests have a #% chance to contain twice as many items",
+      "template_zh": "發掘的保險箱有 #% 機率含有 2 倍的物品",
+      "key": "excavated chests have a (5-20)% chance to contain twice as many items",
+      "key_zh": "發掘的保險箱有 (5-20)% 機率含有 2 倍的物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionNumberOfMonsterMarkers_",
+      "template": "area contains #% increased number of monster markers",
+      "template_zh": "區域增加 #% 怪物標記的數量",
+      "key": "area contains (10-40)% increased number of monster markers",
+      "key_zh": "區域增加 (10-40)% 怪物標記的數量",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionSagaAdditionalTerrainFeatures__",
+      "template": "area contains an additional underground area",
+      "template_zh": "區域含有 1 個額外地下區域",
+      "key": "area contains an additional underground area",
+      "key_zh": "區域含有 1 個額外地下區域",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionFaridunMonsterMarkers",
+      "template": "area contains # additional afarud monster markers",
+      "template_zh": "區域內包含#個額外阿法魯德怪物標記",
+      "key": "area contains (32-40) additional afarud monster markers",
+      "key_zh": "區域內包含(32-40)個額外阿法魯德怪物標記",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "ExpeditionLogbookMapExpeditionFaridunEliteMarkers",
+      "template": "area contains # additional afarud commander monster marker",
+      "template_zh": "區域內包含#個額外阿法魯德指揮官怪物標記",
+      "key": "area contains 1 additional afarud commander monster marker",
+      "key_zh": "區域內包含1個額外阿法魯德指揮官怪物標記",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "68"
+    },
+    {
+      "modId": "MapExpeditionChestCount____",
+      "template": "area contains # additional chest markers",
+      "template_zh": "區域含有 # 個額外保險箱標記",
+      "key": "area contains (8-16) additional chest markers",
+      "key_zh": "區域含有 (8-16) 個額外保險箱標記",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapExpeditionEpicChestCount",
+      "template": "dnt area contains # additional epic chest markers",
+      "template_zh": "DNT Area contains # additional Epic Chest Markers",
+      "key": "dnt area contains (4-12) additional epic chest markers",
+      "key_zh": "DNT Area contains (4-12) additional Epic Chest Markers",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapExpeditionUncommonChestCount_",
+      "template": "dnt area contains # additional uncommon chest markers",
+      "template_zh": "DNT Area contains # additional Uncommon Chest Markers",
+      "key": "dnt area contains (8-24) additional uncommon chest markers",
+      "key_zh": "DNT Area contains (8-24) additional Uncommon Chest Markers",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapExpeditionCommonChestCount",
+      "template": "dnt area contains # additional common chest marker",
+      "template_zh": "DNT Area contains # additional Common Chest Marker",
+      "key": "dnt area contains (12-36) additional common chest marker",
+      "key_zh": "DNT Area contains (12-36) additional Common Chest Marker",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMapBossesEverywhere",
+      "template": "area contains # additional map bosses",
+      "template_zh": "區域含有 # 個額外地圖頭目",
+      "key": "area contains 2 additional map bosses",
+      "key_zh": "區域含有 2 個額外地圖頭目",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapGaunletUniqueMonsterLife",
+      "template": "unique monsters have #% increased maximum life",
+      "template_zh": "傳奇怪物增加 #% 最大生命",
+      "key": "unique monsters have 80% increased maximum life",
+      "key_zh": "傳奇怪物增加 80% 最大生命",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarDivinationCardChance",
+      "template": "#% increased divination cards found in area",
+      "template_zh": "區域內掉落的命運卡增加 #%",
+      "key": "(30-50)% increased divination cards found in area",
+      "key_zh": "區域內掉落的命運卡增加 (30-50)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarScarabChance",
+      "template": "{}% more scarabs found in area",
+      "template_zh": "區域內掉落的聖甲蟲增加 {}%",
+      "key": "{}% more scarabs found in area",
+      "key_zh": "區域內掉落的聖甲蟲增加 {}%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarCurrencyChance",
+      "template": "{}% more currency found in area",
+      "template_zh": "區域內掉落的通貨增加 {}%",
+      "key": "{}% more currency found in area",
+      "key_zh": "區域內掉落的通貨增加 {}%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarRareMonstersPossessedChance",
+      "template": "#% chance for rare monsters in area to be possessed",
+      "template_zh": "區域內稀有怪物有 #% 機率被附身",
+      "key": "(30-50)% chance for rare monsters in area to be possessed",
+      "key_zh": "區域內稀有怪物有 (30-50)% 機率被附身",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarFreeMapCraft",
+      "template": "map crafting options for this map have no cost",
+      "template_zh": "此地圖的地圖工藝選項無消耗",
+      "key": "map crafting options for this map have no cost",
+      "key_zh": "此地圖的地圖工藝選項無消耗",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarMapMonsterRosePetalQuantity",
+      "template": "#% increased quantity of petals found on monsters in area",
+      "template_zh": "在區域內怪物身上找到的花瓣數量增加 #%",
+      "key": "(20-40)% increased quantity of petals found on monsters in area",
+      "key_zh": "在區域內怪物身上找到的花瓣數量增加 (20-40)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarAdditionalPetalSkillChance",
+      "template": "#% chance for area to contain an additional memory petal skill",
+      "template_zh": "區域內含有一個額外記憶之瓣技能的機率 +#%",
+      "key": "+(20-40)% chance for area to contain an additional memory petal skill",
+      "key_zh": "區域內含有一個額外記憶之瓣技能的機率 +(20-40)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarConsumePetalsForAllDropsSameClass",
+      "template": "killing a rare monster consumes # petals if possible to convert dropped items to be the same type",
+      "template_zh": "擊殺稀有怪物時若允許，會消耗#枚花瓣並將掉落的裝備轉化成同樣種類",
+      "key": "killing a rare monster consumes 15 petals if possible to convert dropped items to be the same type",
+      "key_zh": "擊殺稀有怪物時若允許，會消耗15枚花瓣並將掉落的裝備轉化成同樣種類",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarConsumePetalsForNoItemDropsWithMods",
+      "template": "killing a rare monster consumes # petals if possible to prevent it dropping items that can have rarity",
+      "template_zh": "擊殺稀有怪物時若允許，會消耗#枚花瓣並避免掉落可以有稀有度的物品",
+      "key": "killing a rare monster consumes 50 petals if possible to prevent it dropping items that can have rarity",
+      "key_zh": "擊殺稀有怪物時若允許，會消耗50枚花瓣並避免掉落可以有稀有度的物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarConsumePetalsToReviveOnce",
+      "template": "killing a rare monster consumes # petals if possible to revive the monster once",
+      "template_zh": "擊殺稀有怪物時若允許，會消耗#枚花瓣並復活該怪物一次",
+      "key": "killing a rare monster consumes 30 petals if possible to revive the monster once",
+      "key_zh": "擊殺稀有怪物時若允許，會消耗30枚花瓣並復活該怪物一次",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarConsumePetalsForAllRarityDropsConvertedToGold",
+      "template": "killing a rare monster consumes # petals if possible to convert dropped non-unique equipment items to gold",
+      "template_zh": "擊殺稀有怪物時若允許，會消耗#枚花瓣並將掉落的非傳奇裝備轉化成金幣",
+      "key": "killing a rare monster consumes 50 petals if possible to convert dropped non-unique equipment items to gold",
+      "key_zh": "擊殺稀有怪物時若允許，會消耗50枚花瓣並將掉落的非傳奇裝備轉化成金幣",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarConsumePetalsToStealMods",
+      "template": "killing a rare monster consumes # petals if possible to gain its modifiers for 30 seconds",
+      "template_zh": "擊殺稀有怪物時若允許，會消耗#枚花瓣並獲得該怪物的詞綴，持續30秒",
+      "key": "killing a rare monster consumes 15 petals if possible to gain its modifiers for 30 seconds",
+      "key_zh": "擊殺稀有怪物時若允許，會消耗15枚花瓣並獲得該怪物的詞綴，持續30秒",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarInfluencePackSize",
+      "template": "influenced monster packs in area have #% increased pack size",
+      "template_zh": "區域內勢力怪物群大小增加 #%",
+      "key": "influenced monster packs in area have (20-40)% increased pack size",
+      "key_zh": "區域內勢力怪物群大小增加 (20-40)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarInfluencePackCount",
+      "template": "# additional originator packs in area",
+      "template_zh": "區域內額外 +# 個開創者怪物群",
+      "key": "+(3-5) additional originator packs in area",
+      "key_zh": "區域內額外 +(3-5) 個開創者怪物群",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarInfluencePackMagicChance",
+      "template": "#% increased chance for originator packs in area to be magic",
+      "template_zh": "區域內的開創者怪物群為魔法的機率增加 #%",
+      "key": "(50-100)% increased chance for originator packs in area to be magic",
+      "key_zh": "區域內的開創者怪物群為魔法的機率增加 (50-100)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarInfluencePackRareChance",
+      "template": "#% increased chance for originator packs in area to be rare",
+      "template_zh": "區域內的開創者怪物群為稀有的機率增加 #%",
+      "key": "(50-100)% increased chance for originator packs in area to be rare",
+      "key_zh": "區域內的開創者怪物群為稀有的機率增加 (50-100)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarMapBossAdditionalCurrency",
+      "template": "final boss drops # additional currency items",
+      "template_zh": "最終頭目掉落額外 # 個通貨物品",
+      "key": "final boss drops (3-10) additional currency items",
+      "key_zh": "最終頭目掉落額外 (3-10) 個通貨物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarMapBossAdditionalUniques",
+      "template": "final boss drops an additional unique item",
+      "template_zh": "最終頭目會掉落額外 1 個傳奇物品",
+      "key": "final boss drops an additional unique item",
+      "key_zh": "最終頭目會掉落額外 1 個傳奇物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryAltarMapBossAdditionalScarabs",
+      "template": "final boss drops # additional scarab items",
+      "template_zh": "最終頭目會掉落額外 # 個聖甲蟲物品",
+      "key": "final boss drops (3-5) additional scarab items",
+      "key_zh": "最終頭目會掉落額外 (3-5) 個聖甲蟲物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionDivinationCardChance",
+      "template": "#% increased divination cards found in area",
+      "template_zh": "區域內掉落的命運卡增加 #%",
+      "key": "(15-25)% increased divination cards found in area",
+      "key_zh": "區域內掉落的命運卡增加 (15-25)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionScarabChance",
+      "template": "{}% more scarabs found in area",
+      "template_zh": "區域內掉落的聖甲蟲增加 {}%",
+      "key": "{}% more scarabs found in area",
+      "key_zh": "區域內掉落的聖甲蟲增加 {}%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionCurrencyChance",
+      "template": "{}% more currency found in area",
+      "template_zh": "區域內掉落的通貨增加 {}%",
+      "key": "{}% more currency found in area",
+      "key_zh": "區域內掉落的通貨增加 {}%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapBossAdditionalCurrency",
+      "template": "final boss drops # additional currency items",
+      "template_zh": "最終頭目掉落額外 # 個通貨物品",
+      "key": "final boss drops (3-6) additional currency items",
+      "key_zh": "最終頭目掉落額外 (3-6) 個通貨物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapBossAdditionalUniques",
+      "template": "final boss drops an additional unique item",
+      "template_zh": "最終頭目會掉落額外 1 個傳奇物品",
+      "key": "final boss drops an additional unique item",
+      "key_zh": "最終頭目會掉落額外 1 個傳奇物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapBossAdditionalScarabs",
+      "template": "final boss drops # additional scarab items",
+      "template_zh": "最終頭目會掉落額外 # 個聖甲蟲物品",
+      "key": "final boss drops (2-3) additional scarab items",
+      "key_zh": "最終頭目會掉落額外 (2-3) 個聖甲蟲物品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionInfluencePackCount",
+      "template": "# additional originator packs in area",
+      "template_zh": "區域內額外 +# 個開創者怪物群",
+      "key": "+(3-5) additional originator packs in area",
+      "key_zh": "區域內額外 +(3-5) 個開創者怪物群",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionInfluencePackSize",
+      "template": "influenced monster packs in area have #% increased pack size",
+      "template_zh": "區域內勢力怪物群大小增加 #%",
+      "key": "influenced monster packs in area have (10-15)% increased pack size",
+      "key_zh": "區域內勢力怪物群大小增加 (10-15)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapHarvestUpgradeTier2Chance",
+      "template": "tier 2 harvest seeds in area have #% chance to be upgraded to tier 3",
+      "template_zh": "區域內階級 2 的豐收種子有 #% 機率升級至階級 3",
+      "key": "tier 2 harvest seeds in area have (10-15)% chance to be upgraded to tier 3",
+      "key_zh": "區域內階級 2 的豐收種子有 (10-15)% 機率升級至階級 3",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapHarvestUpgradeTier3Chance",
+      "template": "tier 3 harvest seeds in area have #% chance to be upgraded to tier 4",
+      "template_zh": "區域內階級 3 的豐收種子有 #% 機率升級至階級 4",
+      "key": "tier 3 harvest seeds in area have (5-10)% chance to be upgraded to tier 4",
+      "key_zh": "區域內階級 3 的豐收種子有 (5-10)% 機率升級至階級 4",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapHarvestAtLeastTier2",
+      "template": "harvest seeds in area are at least tier 2",
+      "template_zh": "區域內的豐收種子階級至少為 2",
+      "key": "harvest seeds in area are at least tier 2",
+      "key_zh": "區域內的豐收種子階級至少為 2",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapAbyssalDepths",
+      "template": "area contains an abyssal depths",
+      "template_zh": "區域含有 1 個絕望深淵",
+      "key": "area contains an abyssal depths",
+      "key_zh": "區域含有 1 個絕望深淵",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapAbyssAdditionalAbyss",
+      "template": "abysses in area contain # additional pits",
+      "template_zh": "區域內的深淵含有額外#個坑洞",
+      "key": "abysses in area contain 2 additional pits",
+      "key_zh": "區域內的深淵含有額外2個坑洞",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapRitualRewardCount",
+      "template": "rituals offer #% increased favour",
+      "template_zh": "祭祀所提供的恩賜之物增加 #%",
+      "key": "rituals offer (10-15)% increased favour",
+      "key_zh": "祭祀所提供的恩賜之物增加 (10-15)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapRitualFreeRerollsCount",
+      "template": "rerolling favours at ritual altars has no cost the first time",
+      "template_zh": "祭祀神壇重骰恩賜之物前 # 次免費",
+      "key": "rerolling favours at ritual altars has no cost the first time",
+      "key_zh": "祭祀神壇重骰恩賜之物前 1 次免費",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapUltimatumTrialmasterChance",
+      "template": "ultimatum encounters lead to a unique boss if possible",
+      "template_zh": "若可能，最後通牒事件便會產生 1 個傳奇頭目",
+      "key": "ultimatum encounters lead to a unique boss if possible",
+      "key_zh": "若可能，最後通牒事件便會產生 1 個傳奇頭目",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapDeliriumContainsBosses",
+      "template": "delirium encounters contain all unique delirium bosses",
+      "template_zh": "譫妄事件內含有所有的傳奇譫妄頭目",
+      "key": "delirium encounters contain all unique delirium bosses",
+      "key_zh": "譫妄事件內含有所有的傳奇譫妄頭目",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapDeliriumAdditionalRewardTypes",
+      "template": "delirium encounters generate an additional reward type",
+      "template_zh": "譫妄事件產生 1 個額外獎勵類型",
+      "key": "delirium encounters generate an additional reward type",
+      "key_zh": "譫妄事件產生 1 個額外獎勵類型",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapLegionChanceToSpreadRewardsOnBreakOut",
+      "template": "legion chests in area have a #% chance to spread their rewards to\\nlegion monsters they release from stasis when they are broken out\\nlegion monsters that have gained rewards have increased difficulty",
+      "template_zh": "區域內的軍團寶箱在從凝滯狀態被釋放時\\n有#%機率會擴散其獎勵至周遭的軍團怪物上\\n以此方式獲得獎勵的軍團怪物會增加難度",
+      "key": "legion chests in area have a (10-15)% chance to spread their rewards to\\nlegion monsters they release from stasis when they are broken out\\nlegion monsters that have gained rewards have increased difficulty",
+      "key_zh": "區域內的軍團寶箱在從凝滯狀態被釋放時\\n有(10-15)%機率會擴散其獎勵至周遭的軍團怪物上\\n以此方式獲得獎勵的軍團怪物會增加難度",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapExpeditionRelicExtraSuffixes",
+      "template": "remnants have an additional suffix modifier",
+      "template_zh": "遺跡有 1 個額外後綴",
+      "key": "remnants have an additional suffix modifier",
+      "key_zh": "遺跡有 1 個額外後綴",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "EagonMissionMapBreachScarabMoreLikely",
+      "template": "scarabs dropped in area have #% increased chance to be breach scarabs",
+      "template_zh": "區域內掉落的聖甲蟲為裂痕聖甲蟲的機率增加 #%",
+      "key": "scarabs dropped in area have (75-100)% increased chance to be breach scarabs",
+      "key_zh": "區域內掉落的聖甲蟲為裂痕聖甲蟲的機率增加 (75-100)%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "UpgradedVaalSideArea",
+      "template": "monsters in area are at least magic|||||#% more monster damage|||||vaal vessel contains mortal fragments",
+      "template_zh": "區域內的全部怪物至少為魔法|||||#% 更多怪物傷害|||||瓦爾容器含有凡人碎片",
+      "key": "monsters in area are at least magic|||||60% more monster damage|||||vaal vessel contains mortal fragments",
+      "key_zh": "區域內的全部怪物至少為魔法|||||60% 更多怪物傷害|||||瓦爾容器含有凡人碎片",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "UpgradedLabyrinthTrial",
+      "template": "awards an improved offering to the goddess",
+      "template_zh": "獎勵 1 個優化的女神祭品",
+      "key": "awards an improved offering to the goddess",
+      "key_zh": "獎勵 1 個優化的女神祭品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AlluringVaalSideAreaCrafted",
+      "template": "area contains an alluring vaal side area|||||contains a vaal side area",
+      "template_zh": "區域含有 1 個誘人的瓦爾區域|||||含有 1 個瓦爾地區",
+      "key": "area contains an alluring vaal side area|||||contains a vaal side area",
+      "key_zh": "區域含有 1 個誘人的瓦爾區域|||||含有 1 個瓦爾地區",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "ImprovedLabyrinthTrialCrafted",
+      "template": "area contains a labyrinth trial that awards an improved offering to the goddess",
+      "template_zh": "區域含有 1 個獎勵優化女神祭品的迷宮試煉",
+      "key": "area contains a labyrinth trial that awards an improved offering to the goddess",
+      "key_zh": "區域含有 1 個獎勵優化女神祭品的迷宮試煉",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "DisplayLabyrinthTrial",
+      "template": "awards an offering to the goddess",
+      "template_zh": "獎勵 1 個女神祭品",
+      "key": "awards an offering to the goddess",
+      "key_zh": "獎勵 1 個女神祭品",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapSanctumRelicDropChance",
+      "template": "#% increased quantity of relics dropped by monsters",
+      "template_zh": "增加 #% 怪物掉落聖物的數量",
+      "key": "100% increased quantity of relics dropped by monsters",
+      "key_zh": "增加 100% 怪物掉落聖物的數量",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapFriendlyFire",
+      "template": "other players are classified as enemies",
+      "template_zh": "其他玩家被歸類為敵人",
+      "key": "other players are classified as enemies",
+      "key_zh": "其他玩家被歸類為敵人",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapDealNoDamageIfLessThanNumPlayersNearby",
+      "template": "players can only deal damage when near # other players",
+      "template_zh": "玩家只能在附近有 # 名其他玩家時造成傷害",
+      "key": "players can only deal damage when near 2 other players",
+      "key_zh": "玩家只能在附近有 2 名其他玩家時造成傷害",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapPolarity",
+      "template": "players can only deal damage to monsters of matching polarity",
+      "template_zh": "玩家只能對符合極性的敵人造成傷害",
+      "key": "players can only deal damage to monsters of matching polarity",
+      "key_zh": "玩家只能對符合極性的敵人造成傷害",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapAbyssDepths",
+      "template": "area contains an abyssal depths",
+      "template_zh": "區域含有 1 個絕望深淵",
+      "key": "area contains an abyssal depths",
+      "key_zh": "區域含有 1 個絕望深淵",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AzmeriAltarBear",
+      "template": "hits against you are always critical strikes|||||unique items dropped by slain enemies have #% chance to be duplicated",
+      "template_zh": "對你的擊中必定暴擊|||||擊殺怪物掉落的傳奇物品有 #% 機率被複製",
+      "key": "hits against you are always critical strikes|||||unique items dropped by slain enemies have 30% chance to be duplicated",
+      "key_zh": "對你的擊中必定暴擊|||||擊殺怪物掉落的傳奇物品有 30% 機率被複製",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "AzmeriAltarCrow",
+      "template": "removes all armour|||||#% increased action speed|||||removes all evasion",
+      "template_zh": "移除所有護甲|||||增加 #% 行動速度|||||移除全部閃避",
+      "key": "removes all armour|||||25% increased action speed|||||removes all evasion",
+      "key_zh": "移除所有護甲|||||增加 25% 行動速度|||||移除全部閃避",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapHarvestAlwaysHighTierSeeds",
+      "template": "the sacred grove contains up to 1 additional tier 4 seed of each type, if possible",
+      "template_zh": "若可能，聖殿密園含有每種最多 1 個額外階級 4 種子",
+      "key": "the sacred grove contains up to 1 additional tier 4 seed of each type, if possible",
+      "key_zh": "若可能，聖殿密園含有每種最多 1 個額外階級 4 種子",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMorriganBeast",
+      "template": "einhar missions in area will contain the black mórrigan",
+      "template_zh": "區域內的埃哈任務將含有黑色莫里根",
+      "key": "einhar missions in area will contain the black mórrigan",
+      "key_zh": "區域內的埃哈任務將含有黑色莫里根",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapVillageLeagueCrafted",
+      "template": "area contains # additional ore deposits|||||scarabs dropped in area have #% increased chance to be kalguuran scarabs",
+      "template_zh": "區域含有 # 個額外礦床|||||區域內掉落的聖甲蟲為卡爾葛聖甲蟲的機率增加 #%",
+      "key": "area contains 2 additional ore deposits|||||scarabs dropped in area have 50% increased chance to be kalguuran scarabs",
+      "key_zh": "區域含有 2 個額外礦床|||||區域內掉落的聖甲蟲為卡爾葛聖甲蟲的機率增加 50%",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "0"
+    },
+    {
+      "modId": "TencentFlashbackAfflictionAmbushBoxesWisps",
+      "template": "monsters have a chance to be empowered by # wildwood wisps",
+      "template_zh": "怪物有機率受到 # 個荒林妖精強化",
+      "key": "monsters have a chance to be empowered by 5000 wildwood wisps",
+      "key_zh": "怪物有機率受到 5000 個荒林妖精強化",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMercenaryLeague",
+      "template": "area is inhabited by a mercenary",
+      "template_zh": "區域內含有一名傭兵",
+      "key": "area is inhabited by a mercenary",
+      "key_zh": "區域內含有一名傭兵",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapMoreZanaInfluenceFewerDropsEnchant",
+      "template": "{}% less quantity of items found|||||found items with memory strands have {:+d} memory strands",
+      "template_zh": "{}% 更少發現的物品數量|||||找到帶有記憶絲縷的物品時，其具有 {:+d} 記憶絲縷",
+      "key": "{}% less quantity of items found|||||found items with memory strands have {:+d} memory strands",
+      "key_zh": "{}% 更少發現的物品數量|||||找到帶有記憶絲縷的物品時，其具有 {:+d} 記憶絲縷",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MemoryLineCursed",
+      "template": "area is cursed",
+      "template_zh": "區域受到詛咒",
+      "key": "area is cursed",
+      "key_zh": "區域受到詛咒",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "MapEnchantmentFaridunOverrun",
+      "template": "area contains an empowered mirage which covers the entire map",
+      "template_zh": "區域會包含一座含有整張地圖的強化蜃景",
+      "key": "area contains an empowered mirage which covers the entire map",
+      "key_zh": "區域會包含一座含有整張地圖的強化蜃景",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
       ],
       "level": "1"
     },
