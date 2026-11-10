@@ -140,13 +140,51 @@ describe('Seam 4: Canonical gear-type keys in poexd-data', () => {
     assert.ok(resolved.includes('warstaff'));
     assert.ok(resolved.includes('one-hand-sword'));
     assert.ok(resolved.includes('thrusting-one-hand-sword'));
-    assert.ok(resolved.includes('buckler'));
+    assert.ok(resolved.includes('shields_dex'));
     assert.ok(resolved.includes('life-flask'));
     assert.ok(resolved.includes('hybrid-flask'));
     assert.ok(resolved.includes('utility-flask'));
     assert.ok(resolved.includes('crimson_jewel'));
     assert.ok(resolved.includes('large_cluster_jewel'));
     assert.ok(resolved.includes('murderous_eye_jewel'));
+    // Ward (保護) 途徑一：獨立子屬性部位隔離驗證
+    const wardResolved = resolvePoE1GearTypes([{ tag: 'ward_armour', weight: 1000 }]);
+    // 魔符基底只有頭部、手套、鞋子，沒有保護胸甲
+    assert.deepEqual(wardResolved.sort(), ['boots_ward', 'gloves_ward', 'helmets_ward']);
+    assert.ok(!wardResolved.includes('helmet'));
+    assert.ok(!wardResolved.includes('body-armour'));
+
+    // 負權重扣除部位驗證
+    const helmetWardOnly = resolvePoE1GearTypes([
+      { tag: 'ward_armour', weight: 1000 },
+      { tag: 'gloves', weight: 0 },
+      { tag: 'boots', weight: 0 },
+    ]);
+    assert.deepEqual(helmetWardOnly, ['helmets_ward']);
+
+    // 召喚物詞綴只屬於法杖（召喚法杖子類別由基底輪廓補上），不含權杖
+    const minionWeapon = resolvePoE1GearTypes([
+      { tag: 'weapon_can_roll_minion_modifiers', weight: 1000 },
+      { tag: 'default', weight: 0 },
+    ]);
+    assert.deepEqual(minionWeapon, ['wand']);
+
+    // 擴充 Domain 映射驗證 (地圖、聖物、契約、盜賊裝備、飾品、塗劑)
+    assert.deepEqual(resolvePoE1GearTypes([], 5), ['map']);
+    assert.deepEqual(resolvePoE1GearTypes([], 7), ['relic']);
+    assert.deepEqual(resolvePoE1GearTypes([], 32), ['relic']);
+    assert.deepEqual(resolvePoE1GearTypes([], 22), ['contract']);
+    assert.deepEqual(resolvePoE1GearTypes([], 23), ['heist_equipment']);
+    assert.deepEqual(resolvePoE1GearTypes([], 24), ['trinket']);
+    
+    assert.deepEqual(resolvePoE1GearTypes([], 34), ['tincture']);
+
+    // 古靈勢力與勢力詞綴 (帶有 default: 0 負權重標籤) 不應被誤刪部位
+    const eldritchGloves = resolvePoE1GearTypes([
+      { tag: 'gloves', weight: 1000 },
+      { tag: 'default', weight: 0 },
+    ]);
+    assert.ok(eldritchGloves.includes('gloves'));
 
     const sampleClasses = [
       'Claw',
@@ -170,6 +208,11 @@ describe('Seam 4: Canonical gear-type keys in poexd-data', () => {
       'Jewel',
       'AbyssJewel',
       'Tincture',
+      'Map',
+      'Contract',
+      'HeistEquipment',
+      'Trinket',
+      'SanctumRelic',
     ];
     for (const cls of sampleClasses) {
       for (const key of getPoE1ItemClassGearTypes(cls)) {

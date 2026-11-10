@@ -20,6 +20,9 @@ export function resolvePoE1Affinities(
   if (mod.Domain === 16 || mechanismData.delveModIndices.has(modIndex)) {
     affs.add('delve');
   }
+  if (mod.Domain === 7 || mod.Domain === 32) {
+    affs.add('sanctum');
+  }
   if ([10, 19, 21, 22].includes(mod.GenerationType) || mod.Id?.startsWith('HarvestAlternate')) {
     affs.add('enchant');
   }
@@ -66,12 +69,10 @@ export function resolvePoE1Affinities(
 
   // 3.0 古靈勢力固有詞綴 (Eldritch Implicit: 灼烙總督 Gen 28, 吞噬天地 Gen 29)
   if (mod.GenerationType === 28) {
-    affs.add('searing_exarch');
-    affs.add('eldritch');
+    affs.add('searing');
     isInfluence = true;
   } else if (mod.GenerationType === 29) {
-    affs.add('eater_of_worlds');
-    affs.add('eldritch');
+    affs.add('eater');
     isInfluence = true;
   }
 
