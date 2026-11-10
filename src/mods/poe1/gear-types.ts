@@ -40,10 +40,10 @@ export const TWO_HAND_POE1_WEAPONS = [
 ];
 
 export const ALL_POE1_ARMOUR = [
-  'gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int',
-  'boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int',
-  'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int',
-  'helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int',
+  'gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward',
+  'boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward',
+  'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward',
+  'helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward',
   'shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int',
 ];
 
@@ -74,10 +74,10 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   deepwater_hazard_belt: ['belt'],
 
   // 防具部位通用標籤
-  gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
-  boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
-  body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
-  helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
+  gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward'],
+  boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward'],
+  body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+  helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'],
 
   // 武器
   claw: ['claw'],
@@ -186,7 +186,7 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
     'shield', 'shields_str_dex', 'shields_str_int', 'shields_dex_int',
   ],
   ward_armour: [
-    'gloves', 'boots', 'body-armour', 'helmet',
+    'body_armours_ward', 'helmets_ward', 'gloves_ward', 'boots_ward',
   ],
 
   // 盾牌細分
@@ -204,16 +204,43 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   ring_can_roll_minion_modifiers: ['ring'],
   helmet_can_roll_minion_modifiers: [
     'helmet', 'helmets_str', 'helmets_dex', 'helmets_int',
-    'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'
+    'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'
   ],
+
+  // 地圖、聖物與劫盜
+  map: ['map'],
+  contract: ['contract'],
+  blueprint: ['contract'],
+  heist_contract: ['contract'],
+  heist_blueprint: ['contract'],
+  heist_equipment: ['heist_equipment'],
+  heist_equipment_utility: ['heist_equipment'],
+  heist_equipment_tool: ['heist_equipment'],
+  heist_equipment_weapon: ['heist_equipment'],
+  heist_equipment_reward: ['heist_equipment'],
+  heist_equipment_lockpick: ['heist_equipment'],
+  heist_equipment_engineering: ['heist_equipment'],
+  heist_equipment_demolition: ['heist_equipment'],
+  heist_equipment_trapdisarmament: ['heist_equipment'],
+  heist_equipment_bruteforce: ['heist_equipment'],
+  heist_equipment_perception: ['heist_equipment'],
+  heist_equipment_counterthaumaturge: ['heist_equipment'],
+  trinket: ['trinket'],
+  relic: ['relic'],
+  small_sanctum_relic: ['relic'],
+  medium_sanctum_relic: ['relic'],
+  large_sanctum_relic: ['relic'],
+  dex_special_relic: ['relic'],
+  str_special_relic: ['relic'],
+  int_special_relic: ['relic'],
 
   // 特殊基底與機制裝備
   unset_ring: ['ring'],
   deepwater_sword: ['two-hand-sword'],
-  necropolis_boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
-  necropolis_gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
-  necropolis_body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
-  necropolis_helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
+  necropolis_boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward'],
+  necropolis_gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward'],
+  necropolis_body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+  necropolis_helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'],
 };
 
 const INFLUENCE_SUFFIXES = ['shaper', 'elder', 'crusader', 'eyrie', 'basilisk', 'adjudicator'];
@@ -243,7 +270,19 @@ export function resolvePoE1GearTypes(
 ): string[] {
   const result = new Set<string>();
 
-  if (domain === 10) {
+  if (domain === 5 || domain === 33) {
+    return ['map'];
+  } else if (domain === 7 || domain === 32) {
+    return ['relic'];
+  } else if (domain === 22) {
+    return ['contract'];
+  } else if (domain === 23) {
+    return ['heist_equipment'];
+  } else if (domain === 24) {
+    return ['trinket'];
+  } else if (domain === 34) {
+    return ['tincture'];
+  } else if (domain === 10) {
     result.add('jewel');
     for (const { tag, weight } of spawnWeights) {
       if (weight <= 0) continue;
@@ -324,6 +363,16 @@ export function resolvePoE1GearTypes(
         for (const t of matched) result.add(t);
       }
     }
+
+    for (const { tag, weight } of spawnWeights) {
+      if (weight > 0) continue;
+      const lower = tag.toLowerCase();
+
+      const matched = matchPoE1TagGearTypes(lower);
+      if (matched) {
+        for (const t of matched) result.delete(t);
+      }
+    }
   }
 
   return Array.from(result);
@@ -360,11 +409,11 @@ export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   Belt: ['belt'],
   Quiver: ['quiver'],
   Shield: ['shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int'],
-  Gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
-  Boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
-  BodyArmour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
-  'Body Armour': ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
-  Helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
+  Gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward'],
+  Boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward'],
+  BodyArmour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+  'Body Armour': ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+  Helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'],
   Flask: ['flask'],
   LifeFlask: ['life-flask', 'flask'],
   'Life Flask': ['life-flask', 'flask'],
@@ -378,6 +427,22 @@ export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   Jewel: ['jewel'],
   AbyssJewel: ['jewel', 'abyss_jewel'],
   'Abyss Jewel': ['jewel', 'abyss_jewel'],
+  Map: ['map'],
+  Maps: ['map'],
+  Contract: ['contract'],
+  Blueprint: ['contract'],
+  HeistContract: ['contract'],
+  'Heist Contract': ['contract'],
+  HeistBlueprint: ['contract'],
+  'Heist Blueprint': ['contract'],
+  HeistEquipment: ['heist_equipment'],
+  'Heist Equipment': ['heist_equipment'],
+  HeistGear: ['heist_equipment'],
+  'Heist Gear': ['heist_equipment'],
+  Trinket: ['trinket'],
+  SanctumRelic: ['relic'],
+  'Sanctum Relic': ['relic'],
+  Relic: ['relic'],
 };
 
 export function getPoE1ItemClassGearTypes(classId: string): string[] | undefined {

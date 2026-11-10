@@ -27,13 +27,37 @@ export async function buildModsPoE1(
   console.log('[PoE 1 Mods] [1/4] 抓取官方 Trade API Filter 檢索表...');
   const tradeStats = await fetchTradeStats('poe1', loader.patchVersion);
 
-  console.log('[PoE 1 Mods] [2/4] 自官方 CDN 載入並解析 StatDescriptions...');
-  const txtBytes = await loader.getFile('metadata/statdescriptions/stat_descriptions.txt');
-  if (!txtBytes) {
+  console.log('[PoE 1 Mods] [2/4] 自官方 CDN 載入並解析 StatDescriptions (包含地圖、聖物、塗劑與劫盜)...');
+  const [
+    baseDescBytes,
+    mapDescBytes,
+    sanctumDescBytes,
+    tinctureDescBytes,
+    heistDescBytes,
+  ] = await Promise.all([
+    loader.getFile('metadata/statdescriptions/stat_descriptions.txt'),
+    loader.getFile('metadata/statdescriptions/map_stat_descriptions.txt'),
+    loader.getFile('metadata/statdescriptions/sanctum_relic_stat_descriptions.txt'),
+    loader.getFile('metadata/statdescriptions/tincture_stat_descriptions.txt'),
+    loader.getFile('metadata/statdescriptions/heist_equipment_stat_descriptions.txt'),
+  ]);
+
+  if (!baseDescBytes) {
     throw new Error('無法自官方 CDN 取得 stat_descriptions.txt');
   }
-  const txtContent = Buffer.from(txtBytes.buffer, txtBytes.byteOffset, txtBytes.byteLength).toString('utf16le');
-  const statIndex = StatDescriptionIndex.parse(txtContent);
+
+  const toStr = (b: Uint8Array | null) =>
+    b ? Buffer.from(b.buffer, b.byteOffset, b.byteLength).toString('utf16le') : '';
+
+  const combinedDesc = [
+    toStr(baseDescBytes),
+    toStr(mapDescBytes),
+    toStr(sanctumDescBytes),
+    toStr(tinctureDescBytes),
+    toStr(heistDescBytes),
+  ].filter(Boolean).join('\n\n');
+
+  const statIndex = StatDescriptionIndex.parse(combinedDesc);
 
   console.log('[PoE 1 Mods] [3/4] 載入關聯 Dat 表格 (Mods, Stats, Tags, BaseItemTypes, ItemClasses, Essences, DelveCraftingModifiers, CraftingBenchOptions, CraftingItemClassCategories)...');
   const [
@@ -93,10 +117,10 @@ export async function buildModsPoE1(
   const essenceModIndices = new Set<number>();
   const essenceModTypesMap = new Map<number, Set<string>>();
   const essenceFieldToGearTypes: Record<string, string[]> = {
-    Helmet_ModsKey: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int'],
-    BodyArmour_ModsKey: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
-    Boots_ModsKey: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
-    Gloves_ModsKey: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
+    Helmet_ModsKey: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'],
+    BodyArmour_ModsKey: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+    Boots_ModsKey: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward'],
+    Gloves_ModsKey: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward'],
     Bow_ModsKey: ['bow'],
     Wand_ModsKey: ['wand'],
     Staff_ModsKey: ['staff', 'warstaff'],
@@ -175,10 +199,10 @@ export async function buildModsPoE1(
   let matchedTradeIdCount = 0;
   const unmatchedList: UnmatchedModItem[] = [];
 
-  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、工藝(9)、珠寶(10)、深淵珠寶(13)、掘獄(16)、星團珠寶(21)、密教工藝(28)、傭兵(41)、深水神君(42)
-  const allowedDomains = new Set([1, 2, 9, 10, 13, 16, 21, 28, 41, 42]);
-  // 允許的 GenerationType 集合: 固有(0, 3)、前綴(1)、後綴(2)、瓦爾腐化(5)、附魔(10)、塗油(19)、藥劑附魔(21, 22)、灼烙總督古靈(28)、吞噬天地古靈(29)
-  const allowedGenTypes = new Set([0, 1, 2, 3, 5, 10, 19, 21, 22, 28, 29]);
+  // 允許的 Domain 集合: 裝備(1)、藥劑(2)、地圖(5)、聖物(7, 32)、工藝(9)、珠寶(10)、深淵珠寶(13)、掘獄(16)、星團珠寶(21)、劫盜契約(22)、劫盜裝備(23)、盜賊飾品(24)、密教工藝(28)、熔爐地圖(33)、獵魔塗劑(34)、傭兵(41)、深水神君(42)
+  const allowedDomains = new Set([1, 2, 5, 7, 9, 10, 13, 16, 21, 22, 23, 24, 28, 32, 33, 34, 41, 42]);
+  // 允許的 GenerationType 集合: 固有(0, 3)、前綴(1)、後綴(2)、瓦爾腐化(5)、地圖附魔(8)、附魔(10)、塗油(19)、藥劑附魔(21, 22)、譫妄層數(23)、灼烙總督古靈(28)、吞噬天地古靈(29)、T17地圖(36)
+  const allowedGenTypes = new Set([0, 1, 2, 3, 5, 8, 10, 19, 21, 22, 23, 28, 29, 36]);
 
   for (let modIdx = 0; modIdx < modsTable.length; modIdx++) {
     const mod = modsTable[modIdx];
@@ -275,7 +299,9 @@ export async function buildModsPoE1(
 
     // 偏好 Trade Stat 類別選取
     const preferredCategories: string[] = [];
-    if ([10, 19, 21, 22].includes(mod.GenerationType) || mod.Id?.startsWith('HarvestAlternate')) {
+    if (mod.Domain === 7 || mod.Domain === 32) {
+      preferredCategories.push('sanctum', 'explicit', 'implicit');
+    } else if (mod.GenerationType === 8 || [10, 19, 21, 22].includes(mod.GenerationType) || mod.Id?.startsWith('HarvestAlternate')) {
       preferredCategories.push('enchant', 'explicit');
     } else if (mod.GenerationType === 5) {
       preferredCategories.push('implicit');
@@ -297,12 +323,23 @@ export async function buildModsPoE1(
     if (types.some((t) => t.includes('stave') || t.includes('staff'))) contexts.push('staves');
     if (types.some((t) => t.includes('flask'))) contexts.push('flask');
 
-    const resolvedIds = tradeStats.resolveStatIds(rendered.template, {
+    let resolvedIds = tradeStats.resolveStatIds(rendered.template, {
       preferredCategories,
       isLocal,
       context: contexts,
       ruleStatIds: rendered.ruleStatIds,
     });
+
+    if (!resolvedIds && (mod.Domain === 5 || mod.Domain === 22) && rendered.template.includes('|||||')) {
+      const primaryPart = rendered.template.split('|||||')[0].trim();
+      resolvedIds = tradeStats.resolveStatIds(primaryPart, {
+        preferredCategories,
+        isLocal,
+        context: contexts,
+        ruleStatIds: rendered.ruleStatIds ? [rendered.ruleStatIds[0]] : undefined,
+      });
+    }
+
     const tradeId = resolvedIds?.singleId;
     const tradeIds = resolvedIds?.splitIds;
     const tradeCategory = resolvedIds?.allIds[0]?.split('.')[0];

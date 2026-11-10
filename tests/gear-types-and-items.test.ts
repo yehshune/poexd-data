@@ -147,6 +147,34 @@ describe('Seam 4: Canonical gear-type keys in poexd-data', () => {
     assert.ok(resolved.includes('crimson_jewel'));
     assert.ok(resolved.includes('large_cluster_jewel'));
     assert.ok(resolved.includes('murderous_eye_jewel'));
+    // Ward (保護) 途徑一：獨立子屬性部位隔離驗證
+    const wardResolved = resolvePoE1GearTypes([{ tag: 'ward_armour', weight: 1000 }]);
+    assert.deepEqual(wardResolved.sort(), [
+      'body_armours_ward',
+      'boots_ward',
+      'gloves_ward',
+      'helmets_ward',
+    ]);
+    assert.ok(!wardResolved.includes('helmet'));
+    assert.ok(!wardResolved.includes('body-armour'));
+
+    // Tier 9 保護胸甲限定 (負權重扣除部位驗證)
+    const tier9Ward = resolvePoE1GearTypes([
+      { tag: 'ward_armour', weight: 1000 },
+      { tag: 'helmet', weight: 0 },
+      { tag: 'gloves', weight: 0 },
+      { tag: 'boots', weight: 0 },
+    ]);
+    assert.deepEqual(tier9Ward, ['body_armours_ward']);
+
+    // 擴充 Domain 映射驗證 (地圖、聖物、契約、盜賊裝備、飾品、塗劑)
+    assert.deepEqual(resolvePoE1GearTypes([], 5), ['map']);
+    assert.deepEqual(resolvePoE1GearTypes([], 7), ['relic']);
+    assert.deepEqual(resolvePoE1GearTypes([], 32), ['relic']);
+    assert.deepEqual(resolvePoE1GearTypes([], 22), ['contract']);
+    assert.deepEqual(resolvePoE1GearTypes([], 23), ['heist_equipment']);
+    assert.deepEqual(resolvePoE1GearTypes([], 24), ['trinket']);
+    assert.deepEqual(resolvePoE1GearTypes([], 34), ['tincture']);
 
     const sampleClasses = [
       'Claw',
@@ -170,6 +198,11 @@ describe('Seam 4: Canonical gear-type keys in poexd-data', () => {
       'Jewel',
       'AbyssJewel',
       'Tincture',
+      'Map',
+      'Contract',
+      'HeistEquipment',
+      'Trinket',
+      'SanctumRelic',
     ];
     for (const cls of sampleClasses) {
       for (const key of getPoE1ItemClassGearTypes(cls)) {

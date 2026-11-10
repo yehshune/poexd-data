@@ -20,6 +20,9 @@ export function resolvePoE1Affinities(
   if (mod.Domain === 16 || mechanismData.delveModIndices.has(modIndex)) {
     affs.add('delve');
   }
+  if (mod.Domain === 7 || mod.Domain === 32) {
+    affs.add('sanctum');
+  }
   if ([10, 19, 21, 22].includes(mod.GenerationType) || mod.Id?.startsWith('HarvestAlternate')) {
     affs.add('enchant');
   }
