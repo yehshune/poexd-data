@@ -174,7 +174,15 @@ describe('Seam 4: Canonical gear-type keys in poexd-data', () => {
     assert.deepEqual(resolvePoE1GearTypes([], 22), ['contract']);
     assert.deepEqual(resolvePoE1GearTypes([], 23), ['heist_equipment']);
     assert.deepEqual(resolvePoE1GearTypes([], 24), ['trinket']);
+    
     assert.deepEqual(resolvePoE1GearTypes([], 34), ['tincture']);
+
+    // 古靈勢力與勢力詞綴 (帶有 default: 0 負權重標籤) 不應被誤刪部位
+    const eldritchGloves = resolvePoE1GearTypes([
+      { tag: 'gloves', weight: 1000 },
+      { tag: 'default', weight: 0 },
+    ]);
+    assert.ok(eldritchGloves.includes('gloves'));
 
     const sampleClasses = [
       'Claw',

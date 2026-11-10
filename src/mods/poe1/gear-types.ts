@@ -367,6 +367,7 @@ export function resolvePoE1GearTypes(
     for (const { tag, weight } of spawnWeights) {
       if (weight > 0) continue;
       const lower = tag.toLowerCase();
+      if (lower === 'default') continue;
 
       const matched = matchPoE1TagGearTypes(lower);
       if (matched) {
