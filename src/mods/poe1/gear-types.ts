@@ -42,7 +42,7 @@ export const TWO_HAND_POE1_WEAPONS = [
 export const ALL_POE1_ARMOUR = [
   'gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward',
   'boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward',
-  'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward',
+  'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int',
   'helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward',
   'shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int',
 ];
@@ -76,7 +76,7 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   // 防具部位通用標籤
   gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward'],
   boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward'],
-  body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+  body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
   helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'],
 
   // 武器
@@ -186,7 +186,7 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
     'shield', 'shields_str_dex', 'shields_str_int', 'shields_dex_int',
   ],
   ward_armour: [
-    'body_armours_ward', 'helmets_ward', 'gloves_ward', 'boots_ward',
+    'helmets_ward', 'gloves_ward', 'boots_ward',
   ],
 
   // 盾牌細分
@@ -199,7 +199,8 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   focus: ['shield', 'shields_int'],
 
   // 召喚物裝備標籤
-  weapon_can_roll_minion_modifiers: ['wand', 'sceptre'],
+  // 召喚物法杖子類別由 base-profiles 依基底標籤補上
+  weapon_can_roll_minion_modifiers: ['wand'],
   focus_can_roll_minion_modifiers: ['shield', 'shields_int'],
   ring_can_roll_minion_modifiers: ['ring'],
   helmet_can_roll_minion_modifiers: [
@@ -239,7 +240,7 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   deepwater_sword: ['two-hand-sword'],
   necropolis_boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward'],
   necropolis_gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward'],
-  necropolis_body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+  necropolis_body_armour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
   necropolis_helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'],
 };
 
@@ -297,7 +298,6 @@ export function resolvePoE1GearTypes(
     }
     return Array.from(result);
   } else if (domain === 13) {
-    result.add('jewel');
     result.add('abyss_jewel');
     for (const { tag, weight } of spawnWeights) {
       if (weight <= 0) continue;
@@ -314,7 +314,6 @@ export function resolvePoE1GearTypes(
     }
     return Array.from(result);
   } else if (domain === 21) {
-    result.add('jewel');
     result.add('cluster_jewel');
     result.add('large_cluster_jewel');
     result.add('medium_cluster_jewel');
@@ -384,7 +383,7 @@ export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   Dagger: ['dagger'],
   RuneDagger: ['dagger', 'rune-dagger'],
   'Rune Dagger': ['dagger', 'rune-dagger'],
-  Wand: ['wand'],
+  Wand: ['wand', 'wands_minion'],
   OneHandSword: ['one-hand-sword'],
   'One Hand Sword': ['one-hand-sword'],
   ThrustingOneHandSword: ['one-hand-sword', 'thrusting-one-hand-sword'],
@@ -406,14 +405,14 @@ export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   FishingRod: ['fishing-rod'],
   'Fishing Rod': ['fishing-rod'],
   Amulet: ['amulet'],
-  Ring: ['ring'],
+  Ring: ['ring', 'rings_minion', 'unset_ring'],
   Belt: ['belt'],
   Quiver: ['quiver'],
-  Shield: ['shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int'],
+  Shield: ['shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int', 'shields_minion'],
   Gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward'],
   Boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward'],
-  BodyArmour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
-  'Body Armour': ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+  BodyArmour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
+  'Body Armour': ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
   Helmet: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'],
   Flask: ['flask'],
   LifeFlask: ['life-flask', 'flask'],

@@ -16,6 +16,14 @@ import {
   resolveHarvestQualityGearTypes
 } from './gear-types.js';
 import { resolvePoE1Affinities } from './affinities.js';
+import {
+  applySpecialBaseKeys,
+  buildPoE1BaseProfiles,
+  classifyPoE1Base,
+  isSpecialBaseKey,
+  resolveDomainProfileKeys,
+  type BaseRecord,
+} from './base-profiles.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
 export async function buildModsPoE1(
@@ -97,12 +105,24 @@ export async function buildModsPoE1(
     if (row.Id) itemClassesMap.set(idx, row.Id);
   });
 
+  // 0. 基底輪廓：依各基底實際標籤評估詞綴（藥劑、珠寶、劫盜裝備與特殊基底）
+  const baseRecords: BaseRecord[] = [];
+  for (const item of baseItemsTable) {
+    const classId = itemClassesMap.get(item.ItemClassesKey);
+    const name = (item as any).Name as string | undefined;
+    if (!classId || !name) continue;
+    const tagKeys: number[] = (item as any).TagsKeys ?? (item as any).Tags ?? [];
+    const tags = tagKeys.map((k) => tagsMap.get(k)).filter((t): t is string => !!t);
+    baseRecords.push({ classId, name, tags });
+  }
+  const baseProfiles = buildPoE1BaseProfiles(baseRecords);
+
   // 1. 基底固有詞綴對應的裝備類別映射表 (BaseItemTypes.Implicit_ModsKeys)
   const implicitModTypesMap = new Map<number, Set<string>>();
   for (const item of baseItemsTable) {
     const classId = itemClassesMap.get(item.ItemClassesKey);
     if (!classId) continue;
-    const gearTypes = getPoE1ItemClassGearTypes(classId);
+    const gearTypes = resolveImplicitGearTypes(classId, (item as any).Name ?? '', item, tagsMap);
     if (!gearTypes || gearTypes.length === 0) continue;
 
     const imps = (item as any).Implicit_ModsKeys || (item as any).Implicit_Mods || [];
@@ -118,11 +138,11 @@ export async function buildModsPoE1(
   const essenceModTypesMap = new Map<number, Set<string>>();
   const essenceFieldToGearTypes: Record<string, string[]> = {
     Helmet_ModsKey: ['helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int', 'helmets_ward'],
-    BodyArmour_ModsKey: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int', 'body_armours_ward'],
+    BodyArmour_ModsKey: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],
     Boots_ModsKey: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int', 'boots_ward'],
     Gloves_ModsKey: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int', 'gloves_ward'],
     Bow_ModsKey: ['bow'],
-    Wand_ModsKey: ['wand'],
+    Wand_ModsKey: ['wand', 'wands_minion'],
     Staff_ModsKey: ['staff', 'warstaff'],
     TwoHandSword_ModsKey: ['two-hand-sword'],
     TwoHandAxe_ModsKey: ['two-hand-axe'],
@@ -136,8 +156,8 @@ export async function buildModsPoE1(
     Sceptre_ModsKey: ['sceptre'],
     Belt_ModsKey: ['belt'],
     Amulet_ModsKey: ['amulet'],
-    Ring_ModsKey: ['ring'],
-    Shield_ModsKey: ['shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int'],
+    Ring_ModsKey: ['ring', 'rings_minion', 'unset_ring'],
+    Shield_ModsKey: ['shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int', 'shields_minion'],
   };
 
   for (const row of essencesTable) {
@@ -228,7 +248,18 @@ export async function buildModsPoE1(
           spawnWeights.push({ tag: tagName, weight });
         }
       }
-      types = resolvePoE1GearTypes(spawnWeights, mod.Domain);
+      const profileKeys = resolveDomainProfileKeys(spawnWeights, mod.Domain, baseProfiles);
+      if (profileKeys && (profileKeys.length > 0 || mod.Domain === 2)) {
+        types = profileKeys;
+      } else if (profileKeys) {
+        // 沒有一般基底能骰出（傳奇、星團附魔、劫盜成員專屬等），沿用網域預設類別
+        types = resolvePoE1GearTypes(spawnWeights, mod.Domain);
+      } else {
+        types = resolvePoE1GearTypes(spawnWeights, mod.Domain);
+        if (mod.Domain === 1 && spawnWeights.length > 0) {
+          types = applySpecialBaseKeys(types, spawnWeights, baseProfiles);
+        }
+      }
     }
 
     // 若詞綴無自然掉落部位，但屬於精華專屬詞綴，由精華外鍵關聯補全部位
@@ -256,9 +287,9 @@ export async function buildModsPoE1(
       types = ['ring', 'amulet'];
     }
 
-    // 藥劑附魔補全為藥劑
+    // 藥劑附魔補全為所有藥劑類別
     if (types.length === 0 && (mod.GenerationType === 21 || mod.GenerationType === 22)) {
-      types = ['flask'];
+      types = ALL_POE1_FLASK_KEYS;
     }
 
     // 獵魔工藝勢技能 (Aspect Skills) 補全為全裝備部位
@@ -408,4 +439,27 @@ export async function buildModsPoE1(
   console.log(`  -> 寫入: 11 份語系物品名稱分片 (locales/*/items.json, 共 ${itemShards.en.items.length} 筆物品名稱)`);
 
   await writeUnmatchedReport('poe1', outputDir, processedCount, matchedTradeIdCount, unmatchedList);
+}
+
+const ALL_POE1_FLASK_KEYS = ['flask', 'life-flask', 'mana-flask', 'hybrid-flask', 'utility-flask', 'iron-flask'];
+
+/**
+ * 固有詞綴的類別：網域基底（藥劑、珠寶、劫盜）用基底分類；
+ * 特殊基底只保留自己的子類別，一般基底不帶任何特殊子類別。
+ */
+function resolveImplicitGearTypes(
+  classId: string,
+  name: string,
+  item: unknown,
+  tagsMap: Map<number, string>,
+): string[] | undefined {
+  const tagKeys: number[] = (item as any).TagsKeys ?? (item as any).Tags ?? [];
+  const tags = tagKeys.map((k) => tagsMap.get(k)).filter((t): t is string => !!t);
+  const classification = classifyPoE1Base(classId, name, tags);
+  if (classification && 'keys' in classification) return classification.keys;
+
+  const classTypes = getPoE1ItemClassGearTypes(classId);
+  if (!classTypes) return undefined;
+  const generic = classTypes.filter((t) => !isSpecialBaseKey(t));
+  return classification && 'special' in classification ? [...generic, classification.special] : generic;
 }

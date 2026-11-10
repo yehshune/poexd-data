@@ -149,23 +149,25 @@ describe('Seam 4: Canonical gear-type keys in poexd-data', () => {
     assert.ok(resolved.includes('murderous_eye_jewel'));
     // Ward (保護) 途徑一：獨立子屬性部位隔離驗證
     const wardResolved = resolvePoE1GearTypes([{ tag: 'ward_armour', weight: 1000 }]);
-    assert.deepEqual(wardResolved.sort(), [
-      'body_armours_ward',
-      'boots_ward',
-      'gloves_ward',
-      'helmets_ward',
-    ]);
+    // 魔符基底只有頭部、手套、鞋子，沒有保護胸甲
+    assert.deepEqual(wardResolved.sort(), ['boots_ward', 'gloves_ward', 'helmets_ward']);
     assert.ok(!wardResolved.includes('helmet'));
     assert.ok(!wardResolved.includes('body-armour'));
 
-    // Tier 9 保護胸甲限定 (負權重扣除部位驗證)
-    const tier9Ward = resolvePoE1GearTypes([
+    // 負權重扣除部位驗證
+    const helmetWardOnly = resolvePoE1GearTypes([
       { tag: 'ward_armour', weight: 1000 },
-      { tag: 'helmet', weight: 0 },
       { tag: 'gloves', weight: 0 },
       { tag: 'boots', weight: 0 },
     ]);
-    assert.deepEqual(tier9Ward, ['body_armours_ward']);
+    assert.deepEqual(helmetWardOnly, ['helmets_ward']);
+
+    // 召喚物詞綴只屬於法杖（召喚法杖子類別由基底輪廓補上），不含權杖
+    const minionWeapon = resolvePoE1GearTypes([
+      { tag: 'weapon_can_roll_minion_modifiers', weight: 1000 },
+      { tag: 'default', weight: 0 },
+    ]);
+    assert.deepEqual(minionWeapon, ['wand']);
 
     // 擴充 Domain 映射驗證 (地圖、聖物、契約、盜賊裝備、飾品、塗劑)
     assert.deepEqual(resolvePoE1GearTypes([], 5), ['map']);
