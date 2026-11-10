@@ -113,7 +113,7 @@ export async function buildModsPoE1(
     Belt_ModsKey: ['belt'],
     Amulet_ModsKey: ['amulet'],
     Ring_ModsKey: ['ring'],
-    Shield_ModsKey: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler'],
+    Shield_ModsKey: ['shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int'],
   };
 
   for (const row of essencesTable) {

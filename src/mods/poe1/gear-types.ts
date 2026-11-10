@@ -44,7 +44,7 @@ export const ALL_POE1_ARMOUR = [
   'boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int',
   'body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int',
   'helmet', 'helmets_str', 'helmets_dex', 'helmets_int', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int',
-  'shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler',
+  'shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int',
 ];
 
 export const ALL_POE1_JEWELLERY = [
@@ -107,7 +107,7 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
   ring: ['ring'],
   belt: ['belt'],
   quiver: ['quiver'],
-  shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler'],
+  shield: ['shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int'],
 
   // 藥劑與獵魔塗劑
   flask: ['flask'],
@@ -148,14 +148,14 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
     'boots', 'boots_dex',
     'body-armour', 'body_armours_dex',
     'helmet', 'helmets_dex',
-    'shield', 'shields_str_dex',
+    'shield', 'shields_dex',
   ],
   int_armour: [
     'gloves', 'gloves_int',
     'boots', 'boots_int',
     'body-armour', 'body_armours_int',
     'helmet', 'helmets_int',
-    'shield', 'shields_str_int',
+    'shield', 'shields_int',
   ],
   str_dex_armour: [
     'gloves', 'gloves_str_dex',
@@ -176,14 +176,14 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
     'boots', 'boots_dex_int',
     'body-armour', 'body_armours_dex_int',
     'helmet', 'helmets_dex_int',
-    'shield', 'shields_str_dex',
+    'shield', 'shields_dex_int',
   ],
   str_dex_int_armour: [
     'gloves', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int',
     'boots', 'boots_str_dex', 'boots_str_int', 'boots_dex_int',
     'body-armour', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int',
     'helmet', 'helmets_str_dex', 'helmets_str_int', 'helmets_dex_int',
-    'shield', 'shields_str_dex', 'shields_str_int',
+    'shield', 'shields_str_dex', 'shields_str_int', 'shields_dex_int',
   ],
   ward_armour: [
     'gloves', 'boots', 'body-armour', 'helmet',
@@ -191,16 +191,16 @@ export const POE1_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
 
   // 盾牌細分
   str_shield: ['shield', 'shields_str'],
-  dex_shield: ['shield', 'shields_str_dex', 'buckler'],
-  int_shield: ['shield', 'shields_str_int'],
-  str_dex_shield: ['shield', 'shields_str_dex', 'buckler'],
+  dex_shield: ['shield', 'shields_dex'],
+  int_shield: ['shield', 'shields_int'],
+  str_dex_shield: ['shield', 'shields_str_dex'],
   str_int_shield: ['shield', 'shields_str_int'],
-  dex_int_shield: ['shield', 'shields_str_dex', 'buckler'],
-  focus: ['shield', 'shields_str_int'],
+  dex_int_shield: ['shield', 'shields_dex_int'],
+  focus: ['shield', 'shields_int'],
 
   // 召喚物裝備標籤
   weapon_can_roll_minion_modifiers: ['wand', 'sceptre'],
-  focus_can_roll_minion_modifiers: ['shield', 'shields_str_int'],
+  focus_can_roll_minion_modifiers: ['shield', 'shields_int'],
   ring_can_roll_minion_modifiers: ['ring'],
   helmet_can_roll_minion_modifiers: [
     'helmet', 'helmets_str', 'helmets_dex', 'helmets_int',
@@ -359,7 +359,7 @@ export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   Ring: ['ring'],
   Belt: ['belt'],
   Quiver: ['quiver'],
-  Shield: ['shield', 'shields_str', 'shields_str_dex', 'shields_str_int', 'buckler'],
+  Shield: ['shield', 'shields_str', 'shields_dex', 'shields_int', 'shields_str_dex', 'shields_str_int', 'shields_dex_int'],
   Gloves: ['gloves', 'gloves_str', 'gloves_dex', 'gloves_int', 'gloves_str_dex', 'gloves_str_int', 'gloves_dex_int'],
   Boots: ['boots', 'boots_str', 'boots_dex', 'boots_int', 'boots_str_dex', 'boots_str_int', 'boots_dex_int'],
   BodyArmour: ['body-armour', 'body_armours_str', 'body_armours_dex', 'body_armours_int', 'body_armours_str_dex', 'body_armours_str_int', 'body_armours_dex_int'],

@@ -140,7 +140,7 @@ describe('Seam 4: Canonical gear-type keys in poexd-data', () => {
     assert.ok(resolved.includes('warstaff'));
     assert.ok(resolved.includes('one-hand-sword'));
     assert.ok(resolved.includes('thrusting-one-hand-sword'));
-    assert.ok(resolved.includes('buckler'));
+    assert.ok(resolved.includes('shields_dex'));
     assert.ok(resolved.includes('life-flask'));
     assert.ok(resolved.includes('hybrid-flask'));
     assert.ok(resolved.includes('utility-flask'));

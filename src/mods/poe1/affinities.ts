@@ -66,12 +66,10 @@ export function resolvePoE1Affinities(
 
   // 3.0 古靈勢力固有詞綴 (Eldritch Implicit: 灼烙總督 Gen 28, 吞噬天地 Gen 29)
   if (mod.GenerationType === 28) {
-    affs.add('searing_exarch');
-    affs.add('eldritch');
+    affs.add('searing');
     isInfluence = true;
   } else if (mod.GenerationType === 29) {
-    affs.add('eater_of_worlds');
-    affs.add('eldritch');
+    affs.add('eater');
     isInfluence = true;
   }
 
