@@ -2,9 +2,8 @@ name: Build and Deploy Game Data
 
 on:
   push:
-    tags:
-      - 'v*'
-      - '[0-9]+*'
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
