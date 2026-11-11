@@ -50,6 +50,13 @@ async function main() {
     await buildModsPoE1(loader1, outputPoe1Dir);
   }
 
+  if (target === 'mods' || target === 'mercenary' || target === 'all') {
+    const { buildMercenaryPoE1 } = await import('./mods/poe1/generate-mercenary-poe1.js');
+    console.log('\n=== 正在解析 PoE 1 傭兵資料 (poe1/mercenary.json) ===');
+    loader1 ??= await PoeDataLoader.create('poe1');
+    await buildMercenaryPoE1(loader1, outputPoe1Dir);
+  }
+
   // 若尚未初始化 loader1 則在此處取得版本號
   if (!loader1) {
     loader1 = await PoeDataLoader.create('poe1');

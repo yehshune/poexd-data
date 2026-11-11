@@ -189,7 +189,7 @@ export function applyZhCnItemNames(
   return { ...shards, 'zh-CN': { ...shards['zh-CN'], items: zhCnItems } };
 }
 
-const TRADE_ITEMS_URLS = {
+export const TRADE_ITEMS_URLS = {
   poe1: {
     international: 'https://www.pathofexile.com/api/trade/data/items',
     tencent: 'https://poe.game.qq.com/api/trade/data/items',
@@ -206,7 +206,7 @@ function isTradeItemsResponse(value: unknown): value is TradeItemsResponse {
 }
 
 /** 下載交易物品資料；成功時寫入快取，失敗時回退舊快取，兩者皆無則回傳 null。 */
-async function fetchTradeItems(url: string, cacheFile: string): Promise<TradeItemsResponse | null> {
+export async function fetchTradeItems(url: string, cacheFile: string): Promise<TradeItemsResponse | null> {
   try {
     const resp = await fetch(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) poexd-data' },

@@ -11,6 +11,7 @@
     "build": "tsx src/index.ts all",
     "build:atlas": "tsx src/index.ts atlas",
     "build:mods": "tsx src/index.ts mods",
+    "build:mercenary": "tsx src/index.ts mercenary",
     "build:all": "tsx src/index.ts all",
     "test": "node --import tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit"
