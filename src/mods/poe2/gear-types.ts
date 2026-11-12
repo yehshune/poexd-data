@@ -193,13 +193,15 @@ export const POE2_TAG_TO_GEAR_TYPES: Record<string, string[]> = {
 
   // 珠寶
   jewel: ['jewel'],
-  str_radius_jewel: ['jewel', 'ruby'],
-  dex_radius_jewel: ['jewel', 'emerald'],
-  int_radius_jewel: ['jewel', 'sapphire'],
+  // *_radius_jewel 標籤只在時迭珠寶底材上（Time-Lost Ruby / Emerald / Sapphire / Diamond），
+  // 一般紅玉、翠綠、藍玉、鑽石不會出現範圍詞綴
+  str_radius_jewel: ['jewel', 'time_lost_ruby'],
+  dex_radius_jewel: ['jewel', 'time_lost_emerald'],
+  int_radius_jewel: ['jewel', 'time_lost_sapphire'],
+  radius_jewel: ['jewel', 'time_lost_ruby', 'time_lost_emerald', 'time_lost_sapphire', 'time_lost_diamond'],
   strjewel: ['jewel', 'ruby'],
   dexjewel: ['jewel', 'emerald'],
   intjewel: ['jewel', 'sapphire'],
-  radius_jewel: ['jewel', 'diamond'],
   historic_abyss_jewel_1: ['jewel', 'time_lost_ruby'],
   historic_abyss_jewel_2: ['jewel', 'time_lost_emerald'],
   historic_abyss_jewel_3: ['jewel', 'time_lost_sapphire'],

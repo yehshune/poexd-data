@@ -21,6 +21,7 @@ import {
   POE2_WAYSTONE_DOMAIN,
 } from './gear-types.js';
 import { resolvePoE2Affinities } from './affinities.js';
+import { applyRadiusJewelWrapper, loadRadiusJewelWrappers, radiusJewelKind } from './radius-jewel.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
 export async function buildModsPoE2(
@@ -66,6 +67,7 @@ export async function buildModsPoE2(
     loader.loadTable('EssenceTargetItemCategories'),
     loader.loadTable('Essences'),
   ]);
+  const radiusJewelWrappers = await loadRadiusJewelWrappers(loader);
 
   const statsMap = new Map<number, string>();
   statsTable.forEach((row, idx) => {
@@ -229,9 +231,12 @@ export async function buildModsPoE2(
 
     if (activeStats.length === 0) continue;
 
-    // 透過 StatDescriptionIndex 聯合解析
-    const rendered = statIndex.renderMod(activeStats);
-    if (!rendered) continue;
+    // 透過 StatDescriptionIndex 聯合解析；範圍珠寶詞綴再套上「範圍內的小型／核心天賦也會賦予」
+    const baseRendered = statIndex.renderMod(activeStats);
+    if (!baseRendered) continue;
+    const rendered = applyRadiusJewelWrapper(baseRendered, mod.RadiusJewelType, radiusJewelWrappers);
+    // 範圍詞綴與一般詞綴的 stat 相同，雜湊會解析成一般詞綴的市集 id；改以套上句型後的文字比對
+    const hashRuleStatIds = radiusJewelKind(mod.RadiusJewelType) ? undefined : rendered.ruleStatIds;
 
     // 依據機制偏好選取 Trade Stat 類別
     const isNaturalDrop = types.length > 0 && !isBaseImplicit && (mod.GenerationType === 1 || mod.GenerationType === 2);
@@ -262,7 +267,7 @@ export async function buildModsPoE2(
       preferredCategories,
       isLocal,
       context: contexts,
-      ruleStatIds: rendered.ruleStatIds,
+      ruleStatIds: hashRuleStatIds,
     });
     const tradeId = resolvedIds?.singleId;
     const tradeIds = resolvedIds?.splitIds;
@@ -288,7 +293,7 @@ export async function buildModsPoE2(
         preferredCategories: ['crafted'],
         isLocal,
         context: contexts,
-        ruleStatIds: rendered.ruleStatIds,
+        ruleStatIds: hashRuleStatIds,
       });
       if (craftedResolved && craftedResolved.allIds.length > 0) {
         craftedStatIds = craftedResolved.allIds;
