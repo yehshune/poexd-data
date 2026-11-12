@@ -29,6 +29,8 @@ import {
 } from './base-profiles.js';
 import { buildGearBaseIndex, resolveGearKeysByBases } from './gear-base-index.js';
 import { decodeItBytes, resolveInheritedTags } from './item-inheritance.js';
+import { mergeSingularVariants } from '../common/merge-singular-variants.js';
+import { buildClusterPassiveCountRecords, clusterSizeTypesFromModId } from './cluster-jewels.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
 export async function buildModsPoE1(
@@ -291,6 +293,11 @@ export async function buildModsPoE1(
       }
     }
 
+    // 星團的插槽數等傳奇詞沒有出現權重，尺寸寫在詞綴 ID
+    if (mod.Domain === 21 && spawnWeights.length === 0) {
+      types = clusterSizeTypesFromModId(String(mod.Id ?? '')) ?? types;
+    }
+
     // 若詞綴無自然掉落部位，但屬於精華專屬詞綴，由精華外鍵關聯補全部位
     if (types.length === 0 && essenceModTypesMap.has(modIdx)) {
       types = Array.from(essenceModTypesMap.get(modIdx)!);
@@ -452,14 +459,18 @@ export async function buildModsPoE1(
     processedCount++;
   }
 
+  const clusterPassiveRecords = await buildClusterPassiveCountTiers(loader, baseItemsTable, statIndex, tradeStats);
+  console.log(`[PoE 1 Mods] 星團珠寶天賦數：${clusterPassiveRecords.length} 筆附魔階級`);
+  const lexiconRecords = mergeSingularVariants([...collectedRecords, ...clusterPassiveRecords]);
+
   // 詞綴標籤用市集寫法（正負向以國際服市集為準），階級文字維持遊戲寫法
   const statTemplateOverrides = buildTradeStatTemplates(
     statIndex,
     tradeStats.rawData,
-    collectedRecords.flatMap((rec) => rec.statIds)
+    lexiconRecords.flatMap((rec) => rec.statIds)
   );
   console.log(`[PoE 1 Mods] 市集標準寫法：${statTemplateOverrides.size} 個詞綴代碼`);
-  const { modsTiers, shardsByLocale } = buildModsLexiconArtifacts(collectedRecords, {
+  const { modsTiers, shardsByLocale } = buildModsLexiconArtifacts(lexiconRecords, {
     statTemplateOverrides,
   });
   const { modsTiersFile, localeFiles } = await writeModsLexiconArtifacts(
@@ -520,4 +531,43 @@ function resolveImplicitGearTypes(
   if (!classTypes) return undefined;
   const generic = classTypes.filter((t) => !isSpecialBaseKey(t));
   return classification && 'special' in classification ? [...generic, classification.special] : generic;
+}
+
+const CLUSTER_NODE_COUNT_STAT = 'local_jewel_expansion_passive_node_count';
+
+/** 由 PassiveTreeExpansionJewels 的天賦數範圍產生各尺寸的「Adds # Passive Skills」附魔階級 */
+async function buildClusterPassiveCountTiers(
+  loader: PoeDataLoader,
+  baseItemsTable: Array<Record<string, any>>,
+  statIndex: StatDescriptionIndex,
+  tradeStats: Awaited<ReturnType<typeof fetchTradeStats>>
+) {
+  let rows: Array<Record<string, any>>;
+  let sizes: Array<Record<string, any>>;
+  try {
+    [rows, sizes] = await Promise.all([
+      loader.loadTable('PassiveTreeExpansionJewels'),
+      loader.loadTable('PassiveTreeExpansionJewelSizes'),
+    ]);
+  } catch (error) {
+    console.warn(`  [!] 略過星團珠寶天賦數：${(error as Error).message}`);
+    return [];
+  }
+  const bases = rows
+    .filter((row) => baseItemsTable[row.BaseItemTypesKey] && sizes[row.PassiveTreeExpansionJewelSizesKey])
+    .map((row) => ({
+      size: String(sizes[row.PassiveTreeExpansionJewelSizesKey].Name),
+      min: Number(row.MinNodes),
+      max: Number(row.MaxNodes),
+    }));
+  const render = (min: number, max: number) => statIndex.renderMod([{ id: CLUSTER_NODE_COUNT_STAT, min, max }]);
+  const sample = bases[0] && render(bases[0].min, bases[0].max);
+  const tradeId = sample
+    ? tradeStats.resolveStatIds(sample.template, { preferredCategories: ['enchant'], isLocal: true, context: [], ruleStatIds: sample.ruleStatIds })?.singleId
+    : undefined;
+  if (!tradeId?.startsWith('enchant.')) {
+    console.warn('  [!] 星團珠寶天賦數找不到市集附魔代碼，略過');
+    return [];
+  }
+  return buildClusterPassiveCountRecords(bases, render, tradeId);
 }
