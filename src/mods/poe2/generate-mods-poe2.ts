@@ -10,6 +10,7 @@ import { loadAndWriteItemLexiconShards } from '../common/item-lexicon.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
 import { buildTradeStatTemplates } from '../common/trade-stat-templates.js';
 import { loadStatDescriptionIndexes, writeModLineArtifacts } from '../common/mod-line-variants.js';
+import { writeResultLabelArtifacts } from '../common/result-labels.js';
 import {
   resolvePoE2GearTypes,
   getPoE2ItemClassGearTypes,
@@ -599,6 +600,9 @@ export async function buildModsPoE2(
     loader.patchVersion
   );
   console.log(`  -> 寫入: 結果列詞綴變體 (locales/*/mod-lines.json, zh-TW ${modLineCounts['zh-TW']} / zh-CN ${modLineCounts['zh-CN']} 個代碼)`);
+
+  const resultLabelCounts = await writeResultLabelArtifacts(loader, 'poe2', outputDir, loader.patchVersion);
+  console.log(`  -> 寫入: 結果列標籤 (locales/zh-TW/result-labels.json, ${resultLabelCounts['zh-TW'].labels} 個標籤 / ${resultLabelCounts['zh-TW'].templates} 個模板)`);
 
   const itemShards = await loadAndWriteItemLexiconShards(loader, outputDir);
   console.log(`  -> 寫入: 11 份語系物品名稱分片 (locales/*/items.json, 共 ${itemShards.en.items.length} 筆物品名稱)`);
