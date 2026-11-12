@@ -9,6 +9,7 @@ import {
 import { loadAndWriteItemLexiconShards } from '../common/item-lexicon.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
 import { buildTradeStatTemplates } from '../common/trade-stat-templates.js';
+import { loadStatDescriptionIndexes, writeModLineArtifacts } from '../common/mod-line-variants.js';
 import {
   resolvePoE1GearTypes,
   getPoE1ItemClassGearTypes,
@@ -471,6 +472,22 @@ export async function buildModsPoE1(
   console.log(`[PoE 1 Mods] 完成！共轉換 ${processedCount} 筆詞綴階級，成功映射 ${matchedTradeIdCount} 筆 Trade Stat ID`);
   console.log(`  -> 寫入: ${modsTiersFile} (共 ${modsTiers.groups.length} 個屬性分組範本, ${modsTiers.typeTable.length} 種部位組合)`);
   console.log(`  -> 寫入: ${localeFiles.length} 份語系詞綴分片 (locales/*/stats.json)`);
+
+  // 結果列詞綴的遊戲寫法：主描述檔之外再補市集也會用到的描述檔
+  const extraIndexes = await loadStatDescriptionIndexes(
+    (relPath) => loader.getFile(relPath),
+    (text) => StatDescriptionIndex.parse(text),
+    [
+      'metadata/statdescriptions/atlas_stat_descriptions.txt',
+    ]
+  );
+  const modLineCounts = await writeModLineArtifacts(
+    outputDir,
+    [statIndex, ...extraIndexes],
+    tradeStats.rawData,
+    loader.patchVersion
+  );
+  console.log(`  -> 寫入: 結果列詞綴變體 (locales/*/mod-lines.json, zh-TW ${modLineCounts['zh-TW']} / zh-CN ${modLineCounts['zh-CN']} 個代碼)`);
 
   const itemShards = await loadAndWriteItemLexiconShards(loader, outputDir);
   console.log(`  -> 寫入: 11 份語系物品名稱分片 (locales/*/items.json, 共 ${itemShards.en.items.length} 筆物品名稱)`);
