@@ -12,6 +12,7 @@ import {
   renderTierKey,
   type SupportedAffixLocale,
 } from './stat-descriptions.js';
+import type { TradeStatTemplates } from './trade-stat-templates.js';
 
 export interface CollectedModTierRecord {
   modId: string;
@@ -47,8 +48,17 @@ function compactParams(
   });
 }
 
+export interface BuildModsLexiconOptions {
+  /**
+   * 市集代碼的標準寫法（buildTradeStatTemplates 產生）。有覆寫的代碼與語系，
+   * statTemplates 改指向市集寫法；tierTemplates 一律維持遊戲寫法。
+   */
+  statTemplateOverrides?: TradeStatTemplates;
+}
+
 export function buildModsLexiconArtifacts(
-  records: ReadonlyArray<CollectedModTierRecord>
+  records: ReadonlyArray<CollectedModTierRecord>,
+  options: BuildModsLexiconOptions = {}
 ): BuiltModsLexiconArtifacts {
   const typeTable: string[][] = [];
   const typeKeyToIdx = new Map<string, number>();
@@ -117,15 +127,20 @@ export function buildModsLexiconArtifacts(
     const templateToIdx = new Map<string, number>();
     const tierTemplates: number[] = [];
     const statTemplates: Record<string, number> = {};
-
-    for (const { rec } of indexedRecords) {
-      const tmpl = rec.templatesByLocale[locale] ?? rec.templatesByLocale['en'] ?? '';
+    const internTemplate = (tmpl: string): number => {
       let tmplIdx = templateToIdx.get(tmpl);
       if (tmplIdx === undefined) {
         tmplIdx = templates.length;
         templates.push(tmpl);
         templateToIdx.set(tmpl, tmplIdx);
       }
+      return tmplIdx;
+    };
+
+    for (const { rec } of indexedRecords) {
+      const tmplIdx = internTemplate(
+        rec.templatesByLocale[locale] ?? rec.templatesByLocale['en'] ?? ''
+      );
       tierTemplates.push(tmplIdx);
 
       // The first tier encountered for a statId (after sorting by level ascending)
@@ -135,6 +150,11 @@ export function buildModsLexiconArtifacts(
           statTemplates[statId] = tmplIdx;
         }
       }
+    }
+
+    for (const statId of Object.keys(statTemplates)) {
+      const override = options.statTemplateOverrides?.get(statId)?.[locale];
+      if (override) statTemplates[statId] = internTemplate(override);
     }
 
     shardsByLocale[locale] = {

@@ -390,6 +390,11 @@ export class StatDescriptionIndex {
     return index;
   }
 
+  /** 依描述檔順序排列的全部規則（唯讀） */
+  getRules(): readonly StatDescriptionRule[] {
+    return this.rules;
+  }
+
   renderMod(activeStats: Array<{ id: string; min: number; max: number }>): RenderedModResult | null {
     if (activeStats.length === 0) return null;
 

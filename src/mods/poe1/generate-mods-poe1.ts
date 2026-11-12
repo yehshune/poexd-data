@@ -8,6 +8,7 @@ import {
 } from '../common/lexicon-builder.js';
 import { loadAndWriteItemLexiconShards } from '../common/item-lexicon.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
+import { buildTradeStatTemplates } from '../common/trade-stat-templates.js';
 import {
   resolvePoE1GearTypes,
   getPoE1ItemClassGearTypes,
@@ -449,7 +450,16 @@ export async function buildModsPoE1(
     processedCount++;
   }
 
-  const { modsTiers, shardsByLocale } = buildModsLexiconArtifacts(collectedRecords);
+  // 詞綴標籤用市集寫法（正負向以國際服市集為準），階級文字維持遊戲寫法
+  const statTemplateOverrides = buildTradeStatTemplates(
+    statIndex,
+    tradeStats.rawData,
+    collectedRecords.flatMap((rec) => rec.statIds)
+  );
+  console.log(`[PoE 1 Mods] 市集標準寫法：${statTemplateOverrides.size} 個詞綴代碼`);
+  const { modsTiers, shardsByLocale } = buildModsLexiconArtifacts(collectedRecords, {
+    statTemplateOverrides,
+  });
   const { modsTiersFile, localeFiles } = await writeModsLexiconArtifacts(
     outputDir,
     modsTiers,
