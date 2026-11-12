@@ -1,9 +1,9 @@
 {
   "gameVersion": "poe2",
-  "generatedAt": "2026-11-12T11:03:51.075Z",
+  "generatedAt": "2026-11-12T12:33:34.140Z",
   "totalTiers": 3833,
-  "matchedCount": 3769,
-  "unmatchedCount": 64,
+  "matchedCount": 3767,
+  "unmatchedCount": 66,
   "matchRate": "98.3%",
   "summaryByTemplate": [
     {
@@ -46,136 +46,6 @@
         "gloves_dex",
         "gloves_int",
         "gloves_str_dex"
-      ]
-    },
-    {
-      "template": "增加#%斧傷害",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "斧增加#%攻擊速度",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%匕首的暴擊率",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%匕首傷害",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "匕首增加#%攻擊速度",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%鏈錘暴擊率",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%鏈錘傷害",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%劍的傷害",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "劍增加#%攻擊速度",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%陷阱傷害",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%陷阱投擲速度",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%空手攻擊傷害",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
-      ]
-    },
-    {
-      "template": "增加#%空手攻擊速度",
-      "count": 2,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "jewel"
       ]
     },
     {
@@ -255,6 +125,298 @@
       ]
     },
     {
+      "template": "增加#%斧傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "斧增加#%攻擊速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%匕首的暴擊率",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%匕首傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "匕首增加#%攻擊速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%鏈錘暴擊率",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%鏈錘傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%劍的傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "劍增加#%攻擊速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%陷阱傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%陷阱投擲速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%空手攻擊傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "增加#%空手攻擊速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內小型天賦也會賦予 增加#%斧傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內核心天賦也會賦予 斧增加#%攻擊速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內核心天賦也會賦予 增加#%匕首的暴擊率",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內小型天賦也會賦予 增加#%匕首傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內核心天賦也會賦予 匕首增加#%攻擊速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內小型天賦也會賦予 擊中時有#%機率造成目眩",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel",
+        "time_lost_emerald"
+      ]
+    },
+    {
+      "template": "範圍內核心天賦也會賦予 增加#%鏈錘暴擊率",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內小型天賦也會賦予 增加#%鏈錘傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內核心天賦也會賦予 召喚物的復甦速度加快#%",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內小型天賦也會賦予 增加#%劍的傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內核心天賦也會賦予 劍增加#%攻擊速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內小型天賦也會賦予 增加#%陷阱傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內核心天賦也會賦予 增加#%陷阱投擲速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內小型天賦也會賦予 增加#%空手攻擊傷害",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內核心天賦也會賦予 增加#%空手攻擊速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel"
+      ]
+    },
+    {
+      "template": "範圍內小型天賦也會賦予 攻擊擊中時，有#%機率施加切割",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "jewel",
+        "time_lost_ruby"
+      ]
+    },
+    {
       "template": "增加#%釣魚線力量",
       "count": 1,
       "affinities": [
@@ -322,19 +484,6 @@
       ],
       "sampleTypes": [
         "fishing-rod"
-      ]
-    },
-    {
-      "template": "每秒回復#%生命",
-      "count": 1,
-      "affinities": [
-        "desecrated"
-      ],
-      "sampleTypes": [
-        "jewel",
-        "sapphire",
-        "ruby",
-        "emerald"
       ]
     },
     {
@@ -657,10 +806,10 @@
     },
     {
       "modId": "JewelRadiusAxeDamage",
-      "template": "#% increased damage with axes",
-      "template_zh": "增加#%斧傷害",
-      "key": "(2-3)% increased damage with axes",
-      "key_zh": "增加(2-3)%斧傷害",
+      "template": "small passive skills in radius also grant #% increased damage with axes",
+      "template_zh": "範圍內小型天賦也會賦予 增加#%斧傷害",
+      "key": "small passive skills in radius also grant (2-3)% increased damage with axes",
+      "key_zh": "範圍內小型天賦也會賦予 增加(2-3)%斧傷害",
       "types": [
         "jewel"
       ],
@@ -671,10 +820,10 @@
     },
     {
       "modId": "JewelRadiusAxeSpeed",
-      "template": "#% increased attack speed with axes",
-      "template_zh": "斧增加#%攻擊速度",
-      "key": "(1-2)% increased attack speed with axes",
-      "key_zh": "斧增加(1-2)%攻擊速度",
+      "template": "notable passive skills in radius also grant #% increased attack speed with axes",
+      "template_zh": "範圍內核心天賦也會賦予 斧增加#%攻擊速度",
+      "key": "notable passive skills in radius also grant (1-2)% increased attack speed with axes",
+      "key_zh": "範圍內核心天賦也會賦予 斧增加(1-2)%攻擊速度",
       "types": [
         "jewel"
       ],
@@ -685,10 +834,10 @@
     },
     {
       "modId": "JewelRadiusDaggerCriticalChance",
-      "template": "#% increased critical hit chance with daggers",
-      "template_zh": "增加#%匕首的暴擊率",
-      "key": "(3-7)% increased critical hit chance with daggers",
-      "key_zh": "增加(3-7)%匕首的暴擊率",
+      "template": "notable passive skills in radius also grant #% increased critical hit chance with daggers",
+      "template_zh": "範圍內核心天賦也會賦予 增加#%匕首的暴擊率",
+      "key": "notable passive skills in radius also grant (3-7)% increased critical hit chance with daggers",
+      "key_zh": "範圍內核心天賦也會賦予 增加(3-7)%匕首的暴擊率",
       "types": [
         "jewel"
       ],
@@ -699,10 +848,10 @@
     },
     {
       "modId": "JewelRadiusDaggerDamage",
-      "template": "#% increased damage with daggers",
-      "template_zh": "增加#%匕首傷害",
-      "key": "(2-3)% increased damage with daggers",
-      "key_zh": "增加(2-3)%匕首傷害",
+      "template": "small passive skills in radius also grant #% increased damage with daggers",
+      "template_zh": "範圍內小型天賦也會賦予 增加#%匕首傷害",
+      "key": "small passive skills in radius also grant (2-3)% increased damage with daggers",
+      "key_zh": "範圍內小型天賦也會賦予 增加(2-3)%匕首傷害",
       "types": [
         "jewel"
       ],
@@ -713,10 +862,10 @@
     },
     {
       "modId": "JewelRadiusDaggerSpeed",
-      "template": "#% increased attack speed with daggers",
-      "template_zh": "匕首增加#%攻擊速度",
-      "key": "(1-2)% increased attack speed with daggers",
-      "key_zh": "匕首增加(1-2)%攻擊速度",
+      "template": "notable passive skills in radius also grant #% increased attack speed with daggers",
+      "template_zh": "範圍內核心天賦也會賦予 匕首增加#%攻擊速度",
+      "key": "notable passive skills in radius also grant (1-2)% increased attack speed with daggers",
+      "key_zh": "範圍內核心天賦也會賦予 匕首增加(1-2)%攻擊速度",
       "types": [
         "jewel"
       ],
@@ -726,11 +875,26 @@
       "level": "1"
     },
     {
+      "modId": "JewelRadiusDazeBuildup",
+      "template": "small passive skills in radius also grant #% chance to daze on hit",
+      "template_zh": "範圍內小型天賦也會賦予 擊中時有#%機率造成目眩",
+      "key": "small passive skills in radius also grant 1% chance to daze on hit",
+      "key_zh": "範圍內小型天賦也會賦予 擊中時有1%機率造成目眩",
+      "types": [
+        "jewel",
+        "time_lost_emerald"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "JewelRadiusFlailCriticalChance",
-      "template": "#% increased critical hit chance with flails",
-      "template_zh": "增加#%鏈錘暴擊率",
-      "key": "(3-7)% increased critical hit chance with flails",
-      "key_zh": "增加(3-7)%鏈錘暴擊率",
+      "template": "notable passive skills in radius also grant #% increased critical hit chance with flails",
+      "template_zh": "範圍內核心天賦也會賦予 增加#%鏈錘暴擊率",
+      "key": "notable passive skills in radius also grant (3-7)% increased critical hit chance with flails",
+      "key_zh": "範圍內核心天賦也會賦予 增加(3-7)%鏈錘暴擊率",
       "types": [
         "jewel"
       ],
@@ -741,10 +905,24 @@
     },
     {
       "modId": "JewelRadiusFlailDamage",
-      "template": "#% increased damage with flails",
-      "template_zh": "增加#%鏈錘傷害",
-      "key": "(1-2)% increased damage with flails",
-      "key_zh": "增加(1-2)%鏈錘傷害",
+      "template": "small passive skills in radius also grant #% increased damage with flails",
+      "template_zh": "範圍內小型天賦也會賦予 增加#%鏈錘傷害",
+      "key": "small passive skills in radius also grant (1-2)% increased damage with flails",
+      "key_zh": "範圍內小型天賦也會賦予 增加(1-2)%鏈錘傷害",
+      "types": [
+        "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusMinionReviveSpeed",
+      "template": "notable passive skills in radius also grant minions revive #% faster",
+      "template_zh": "範圍內核心天賦也會賦予 召喚物的復甦速度加快#%",
+      "key": "notable passive skills in radius also grant minions revive (3-7)% faster",
+      "key_zh": "範圍內核心天賦也會賦予 召喚物的復甦速度加快(3-7)%",
       "types": [
         "jewel"
       ],
@@ -755,10 +933,10 @@
     },
     {
       "modId": "JewelRadiusSwordDamage",
-      "template": "#% increased damage with swords",
-      "template_zh": "增加#%劍的傷害",
-      "key": "(1-2)% increased damage with swords",
-      "key_zh": "增加(1-2)%劍的傷害",
+      "template": "small passive skills in radius also grant #% increased damage with swords",
+      "template_zh": "範圍內小型天賦也會賦予 增加#%劍的傷害",
+      "key": "small passive skills in radius also grant (1-2)% increased damage with swords",
+      "key_zh": "範圍內小型天賦也會賦予 增加(1-2)%劍的傷害",
       "types": [
         "jewel"
       ],
@@ -769,10 +947,10 @@
     },
     {
       "modId": "JewelRadiusSwordSpeed",
-      "template": "#% increased attack speed with swords",
-      "template_zh": "劍增加#%攻擊速度",
-      "key": "(1-2)% increased attack speed with swords",
-      "key_zh": "劍增加(1-2)%攻擊速度",
+      "template": "notable passive skills in radius also grant #% increased attack speed with swords",
+      "template_zh": "範圍內核心天賦也會賦予 劍增加#%攻擊速度",
+      "key": "notable passive skills in radius also grant (1-2)% increased attack speed with swords",
+      "key_zh": "範圍內核心天賦也會賦予 劍增加(1-2)%攻擊速度",
       "types": [
         "jewel"
       ],
@@ -783,10 +961,10 @@
     },
     {
       "modId": "JewelRadiusTrapDamage",
-      "template": "#% increased trap damage",
-      "template_zh": "增加#%陷阱傷害",
-      "key": "(1-2)% increased trap damage",
-      "key_zh": "增加(1-2)%陷阱傷害",
+      "template": "small passive skills in radius also grant #% increased trap damage",
+      "template_zh": "範圍內小型天賦也會賦予 增加#%陷阱傷害",
+      "key": "small passive skills in radius also grant (1-2)% increased trap damage",
+      "key_zh": "範圍內小型天賦也會賦予 增加(1-2)%陷阱傷害",
       "types": [
         "jewel"
       ],
@@ -797,10 +975,10 @@
     },
     {
       "modId": "JewelRadiusTrapThrowSpeed",
-      "template": "#% increased trap throwing speed",
-      "template_zh": "增加#%陷阱投擲速度",
-      "key": "(2-4)% increased trap throwing speed",
-      "key_zh": "增加(2-4)%陷阱投擲速度",
+      "template": "notable passive skills in radius also grant #% increased trap throwing speed",
+      "template_zh": "範圍內核心天賦也會賦予 增加#%陷阱投擲速度",
+      "key": "notable passive skills in radius also grant (2-4)% increased trap throwing speed",
+      "key_zh": "範圍內核心天賦也會賦予 增加(2-4)%陷阱投擲速度",
       "types": [
         "jewel"
       ],
@@ -811,10 +989,10 @@
     },
     {
       "modId": "JewelRadiusUnarmedDamage",
-      "template": "#% increased damage with unarmed attacks",
-      "template_zh": "增加#%空手攻擊傷害",
-      "key": "(1-2)% increased damage with unarmed attacks",
-      "key_zh": "增加(1-2)%空手攻擊傷害",
+      "template": "small passive skills in radius also grant #% increased damage with unarmed attacks",
+      "template_zh": "範圍內小型天賦也會賦予 增加#%空手攻擊傷害",
+      "key": "small passive skills in radius also grant (1-2)% increased damage with unarmed attacks",
+      "key_zh": "範圍內小型天賦也會賦予 增加(1-2)%空手攻擊傷害",
       "types": [
         "jewel"
       ],
@@ -825,12 +1003,27 @@
     },
     {
       "modId": "JewelRadiusUnarmedAttackSpeed",
-      "template": "#% increased unarmed attack speed",
-      "template_zh": "增加#%空手攻擊速度",
-      "key": "(1-2)% increased unarmed attack speed",
-      "key_zh": "增加(1-2)%空手攻擊速度",
+      "template": "notable passive skills in radius also grant #% increased unarmed attack speed",
+      "template_zh": "範圍內核心天賦也會賦予 增加#%空手攻擊速度",
+      "key": "notable passive skills in radius also grant (1-2)% increased unarmed attack speed",
+      "key_zh": "範圍內核心天賦也會賦予 增加(1-2)%空手攻擊速度",
       "types": [
         "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "JewelRadiusIncisionChance",
+      "template": "small passive skills in radius also grant #% chance for attack hits to apply incision",
+      "template_zh": "範圍內小型天賦也會賦予 攻擊擊中時，有#%機率施加切割",
+      "key": "small passive skills in radius also grant (3-5)% chance for attack hits to apply incision",
+      "key_zh": "範圍內小型天賦也會賦予 攻擊擊中時，有(3-5)%機率施加切割",
+      "types": [
+        "jewel",
+        "time_lost_ruby"
       ],
       "affinities": [
         "normal"
@@ -1102,23 +1295,6 @@
         "normal"
       ],
       "level": "80"
-    },
-    {
-      "modId": "AbyssModRadiusJewelPrefixRegeneratePercentLifePerSecond",
-      "template": "regenerate #% of maximum life per second",
-      "template_zh": "每秒回復#%生命",
-      "key": "regenerate (0.03-0.07)% of maximum life per second",
-      "key_zh": "每秒回復(0.03-0.07)%生命",
-      "types": [
-        "jewel",
-        "sapphire",
-        "ruby",
-        "emerald"
-      ],
-      "affinities": [
-        "desecrated"
-      ],
-      "level": "1"
     },
     {
       "modId": "HandWrapsImplicitLocalBaseEvasionAndEnergyShieldPerLevel",
