@@ -15,6 +15,12 @@ export interface ResultLabels {
   templates: Array<[string, string]>;
 }
 
+/** 傭兵名字由名與稱號兩個字拼成（如 Velessa + ", the Bardiyan-Born"），組合太多，分開輸出 */
+export interface MercenaryNameParts {
+  first: Record<string, string>;
+  suffix: Record<string, string>;
+}
+
 type Row = Record<string, unknown>;
 
 export interface ResultLabelSource {
@@ -82,13 +88,45 @@ export function buildResultLabels(sources: readonly ResultLabelSource[]): Result
   };
 }
 
+const tagKey = (row: Row) => JSON.stringify(row.SpawnWeight_Tags ?? []);
+
+/**
+ * Words 表的傭兵名與稱號（譯文在 Text2）。稱號是英文以「, the 」開頭、譯文以「．」開頭接在
+ * 名字後面的字；名字是與稱號同一組出現權重標籤、但屬於另一個字表的字。
+ */
+export function buildMercenaryNameParts(english: Row[], localized: Row[]): MercenaryNameParts {
+  const localizedByIndex = new Map(localized.map((row) => [row._index, row]));
+  const textOf = (row: Row | undefined) => (typeof row?.Text2 === 'string' ? row.Text2 : '');
+  const suffixRows = english.filter(
+    (row) => textOf(row).startsWith(', the ') && textOf(localizedByIndex.get(row._index)).startsWith('．')
+  );
+  const suffixTags = new Set(suffixRows.map(tagKey));
+  const suffixLists = new Set(suffixRows.map((row) => row.Wordlist));
+  const parts: MercenaryNameParts = { first: {}, suffix: {} };
+  for (const row of english) {
+    const en = textOf(row).trim();
+    const zh = textOf(localizedByIndex.get(row._index)).trim();
+    if (!en || !zh || en === zh) continue;
+    if (suffixLists.has(row.Wordlist) && suffixTags.has(tagKey(row))) {
+      if (textOf(row).startsWith(', the ')) parts.suffix[textOf(row)] = zh;
+    } else if (suffixTags.has(tagKey(row)) && !/^[ ,]/.test(textOf(row))) {
+      parts.first[en] = zh;
+    }
+  }
+  return parts;
+}
+
 /** ClientStrings 依用途排序：物品顯示、市集與技能彈窗優先，其他介面字串最後 */
 const CLIENT_STRING_PRIORITY =
-  /^(ItemDisplay|ItemPopup|ItemNote|ETradeMarket|MarketPopup|SkillPopup|WeaponClass|JewelRadius|Heist|Sanctum|NumberOf|PercentageOfBase|Time)/;
+  /^(ItemDisplay|ItemPopup|ItemNote|ETradeMarket|MarketPopup|SkillPopup|WeaponClass|JewelRadius|Heist|Sanctum|NumberOf|PercentageOfBase|Time|Mercenary)/;
 
 const SOURCE_TABLES: Record<'poe1' | 'poe2', Array<Omit<ResultLabelSource, 'english' | 'localized'>>> = {
   poe1: [
     { name: 'ClientStrings', columns: ['Text'], priority: (row) => (CLIENT_STRING_PRIORITY.test(String(row.Id)) ? 0 : 2) },
+    { name: 'ClientStrings2', columns: ['Text'], priority: (row) => (CLIENT_STRING_PRIORITY.test(String(row.Id)) ? 0 : 2) },
+    { name: 'MercenaryBuilds', columns: ['Name'] },
+    { name: 'MercenarySkills', columns: ['Name'] },
+    { name: 'MercenarySupports', columns: ['Name'] },
     { name: 'ItemClasses', columns: ['Name'] },
     { name: 'GemTags', columns: ['Tag', 'Name'] },
     { name: 'ActiveSkills', columns: ['DisplayedName', 'Description'] },
@@ -101,6 +139,7 @@ const SOURCE_TABLES: Record<'poe1' | 'poe2', Array<Omit<ResultLabelSource, 'engl
   ],
   poe2: [
     { name: 'ClientStrings', columns: ['Text'], priority: (row) => (CLIENT_STRING_PRIORITY.test(String(row.Id)) ? 0 : 2) },
+    { name: 'ClientStrings2', columns: ['Text'], priority: (row) => (CLIENT_STRING_PRIORITY.test(String(row.Id)) ? 0 : 2) },
     { name: 'ItemClasses', columns: ['Name'] },
     { name: 'GemTags', columns: ['Tag', 'Name'] },
     { name: 'ActiveSkills', columns: ['DisplayedName', 'Description'] },
@@ -113,8 +152,8 @@ export async function writeResultLabelArtifacts(
   game: 'poe1' | 'poe2',
   outputDir: string,
   patch: string
-): Promise<Record<string, { labels: number; templates: number }>> {
-  const summary: Record<string, { labels: number; templates: number }> = {};
+): Promise<Record<string, { labels: number; templates: number; names: number }>> {
+  const summary: Record<string, { labels: number; templates: number; names: number }> = {};
   for (const [locale, datLanguage] of RESULT_LABEL_LOCALES) {
     const sources: ResultLabelSource[] = [];
     for (const table of SOURCE_TABLES[game]) {
@@ -129,14 +168,30 @@ export async function writeResultLabelArtifacts(
       }
     }
     const { labels, templates } = buildResultLabels(sources);
+    let names: MercenaryNameParts = { first: {}, suffix: {} };
+    if (game === 'poe1') {
+      try {
+        const [english, localized] = await Promise.all([
+          loader.loadTable('Words', { language: 'English' }),
+          loader.loadTable('Words', { language: datLanguage }),
+        ]);
+        names = buildMercenaryNameParts(english, localized);
+      } catch (error) {
+        console.warn(`  [!] 結果列標籤略過傭兵名字：${(error as Error).message}`);
+      }
+    }
     const localeDir = path.join(outputDir, 'locales', locale);
     await fs.mkdir(localeDir, { recursive: true });
     await fs.writeFile(
       path.join(localeDir, 'result-labels.json'),
-      JSON.stringify({ schemaVersion: 1, patch, locale, labels, templates }),
+      JSON.stringify({ schemaVersion: 1, patch, locale, labels, templates, names }),
       'utf-8'
     );
-    summary[locale] = { labels: Object.keys(labels).length, templates: templates.length };
+    summary[locale] = {
+      labels: Object.keys(labels).length,
+      templates: templates.length,
+      names: Object.keys(names.first).length * Object.keys(names.suffix).length,
+    };
   }
   return summary;
 }

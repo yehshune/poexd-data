@@ -1,6 +1,10 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildResultLabels, type ResultLabelSource } from '../src/mods/common/result-labels.js';
+import {
+  buildMercenaryNameParts,
+  buildResultLabels,
+  type ResultLabelSource,
+} from '../src/mods/common/result-labels.js';
 
 const clientStrings: ResultLabelSource = {
   name: 'ClientStrings',
@@ -59,5 +63,31 @@ describe('buildResultLabels', () => {
       ['Level {1} ({0}%)', '等級 {1} ({0}%)'],
     ]);
     assert.equal(result.labels['<red>Broken'], undefined);
+  });
+});
+
+describe('buildMercenaryNameParts', () => {
+  // 取自 3.29.3.6 Words：傭兵名與稱號分屬兩個字表，同一組出現權重標籤；譯文在 Text2
+  const MERC_TAGS = [1238, 1240];
+  const english = [
+    { _index: 0, Wordlist: 13, Text2: 'Velessa', SpawnWeight_Tags: MERC_TAGS },
+    { _index: 1, Wordlist: 14, Text2: ', the Bardiyan-Born', SpawnWeight_Tags: MERC_TAGS },
+    { _index: 2, Wordlist: 9, Text2: ', Child of Winter', SpawnWeight_Tags: [5] },
+    { _index: 3, Wordlist: 11, Text2: 'Jon', SpawnWeight_Tags: [7] },
+    { _index: 4, Wordlist: 13, Text2: 'Draxia', SpawnWeight_Tags: MERC_TAGS },
+  ];
+  const localized = [
+    { _index: 0, Text2: '維勒莎' },
+    { _index: 1, Text2: '．巴迪亞家族子嗣' },
+    { _index: 2, Text2: '寒冬之子' },
+    { _index: 3, Text2: '約翰' },
+    { _index: 4, Text2: 'Draxia' },
+  ];
+
+  it('稱號（「, the …」且譯文以「．」接在名字後）與同標籤組的名字分開輸出，未翻譯的略過', () => {
+    assert.deepEqual(buildMercenaryNameParts(english, localized), {
+      first: { Velessa: '維勒莎' },
+      suffix: { ', the Bardiyan-Born': '．巴迪亞家族子嗣' },
+    });
   });
 });
