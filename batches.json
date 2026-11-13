@@ -1,0 +1,29 @@
+{
+  "poe2/game": {
+    "builtAt": "2026-11-13T13:56:15.369Z",
+    "patch": "0.5.5.8"
+  },
+  "poe1/game": {
+    "builtAt": "2026-11-13T13:56:26.616Z",
+    "patch": "3.29.3.6"
+  },
+  "poe1/mercenary": {
+    "builtAt": "2026-11-13T13:56:27.277Z",
+    "patch": "3.29.3.6"
+  },
+  "poe1/trade-filters": {
+    "builtAt": "2026-11-13T13:57:27.738Z",
+    "staleLocales": [
+      "ko"
+    ]
+  },
+  "poe2/trade-filters": {
+    "builtAt": "2026-11-13T13:57:27.739Z",
+    "staleLocales": [
+      "ko"
+    ]
+  },
+  "market": {
+    "builtAt": "2026-11-13T13:57:52.226Z"
+  }
+}
