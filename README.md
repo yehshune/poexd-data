@@ -40,6 +40,9 @@
 | **PoE 1 多語系詞綴分片** | PoE 1 之 11 種官方語系詞綴文字分片 | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/poe1/locales/{locale}/stats.json` |
 | **PoE 2 未配對報告** | 詞綴匹配率統計與無法對齊 Trade API 之診斷記錄 | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/poe2/unmatched-report.json` |
 | **PoE 1 未配對報告** | PoE 1 詞綴匹配率統計與未配對詞綴診斷記錄 | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/poe1/unmatched-report.json` |
+| **市集篩選翻譯** | 各語系官方市集 `/data/filters` 的群組、欄位、選項與 pseudo 屬性文字（`{version}` 為 `poe1` 或 `poe2`） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/trade-filters.json` |
+| **市集漢化介面字典** | 台服、國服官方介面字典（僅 `zh-TW`、`zh-CN`） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/locales/{locale}/trade-ui.json` |
+| **市集漢化 stats / static** | 台服、國服的 `/data/stats`、`/data/static`，只保留國際服存在的條目（`zh-TW`、`zh-CN`；`trade-stats` 另有 `en`） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/trade-stats.json` |
 
 ### 輿圖圖示範例清單（`poe2/icons/`）
 
@@ -105,7 +108,9 @@
 ```text
 output/
 ├── version.json                     # 當前 PoE 1 與 PoE 2 Patch 版本及建置時間戳
+├── locales/{zh-TW,zh-CN}/trade-ui.json  # 市集漢化介面字典（build:trade）
 ├── poe1/
+│   ├── locales/{locale}/trade-*.json  # 市集篩選翻譯與市集漢化 stats / static（build:trade）
 │   ├── mods-tiers.json              # PoE 1 詞綴階級與屬性緊湊總表（不含語系文字）
 │   ├── locales/{locale}/stats.json  # PoE 1 11 種官方語系詞綴文字分片
 │   └── unmatched-report.json        # PoE 1 未配對詞綴清單與診斷報告
@@ -115,6 +120,7 @@ output/
     ├── icons/                       # PoE 2 輿圖機制與外框透明 PNG 圖示（共 36 款）
     ├── mods-tiers.json              # PoE 2 詞綴階級與屬性緊湊總表（不含語系文字）
     ├── locales/{locale}/stats.json  # PoE 2 11 種官方語系詞綴文字分片
+    ├── locales/{locale}/trade-*.json  # 市集篩選翻譯與市集漢化 stats / static（build:trade）
     └── unmatched-report.json        # PoE 2 未配對詞綴清單與診斷報告
 ```
 
@@ -149,6 +155,10 @@ pnpm run build:atlas
 
 # 僅解析 PoE 1 與 PoE 2 裝備詞綴並對齊 Trade API 雜湊
 pnpm run build:mods
+
+# 僅從官方市集 API 產生篩選翻譯與市集漢化資料（不下載遊戲封包）
+# 可加 --locale <locale>（可重複）、--version poe1|poe2、--only filters|market、--skip-ui
+pnpm run build:trade
 
 # 完整重新建置別名
 pnpm run build:all

@@ -7,6 +7,14 @@ async function main() {
 
   const fs = await import('fs/promises');
   const outputDir = path.join(process.cwd(), 'output');
+
+  // 市集篩選翻譯與市集漢化只需要官方市集 API，不需要下載 GGG 遊戲封包
+  if (target === 'trade') {
+    const { buildTradeData, parseTradeArgs } = await import('./trade/build-trade-data.js');
+    console.log('\n=== 正在自官方市集 API 產生篩選翻譯與市集漢化資料 ===');
+    await buildTradeData(outputDir, parseTradeArgs(args.slice(1)));
+    return;
+  }
   const outputPoe1Dir = path.join(outputDir, 'poe1');
   const outputPoe2Dir = path.join(outputDir, 'poe2');
   const outputPoe2IconsDir = path.join(outputPoe2Dir, 'icons');
@@ -55,6 +63,12 @@ async function main() {
     console.log('\n=== 正在解析 PoE 1 傭兵資料 (poe1/mercenary.json) ===');
     loader1 ??= await PoeDataLoader.create('poe1');
     await buildMercenaryPoE1(loader1, outputPoe1Dir);
+  }
+
+  if (target === 'all') {
+    const { buildTradeData } = await import('./trade/build-trade-data.js');
+    console.log('\n=== 正在自官方市集 API 產生篩選翻譯與市集漢化資料 ===');
+    await buildTradeData(outputDir);
   }
 
   // 若尚未初始化 loader1 則在此處取得版本號
