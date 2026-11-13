@@ -31,6 +31,7 @@
 | 資料名稱 | 說明 | jsDelivr CDN 存取網址 |
 | :--- | :--- | :--- |
 | **版本中繼資訊** | PoE 1 與 PoE 2 最新 Patch 版本號與產出時間戳（供客戶端快速快取驗證） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/version.json` |
+| **發布清單** | 每個檔案的 sha256、大小、一致性批次與格式版本，以及各批次的建置時間與沿用上一版的語系 | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/manifest.json` |
 | **PoE 2 輿圖地圖** | 包含終局地圖、繁中/英文名稱、首領分類（青銅城塞/灰燼仲裁者等）、Pin 圖示關聯 | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/poe2/atlas_maps.json` |
 | **PoE 2 輿圖機制** | 輿圖機制名稱、效果描述、關聯圖示代號與特殊狀態（腐化、譫妄迷霧、已淨化、流浪商人等） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/poe2/atlas_content.json` |
 | **PoE 2 輿圖圖示** | 自遊戲 BC7 貼圖提取之透明 PNG 圖示（共 36 款，請替換圖示名稱） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/poe2/icons/{IconName}.png` |
@@ -226,9 +227,22 @@ pnpm run build:all
 ## 自動化部署與 CI/CD
 
 專案已配置 GitHub Actions 工作流（`.github/workflows/deploy.yml`）：
-- 當推送符合版號格式的 Tag（如 `v1.0.0`）或由維護者手動點擊 `workflow_dispatch` 時觸發。
-- 自動在 Ubuntu 容器中安裝 Node.js 與 pnpm、拉取最新官方封包建置全量資料，並將 `./output` 資料夾部署至 `gh-pages` 分支。
-- 部署完成後，全球 CDN（jsDelivr）將於數分鐘內同步最新版本內容。
+
+| 觸發                  | 建置目標                                                     |
+| --------------------- | ------------------------------------------------------------ |
+| 推送到 `main`         | `all`                                                        |
+| 每週一 03:00 UTC      | `trade`（市集篩選翻譯與市集漢化）                            |
+| 每天 02:00 UTC        | 比對官方 patch 與已發布的 `version.json`，不同時才建置 `mods` |
+| 手動 `workflow_dispatch` | 可選擇目標，以及是否允許檔案縮水                          |
+
+每次執行的流程：
+
+1. 取回目前 `gh-pages` 的內容到 `./output`（沿用上一版），並另存一份作為比對基準。只重建部分目標時，其他檔案維持上一版；某個語系抓取失敗時也沿用舊檔。
+2. 建置選定的目標，每個批次完成後記錄到 `output/batches.json`（建置時間、patch、沿用上一版的語系）。
+3. **驗證閘門**（`pnpm verify`）：必要檔案都存在、每個檔案都是有效 JSON、遊戲資料與傭兵資料批次一致，且與上一版相比沒有檔案消失或縮水超過 30%。任一項失敗就不部署。
+4. 產生 `output/manifest.json`（每個檔案的 sha256、大小、批次與格式版本），然後部署到 `gh-pages`。
+
+部署完成後，全球 CDN（jsDelivr）將於數分鐘內同步最新版本內容。用戶端應以 commit SHA 取用檔案（例如 `https://raw.githubusercontent.com/yehshune/poexd-data/<sha>/manifest.json`），避免分支快取延遲。
 
 ---
 

@@ -67,6 +67,18 @@ export class PoeDataLoader {
     gameVersion: 'poe1' | 'poe2' = 'poe2',
     cacheRoot = path.join(process.cwd(), '.cache')
   ): Promise<PoeDataLoader> {
+    const patchVersion = await PoeDataLoader.detectPatchVersion(gameVersion, cacheRoot);
+    const bundleLoader = await CachingBundleLoader.create(path.join(cacheRoot, 'bundles'), patchVersion);
+    const fileLoader = await BaseFileLoader.create(bundleLoader);
+
+    return new PoeDataLoader(gameVersion, patchVersion, fileLoader, cacheRoot);
+  }
+
+  /** 只偵測官方最新 patch 版號，不下載任何 bundle（供每日改版檢查使用） */
+  static async detectPatchVersion(
+    gameVersion: 'poe1' | 'poe2',
+    cacheRoot = path.join(process.cwd(), '.cache')
+  ): Promise<string> {
     const isValidPatch = (ver: unknown): ver is string =>
       typeof ver === 'string' &&
       ver.trim() !== '' &&
@@ -154,11 +166,7 @@ export class PoeDataLoader {
     }
 
     console.log(`[CDN] ${gameVersion} 當前版本: ${patchVersion}`);
-
-    const bundleLoader = await CachingBundleLoader.create(path.join(cacheRoot, 'bundles'), patchVersion);
-    const fileLoader = await BaseFileLoader.create(bundleLoader);
-
-    return new PoeDataLoader(gameVersion, patchVersion, fileLoader, cacheRoot);
+    return patchVersion;
   }
 
   async getSchema(): Promise<SchemaFile> {

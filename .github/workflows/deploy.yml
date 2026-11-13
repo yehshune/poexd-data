@@ -4,35 +4,127 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # 每週一 03:00 UTC：更新市集篩選翻譯與市集漢化
+    - cron: '0 3 * * 1'
+    # 每天 02:00 UTC：遊戲改版時才重建詞綴與傭兵資料
+    - cron: '0 2 * * *'
   workflow_dispatch:
+    inputs:
+      target:
+        description: 建置目標
+        type: choice
+        options: [all, mods, mercenary, atlas, trade]
+        default: all
+      allow_shrink:
+        description: 允許檔案縮水或消失（確認官方確實移除條目時才勾選）
+        type: boolean
+        default: false
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: deploy-gh-pages
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24
-          cache: 'pnpm'
+          cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      - name: Build game data
-        run: pnpm run build
+      - name: Test
+        run: pnpm test
+
+      # 先取回目前發布的內容：只重建部分目標時其他檔案不會被部署清掉，
+      # 語系抓取失敗時也能沿用上一版；同一份內容另存為驗證閘門的比對基準
+      - name: Restore previous publish
+        run: |
+          mkdir -p output .baseline
+          if git fetch --depth=1 origin gh-pages; then
+            git archive FETCH_HEAD | tar -x -C output
+            git archive FETCH_HEAD | tar -x -C .baseline
+          else
+            echo "::notice::gh-pages 尚不存在，從空目錄開始建置"
+          fi
+
+      - name: Decide target
+        id: plan
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+          INPUT_TARGET: ${{ inputs.target }}
+        run: |
+          case "$EVENT_NAME" in
+            workflow_dispatch) target="$INPUT_TARGET" ;;
+            schedule)
+              if [ "$SCHEDULE" = '0 3 * * 1' ]; then target=trade; else target=patch-check; fi
+              ;;
+            *) target=all ;;
+          esac
+          case "$target" in
+            all|mods|mercenary|atlas|trade|patch-check) ;;
+            *) echo "::error::未知的建置目標：$target"; exit 1 ;;
+          esac
+          echo "target=$target" >> "$GITHUB_OUTPUT"
+
+      - name: Check game patch
+        id: patch
+        if: steps.plan.outputs.target == 'patch-check'
+        run: pnpm check-patch
+
+      - name: Build
+        id: build
+        env:
+          TARGET: ${{ steps.plan.outputs.target }}
+          PATCH_CHANGED: ${{ steps.patch.outputs.changed }}
+        run: |
+          if [ "$TARGET" = patch-check ]; then
+            if [ "$PATCH_CHANGED" != true ]; then
+              echo "遊戲版本未變動，不需要重建"
+              echo "deploy=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            TARGET=mods
+          fi
+          pnpm exec tsx src/index.ts "$TARGET"
+          echo "deploy=true" >> "$GITHUB_OUTPUT"
+
+      - name: Verify
+        if: steps.build.outputs.deploy == 'true'
+        env:
+          ALLOW_SHRINK: ${{ inputs.allow_shrink }}
+        run: |
+          if [ "$ALLOW_SHRINK" = true ]; then
+            pnpm verify --baseline .baseline --allow-shrink
+          else
+            pnpm verify --baseline .baseline
+          fi
+
+      - name: Generate manifest
+        if: steps.build.outputs.deploy == 'true'
+        run: pnpm manifest
 
       - name: Deploy to GitHub Pages Branch
-        uses: JamesIves/github-pages-deploy-action@v4
+        if: steps.build.outputs.deploy == 'true'
+        uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4.9.0
         with:
           folder: output
           branch: gh-pages

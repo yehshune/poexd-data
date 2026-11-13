@@ -15,6 +15,17 @@ async function main() {
     await buildTradeData(outputDir, parseTradeArgs(args.slice(1)));
     return;
   }
+
+  // 發布相關子命令：manifest、驗證閘門、patch 比對
+  if (target === 'manifest' || target === 'verify' || target === 'check-patch') {
+    const cli = await import('./publish/cli.js');
+    if (target === 'manifest') await cli.runManifest(outputDir);
+    else if (target === 'verify') await cli.runVerify(outputDir, args.slice(1));
+    else await cli.runCheckPatch(outputDir);
+    return;
+  }
+
+  const { recordBatch } = await import('./publish/batch-log.js');
   const outputPoe1Dir = path.join(outputDir, 'poe1');
   const outputPoe2Dir = path.join(outputDir, 'poe2');
   const outputPoe2IconsDir = path.join(outputPoe2Dir, 'icons');
@@ -52,10 +63,12 @@ async function main() {
 
     console.log('\n=== [4/5] 正在直接解析官方 CDN PoE 2 詞綴 (poe2/mods-*.json) ===');
     await buildModsPoE2(loader2, outputPoe2Dir);
+    await recordBatch(outputDir, 'poe2/game', { patch: loader2.patchVersion });
 
     console.log('\n=== [5/5] 正在直接解析官方 CDN PoE 1 詞綴 (poe1/mods-*.json) ===');
     loader1 = await PoeDataLoader.create('poe1');
     await buildModsPoE1(loader1, outputPoe1Dir);
+    await recordBatch(outputDir, 'poe1/game', { patch: loader1.patchVersion });
   }
 
   if (target === 'mods' || target === 'mercenary' || target === 'all') {
@@ -63,12 +76,20 @@ async function main() {
     console.log('\n=== 正在解析 PoE 1 傭兵資料 (poe1/mercenary.json) ===');
     loader1 ??= await PoeDataLoader.create('poe1');
     await buildMercenaryPoE1(loader1, outputPoe1Dir);
+    await recordBatch(outputDir, 'poe1/mercenary', { patch: loader1.patchVersion });
   }
 
   if (target === 'all') {
     const { buildTradeData } = await import('./trade/build-trade-data.js');
     console.log('\n=== 正在自官方市集 API 產生篩選翻譯與市集漢化資料 ===');
-    await buildTradeData(outputDir);
+    try {
+      await buildTradeData(outputDir);
+    } catch (error) {
+      // 市集資料失敗時沿用 output/ 內的上一版，不擋住遊戲資料的更新；驗證閘門仍會檢查必要檔案
+      const message = error instanceof Error ? error.message : String(error);
+      console.warn(`[poexd-data] 市集資料未更新，沿用上一版：${message}`);
+      if (process.env.GITHUB_ACTIONS) console.log(`::warning title=市集資料未更新::${message.replace(/\r?\n/g, ' ')}`);
+    }
   }
 
   // 若尚未初始化 loader1 則在此處取得版本號

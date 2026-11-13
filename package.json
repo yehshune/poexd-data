@@ -14,6 +14,9 @@
     "build:mercenary": "tsx src/index.ts mercenary",
     "build:trade": "tsx src/index.ts trade",
     "build:all": "tsx src/index.ts all",
+    "manifest": "tsx src/index.ts manifest",
+    "verify": "tsx src/index.ts verify",
+    "check-patch": "tsx src/index.ts check-patch",
     "test": "node --import tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit"
   },

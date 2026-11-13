@@ -29,6 +29,8 @@ import {
   type StatsResponse,
   type TradeFiltersArtifact,
 } from './trade-filter-api.js';
+import { recordBatch } from '../publish/batch-log.js';
+import type { BatchId } from '../publish/catalog.js';
 import {
   MARKET_LOCALES,
   buildStaticArtifact,
@@ -92,6 +94,8 @@ export interface TradeBuildResult {
   writes: PendingWrite[];
   /** 抓取失敗、保留既有檔案的項目 */
   failures: string[];
+  /** 抓取失敗、沿用上一版的語系 */
+  stale: string[];
 }
 
 const log = (line: string) => process.stdout.write(`${line}\n`);
@@ -101,6 +105,7 @@ const log = (line: string) => process.stdout.write(`${line}\n`);
 async function buildFiltersForVersion(version: GameVersion, locales: string[]): Promise<TradeBuildResult> {
   const artifacts: Record<string, TradeFiltersArtifact> = {};
   const failures: string[] = [];
+  const stale: string[] = [];
   for (const locale of locales) {
     const url = buildFiltersUrl(locale, version);
     try {
@@ -118,6 +123,7 @@ async function buildFiltersForVersion(version: GameVersion, locales: string[]): 
         throw new Error(`${version} ${locale} 為必要語系，抓取失敗：${reason}（${url}）`);
       }
       failures.push(`filters ${version} ${locale}: ${reason}`);
+      stale.push(locale);
       log(`  filters ${version} ${locale.padEnd(5)} ✗ ${reason}，保留既有檔案`);
     }
     await sleep(REQUEST_INTERVAL_MS);
@@ -126,7 +132,7 @@ async function buildFiltersForVersion(version: GameVersion, locales: string[]): 
     path: join(version, 'locales', locale, 'trade-filters.json'),
     content: stableJson(artifact),
   }));
-  return { writes, failures };
+  return { writes, failures, stale };
 }
 
 // ── 市集漢化 ──────────────────────────────────────────────
@@ -134,6 +140,7 @@ async function buildFiltersForVersion(version: GameVersion, locales: string[]): 
 async function buildUiWrites(locales: string[]): Promise<TradeBuildResult> {
   const writes: PendingWrite[] = [];
   const failures: string[] = [];
+  const stale: string[] = [];
   for (const locale of locales) {
     try {
       const artifact = validateUiArtifact(
@@ -143,11 +150,12 @@ async function buildUiWrites(locales: string[]): Promise<TradeBuildResult> {
       log(`  ui      ${locale.padEnd(5)} ✓ ${Object.keys(artifact.strings).length} 個字串`);
     } catch (error) {
       failures.push(`ui ${locale}: ${describeError(error)}`);
+      stale.push(locale);
       log(`  ui      ${locale.padEnd(5)} ✗ ${describeError(error)}，保留既有檔案`);
     }
     await sleep(REQUEST_INTERVAL_MS);
   }
-  return { writes, failures };
+  return { writes, failures, stale };
 }
 
 async function fetchMarketEnglish(version: GameVersion) {
@@ -176,6 +184,7 @@ async function buildMarketForVersion(version: GameVersion, locales: string[]): P
     },
   ];
   const failures: string[] = [];
+  const stale: string[] = [];
   for (const locale of locales) {
     try {
       const statsResponse = await fetchJson<TradeDataResponse>(buildStatsUrl(locale, version), MARKET_TIMEOUT_MS);
@@ -203,11 +212,12 @@ async function buildMarketForVersion(version: GameVersion, locales: string[]): P
       );
     } catch (error) {
       failures.push(`market ${version} ${locale}: ${describeError(error)}`);
+      stale.push(locale);
       log(`  market  ${version} ${locale.padEnd(5)} ✗ ${describeError(error)}，保留既有檔案`);
     }
     await sleep(REQUEST_INTERVAL_MS);
   }
-  return { writes, failures };
+  return { writes, failures, stale };
 }
 
 // ── 寫入 ─────────────────────────────────────────────────
@@ -282,16 +292,23 @@ export async function buildTradeData(outputDir: string, options: TradeBuildOptio
   const parts = new Set(options.parts ?? ['filters', 'market']);
 
   // 篩選翻譯與市集漢化是互不相依的一致性批次：各自整批寫入，一批失敗不影響另一批
-  const batches: Array<{ name: string; run: () => Promise<TradeBuildResult[]> }> = [];
+  // records：整批寫入成功後要記錄的批次與其沿用上一版的語系
+  const batches: Array<{
+    name: string;
+    run: () => Promise<{ results: TradeBuildResult[]; records: Array<[BatchId, string[]]> }>;
+  }> = [];
   if (parts.has('filters')) {
     batches.push({
       name: 'filters',
       run: async () => {
         const results: TradeBuildResult[] = [];
+        const records: Array<[BatchId, string[]]> = [];
         for (const version of versions as GameVersion[]) {
-          results.push(await buildFiltersForVersion(version, filterLocales));
+          const result = await buildFiltersForVersion(version, filterLocales);
+          results.push(result);
+          records.push([`${version}/trade-filters`, result.stale]);
         }
-        return results;
+        return { results, records };
       },
     });
   }
@@ -304,7 +321,8 @@ export async function buildTradeData(outputDir: string, options: TradeBuildOptio
         for (const version of versions as GameVersion[]) {
           results.push(await buildMarketForVersion(version, marketLocales));
         }
-        return results;
+        const stale = [...new Set(results.flatMap((result) => result.stale))];
+        return { results, records: [['market', stale]] };
       },
     });
   }
@@ -314,9 +332,10 @@ export async function buildTradeData(outputDir: string, options: TradeBuildOptio
   const batchErrors: string[] = [];
   for (const batch of batches) {
     try {
-      const results = await batch.run();
+      const { results, records } = await batch.run();
       const batchWrites = results.flatMap((result) => result.writes);
       await commitWrites(outputDir, batchWrites);
+      for (const [id, staleLocales] of records) await recordBatch(outputDir, id, { staleLocales });
       writes.push(...batchWrites);
       failures.push(...results.flatMap((result) => result.failures));
     } catch (error) {
@@ -328,5 +347,5 @@ export async function buildTradeData(outputDir: string, options: TradeBuildOptio
   log(`[trade] 已更新 ${writes.length} 個檔案`);
   if (failures.length > 0) log(`[trade] 未更新（保留既有檔案）：\n  - ${failures.join('\n  - ')}`);
   if (batchErrors.length > 0) throw new Error(`[trade] 必要資料抓取失敗：${batchErrors.join('；')}`);
-  return { writes, failures };
+  return { writes, failures, stale: [] };
 }
