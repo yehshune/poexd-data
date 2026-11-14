@@ -33,11 +33,25 @@ import { mergeSingularVariants } from '../common/merge-singular-variants.js';
 import { buildClusterPassiveCountRecords, clusterSizeTypesFromModId } from './cluster-jewels.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
+/**
+ * 讀取 PoE 1 描述檔：3.30 起客戶端把 `metadata/statdescriptions/*.txt` 改名為 `.csd`（內容格式不變），
+ * 先找 `.csd`，舊版客戶端再退回 `.txt`。
+ */
+export async function getPoE1StatDescriptionFile(
+  getFile: (relPath: string) => Promise<Uint8Array | null>,
+  txtPath: string
+): Promise<Uint8Array | null> {
+  const csdPath = txtPath.replace(/\.txt$/, '.csd');
+  return (await getFile(csdPath)) ?? (await getFile(txtPath));
+}
+
 export async function buildModsPoE1(
   loader: PoeDataLoader,
   outputDir: string
 ) {
   await fs.mkdir(outputDir, { recursive: true });
+  const getStatDescFile = (relPath: string) =>
+    getPoE1StatDescriptionFile((p) => loader.getFile(p), relPath);
 
   console.log('[PoE 1 Mods] [1/4] 抓取官方 Trade API Filter 檢索表...');
   const tradeStats = await fetchTradeStats('poe1', loader.patchVersion);
@@ -50,15 +64,15 @@ export async function buildModsPoE1(
     tinctureDescBytes,
     heistDescBytes,
   ] = await Promise.all([
-    loader.getFile('metadata/statdescriptions/stat_descriptions.txt'),
-    loader.getFile('metadata/statdescriptions/map_stat_descriptions.txt'),
-    loader.getFile('metadata/statdescriptions/sanctum_relic_stat_descriptions.txt'),
-    loader.getFile('metadata/statdescriptions/tincture_stat_descriptions.txt'),
-    loader.getFile('metadata/statdescriptions/heist_equipment_stat_descriptions.txt'),
+    getStatDescFile('metadata/statdescriptions/stat_descriptions.txt'),
+    getStatDescFile('metadata/statdescriptions/map_stat_descriptions.txt'),
+    getStatDescFile('metadata/statdescriptions/sanctum_relic_stat_descriptions.txt'),
+    getStatDescFile('metadata/statdescriptions/tincture_stat_descriptions.txt'),
+    getStatDescFile('metadata/statdescriptions/heist_equipment_stat_descriptions.txt'),
   ]);
 
   if (!baseDescBytes) {
-    throw new Error('無法自官方 CDN 取得 stat_descriptions.txt');
+    throw new Error('無法自官方 CDN 取得 stat_descriptions（.csd / .txt）');
   }
 
   const toStr = (b: Uint8Array | null) =>
@@ -487,7 +501,7 @@ export async function buildModsPoE1(
 
   // 結果列詞綴的遊戲寫法：主描述檔之外再補市集也會用到的描述檔
   const extraIndexes = await loadStatDescriptionIndexes(
-    (relPath) => loader.getFile(relPath),
+    getStatDescFile,
     (text) => StatDescriptionIndex.parse(text),
     [
       'metadata/statdescriptions/atlas_stat_descriptions.txt',
