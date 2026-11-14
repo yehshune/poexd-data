@@ -957,7 +957,7 @@
     "desc": "",
     "translates": {
       "traditional chinese": {
-        "name": "Player Hideout",
+        "name": "玩家藏身處",
         "desc": ""
       }
     }
@@ -968,7 +968,7 @@
     "desc": "Complete all Player Hideout Modified Maps to receive a Reward",
     "translates": {
       "traditional chinese": {
-        "name": "Player Hideout Modifier",
+        "name": "玩家藏身處詞綴",
         "desc": "Complete all Player Hideout Modified Maps to receive a Reward"
       }
     }
