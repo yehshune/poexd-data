@@ -31,6 +31,7 @@ import { buildGearBaseIndex, resolveGearKeysByBases } from './gear-base-index.js
 import { decodeItBytes, resolveInheritedTags } from './item-inheritance.js';
 import { mergeSingularVariants } from '../common/merge-singular-variants.js';
 import { buildClusterPassiveCountRecords, clusterSizeTypesFromModId } from './cluster-jewels.js';
+import { buildVisceraModTypeIndex, VISCERA_ITEM_CLASS, type VisceraBase } from './viscera.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
 /**
@@ -139,12 +140,16 @@ export async function buildModsPoE1(
     influenceTagsByClass.set(classId, [...(influenceTagsByClass.get(classId) ?? []), tagName]);
   }
   const baseRecords: BaseRecord[] = [];
+  const visceraBases: VisceraBase[] = [];
   for (const item of baseItemsTable) {
     const classId = itemClassesMap.get(item.ItemClassesKey);
     const name = (item as any).Name as string | undefined;
     if (!classId || !name) continue;
     const tagKeys: number[] = (item as any).TagsKeys ?? (item as any).Tags ?? [];
     const ownTags = tagKeys.map((k) => tagsMap.get(k)).filter((t): t is string => !!t);
+    if (classId === VISCERA_ITEM_CLASS && item.Id) {
+      visceraBases.push({ id: String(item.Id), tags: ownTags });
+    }
     const parent = (item as any).InheritsFrom as string | undefined;
     const inherited = parent ? await resolveInheritedTags(parent, readIt, itCache) : [];
     baseRecords.push({
@@ -156,6 +161,7 @@ export async function buildModsPoE1(
   }
   const baseProfiles = buildPoE1BaseProfiles(baseRecords);
   const gearBaseIndex = buildGearBaseIndex(baseRecords);
+  const visceraModTypes = buildVisceraModTypeIndex(visceraBases);
   let gearFallbackCount = 0;
 
   // 1. 基底固有詞綴對應的裝備類別映射表 (BaseItemTypes.Implicit_ModsKeys)
@@ -340,6 +346,11 @@ export async function buildModsPoE1(
     // 藥劑附魔補全為所有藥劑類別
     if (types.length === 0 && (mod.GenerationType === 21 || mod.GenerationType === 22)) {
       types = ALL_POE1_FLASK_KEYS;
+    }
+
+    // 臟器詞綴沒有出現權重，依怪物名稱對應到臟器基底的部位
+    if (types.length === 0) {
+      types = visceraModTypes.resolve(String(mod.Id ?? '')) ?? types;
     }
 
     // 獵魔工藝勢技能 (Aspect Skills) 補全為全裝備部位

@@ -443,6 +443,7 @@ export const POE1_ITEM_CLASS_TO_GEAR_TYPES: Record<string, string[]> = {
   SanctumRelic: ['relic'],
   'Sanctum Relic': ['relic'],
   Relic: ['relic'],
+  Viscera: ['viscera'],
 };
 
 export function getPoE1ItemClassGearTypes(classId: string): string[] | undefined {

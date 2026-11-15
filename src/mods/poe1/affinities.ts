@@ -107,7 +107,9 @@ export function resolvePoE1Affinities(
   }
 
   // 3.2 次之由 Mod.Id 名稱判定 (兜底相容)
-  const idLower = (mod.Id || '').toLowerCase();
+  // 臟器詞綴的 ID 是怪物名稱（例如 Boneshaper、Elder），不代表勢力
+  const isVisceraMod = Boolean(mod.Id?.startsWith('VisceraMod'));
+  const idLower = isVisceraMod ? '' : (mod.Id || '').toLowerCase();
   if (idLower.includes('elder')) {
     affs.add('elder');
     isInfluence = true;
