@@ -1,10 +1,10 @@
 {
   "gameVersion": "poe1",
-  "generatedAt": "2026-11-14T05:04:15.537Z",
-  "totalTiers": 15286,
-  "matchedCount": 14859,
-  "unmatchedCount": 427,
-  "matchRate": "97.2%",
+  "generatedAt": "2026-11-15T04:00:52.897Z",
+  "totalTiers": 15726,
+  "matchedCount": 15303,
+  "unmatchedCount": 423,
+  "matchRate": "97.3%",
   "summaryByTemplate": [
     {
       "template": "增加#%此區域的輿圖掉落加成",
@@ -30,20 +30,6 @@
     },
     {
       "template": "#條前綴詞綴無法被變更",
-      "count": 6,
-      "affinities": [
-        "master"
-      ],
-      "sampleTypes": [
-        "dagger",
-        "rune-dagger",
-        "one-hand-axe",
-        "one-hand-mace",
-        "one-hand-sword"
-      ]
-    },
-    {
-      "template": "#條後綴詞綴無法被變更",
       "count": 6,
       "affinities": [
         "master"
@@ -1597,17 +1583,6 @@
       ]
     },
     {
-      "template": "你受到譫妄迷霧影響",
-      "count": 1,
-      "affinities": [
-        "essence",
-        "normal"
-      ],
-      "sampleTypes": [
-        "belt"
-      ]
-    },
-    {
       "template": "此區域可能含有裂痕",
       "count": 1,
       "affinities": [
@@ -2704,28 +2679,6 @@
       ]
     },
     {
-      "template": "使用弓暴擊時有 #% 機率使敵人中毒",
-      "count": 1,
-      "affinities": [
-        "veiled"
-      ],
-      "sampleTypes": [
-        "jewel",
-        "searching_eye_jewel"
-      ]
-    },
-    {
-      "template": "獲得等同於裝備匕首#%傷害的附加法術傷害\\n若裝備了兩把匕首，則各自貢獻等同於其60%傷害的附加傷害",
-      "count": 1,
-      "affinities": [
-        "veiled"
-      ],
-      "sampleTypes": [
-        "jewel",
-        "hypnotic_eye_jewel"
-      ]
-    },
-    {
       "template": "區域受到詛咒",
       "count": 1,
       "affinities": [
@@ -2806,6 +2759,17 @@
       ]
     },
     {
+      "template": "點燃時增加#%行動速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "viscera",
+        "viscera_leg"
+      ]
+    },
+    {
       "template": "浸泡在以#之名獻祭的#條生命中\\n範圍內的天賦臣服於#|||||塗抹時會生長成一個隨機的天賦點\\n生長的天賦點會被用於塗抹的油瓶類型影響",
       "count": 1,
       "affinities": [
@@ -2813,6 +2777,50 @@
       ],
       "sampleTypes": [
         "jewel"
+      ]
+    },
+    {
+      "template": "你的技能會於擊中時擊殺低於15%生命的不死敵人",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "viscera",
+        "viscera_head"
+      ]
+    },
+    {
+      "template": "擊中有#%機率會將敵方怪物的火焰抗性數值視為顛倒",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "viscera",
+        "viscera_arm"
+      ]
+    },
+    {
+      "template": "由召喚物所施加的傷害型異常狀態會加快#%造成傷害的速度",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "viscera",
+        "viscera_leg"
+      ]
+    },
+    {
+      "template": "你的擊中使敵人逃跑的機率同時有相同的機率會使敵人驚恐",
+      "count": 1,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "viscera",
+        "viscera_arm"
       ]
     }
   ],
@@ -3873,206 +3881,6 @@
       "template_zh": "#條前綴詞綴無法被變更",
       "key": "2 prefix modifiers cannot be changed",
       "key_zh": "2條前綴詞綴無法被變更",
-      "types": [
-        "ring",
-        "rings_minion",
-        "unset_ring",
-        "amulet",
-        "belt"
-      ],
-      "affinities": [
-        "master"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "DexMasterItemGenerationCannotChangeOneSuffixes",
-      "template": "# suffix modifier cannot be changed",
-      "template_zh": "#條後綴詞綴無法被變更",
-      "key": "1 suffix modifier cannot be changed",
-      "key_zh": "1條後綴詞綴無法被變更",
-      "types": [
-        "dagger",
-        "rune-dagger",
-        "one-hand-axe",
-        "one-hand-mace",
-        "one-hand-sword",
-        "claw",
-        "sceptre",
-        "thrusting-one-hand-sword",
-        "two-hand-axe",
-        "two-hand-mace",
-        "two-hand-sword",
-        "staff",
-        "warstaff",
-        "wand",
-        "wands_minion",
-        "bow"
-      ],
-      "affinities": [
-        "master"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "DexMasterItemGenerationCannotChangeOneSuffixesB",
-      "template": "# suffix modifier cannot be changed",
-      "template_zh": "#條後綴詞綴無法被變更",
-      "key": "1 suffix modifier cannot be changed",
-      "key_zh": "1條後綴詞綴無法被變更",
-      "types": [
-        "body-armour",
-        "body_armours_str",
-        "body_armours_dex",
-        "body_armours_int",
-        "body_armours_str_dex",
-        "body_armours_str_int",
-        "body_armours_dex_int",
-        "gloves",
-        "gloves_str",
-        "gloves_dex",
-        "gloves_int",
-        "gloves_str_dex",
-        "gloves_str_int",
-        "gloves_dex_int",
-        "gloves_ward",
-        "boots",
-        "boots_str",
-        "boots_dex",
-        "boots_int",
-        "boots_str_dex",
-        "boots_str_int",
-        "boots_dex_int",
-        "boots_ward",
-        "helmet",
-        "helmets_str",
-        "helmets_dex",
-        "helmets_int",
-        "helmets_str_dex",
-        "helmets_str_int",
-        "helmets_dex_int",
-        "helmets_ward",
-        "shield",
-        "shields_str",
-        "shields_dex",
-        "shields_int",
-        "shields_str_dex",
-        "shields_str_int",
-        "shields_dex_int",
-        "shields_minion",
-        "quiver"
-      ],
-      "affinities": [
-        "master"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "DexMasterItemGenerationCannotChangeOneSuffixesC",
-      "template": "# suffix modifier cannot be changed",
-      "template_zh": "#條後綴詞綴無法被變更",
-      "key": "1 suffix modifier cannot be changed",
-      "key_zh": "1條後綴詞綴無法被變更",
-      "types": [
-        "ring",
-        "rings_minion",
-        "unset_ring",
-        "amulet",
-        "belt"
-      ],
-      "affinities": [
-        "master"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "DexMasterItemGenerationCannotChangeTwoSuffixes",
-      "template": "# suffix modifiers cannot be changed",
-      "template_zh": "#條後綴詞綴無法被變更",
-      "key": "2 suffix modifiers cannot be changed",
-      "key_zh": "2條後綴詞綴無法被變更",
-      "types": [
-        "dagger",
-        "rune-dagger",
-        "one-hand-axe",
-        "one-hand-mace",
-        "one-hand-sword",
-        "claw",
-        "sceptre",
-        "thrusting-one-hand-sword",
-        "two-hand-axe",
-        "two-hand-mace",
-        "two-hand-sword",
-        "staff",
-        "warstaff",
-        "wand",
-        "wands_minion",
-        "bow"
-      ],
-      "affinities": [
-        "master"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "DexMasterItemGenerationCannotChangeTwoSuffixesB",
-      "template": "# suffix modifiers cannot be changed",
-      "template_zh": "#條後綴詞綴無法被變更",
-      "key": "2 suffix modifiers cannot be changed",
-      "key_zh": "2條後綴詞綴無法被變更",
-      "types": [
-        "body-armour",
-        "body_armours_str",
-        "body_armours_dex",
-        "body_armours_int",
-        "body_armours_str_dex",
-        "body_armours_str_int",
-        "body_armours_dex_int",
-        "gloves",
-        "gloves_str",
-        "gloves_dex",
-        "gloves_int",
-        "gloves_str_dex",
-        "gloves_str_int",
-        "gloves_dex_int",
-        "gloves_ward",
-        "boots",
-        "boots_str",
-        "boots_dex",
-        "boots_int",
-        "boots_str_dex",
-        "boots_str_int",
-        "boots_dex_int",
-        "boots_ward",
-        "helmet",
-        "helmets_str",
-        "helmets_dex",
-        "helmets_int",
-        "helmets_str_dex",
-        "helmets_str_int",
-        "helmets_dex_int",
-        "helmets_ward",
-        "shield",
-        "shields_str",
-        "shields_dex",
-        "shields_int",
-        "shields_str_dex",
-        "shields_str_int",
-        "shields_dex_int",
-        "shields_minion",
-        "quiver"
-      ],
-      "affinities": [
-        "master"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "DexMasterItemGenerationCannotChangeTwoSuffixesC",
-      "template": "# suffix modifiers cannot be changed",
-      "template_zh": "#條後綴詞綴無法被變更",
-      "key": "2 suffix modifiers cannot be changed",
-      "key_zh": "2條後綴詞綴無法被變更",
       "types": [
         "ring",
         "rings_minion",
@@ -5890,21 +5698,6 @@
         "normal"
       ],
       "level": "1"
-    },
-    {
-      "modId": "PlayerIsDeliriousEssence1",
-      "template": "you are affected by delirium fog",
-      "template_zh": "你受到譫妄迷霧影響",
-      "key": "you are affected by delirium fog",
-      "key_zh": "你受到譫妄迷霧影響",
-      "types": [
-        "belt"
-      ],
-      "affinities": [
-        "essence",
-        "normal"
-      ],
-      "level": "85"
     },
     {
       "modId": "MapBreachLeague",
@@ -8714,36 +8507,6 @@
       "level": "68"
     },
     {
-      "modId": "JunMasterVeiledAbyssBowPoisonOnCrit",
-      "template": "critical strikes with bows have a #% chance to poison the enemy",
-      "template_zh": "使用弓暴擊時有 #% 機率使敵人中毒",
-      "key": "critical strikes with bows have a 20% chance to poison the enemy",
-      "key_zh": "使用弓暴擊時有 20% 機率使敵人中毒",
-      "types": [
-        "jewel",
-        "searching_eye_jewel"
-      ],
-      "affinities": [
-        "veiled"
-      ],
-      "level": "68"
-    },
-    {
-      "modId": "JunMasterVeiledAbyssHypnoticDaggerDamageAsSpellDamage",
-      "template": "gain added spell damage equal to #% of damage of equipped dagger\\nif two daggers are equipped, each contributes 60% as much added damage",
-      "template_zh": "獲得等同於裝備匕首#%傷害的附加法術傷害\\n若裝備了兩把匕首，則各自貢獻等同於其60%傷害的附加傷害",
-      "key": "gain added spell damage equal to 20% of damage of equipped dagger\\nif two daggers are equipped, each contributes 60% as much added damage",
-      "key_zh": "獲得等同於裝備匕首20%傷害的附加法術傷害\\n若裝備了兩把匕首，則各自貢獻等同於其60%傷害的附加傷害",
-      "types": [
-        "jewel",
-        "hypnotic_eye_jewel"
-      ],
-      "affinities": [
-        "veiled"
-      ],
-      "level": "68"
-    },
-    {
       "modId": "MemoryLineCursed",
       "template": "area is cursed",
       "template_zh": "區域受到詛咒",
@@ -8968,6 +8731,21 @@
       "level": "1"
     },
     {
+      "modId": "VisceraModAidanHigh",
+      "template": "#% increased action speed while ignited",
+      "template_zh": "點燃時增加#%行動速度",
+      "key": "(5-6)% increased action speed while ignited",
+      "key_zh": "點燃時增加(5-6)%行動速度",
+      "types": [
+        "viscera",
+        "viscera_leg"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
       "modId": "BlightcoreDisplayMod",
       "template": "bathed in the blood of # sacrificed in the name of #\\npassives in radius are conquered by the #|||||grows four random passive skills when anointed\\npassive skills grown are influenced by oils used when anointing",
       "template_zh": "浸泡在以#之名獻祭的#條生命中\\n範圍內的天賦臣服於#|||||塗抹時會生長成一個隨機的天賦點\\n生長的天賦點會被用於塗抹的油瓶類型影響",
@@ -9031,6 +8809,66 @@
       "key_zh": "1 個附加的天賦為15027",
       "types": [
         "jewel"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "VisceraModRhysHigh",
+      "template": "kill undead enemies that have 15% or lower life when hit by your skills",
+      "template_zh": "你的技能會於擊中時擊殺低於15%生命的不死敵人",
+      "key": "kill undead enemies that have 15% or lower life when hit by your skills",
+      "key_zh": "你的技能會於擊中時擊殺低於15%生命的不死敵人",
+      "types": [
+        "viscera",
+        "viscera_head"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "VisceraModDishonouredQueenHigh",
+      "template": "hits have #% chance to treat enemy monster fire resistance values as inverted",
+      "template_zh": "擊中有#%機率會將敵方怪物的火焰抗性數值視為顛倒",
+      "key": "hits have (10-15)% chance to treat enemy monster fire resistance values as inverted",
+      "key_zh": "擊中有(10-15)%機率會將敵方怪物的火焰抗性數值視為顛倒",
+      "types": [
+        "viscera",
+        "viscera_arm"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "VisceraModPlagueRetchHigh",
+      "template": "damaging ailments inflicted by minions deal damage #% faster",
+      "template_zh": "由召喚物所施加的傷害型異常狀態會加快#%造成傷害的速度",
+      "key": "damaging ailments inflicted by minions deal damage (15-20)% faster",
+      "key_zh": "由召喚物所施加的傷害型異常狀態會加快(15-20)%造成傷害的速度",
+      "types": [
+        "viscera",
+        "viscera_leg"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "VisceraModEffigyofFearHigh",
+      "template": "your chance to cause monsters to flee on hit is also chance to terrify monsters on hit",
+      "template_zh": "你的擊中使敵人逃跑的機率同時有相同的機率會使敵人驚恐",
+      "key": "your chance to cause monsters to flee on hit is also chance to terrify monsters on hit",
+      "key_zh": "你的擊中使敵人逃跑的機率同時有相同的機率會使敵人驚恐",
+      "types": [
+        "viscera",
+        "viscera_arm"
       ],
       "affinities": [
         "normal"
