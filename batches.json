@@ -12,18 +12,18 @@
     "patch": "3.30.0.2.2"
   },
   "poe1/trade-filters": {
-    "builtAt": "2026-11-16T01:29:39.484Z",
+    "builtAt": "2026-11-16T10:40:13.153Z",
     "staleLocales": [
       "ko"
     ]
   },
   "poe2/trade-filters": {
-    "builtAt": "2026-11-16T01:29:39.485Z",
+    "builtAt": "2026-11-16T10:40:13.154Z",
     "staleLocales": [
       "ko"
     ]
   },
   "market": {
-    "builtAt": "2026-11-16T01:30:13.563Z"
+    "builtAt": "2026-11-16T10:40:44.331Z"
   }
 }
