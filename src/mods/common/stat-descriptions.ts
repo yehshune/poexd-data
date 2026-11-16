@@ -161,20 +161,27 @@ export function cleanMarkup(text: string, isNonAscii = false): string {
   return s.trim();
 }
 
+/**
+ * 描述檔的佔位符：`{0}`、`{0:d}`、`{0:+d}`，以及較少見的 `{}`、`{:d}`、`{:+d}`（不帶編號，
+ * 依出現順序取第 0、1… 個數值）、`{0:+}`（帶正負號）、`{0:-d}`（數值前固定加負號）。
+ */
+const RAW_PLACEHOLDER = /\{(\d*)(?::([+-]?)d?)?\}/g;
+
 export function normalizeLineFormat(
   format: string,
   negatedIndices: Set<number>,
   allStatsLen: number,
   paramOffset: number
 ): string {
-  return format.replace(/\{(\d+)(?::(\+d|d))?\}/g, (match, idxStr, fmt) => {
-    const i = parseInt(idxStr, 10);
+  let nextIndex = 0;
+  return format.replace(RAW_PLACEHOLDER, (match, idxStr: string, sign: string | undefined) => {
+    const i = idxStr === '' ? nextIndex++ : parseInt(idxStr, 10);
     if (i < 0 || i >= allStatsLen) return match;
     const p = paramOffset + i;
-    const neg = negatedIndices.has(i);
-    const signed = fmt === '+d';
-    if (signed) return neg ? `{${p}:+n}` : `{${p}:+d}`;
-    return neg ? `{${p}:n}` : `{${p}:d}`;
+    const kind = negatedIndices.has(i) ? 'n' : 'd';
+    if (sign === '+') return `{${p}:+${kind}}`;
+    if (sign === '-') return `-{${p}:${kind}}`;
+    return `{${p}:${kind}}`;
   });
 }
 

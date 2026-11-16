@@ -2,7 +2,8 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { StatDescriptionIndex } from '../src/mods/common/stat-descriptions.js';
 import { computeGggStatHash } from '../src/mods/common/murmurhash2.js';
-import { buildModLineVariants } from '../src/mods/common/mod-line-variants.js';
+import { buildModLineVariants, textSkeleton } from '../src/mods/common/mod-line-variants.js';
+import { normalizeLineFormat } from '../src/mods/common/stat-descriptions.js';
 
 const MAIN = `
 description
@@ -84,5 +85,56 @@ describe('buildModLineVariants', () => {
     assert.equal(zhTw['999'], undefined);
     const zhCn = buildModLineVariants(indexes, tradeHashes, 'zh-CN');
     assert.equal(zhCn[ATTR], undefined);
+  });
+
+  it('同一 hash 有多條規則時，選英文寫法與市集文字相符的那條', () => {
+    const tradeTexts = new Map([[ATTR, ['Shadowed #']]]);
+    const lines = buildModLineVariants(indexes, tradeHashes, 'zh-TW', tradeTexts);
+    assert.deepEqual(lines[ATTR], [['Shadowed {0:d}', '被覆蓋 {0:d}']]);
+    const unmatched = buildModLineVariants(indexes, tradeHashes, 'zh-TW', new Map([[ATTR, ['Other #']]]));
+    assert.equal(unmatched[ATTR].length, 2);
+  });
+
+  it('市集文字相符的規則在該語系不可用時，改用先出現的可用規則', () => {
+    const extra = StatDescriptionIndex.parse(`
+description
+\t1 local_attribute_requirements_+%
+\t1
+\t\t# "Extra {0}"
+\tlang "Simplified Chinese"
+\t1
+\t\t# "额外 {0}"
+`);
+    const lines = buildModLineVariants(
+      [...indexes, extra],
+      tradeHashes,
+      'zh-CN',
+      new Map([[ATTR, ['Shadowed #']]])
+    );
+    assert.deepEqual(lines[ATTR], [['Extra {0:d}', '额外 {0:d}']]);
+  });
+});
+
+describe('normalizeLineFormat', () => {
+  it('不帶編號的佔位符依出現順序編號，並套用取負', () => {
+    assert.equal(normalizeLineFormat('Travels {}% slower', new Set([0]), 1, 0), 'Travels {0:n}% slower');
+    assert.equal(normalizeLineFormat('{:+d} to {:d}', new Set(), 2, 0), '{0:+d} to {1:d}');
+    assert.equal(normalizeLineFormat('Adds {} to {}', new Set(), 2, 3), 'Adds {3:d} to {4:d}');
+  });
+
+  it('{0:+} 帶正負號，{0:-d} 數值前固定加負號，超出範圍的保留原文', () => {
+    assert.equal(normalizeLineFormat('{0:+}% to Resistance', new Set(), 1, 0), '{0:+d}% to Resistance');
+    assert.equal(normalizeLineFormat('applies {0:-d}% to Resistance', new Set(), 1, 0), 'applies -{0:d}% to Resistance');
+    assert.equal(normalizeLineFormat('{0} and {1}', new Set(), 1, 0), '{0:d} and {1}');
+  });
+});
+
+describe('textSkeleton', () => {
+  it('模板、市集文字與實際句子得到同一個骨架', () => {
+    const skeleton = textSkeleton('{0:+d}% to Item Rarity');
+    assert.equal(textSkeleton('+#% to Item Rarity'), skeleton);
+    assert.equal(textSkeleton('+22% to Item Rarity'), skeleton);
+    assert.equal(textSkeleton('#% increased Armour (Local)'), textSkeleton('{0:d}% increased Armour'));
+    assert.equal(textSkeleton('Line {0:d}\nNext'), textSkeleton('Line #\nNext'));
   });
 });
