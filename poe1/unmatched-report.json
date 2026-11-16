@@ -1,9 +1,9 @@
 {
   "gameVersion": "poe1",
-  "generatedAt": "2026-11-16T01:28:40.613Z",
+  "generatedAt": "2026-11-16T09:05:18.223Z",
   "totalTiers": 15726,
-  "matchedCount": 15313,
-  "unmatchedCount": 413,
+  "matchedCount": 15314,
+  "unmatchedCount": 412,
   "matchRate": "97.4%",
   "summaryByTemplate": [
     {
@@ -2752,17 +2752,6 @@
       ],
       "sampleTypes": [
         "jewel"
-      ]
-    },
-    {
-      "template": "你的技能會於擊中時擊殺低於15%生命的不死敵人",
-      "count": 1,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "viscera",
-        "viscera_head"
       ]
     }
   ],
@@ -8536,21 +8525,6 @@
       "key_zh": "1 個附加的天賦為15027",
       "types": [
         "jewel"
-      ],
-      "affinities": [
-        "normal"
-      ],
-      "level": "1"
-    },
-    {
-      "modId": "VisceraModRhysHigh",
-      "template": "kill undead enemies that have 15% or lower life when hit by your skills",
-      "template_zh": "你的技能會於擊中時擊殺低於15%生命的不死敵人",
-      "key": "kill undead enemies that have 15% or lower life when hit by your skills",
-      "key_zh": "你的技能會於擊中時擊殺低於15%生命的不死敵人",
-      "types": [
-        "viscera",
-        "viscera_head"
       ],
       "affinities": [
         "normal"
