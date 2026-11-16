@@ -1,4 +1,5 @@
 import * as fs from 'fs/promises';
+import * as path from 'path';
 import type { PoeDataLoader } from '../../cdn/loader.js';
 import { StatDescriptionIndex } from '../common/stat-descriptions.js';
 import {
@@ -10,6 +11,7 @@ import { loadAndWriteItemLexiconShards } from '../common/item-lexicon.js';
 import { fetchTradeStats } from '../common/trade-stats.js';
 import { buildTradeStatTemplates } from '../common/trade-stat-templates.js';
 import { loadStatDescriptionIndexes, writeModLineArtifacts } from '../common/mod-line-variants.js';
+import { loadStatTextIndexes, writeStatTextArtifacts } from '../common/stat-text.js';
 import { writeResultLabelArtifacts } from '../common/result-labels.js';
 import {
   resolvePoE2GearTypes,
@@ -598,13 +600,26 @@ export async function buildModsPoE2(
       'data/statdescriptions/tablet_stat_descriptions.csd',
     ]
   );
-  const modLineCounts = await writeModLineArtifacts(
+  const modLines = await writeModLineArtifacts(
     outputDir,
     [statIndex, ...extraIndexes],
     tradeStats.rawData,
     loader.patchVersion
   );
-  console.log(`  -> 寫入: 結果列詞綴變體 (locales/*/mod-lines.json, zh-TW ${modLineCounts['zh-TW']} / zh-CN ${modLineCounts['zh-CN']} 個代碼)`);
+  console.log(`  -> 寫入: 結果列詞綴變體 (locales/*/mod-lines.json, zh-TW ${modLines.counts['zh-TW']} / zh-CN ${modLines.counts['zh-CN']} 個代碼)`);
+
+  const statTextIndexes = await loadStatTextIndexes('poe2', (relPath) => loader.getFile(relPath));
+  const statText = await writeStatTextArtifacts(
+    outputDir,
+    'poe2',
+    statTextIndexes,
+    modLines.lines,
+    loader.patchVersion,
+    path.join(process.cwd(), 'data', 'stat-aliases', 'poe2.json')
+  );
+  console.log(`  -> 寫入: 完整 stat 文字目錄 (locales/*/stat-text.json, zh-TW ${statText.counts['zh-TW']} / zh-CN ${statText.counts['zh-CN']} 個代碼)`);
+  console.log(`  -> 寫入: 擴充用物品 stat 文字 (locales/*/stat-text-items.json, zh-TW ${statText.itemCounts['zh-TW']} / zh-CN ${statText.itemCounts['zh-CN']} 個代碼)`);
+  console.log(`  -> 寫入: 舊英文別名 (stat-aliases.json, 共 ${statText.aliasCount} 筆，本次新偵測 ${statText.rewordedCount} 筆)`);
 
   const resultLabelCounts = await writeResultLabelArtifacts(loader, 'poe2', outputDir, loader.patchVersion);
   console.log(`  -> 寫入: 結果列標籤 (locales/zh-TW/result-labels.json, ${resultLabelCounts['zh-TW'].labels} 個標籤 / ${resultLabelCounts['zh-TW'].templates} 個模板)`);

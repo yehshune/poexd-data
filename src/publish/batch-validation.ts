@@ -2,7 +2,7 @@
  * 發布前的批次一致性驗證。
  *
  * mods-tiers.json、locales/<locale>/stats.json 與 items.json 以索引互相對齊，必須整批來自同一次建置；
- * mod-lines.json、result-labels.json 也屬於同一批（patch 相同）。
+ * mod-lines.json、stat-text-items.json、result-labels.json 與 stat-aliases.json 也屬於同一批（patch 相同）。
  * mercenary.json 與 locales/<locale>/mercenary.json（僅 poe1）自成一批。
  *
  * 由 PoeXD-Extension 的 scripts/sync-game-data.mjs 搬移而來，規則不變。
@@ -18,7 +18,10 @@ export interface GameDataBatch {
   stats: Record<string, Json>;
   items: Record<string, Json>;
   modLines?: Record<string, Json>;
+  statText?: Record<string, Json>;
   resultLabels?: Record<string, Json>;
+  /** `<version>/stat-aliases.json`（與語系無關） */
+  statAliases?: Json;
 }
 
 export interface MercenaryBatch {
@@ -60,6 +63,7 @@ export function validateGameDataBatch(batch: GameDataBatch): string[] {
   }
   const localeShards: Array<[string, Record<string, Json> | undefined, (shard: Json) => boolean]> = [
     ['mod-lines.json', batch.modLines, (shard) => isObject(shard.lines)],
+    ['stat-text-items.json', batch.statText, (shard) => isObject(shard.lines)],
     ['result-labels.json', batch.resultLabels, (shard) => isObject(shard.labels) && Array.isArray(shard.templates)],
   ];
   for (const [file, shards, hasValidBody] of localeShards) {
@@ -70,6 +74,14 @@ export function validateGameDataBatch(batch: GameDataBatch): string[] {
       if (shard?.schemaVersion !== 1 || shard?.locale !== locale || !hasValidBody(shard)) {
         errors.push(`${file} (${locale}) 語系或格式不符`);
       }
+    }
+  }
+  if (batch.statAliases !== undefined && batch.statAliases !== null) {
+    if (batch.statAliases?.patch !== patch) {
+      errors.push(`stat-aliases.json patch ${batch.statAliases?.patch ?? '缺少'} ≠ ${patch}`);
+    }
+    if (batch.statAliases?.schemaVersion !== 1 || !isObject(batch.statAliases?.aliases)) {
+      errors.push('stat-aliases.json 格式不符');
     }
   }
   return errors;
@@ -118,11 +130,21 @@ export async function loadGameDataBatch(outputDir: string, version: string): Pro
   const versionDir = join(outputDir, version);
   const modsTiers = await readJsonIfExists(join(versionDir, 'mods-tiers.json'));
   if (!modsTiers) return null;
-  const batch: Required<GameDataBatch> = { modsTiers, stats: {}, items: {}, modLines: {}, resultLabels: {} };
-  const files: Array<[keyof Omit<GameDataBatch, 'modsTiers'>, string]> = [
+  const statAliases = await readJsonIfExists(join(versionDir, 'stat-aliases.json'));
+  const batch: GameDataBatch & Required<Omit<GameDataBatch, 'statAliases'>> = {
+    modsTiers,
+    stats: {},
+    items: {},
+    modLines: {},
+    statText: {},
+    resultLabels: {},
+    ...(statAliases ? { statAliases } : {}),
+  };
+  const files: Array<[keyof Omit<GameDataBatch, 'modsTiers' | 'statAliases'>, string]> = [
     ['stats', 'stats.json'],
     ['items', 'items.json'],
     ['modLines', 'mod-lines.json'],
+    ['statText', 'stat-text-items.json'],
     ['resultLabels', 'result-labels.json'],
   ];
   for (const locale of await listLocales(versionDir)) {

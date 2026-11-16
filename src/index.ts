@@ -25,6 +25,18 @@ async function main() {
     return;
   }
 
+  // 一次性回補舊英文別名（見 src/aliases/seed-pob-aliases.ts）
+  if (target === 'seed-aliases') {
+    const { PoeDataLoader } = await import('./cdn/loader.js');
+    const { seedPobAliases } = await import('./aliases/seed-pob-aliases.js');
+    for (const version of ['poe1', 'poe2'] as const) {
+      const loader = await PoeDataLoader.create(version);
+      const result = await seedPobAliases(version, loader, process.cwd());
+      console.log(`[seed-aliases] ${version}: 比對 ${result.versions} 個 PoB 版本，寫入 ${result.aliases} 筆別名`);
+    }
+    return;
+  }
+
   const { recordBatch } = await import('./publish/batch-log.js');
   const outputPoe1Dir = path.join(outputDir, 'poe1');
   const outputPoe2Dir = path.join(outputDir, 'poe2');

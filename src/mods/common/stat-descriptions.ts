@@ -293,6 +293,8 @@ function parseVariantLine(rawLine: string, isNonAscii: boolean, statCount: numbe
   };
 }
 
+const DESCRIPTION_HEADER = /^description(?:\s+\S+)?$/;
+
 export class StatDescriptionIndex {
   private rules: StatDescriptionRule[] = [];
   // statId -> rules that mention this statId
@@ -307,7 +309,8 @@ export class StatDescriptionIndex {
     let ruleIndex = 0;
     while (i < n) {
       const line = lines[i].trim();
-      if (line !== 'description') {
+      // `has_identifiers` 的描述檔（PoE 1 技能描述檔）寫成 `description <識別名稱>`
+      if (!DESCRIPTION_HEADER.test(line)) {
         i++;
         continue;
       }

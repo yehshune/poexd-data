@@ -17,6 +17,7 @@
     "manifest": "tsx src/index.ts manifest",
     "verify": "tsx src/index.ts verify",
     "check-patch": "tsx src/index.ts check-patch",
+    "seed:aliases": "tsx src/index.ts seed-aliases",
     "test": "node --import tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit"
   },

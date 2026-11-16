@@ -147,17 +147,25 @@ export async function loadStatDescriptionIndexes(
   return indexes;
 }
 
+export interface ModLineArtifacts {
+  counts: Record<ModLineLocale, number>;
+  /** 寫出的內容，供 stat-text-items.json 扣除重複句子 */
+  lines: Record<ModLineLocale, ModLineVariants>;
+}
+
 export async function writeModLineArtifacts(
   outputDir: string,
   indexes: readonly StatDescriptionIndex[],
   trade: TradeStatsResponse,
   patch: string
-): Promise<Record<ModLineLocale, number>> {
+): Promise<ModLineArtifacts> {
   const hashes = collectTradeHashes(trade);
   const tradeTexts = collectTradeTexts(trade);
   const counts = {} as Record<ModLineLocale, number>;
+  const written = {} as Record<ModLineLocale, ModLineVariants>;
   for (const locale of MOD_LINE_LOCALES) {
     const lines = buildModLineVariants(indexes, hashes, locale, tradeTexts);
+    written[locale] = lines;
     const localeDir = path.join(outputDir, 'locales', locale);
     await fs.mkdir(localeDir, { recursive: true });
     await fs.writeFile(
@@ -167,5 +175,5 @@ export async function writeModLineArtifacts(
     );
     counts[locale] = Object.keys(lines).length;
   }
-  return counts;
+  return { counts, lines: written };
 }

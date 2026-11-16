@@ -44,6 +44,9 @@
 | **市集篩選翻譯** | 各語系官方市集 `/data/filters` 的群組、欄位、選項與 pseudo 屬性文字（`{version}` 為 `poe1` 或 `poe2`） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/trade-filters.json` |
 | **市集漢化介面字典** | 台服、國服官方介面字典（僅 `zh-TW`、`zh-CN`） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/locales/{locale}/trade-ui.json` |
 | **市集漢化 stats / static** | 台服、國服的 `/data/stats`、`/data/static`，只保留國際服存在的條目（`zh-TW`、`zh-CN`；`trade-stats` 另有 `en`） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/trade-stats.json` |
+| **完整 stat 文字目錄** | 物品、天賦與技能描述檔的全部規則：stat hash →〔英文模板, 譯文模板〕（`zh-TW`、`zh-CN`），不限市集上有的 stat。不列入 manifest | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/stat-text.json` |
+| **物品 stat 文字** | PoeXD-Extension 用：只收物品詞綴描述檔、扣掉 `mod-lines.json` 已有的句子，格式同上 | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/stat-text-items.json` |
+| **舊英文別名** | GGG 改寫英文後，每個 stat hash 的〔舊英文模板, 現行英文模板〕，讓舊物品文字也能對到譯文（與語系無關） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/stat-aliases.json` |
 
 ### 輿圖圖示範例清單（`poe2/icons/`）
 
@@ -114,6 +117,9 @@ output/
 │   ├── locales/{locale}/trade-*.json  # 市集篩選翻譯與市集漢化 stats / static（build:trade）
 │   ├── mods-tiers.json              # PoE 1 詞綴階級與屬性緊湊總表（不含語系文字）
 │   ├── locales/{locale}/stats.json  # PoE 1 11 種官方語系詞綴文字分片
+│   ├── locales/{zh-TW,zh-CN}/stat-text.json  # 完整 stat 文字目錄（物品、天賦、技能；不列入 manifest）
+│   ├── locales/{zh-TW,zh-CN}/stat-text-items.json  # 擴充用：物品詞綴、扣掉 mod-lines 已有的句子
+│   ├── stat-aliases.json            # 舊英文別名
 │   └── unmatched-report.json        # PoE 1 未配對詞綴清單與診斷報告
 └── poe2/
     ├── atlas_maps.json              # PoE 2 輿圖地圖資料庫（含中英雙語、標籤、頭目）
@@ -121,6 +127,9 @@ output/
     ├── icons/                       # PoE 2 輿圖機制與外框透明 PNG 圖示（共 36 款）
     ├── mods-tiers.json              # PoE 2 詞綴階級與屬性緊湊總表（不含語系文字）
     ├── locales/{locale}/stats.json  # PoE 2 11 種官方語系詞綴文字分片
+    ├── locales/{zh-TW,zh-CN}/stat-text.json  # 完整 stat 文字目錄（物品、天賦、技能；不列入 manifest）
+    ├── locales/{zh-TW,zh-CN}/stat-text-items.json  # 擴充用：物品詞綴、扣掉 mod-lines 已有的句子
+    ├── stat-aliases.json            # 舊英文別名
     ├── locales/{locale}/trade-*.json  # 市集篩選翻譯與市集漢化 stats / static（build:trade）
     └── unmatched-report.json        # PoE 2 未配對詞綴清單與診斷報告
 ```
@@ -163,7 +172,15 @@ pnpm run build:trade
 
 # 完整重新建置別名
 pnpm run build:all
+
+# 一次性回補舊英文別名：比對 Path of Building Community 歷次匯出的描述檔，
+# 寫入 data/stat-aliases/{poe1,poe2}.json（需要時才手動執行；可設定 GITHUB_TOKEN）
+pnpm run seed:aliases
 ```
+
+舊英文別名有兩個來源：`data/stat-aliases/` 是一次性回補的結果（隨原始碼提交）；
+之後每次建置 `build:mods` 都會比對上一版發布的 `stat-text.json`，自動記下被改寫的英文，
+與回補檔、上一版的 `stat-aliases.json` 合併後發布。
 
 ---
 
@@ -249,4 +266,5 @@ pnpm run build:all
 ## 授權條款與版權聲明
 
 - **原始碼授權**：本專案採用 [MIT License](LICENSE) 條款開源。
+- **舊英文別名回補來源**：`data/stat-aliases/` 由 [Path of Building Community](https://github.com/PathOfBuildingCommunity/PathOfBuilding)（MIT License）歷次匯出的描述檔比對產生。
 - **遊戲版權歸屬**：《流亡黯道》（Path of Exile）與《流亡黯道 2》（Path of Exile 2）之所有遊戲資料、文字、貼圖與註冊商標均屬於 [Grinding Gear Games](https://www.grindinggear.com/)（GGG）所有。本專案為第三方獨立開源資料處理管線，與 Grinding Gear Games 無官方隸屬關係。
