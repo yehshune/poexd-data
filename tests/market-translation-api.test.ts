@@ -5,14 +5,16 @@ import {
   UI_DICTIONARY_SOURCES,
   buildStaticArtifact,
   buildStatsArtifact,
+  buildTradeItemsArtifact,
   buildUiArtifact,
   getUiDictionaryUrls,
   parseUiDictionary,
   validateStaticArtifact,
   validateStatsArtifact,
+  validateTradeItemsArtifact,
   validateUiArtifact,
 } from '../src/trade/market-translation-api.js';
-import { buildStaticUrl } from '../src/trade/trade-filter-api.js';
+import { buildItemsUrl, buildStaticUrl } from '../src/trade/trade-filter-api.js';
 
 describe('parseUiDictionary', () => {
   it('解析官方 translate.*.js 的 __ 指派並處理跳脫的單引號', () => {
@@ -308,5 +310,99 @@ describe('buildStaticArtifact / validateStaticArtifact', () => {
 
   it('static 端點網址', () => {
     assert.equal(buildStaticUrl('zh-CN', 'poe2'), 'https://poe.game.qq.com/api/trade2/data/static');
+    assert.equal(buildItemsUrl('zh-TW', 'poe1'), 'https://pathofexile.tw/api/trade/data/items');
+  });
+});
+
+describe('buildTradeItemsArtifact / validateTradeItemsArtifact', () => {
+  const english = {
+    result: [
+      {
+        id: 'map',
+        entries: [
+          { type: 'Mercenary Warrant' },
+          { type: 'Crit1HShadowPhysSpell', text: 'Mercenary Warrant (Bladecaster)', disc: 'mercenary_warrant' },
+          { type: '10021', text: 'Blighted Map (Strand)', disc: 'blighted' },
+        ],
+      },
+      {
+        id: 'currency',
+        entries: [{ type: '10021', text: 'Scrying Orb (Strand)', disc: 'scrying_orb' }],
+      },
+      {
+        id: 'accessory',
+        entries: [
+          {
+            type: 'Chain Belt',
+            name: 'Auxium',
+            text: 'Auxium Chain Belt (Legacy)',
+            disc: 'legacy',
+          },
+        ],
+      },
+      {
+        id: 'gem',
+        entries: [
+          { type: 'Animate Weapon', text: 'Animate Weapon of Ranged Arms', disc: 'alt_y' },
+        ],
+      },
+    ],
+  };
+
+  it('只收錄以跨服固定代碼為 type 的 disc 條目，並抽取 legacy 後綴', () => {
+    const chinese = {
+      result: [
+        {
+          id: 'map',
+          entries: [
+            { type: '傭兵契約書' },
+            { type: 'Crit1HShadowPhysSpell', text: '傭兵契約書 (刀刃術者)', disc: 'mercenary_warrant' },
+            { type: '10021', text: '凋落地圖 (致命岩灘)', disc: 'blighted' },
+          ],
+        },
+        {
+          id: 'currency',
+          entries: [{ type: '10021', text: '占卜寶珠 (致命岩灘)', disc: 'scrying_orb' }],
+        },
+        {
+          id: 'accessory',
+          entries: [
+            {
+              type: '扣鏈腰帶',
+              name: '奧術之符',
+              text: '奧術之符 扣鏈腰帶 (舊版)',
+              disc: 'legacy',
+            },
+          ],
+        },
+        {
+          id: 'gem',
+          entries: [{ type: '幻化武器', text: '幻化武器．遠程', disc: 'alt_y' }],
+        },
+      ],
+    };
+    const enArtifact = buildTradeItemsArtifact(english, { gameVersion: 'poe1', locale: 'en' });
+    const twArtifact = buildTradeItemsArtifact(chinese, {
+      gameVersion: 'poe1',
+      locale: 'zh-TW',
+      englishResponse: english,
+    });
+    assert.deepEqual(twArtifact.discEntries, {
+      mercenary_warrant: { Crit1HShadowPhysSpell: '傭兵契約書 (刀刃術者)' },
+      blighted: { '10021': '凋落地圖 (致命岩灘)' },
+      scrying_orb: { '10021': '占卜寶珠 (致命岩灘)' },
+    });
+    assert.deepEqual(twArtifact.discSuffixes, { legacy: ' (舊版)' });
+    assert.equal(validateTradeItemsArtifact(twArtifact, enArtifact), twArtifact);
+  });
+
+  it('中文回傳與 en 相同的 legacy 後綴時拒絕（視為網域回傳英文）', () => {
+    const enArtifact = buildTradeItemsArtifact(english, { gameVersion: 'poe2', locale: 'en' });
+    const fakeTw = buildTradeItemsArtifact(english, {
+      gameVersion: 'poe2',
+      locale: 'zh-TW',
+      englishResponse: english,
+    });
+    assert.throws(() => validateTradeItemsArtifact(fakeTw, enArtifact), /legacy/);
   });
 });

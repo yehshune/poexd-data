@@ -22,6 +22,7 @@ describe('batchOf', () => {
     assert.equal(batchOf('locales/zh-TW/trade-ui.json'), 'market');
     assert.equal(batchOf('poe1/locales/en/trade-stats.json'), 'market');
     assert.equal(batchOf('poe2/locales/zh-CN/trade-static.json'), 'market');
+    assert.equal(batchOf('poe1/locales/zh-TW/trade-items.json'), 'market');
   });
 
   it('accepts Windows separators', () => {

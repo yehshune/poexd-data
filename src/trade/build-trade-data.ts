@@ -6,6 +6,7 @@
  * - locales/<locale>/trade-ui.json                  市集漢化介面字典（zh-TW、zh-CN）
  * - <version>/locales/<locale>/trade-stats.json     市集漢化 stats（zh-TW、zh-CN，另有 en）
  * - <version>/locales/<locale>/trade-static.json    市集漢化 static（zh-TW、zh-CN）
+ * - <version>/locales/<locale>/trade-items.json     市集漢化 items 的 disc 條目與後綴（zh-TW、zh-CN）
  *
  * en 必須成功（執行期後備語系），否則整批不寫入；其他語系失敗時保留 output/ 內既有檔案並列在摘要。
  * 全部抓取與驗證完成後才寫入：先寫暫存檔，全部成功才逐一改名，避免留下半套資料。
@@ -18,6 +19,7 @@ import {
   REQUIRED_LOCALES,
   buildArtifactFromApi,
   buildFiltersUrl,
+  buildItemsUrl,
   buildStaticUrl,
   buildStatsUrl,
   isGameVersion,
@@ -35,11 +37,13 @@ import {
   MARKET_LOCALES,
   buildStaticArtifact,
   buildStatsArtifact,
+  buildTradeItemsArtifact,
   buildUiArtifact,
   getUiDictionaryUrls,
   isMarketLocale,
   validateStaticArtifact,
   validateStatsArtifact,
+  validateTradeItemsArtifact,
   validateUiArtifact,
   type TradeDataResponse,
 } from './market-translation-api.js';
@@ -164,11 +168,15 @@ async function fetchMarketEnglish(version: GameVersion) {
     await sleep(REQUEST_INTERVAL_MS);
     const staticResponse = await fetchJson<TradeDataResponse>(buildStaticUrl('en', version), MARKET_TIMEOUT_MS);
     await sleep(REQUEST_INTERVAL_MS);
+    const itemsResponse = await fetchJson<TradeDataResponse>(buildItemsUrl('en', version), MARKET_TIMEOUT_MS);
+    await sleep(REQUEST_INTERVAL_MS);
     return {
       statsResponse,
       staticResponse,
+      itemsResponse,
       statsArtifact: buildStatsArtifact(statsResponse, { gameVersion: version, locale: 'en' }),
       staticArtifact: buildStaticArtifact(staticResponse, { gameVersion: version, locale: 'en' }),
+      itemsArtifact: buildTradeItemsArtifact(itemsResponse, { gameVersion: version, locale: 'en' }),
     };
   } catch (error) {
     throw new Error(`${version} en 為必要語系，抓取失敗：${describeError(error)}`);
@@ -190,6 +198,8 @@ async function buildMarketForVersion(version: GameVersion, locales: string[]): P
       const statsResponse = await fetchJson<TradeDataResponse>(buildStatsUrl(locale, version), MARKET_TIMEOUT_MS);
       await sleep(REQUEST_INTERVAL_MS);
       const staticResponse = await fetchJson<TradeDataResponse>(buildStaticUrl(locale, version), MARKET_TIMEOUT_MS);
+      await sleep(REQUEST_INTERVAL_MS);
+      const itemsResponse = await fetchJson<TradeDataResponse>(buildItemsUrl(locale, version), MARKET_TIMEOUT_MS);
       const options = { gameVersion: version, locale };
       const stats = validateStatsArtifact(
         buildStatsArtifact(statsResponse, { ...options, englishResponse: english.statsResponse }),
@@ -199,16 +209,22 @@ async function buildMarketForVersion(version: GameVersion, locales: string[]): P
         buildStaticArtifact(staticResponse, { ...options, englishResponse: english.staticResponse }),
         english.staticArtifact,
       );
+      const tradeItems = validateTradeItemsArtifact(
+        buildTradeItemsArtifact(itemsResponse, { ...options, englishResponse: english.itemsResponse }),
+        english.itemsArtifact,
+      );
       const dir = join(version, 'locales', locale);
       writes.push(
         { path: join(dir, 'trade-stats.json'), content: compactJson(stats) },
         { path: join(dir, 'trade-static.json'), content: compactJson(statics) },
+        { path: join(dir, 'trade-items.json'), content: compactJson(tradeItems) },
       );
       const covered = Object.keys(stats.stats).length;
       const total = Object.keys(english.statsArtifact.stats).length;
       const staticCount = Object.values(statics.entries).reduce((sum, group) => sum + Object.keys(group).length, 0);
+      const discCount = Object.values(tradeItems.discEntries).reduce((sum, group) => sum + Object.keys(group).length, 0);
       log(
-        `  market  ${version} ${locale.padEnd(5)} ✓ stats ${covered}/${total}（${Math.round((covered / total) * 100)}%）、static ${staticCount} 筆`,
+        `  market  ${version} ${locale.padEnd(5)} ✓ stats ${covered}/${total}（${Math.round((covered / total) * 100)}%）、static ${staticCount} 筆、items ${discCount} 筆`,
       );
     } catch (error) {
       failures.push(`market ${version} ${locale}: ${describeError(error)}`);

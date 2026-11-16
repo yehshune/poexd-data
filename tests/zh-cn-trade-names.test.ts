@@ -63,6 +63,39 @@ describe('zh-CN item names from Tencent trade data', () => {
     assert.equal(names.size, 0);
   });
 
+  it('aligns transfigured gems (alt_x/y/z) by text rather than overwriting the base gem', () => {
+    const names = alignTradeItemNames({
+      international: {
+        result: [
+          {
+            id: 'gem',
+            entries: [
+              { type: 'Animate Weapon' },
+              { type: 'Animate Weapon', text: 'Animate Weapon of Ranged Arms', disc: 'alt_y' },
+            ],
+          },
+        ],
+      },
+      tencent: {
+        result: [
+          {
+            id: 'gem',
+            entries: [
+              { type: '幻化武器' },
+              { type: '幻化武器', text: '远程之幻化武器', disc: 'alt_y' },
+            ],
+          },
+        ],
+      },
+      englishToZhTw: new Map([
+        ['animate weapon', '幻化武器'],
+        ['animate weapon of ranged arms', '幻化武器．遠程'],
+      ]),
+    });
+    assert.equal(names.get('animate weapon'), '幻化武器');
+    assert.equal(names.get('animate weapon of ranged arms'), '远程之幻化武器');
+  });
+
   it('overlays Tencent names onto the zh-CN shard without mutating input and keeps English fallback', () => {
     const items = (list: string[]): LocaleItemsShard => ({ items: list });
     const base = Object.fromEntries(

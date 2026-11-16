@@ -64,6 +64,9 @@ export const buildStatsUrl = (locale: string, gameVersion: string) =>
 export const buildStaticUrl = (locale: string, gameVersion: string) =>
   buildDataUrl(locale, gameVersion, 'static');
 
+export const buildItemsUrl = (locale: string, gameVersion: string) =>
+  buildDataUrl(locale, gameVersion, 'items');
+
 const cleanText = (text: unknown): string =>
   typeof text === 'string' ? text.split('​')[0].replace(/\s+/g, ' ').trim() : '';
 

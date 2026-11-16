@@ -30,7 +30,7 @@ const RULES: Array<{ pattern: RegExp; batch: (match: RegExpExecArray) => BatchId
   },
   { pattern: new RegExp(`^locales/${LOCALE}/trade-ui\\.json$`), batch: () => 'market' },
   {
-    pattern: new RegExp(`^${VERSION}/locales/${LOCALE}/trade-(?:stats|static)\\.json$`),
+    pattern: new RegExp(`^${VERSION}/locales/${LOCALE}/trade-(?:stats|static|items)\\.json$`),
     batch: () => 'market',
   },
 ];

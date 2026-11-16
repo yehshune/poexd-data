@@ -2,7 +2,7 @@
  * 市集漢化（PoeXD-Extension ADR-0012）的資料產物：從台服、國服官方來源產生國際服頁面要替換的中文。
  *
  * - 介面字串：官方 `translate.zh_TW.js` / `translate.zh_CN.js`（全域 `__` 字典），只當資料解析、不 eval。
- * - stats / static：各服 `/api/{trade,trade2}/data/{stats,static}`，以 API 的 id 對接，不做位置對位。
+ * - stats / static / items：各服 `/api/{trade,trade2}/data/{stats,static,items}`，以 API 的 id 或 (disc, type) 對接，不做位置對位。
  *
  * 中文產物只保留國際服（en）存在的條目：執行期只會替換國際服回應裡的條目。
  *
@@ -363,6 +363,126 @@ export const validateStaticArtifact = (artifact: StaticArtifact, englishArtifact
       .filter(([key]) => englishTexts.has(key))
       .map(([key, text]): TextPair => [text, englishTexts.get(key)]);
     assertNotEnglish(artifact, pairs);
+  }
+  return artifact;
+};
+
+// ── items ────────────────────────────────────────────────
+
+export interface TradeItemsArtifact {
+  schemaVersion: number;
+  gameVersion: string;
+  locale: string;
+  source: string | undefined;
+  /** `disc` 群組中以跨服一致代碼為 `type` 的譯文（如 mercenary_warrant、scrying_orb、blighted、uberblighted、chart） */
+  discEntries: Record<string, Record<string, string>>;
+  /** `disc` 條目的後綴詞（如 `legacy` → `" (舊版)"` / `"（遗产）"`） */
+  discSuffixes: Record<string, string>;
+}
+
+const collectDiscItemData = (response: TradeDataResponse, label: string) => {
+  const byDisc = new Map<string, Array<{ type: string; text: string }>>();
+  const suffixCounts = new Map<string, Map<string, number>>();
+  for (const group of requireResult(response, label)) {
+    for (const entry of group.entries ?? []) {
+      const disc = textOf(entry?.disc);
+      const type = textOf(entry?.type);
+      const text = textOf(entry?.text);
+      if (!disc || !type || !text) continue;
+      const list = byDisc.get(disc) ?? [];
+      list.push({ type, text });
+      byDisc.set(disc, list);
+
+      const name = textOf(entry?.name);
+      if (name) {
+        const prefix = `${name} ${type}`;
+        if (text.startsWith(prefix) && text.length > prefix.length) {
+          const suffix = text.slice(prefix.length);
+          const counts = suffixCounts.get(disc) ?? new Map<string, number>();
+          counts.set(suffix, (counts.get(suffix) ?? 0) + 1);
+          suffixCounts.set(disc, counts);
+        }
+      }
+    }
+  }
+  const discSuffixes: Record<string, string> = {};
+  for (const [disc, counts] of suffixCounts) {
+    let bestSuffix = '';
+    let bestCount = 0;
+    for (const [suffix, count] of counts) {
+      if (count > bestCount) {
+        bestSuffix = suffix;
+        bestCount = count;
+      }
+    }
+    if (bestSuffix) discSuffixes[disc] = bestSuffix;
+  }
+  return { byDisc, discSuffixes };
+};
+
+/**
+ * items API → `{ discEntries, discSuffixes }`。
+ * 只收錄 `type` 跨服一致（非在地化名稱）的 `disc` 群組條目，以及 `legacy` 等 `disc` 的顯示後綴；
+ * 英文 `type` 與 `text` 相同的條目不當作跨服代碼。
+ */
+export const buildTradeItemsArtifact = (
+  response: TradeDataResponse,
+  { gameVersion, locale, englishResponse }: BuildOptions,
+): TradeItemsArtifact => {
+  const own = collectDiscItemData(response, 'items');
+  const english = englishResponse ? collectDiscItemData(englishResponse, 'items(en)') : null;
+
+  const discEntries: Record<string, Record<string, string>> = {};
+  for (const [disc, entries] of own.byDisc) {
+    if (!english) {
+      // en 基線保留有區別性 text 的條目，供驗證比對是否誤抓英文
+      const pairs = entries.filter((e) => e.text !== e.type).map((e) => [e.type, e.text] as const);
+      if (pairs.length > 0) discEntries[disc] = Object.fromEntries(pairs);
+      continue;
+    }
+    const enList = english.byDisc.get(disc);
+    if (!enList) continue;
+    const enByType = new Map(enList.map((e) => [e.type, e.text]));
+    const matched: Array<[string, string]> = [];
+    for (const entry of entries) {
+      const enText = enByType.get(entry.type);
+      if (enText && entry.text !== enText) matched.push([entry.type, entry.text]);
+    }
+    // 超過半數條目的 type 與英文相同且 text 已翻譯，代表該 disc 以固定代碼當作 type
+    if (matched.length > 0 && matched.length * 2 >= entries.length) {
+      discEntries[disc] = Object.fromEntries(matched);
+    }
+  }
+
+  return {
+    schemaVersion: MARKET_SCHEMA_VERSION,
+    gameVersion,
+    locale,
+    source: sourceOf(locale),
+    discEntries,
+    discSuffixes: own.discSuffixes,
+  };
+};
+
+const flattenDiscEntries = (discEntries: Record<string, Record<string, string>>): Array<[string, string]> =>
+  Object.entries(discEntries).flatMap(([disc, entries]) =>
+    Object.entries(entries).map(([type, text]): [string, string] => [`${disc}/${type}`, text]),
+  );
+
+export const validateTradeItemsArtifact = (
+  artifact: TradeItemsArtifact,
+  englishArtifact?: TradeItemsArtifact,
+): TradeItemsArtifact => {
+  if (englishArtifact && artifact.locale !== 'en') {
+    const englishTexts = new Map(flattenDiscEntries(englishArtifact.discEntries));
+    const pairs = flattenDiscEntries(artifact.discEntries)
+      .filter(([key]) => englishTexts.has(key))
+      .map(([key, text]): TextPair => [text, englishTexts.get(key)]);
+    assertNotEnglish(artifact, pairs);
+    const enLegacy = englishArtifact.discSuffixes.legacy;
+    if (enLegacy && (!artifact.discSuffixes.legacy || artifact.discSuffixes.legacy === enLegacy)) {
+      throw new Error(`${artifact.locale} trade-items 缺少有效的 legacy 後綴（網域可能回傳英文）`);
+    }
   }
   return artifact;
 };

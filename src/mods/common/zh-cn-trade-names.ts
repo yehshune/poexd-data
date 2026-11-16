@@ -77,7 +77,11 @@ export function diceSimilarity(a: string, b: string): number {
   return (2 * shared) / (ga.size + gb.size);
 }
 
-const entryLabel = (entry: TradeItemEntry): string => entry.name ?? entry.type;
+/** 變異寶石（alt_x/y/z）的 `type` 是基礎寶石名，完整名稱在 `text` */
+const ALT_GEM_DISCS = new Set(['alt_x', 'alt_y', 'alt_z']);
+
+const entryLabel = (entry: TradeItemEntry): string =>
+  entry.name ?? (entry.disc && ALT_GEM_DISCS.has(entry.disc) && entry.text ? entry.text : entry.type);
 
 const isUnique = (entry: TradeItemEntry): boolean => entry.flags?.unique === true;
 
