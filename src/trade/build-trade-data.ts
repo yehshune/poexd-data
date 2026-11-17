@@ -47,6 +47,7 @@ import {
   validateUiArtifact,
   type TradeDataResponse,
 } from './market-translation-api.js';
+import { fillPassiveNodeStats, loadStatTemplates } from './passive-node-stats.js';
 
 const REQUEST_INTERVAL_MS = 1000;
 const FILTERS_TIMEOUT_MS = 20000;
@@ -183,7 +184,11 @@ async function fetchMarketEnglish(version: GameVersion) {
   }
 }
 
-async function buildMarketForVersion(version: GameVersion, locales: string[]): Promise<TradeBuildResult> {
+async function buildMarketForVersion(
+  version: GameVersion,
+  locales: string[],
+  outputDir: string,
+): Promise<TradeBuildResult> {
   const english = await fetchMarketEnglish(version);
   const writes: PendingWrite[] = [
     {
@@ -201,10 +206,13 @@ async function buildMarketForVersion(version: GameVersion, locales: string[]): P
       await sleep(REQUEST_INTERVAL_MS);
       const itemsResponse = await fetchJson<TradeDataResponse>(buildItemsUrl(locale, version), MARKET_TIMEOUT_MS);
       const options = { gameVersion: version, locale };
-      const stats = validateStatsArtifact(
-        buildStatsArtifact(statsResponse, { ...options, englishResponse: english.statsResponse }),
-        english.statsArtifact,
-      );
+      const builtStats = buildStatsArtifact(statsResponse, { ...options, englishResponse: english.statsResponse });
+      // 該服市集沒收的天賦節點 stat，用同節點的塗油譯名與遊戲描述檔句型補回（見 passive-node-stats.ts）
+      const templates = await loadStatTemplates(outputDir, version, locale);
+      const derived = templates
+        ? fillPassiveNodeStats(builtStats.stats, Object.keys(english.statsArtifact.stats), templates)
+        : { stats: builtStats.stats, filled: 0 };
+      const stats = validateStatsArtifact({ ...builtStats, stats: derived.stats }, english.statsArtifact);
       const statics = validateStaticArtifact(
         buildStaticArtifact(staticResponse, { ...options, englishResponse: english.staticResponse }),
         english.staticArtifact,
@@ -224,7 +232,7 @@ async function buildMarketForVersion(version: GameVersion, locales: string[]): P
       const staticCount = Object.values(statics.entries).reduce((sum, group) => sum + Object.keys(group).length, 0);
       const discCount = Object.values(tradeItems.discEntries).reduce((sum, group) => sum + Object.keys(group).length, 0);
       log(
-        `  market  ${version} ${locale.padEnd(5)} ✓ stats ${covered}/${total}（${Math.round((covered / total) * 100)}%）、static ${staticCount} 筆、items ${discCount} 筆`,
+        `  market  ${version} ${locale.padEnd(5)} ✓ stats ${covered}/${total}（${Math.round((covered / total) * 100)}%）、static ${staticCount} 筆、items ${discCount} 筆${derived.filled ? `（天賦節點補 ${derived.filled} 筆）` : ''}${templates ? '' : '（無 stat-text.json，未補天賦節點）'}`,
       );
     } catch (error) {
       failures.push(`market ${version} ${locale}: ${describeError(error)}`);
@@ -335,7 +343,7 @@ export async function buildTradeData(outputDir: string, options: TradeBuildOptio
         const results: TradeBuildResult[] = [];
         if (!options.skipUi) results.push(await buildUiWrites(marketLocales));
         for (const version of versions as GameVersion[]) {
-          results.push(await buildMarketForVersion(version, marketLocales));
+          results.push(await buildMarketForVersion(version, marketLocales, outputDir));
         }
         const stale = [...new Set(results.flatMap((result) => result.stale))];
         return { results, records: [['market', stale]] };
