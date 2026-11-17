@@ -46,6 +46,8 @@
 | **市集漢化 stats / static** | 台服、國服的 `/data/stats`、`/data/static`，只保留國際服存在的條目（`zh-TW`、`zh-CN`；`trade-stats` 另有 `en`） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/trade-stats.json` |
 | **完整 stat 文字目錄** | 物品、天賦與技能描述檔的全部規則：stat hash →〔英文模板, 譯文模板〕（`zh-TW`、`zh-CN`），不限市集上有的 stat。不列入 manifest | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/stat-text.json` |
 | **物品 stat 文字** | PoeXD-Extension 用：只收物品詞綴描述檔、扣掉 `mod-lines.json` 已有的句子，格式同上 | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/stat-text-items.json` |
+| **天賦 stat 文字** | PoeXD-Extension 用（pobb.in 天賦樹）：只收天賦描述檔、扣掉 `mod-lines.json` 與 `stat-text-items.json` 已有的句子，格式同上 | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/{locale}/stat-text-passives.json` |
+| **天賦名稱表** | PoeXD-Extension 用（pobb.in 天賦樹）：英文天賦名 → 譯名，來自遊戲資料表 `PassiveSkills`（不含輿圖天賦）、`Ascendancy` 與 `AlternatePassiveSkills`（僅 PoE 1）；同名異譯者不收。只有 `zh-TW`（官方 CDN 沒有簡中資料表） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/locales/zh-TW/passive-names.json` |
 | **舊英文別名** | GGG 改寫英文後，每個 stat hash 的〔舊英文模板, 現行英文模板〕，讓舊物品文字也能對到譯文（與語系無關） | `https://cdn.jsdelivr.net/gh/yehshune/poexd-data@gh-pages/{version}/stat-aliases.json` |
 
 ### 輿圖圖示範例清單（`poe2/icons/`）
@@ -119,6 +121,8 @@ output/
 │   ├── locales/{locale}/stats.json  # PoE 1 11 種官方語系詞綴文字分片
 │   ├── locales/{zh-TW,zh-CN}/stat-text.json  # 完整 stat 文字目錄（物品、天賦、技能；不列入 manifest）
 │   ├── locales/{zh-TW,zh-CN}/stat-text-items.json  # 擴充用：物品詞綴、扣掉 mod-lines 已有的句子
+│   ├── locales/{zh-TW,zh-CN}/stat-text-passives.json  # 擴充用：天賦描述、扣掉 mod-lines 與 stat-text-items 已有的句子
+│   ├── locales/zh-TW/passive-names.json  # 擴充用：天賦名稱表
 │   ├── stat-aliases.json            # 舊英文別名
 │   └── unmatched-report.json        # PoE 1 未配對詞綴清單與診斷報告
 └── poe2/
@@ -129,6 +133,8 @@ output/
     ├── locales/{locale}/stats.json  # PoE 2 11 種官方語系詞綴文字分片
     ├── locales/{zh-TW,zh-CN}/stat-text.json  # 完整 stat 文字目錄（物品、天賦、技能；不列入 manifest）
     ├── locales/{zh-TW,zh-CN}/stat-text-items.json  # 擴充用：物品詞綴、扣掉 mod-lines 已有的句子
+    ├── locales/{zh-TW,zh-CN}/stat-text-passives.json  # 擴充用：天賦描述、扣掉 mod-lines 與 stat-text-items 已有的句子
+    ├── locales/zh-TW/passive-names.json  # 擴充用：天賦名稱表
     ├── stat-aliases.json            # 舊英文別名
     ├── locales/{locale}/trade-*.json  # 市集篩選翻譯與市集漢化 stats / static（build:trade）
     └── unmatched-report.json        # PoE 2 未配對詞綴清單與診斷報告

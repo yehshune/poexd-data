@@ -2,7 +2,8 @@
  * 發布前的批次一致性驗證。
  *
  * mods-tiers.json、locales/<locale>/stats.json 與 items.json 以索引互相對齊，必須整批來自同一次建置；
- * mod-lines.json、stat-text-items.json、result-labels.json 與 stat-aliases.json 也屬於同一批（patch 相同）。
+ * mod-lines.json、stat-text-items.json、stat-text-passives.json、passive-names.json、result-labels.json 與
+ * stat-aliases.json 也屬於同一批（patch 相同）。
  * mercenary.json 與 locales/<locale>/mercenary.json（僅 poe1）自成一批。
  *
  * 由 PoeXD-Extension 的 scripts/sync-game-data.mjs 搬移而來，規則不變。
@@ -19,6 +20,8 @@ export interface GameDataBatch {
   items: Record<string, Json>;
   modLines?: Record<string, Json>;
   statText?: Record<string, Json>;
+  passiveStatText?: Record<string, Json>;
+  passiveNames?: Record<string, Json>;
   resultLabels?: Record<string, Json>;
   /** `<version>/stat-aliases.json`（與語系無關） */
   statAliases?: Json;
@@ -64,6 +67,8 @@ export function validateGameDataBatch(batch: GameDataBatch): string[] {
   const localeShards: Array<[string, Record<string, Json> | undefined, (shard: Json) => boolean]> = [
     ['mod-lines.json', batch.modLines, (shard) => isObject(shard.lines)],
     ['stat-text-items.json', batch.statText, (shard) => isObject(shard.lines)],
+    ['stat-text-passives.json', batch.passiveStatText, (shard) => isObject(shard.lines)],
+    ['passive-names.json', batch.passiveNames, (shard) => isObject(shard.names)],
     ['result-labels.json', batch.resultLabels, (shard) => isObject(shard.labels) && Array.isArray(shard.templates)],
   ];
   for (const [file, shards, hasValidBody] of localeShards) {
@@ -137,6 +142,8 @@ export async function loadGameDataBatch(outputDir: string, version: string): Pro
     items: {},
     modLines: {},
     statText: {},
+    passiveStatText: {},
+    passiveNames: {},
     resultLabels: {},
     ...(statAliases ? { statAliases } : {}),
   };
@@ -145,6 +152,8 @@ export async function loadGameDataBatch(outputDir: string, version: string): Pro
     ['items', 'items.json'],
     ['modLines', 'mod-lines.json'],
     ['statText', 'stat-text-items.json'],
+    ['passiveStatText', 'stat-text-passives.json'],
+    ['passiveNames', 'passive-names.json'],
     ['resultLabels', 'result-labels.json'],
   ];
   for (const locale of await listLocales(versionDir)) {

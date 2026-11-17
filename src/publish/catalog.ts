@@ -20,7 +20,7 @@ const RULES: Array<{ pattern: RegExp; batch: (match: RegExpExecArray) => BatchId
   { pattern: new RegExp(`^${VERSION}/mods-tiers\\.json$`), batch: (m) => `${m[1]}/game` as BatchId },
   { pattern: new RegExp(`^${VERSION}/stat-aliases\\.json$`), batch: (m) => `${m[1]}/game` as BatchId },
   {
-    pattern: new RegExp(`^${VERSION}/locales/${LOCALE}/(?:stats|items|mod-lines|stat-text-items|result-labels)\\.json$`),
+    pattern: new RegExp(`^${VERSION}/locales/${LOCALE}/(?:stats|items|mod-lines|stat-text-items|stat-text-passives|passive-names|result-labels)\\.json$`),
     batch: (m) => `${m[1]}/game` as BatchId,
   },
   { pattern: /^poe1\/mercenary\.json$/, batch: () => 'poe1/mercenary' },

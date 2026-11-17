@@ -191,6 +191,41 @@ describe('writeStatTextArtifacts：每次建置記錄改寫', () => {
     }
   });
 
+  it('stat-text-passives.json 只收天賦描述檔，扣掉 mod-lines 與 stat-text-items 已有的句子', async () => {
+    const dir = await mkdtemp(join(tmpdir(), 'stat-text-'));
+    const KEYSTONE = hashOf('keystone_chaos_inoculation');
+    const PASSIVE = StatDescriptionIndex.parse(
+      description('base_maximum_life', ['# "{0:+d} to maximum Life"'], ['# "{0:+d} 最大生命"']) +
+        description(
+          'keystone_chaos_inoculation',
+          ['# "Maximum Life becomes 1, Immune to Chaos Damage"'],
+          ['# "最大生命變為 1，免疫混沌傷害"']
+        )
+    );
+    try {
+      const result = await writeStatTextArtifacts(
+        dir,
+        'poe1',
+        [
+          { name: 'stat_descriptions', index: MAIN },
+          { name: 'passive_skill_stat_descriptions', index: PASSIVE },
+        ],
+        { 'zh-TW': { [RARITY]: [['{0:+d}% to Item Rarity', '{0:+d}%物品稀有度']] }, 'zh-CN': {} },
+        'new',
+        join(dir, 'missing.json')
+      );
+      assert.deepEqual(result.passiveCounts, { 'zh-TW': 1, 'zh-CN': 0 });
+      const passives = JSON.parse(await readFile(join(dir, 'locales', 'zh-TW', 'stat-text-passives.json'), 'utf8'));
+      assert.equal(passives.patch, 'new');
+      assert.equal(passives.locale, 'zh-TW');
+      assert.deepEqual(passives.lines, {
+        [KEYSTONE]: [['Maximum Life becomes 1, Immune to Chaos Damage', '最大生命變為 1，免疫混沌傷害']],
+      });
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
+  });
+
   it('第一次建置（沒有上一版）只寫出回補檔的別名', async () => {
     const dir = await mkdtemp(join(tmpdir(), 'stat-text-'));
     try {

@@ -13,6 +13,7 @@ import { buildTradeStatTemplates } from '../common/trade-stat-templates.js';
 import { loadStatDescriptionIndexes, writeModLineArtifacts } from '../common/mod-line-variants.js';
 import { loadStatTextIndexes, writeStatTextArtifacts } from '../common/stat-text.js';
 import { writeResultLabelArtifacts } from '../common/result-labels.js';
+import { writePassiveNameArtifacts } from '../common/passive-names.js';
 import {
   resolvePoE2GearTypes,
   getPoE2ItemClassGearTypes,
@@ -619,10 +620,14 @@ export async function buildModsPoE2(
   );
   console.log(`  -> 寫入: 完整 stat 文字目錄 (locales/*/stat-text.json, zh-TW ${statText.counts['zh-TW']} / zh-CN ${statText.counts['zh-CN']} 個代碼)`);
   console.log(`  -> 寫入: 擴充用物品 stat 文字 (locales/*/stat-text-items.json, zh-TW ${statText.itemCounts['zh-TW']} / zh-CN ${statText.itemCounts['zh-CN']} 個代碼)`);
+  console.log(`  -> 寫入: 擴充用天賦 stat 文字 (locales/*/stat-text-passives.json, zh-TW ${statText.passiveCounts['zh-TW']} / zh-CN ${statText.passiveCounts['zh-CN']} 個代碼)`);
   console.log(`  -> 寫入: 舊英文別名 (stat-aliases.json, 共 ${statText.aliasCount} 筆，本次新偵測 ${statText.rewordedCount} 筆)`);
 
   const resultLabelCounts = await writeResultLabelArtifacts(loader, 'poe2', outputDir, loader.patchVersion);
   console.log(`  -> 寫入: 結果列標籤 (locales/zh-TW/result-labels.json, ${resultLabelCounts['zh-TW'].labels} 個標籤 / ${resultLabelCounts['zh-TW'].templates} 個模板)`);
+
+  const passiveNameCounts = await writePassiveNameArtifacts(loader, 'poe2', outputDir, loader.patchVersion);
+  console.log(`  -> 寫入: 天賦名稱表 (locales/zh-TW/passive-names.json, ${passiveNameCounts['zh-TW'].names} 筆，譯文衝突略過 ${passiveNameCounts['zh-TW'].conflicts} 筆)`);
 
   const itemShards = await loadAndWriteItemLexiconShards(loader, outputDir);
   console.log(`  -> 寫入: 11 份語系物品名稱分片 (locales/*/items.json, 共 ${itemShards.en.items.length} 筆物品名稱)`);

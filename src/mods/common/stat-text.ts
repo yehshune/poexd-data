@@ -24,6 +24,8 @@ import {
  *   不列入發布清單（manifest），PoeXD-Extension 不同步。
  * - `locales/<locale>/stat-text-items.json`：PoeXD-Extension 用。只收物品詞綴的描述檔，並扣掉
  *   mod-lines.json 已有的句子（擴充本來就會載入 mod-lines），兩份合起來就是物品詞綴的全部寫法。
+ * - `locales/<locale>/stat-text-passives.json`：PoeXD-Extension 用（pobb.in 天賦樹）。只收天賦描述檔，
+ *   並扣掉 mod-lines 與 stat-text-items 已有的句子，三份合起來就是天賦節點的全部寫法。
  *
  * 同一 hash 出現在多份描述檔（例如光環技能對同一個 stat 有自己的寫法）時，各份的寫法都收錄，
  * 依描述檔順序排列。
@@ -86,6 +88,15 @@ export const STAT_TEXT_FILES: Readonly<Record<'poe1' | 'poe2', readonly string[]
     'endgame_map_stat_descriptions',
     'tablet_stat_descriptions',
   ],
+};
+
+/**
+ * 天賦節點會用到的描述檔（`stat-text-passives.json` 的範圍），須是 STAT_TEXT_FILES 的子集。
+ * 天賦上與物品相同的句子在主描述檔，已由 mod-lines 與 stat-text-items 收錄，這裡只補天賦專用的寫法。
+ */
+export const STAT_TEXT_PASSIVE_FILES: Readonly<Record<'poe1' | 'poe2', readonly string[]>> = {
+  poe1: ['passive_skill_stat_descriptions', 'passive_skill_aura_stat_descriptions'],
+  poe2: ['passive_skill_stat_descriptions', 'passive_skill_aura_stat_descriptions'],
 };
 
 /** 物品詞綴會用到的描述檔（`stat-text-items.json` 的範圍），須是 STAT_TEXT_FILES 的子集 */
@@ -183,6 +194,8 @@ export interface StatTextResult {
   counts: Record<ModLineLocale, number>;
   /** stat-text-items.json 的 hash 數 */
   itemCounts: Record<ModLineLocale, number>;
+  /** stat-text-passives.json 的 hash 數 */
+  passiveCounts: Record<ModLineLocale, number>;
   /** 發布的別名總數（hash × 舊模板） */
   aliasCount: number;
   /** 這次建置新偵測到的改寫數 */
@@ -190,7 +203,7 @@ export interface StatTextResult {
 }
 
 /**
- * 寫出各語系的 stat-text.json、stat-text-items.json 與 `<version>/stat-aliases.json`。
+ * 寫出各語系的 stat-text.json、stat-text-items.json、stat-text-passives.json 與 `<version>/stat-aliases.json`。
  *
  * 寫入前先讀上一版完整的 stat-text.json（CI 建置前會把上一版發布內容還原到輸出目錄），
  * 比對出這一版被改寫的英文；再與回補檔、上一版的別名合併。
@@ -212,19 +225,27 @@ export async function writeStatTextArtifacts(
   const all = indexes.map(({ index }) => index);
   const itemNames = new Set(STAT_TEXT_ITEM_FILES[version]);
   const items = indexes.filter(({ name }) => itemNames.has(name)).map(({ index }) => index);
+  const passiveNames = new Set(STAT_TEXT_PASSIVE_FILES[version]);
+  const passives = indexes.filter(({ name }) => passiveNames.has(name)).map(({ index }) => index);
 
   const counts = {} as Record<ModLineLocale, number>;
   const itemCounts = {} as Record<ModLineLocale, number>;
+  const passiveCounts = {} as Record<ModLineLocale, number>;
   let current = new Map<string, string[]>();
   for (const locale of STAT_TEXT_LOCALES) {
     const lines = buildStatText(all, locale);
     const itemLines = subtractModLines(buildStatText(items, locale), modLines[locale] ?? {});
+    const passiveLines = subtractModLines(
+      subtractModLines(buildStatText(passives, locale), modLines[locale] ?? {}),
+      itemLines
+    );
     if (locale === TRACKING_LOCALE) current = englishOf(lines);
     const localeDir = path.join(outputDir, 'locales', locale);
     await fs.mkdir(localeDir, { recursive: true });
     for (const [file, body] of [
       ['stat-text.json', lines],
       ['stat-text-items.json', itemLines],
+      ['stat-text-passives.json', passiveLines],
     ] as const) {
       await fs.writeFile(
         path.join(localeDir, file),
@@ -234,11 +255,12 @@ export async function writeStatTextArtifacts(
     }
     counts[locale] = Object.keys(lines).length;
     itemCounts[locale] = Object.keys(itemLines).length;
+    passiveCounts[locale] = Object.keys(passiveLines).length;
   }
 
   const reworded = previousEnglish ? detectAllRewording(previousEnglish, current) : {};
   const aliases = mergeAliases([seedAliases, previousAliases, reworded], current);
   await writeAliasFile(aliasFile, patch, aliases);
   const total = (value: StatAliases) => Object.values(value).reduce((sum, pairs) => sum + pairs.length, 0);
-  return { counts, itemCounts, aliasCount: total(aliases), rewordedCount: total(reworded) };
+  return { counts, itemCounts, passiveCounts, aliasCount: total(aliases), rewordedCount: total(reworded) };
 }

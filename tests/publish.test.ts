@@ -17,6 +17,8 @@ describe('batchOf', () => {
     assert.equal(batchOf('poe2/locales/zh-CN/mod-lines.json'), 'poe2/game');
     assert.equal(batchOf('poe1/locales/zh-TW/stat-text-items.json'), 'poe1/game');
     assert.equal(batchOf('poe1/locales/zh-TW/stat-text.json'), null);
+    assert.equal(batchOf('poe2/locales/zh-CN/stat-text-passives.json'), 'poe2/game');
+    assert.equal(batchOf('poe1/locales/zh-TW/passive-names.json'), 'poe1/game');
     assert.equal(batchOf('poe2/stat-aliases.json'), 'poe2/game');
     assert.equal(batchOf('poe1/locales/zh-TW/result-labels.json'), 'poe1/game');
     assert.equal(batchOf('poe1/mercenary.json'), 'poe1/mercenary');

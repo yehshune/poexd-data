@@ -61,6 +61,20 @@ describe('validateGameDataBatch', () => {
     assert.deepEqual(validateGameDataBatch(batch({ statAliases: { schemaVersion: 1, patch: '1.0', aliases: {} } })), []);
   });
 
+  it('validates optional passive shards (stat-text-passives lines, passive-names names)', () => {
+    const passiveStatText = {
+      'zh-TW': { schemaVersion: 1, patch: '1.0', locale: 'zh-TW', lines: {} },
+      'zh-CN': { schemaVersion: 1, patch: '0.9', locale: 'zh-CN', lines: {} },
+    };
+    const passiveNames = {
+      'zh-TW': { schemaVersion: 1, patch: '1.0', locale: 'zh-TW', lines: {} },
+    };
+    assert.deepEqual(validateGameDataBatch(batch({ passiveStatText, passiveNames })), [
+      'stat-text-passives.json (zh-CN) patch 0.9 ≠ 1.0',
+      'passive-names.json (zh-TW) 語系或格式不符',
+    ]);
+  });
+
   it('validates optional result-labels shards (labels object, templates array)', () => {
     const resultLabels = {
       'zh-TW': {
