@@ -1,9 +1,9 @@
 {
   "gameVersion": "poe1",
-  "generatedAt": "2026-11-18T09:48:45.583Z",
-  "totalTiers": 15726,
-  "matchedCount": 15314,
-  "unmatchedCount": 412,
+  "generatedAt": "2026-11-19T09:58:04.518Z",
+  "totalTiers": 15727,
+  "matchedCount": 15316,
+  "unmatchedCount": 411,
   "matchRate": "97.4%",
   "summaryByTemplate": [
     {
@@ -480,6 +480,16 @@
     },
     {
       "template": "區域含有 1 個絕望深淵",
+      "count": 2,
+      "affinities": [
+        "normal"
+      ],
+      "sampleTypes": [
+        "map"
+      ]
+    },
+    {
+      "template": "祭祀所提供的恩賜之物增加 #%",
       "count": 2,
       "affinities": [
         "normal"
@@ -2413,16 +2423,6 @@
       ]
     },
     {
-      "template": "祭祀所提供的恩賜之物增加 #%",
-      "count": 1,
-      "affinities": [
-        "normal"
-      ],
-      "sampleTypes": [
-        "map"
-      ]
-    },
-    {
       "template": "在你地圖中的祭祀神壇重骰恩賜之物時，擁有額外 # 次免費",
       "count": 1,
       "affinities": [
@@ -2640,28 +2640,6 @@
       ],
       "sampleTypes": [
         "map"
-      ]
-    },
-    {
-      "template": "召喚物轉化 #% 物理傷害為閃電傷害",
-      "count": 1,
-      "affinities": [
-        "veiled"
-      ],
-      "sampleTypes": [
-        "jewel",
-        "ghastly_eye_jewel"
-      ]
-    },
-    {
-      "template": "對貧血的敵人，增加 #% 爪的傷害",
-      "count": 1,
-      "affinities": [
-        "veiled"
-      ],
-      "sampleTypes": [
-        "jewel",
-        "searching_eye_jewel"
       ]
     },
     {
@@ -8208,36 +8186,6 @@
       "level": "1"
     },
     {
-      "modId": "JunMasterVeiledAbyssGhastlyMinionConvertLightning",
-      "template": "minions convert #% of physical damage to lightning damage",
-      "template_zh": "召喚物轉化 #% 物理傷害為閃電傷害",
-      "key": "minions convert (4-8)% of physical damage to lightning damage",
-      "key_zh": "召喚物轉化 (4-8)% 物理傷害為閃電傷害",
-      "types": [
-        "jewel",
-        "ghastly_eye_jewel"
-      ],
-      "affinities": [
-        "veiled"
-      ],
-      "level": "68"
-    },
-    {
-      "modId": "JunMasterVeiledAbyssSearchingClawDamageLowLife",
-      "template": "#% increased damage with claws against enemies that are on low life",
-      "template_zh": "對貧血的敵人，增加 #% 爪的傷害",
-      "key": "(30-40)% increased damage with claws against enemies that are on low life",
-      "key_zh": "對貧血的敵人，增加 (30-40)% 爪的傷害",
-      "types": [
-        "jewel",
-        "searching_eye_jewel"
-      ],
-      "affinities": [
-        "veiled"
-      ],
-      "level": "68"
-    },
-    {
       "modId": "MemoryLineCursed",
       "template": "area is cursed",
       "template_zh": "區域受到詛咒",
@@ -8369,6 +8317,20 @@
       "template_zh": "區域內的祭祀神壇會生成荒林妖精",
       "key": "ritual altars in area spawn a wildwood wisp",
       "key_zh": "區域內的祭祀神壇會生成荒林妖精",
+      "types": [
+        "map"
+      ],
+      "affinities": [
+        "normal"
+      ],
+      "level": "1"
+    },
+    {
+      "modId": "RandomJuiceModRitualFavours",
+      "template": "rituals offer #% increased favour",
+      "template_zh": "祭祀所提供的恩賜之物增加 #%",
+      "key": "rituals offer 150% increased favour",
+      "key_zh": "祭祀所提供的恩賜之物增加 150%",
       "types": [
         "map"
       ],
