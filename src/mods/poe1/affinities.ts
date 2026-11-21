@@ -1,3 +1,6 @@
+import { isPoE1IncursionMod } from './incursion.js';
+import { isPoE1SynthesisImplicitMod } from './synthesis.js';
+
 export interface PoE1MechanismData {
   essenceModIndices: Set<number>;
   delveModIndices: Set<number>;
@@ -28,6 +31,12 @@ export function resolvePoE1Affinities(
   }
   if (mod.Id?.startsWith('RecombinatorSpecial')) {
     affs.add('sentinel');
+  }
+  if (mod.Id?.startsWith('NecropolisCrafting')) {
+    affs.add('haunted');
+  }
+  if (isPoE1IncursionMod(mod)) {
+    affs.add('incursion');
   }
   if (mod.Id?.includes('AspectCrafted')) {
     affs.add('bestiary');
@@ -79,6 +88,11 @@ export function resolvePoE1Affinities(
   // 3.0.1 星團珠寶 (Cluster Jewels)
   if (mod.Domain === 21) {
     affs.add('cluster');
+  }
+
+  // 3.0.2 追憶固定詞綴 (Synthesis Implicits: Domain 1, Gen 3, Id 以 Synthesis 開頭)
+  if (isPoE1SynthesisImplicitMod(mod)) {
+    affs.add('synthesis');
   }
 
   // 3.1 優先由權重標籤 (SpawnWeight Tags) 精準判定
@@ -145,8 +159,11 @@ export function resolvePoE1Affinities(
     mod.GenerationType === 5 ||
     [10, 19, 21, 22].includes(mod.GenerationType) ||
     Boolean(mod.Id?.startsWith('RecombinatorSpecial')) ||
+    Boolean(mod.Id?.startsWith('NecropolisCrafting')) ||
     Boolean(mod.Id?.startsWith('HarvestAlternate')) ||
     Boolean(mod.Id?.includes('AspectCrafted')) ||
+    isPoE1IncursionMod(mod) ||
+    isPoE1SynthesisImplicitMod(mod) ||
     tradeCategory === 'crafted' ||
     tradeCategory === 'enchant' ||
     tradeCategory === 'delve';

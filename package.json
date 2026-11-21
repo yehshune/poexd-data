@@ -18,6 +18,7 @@
     "verify": "tsx src/index.ts verify",
     "check-patch": "tsx src/index.ts check-patch",
     "seed:aliases": "tsx src/index.ts seed-aliases",
+    "seed:synthesis": "tsx src/index.ts seed-synthesis",
     "test": "node --import tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit"
   },

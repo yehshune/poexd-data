@@ -37,6 +37,17 @@ async function main() {
     return;
   }
 
+  // 自 PoE Wiki synthesis_mods Cargo 表更新追憶固定詞部位對照檔
+  if (target === 'seed-synthesis') {
+    const { fetchPoE1SynthesisImplicitsFromWiki } = await import('./mods/poe1/synthesis.js');
+    const outPath = path.join(process.cwd(), 'data', 'synthesis-implicits', 'poe1.json');
+    await fs.mkdir(path.dirname(outPath), { recursive: true });
+    const data = await fetchPoE1SynthesisImplicitsFromWiki();
+    await fs.writeFile(outPath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+    console.log(`[seed-synthesis] 已寫入 ${data.modCount} 筆追憶固定詞部位對照 -> ${outPath}`);
+    return;
+  }
+
   const { recordBatch } = await import('./publish/batch-log.js');
   const outputPoe1Dir = path.join(outputDir, 'poe1');
   const outputPoe2Dir = path.join(outputDir, 'poe2');

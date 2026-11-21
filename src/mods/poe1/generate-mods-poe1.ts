@@ -35,6 +35,9 @@ import { decodeItBytes, resolveInheritedTags } from './item-inheritance.js';
 import { mergeSingularVariants } from '../common/merge-singular-variants.js';
 import { buildClusterPassiveCountRecords, clusterSizeTypesFromModId } from './cluster-jewels.js';
 import { buildVisceraModTypeIndex, VISCERA_ITEM_CLASS, type VisceraBase } from './viscera.js';
+import { loadPoE1SynthesisImplicitTypes } from './synthesis.js';
+import { isPoE1IncursionMod, resolvePoE1IncursionGearTypes } from './incursion.js';
+import { buildPoE1AspectCraftedRecords } from './bestiary-aspects.js';
 import { writeUnmatchedReport, type UnmatchedModItem } from '../common/unmatched-reporter.js';
 
 /**
@@ -165,6 +168,9 @@ export async function buildModsPoE1(
   const baseProfiles = buildPoE1BaseProfiles(baseRecords);
   const gearBaseIndex = buildGearBaseIndex(baseRecords);
   const visceraModTypes = buildVisceraModTypeIndex(visceraBases);
+  const synthesisModTypesMap = await loadPoE1SynthesisImplicitTypes(
+    path.join(process.cwd(), 'data', 'synthesis-implicits', 'poe1.json')
+  );
   let gearFallbackCount = 0;
 
   // 1. 基底固有詞綴對應的裝備類別映射表 (BaseItemTypes.Implicit_ModsKeys)
@@ -361,6 +367,16 @@ export async function buildModsPoE1(
       types = POE1_DEFAULT_GEAR_TYPES;
     }
 
+    // 追憶固定詞綴（Mods.dat 無 SpawnWeights，由 PoE Wiki synthesis_mods 靜態對照表補全部位）
+    if (types.length === 0 && mod.Domain === 1 && mod.GenerationType === 3) {
+      types = synthesisModTypesMap.get(String(mod.Id ?? '')) ?? types;
+    }
+
+    // 穿越（神廟）詞綴（Mods.dat SpawnWeight 全為 0，依官方神廟部位規則補全）
+    if (types.length === 0 && isPoE1IncursionMod(mod)) {
+      types = resolvePoE1IncursionGearTypes(String(mod.Id ?? ''));
+    }
+
     if (types.length === 0) continue;
 
     // 收集該 Mod 包含的所有活躍數值欄位 (PoE 1 欄位為 StatsKey 與 StatMin / StatMax)
@@ -489,7 +505,13 @@ export async function buildModsPoE1(
 
   const clusterPassiveRecords = await buildClusterPassiveCountTiers(loader, baseItemsTable, statIndex, tradeStats);
   console.log(`[PoE 1 Mods] 星團珠寶天賦數：${clusterPassiveRecords.length} 筆附魔階級`);
-  const lexiconRecords = mergeSingularVariants([...collectedRecords, ...clusterPassiveRecords]);
+  const aspectCraftedRecords = buildPoE1AspectCraftedRecords(modsTable, tradeStats);
+  console.log(`[PoE 1 Mods] 獸獵 / 神君勢技能工藝：${aspectCraftedRecords.length} 筆階級`);
+  const lexiconRecords = mergeSingularVariants([
+    ...collectedRecords,
+    ...clusterPassiveRecords,
+    ...aspectCraftedRecords,
+  ]);
 
   // 詞綴標籤用市集寫法（正負向以國際服市集為準），階級文字維持遊戲寫法
   const statTemplateOverrides = buildTradeStatTemplates(

@@ -1,0 +1,8485 @@
+{
+  "source": "https://www.poewiki.net/w/api.php?action=cargoquery&tables=synthesis_mods",
+  "generatedAt": "2026-11-21T16:59:51.251Z",
+  "modCount": 1272,
+  "mods": {
+    "SynthesisImplicitAbyssJewelEffect1": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitAccuracy1": [
+      "Amulet",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitAccuracy2": [
+      "Amulet",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitAccuracy3": [
+      "Amulet",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitAccuracy4": [
+      "Amulet",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitAccuracy5_": [
+      "Amulet",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitAccuracyJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAccuracyJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAddedColdDamagePerDexterity1_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Sword",
+      "Thrusting One Hand Sword"
+    ],
+    "SynthesisImplicitAddedColdDamagePerDexterity2": [
+      "Bow"
+    ],
+    "SynthesisImplicitAddedFireDamagePerStrength1": [
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword"
+    ],
+    "SynthesisImplicitAddedFireDamagePerStrength2": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitAddedLightningDamagePerIntelligence1": [
+      "Claw",
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitAddedLightningDamagePerIntelligence2": [
+      "Staff"
+    ],
+    "SynthesisImplicitAddedManaRegen1__": [
+      "Amulet",
+      "Ring"
+    ],
+    "SynthesisImplicitAddedManaRegen2": [
+      "Amulet",
+      "Boots",
+      "Ring"
+    ],
+    "SynthesisImplicitAddedManaRegen3_____": [
+      "Amulet",
+      "Ring"
+    ],
+    "SynthesisImplicitAddedManaRegenWithDualWieldJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAddedManaRegenWithDualWieldJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAddedManaRegenWithShieldJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAddedManaRegenWithShieldJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAddedManaRegenWithStaffJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAddedManaRegenWithStaffJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAdditionalArrow1": [
+      "Bow",
+      "Quiver"
+    ],
+    "SynthesisImplicitAdditionalArrowPierce1_": [
+      "Quiver"
+    ],
+    "SynthesisImplicitAdditionalArrowPierce2_": [
+      "Quiver"
+    ],
+    "SynthesisImplicitAdditionalArrowPierce3": [
+      "Quiver"
+    ],
+    "SynthesisImplicitAdditionalCriticalStrikeChanceWithAttacks1_": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitAdditionalCriticalStrikeChanceWithSpells1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitAdditionalEvadeChance1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAdditionalEvadeChance2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAdditionalEvadeChance3": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitAdditionalPhysReduction1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAdditionalPhysReduction2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAdditionalPhysReduction3": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitAdditionalPierce1": [
+      "Wand"
+    ],
+    "SynthesisImplicitAdditionalVaalSoulOnKill1": [
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitAdditionalVaalSoulOnKill2": [
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitAilmentDamage1": [
+      "Amulet",
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitAilmentDamage2": [
+      "Amulet",
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitAilmentDamage3": [
+      "Amulet",
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitAilmentDamage4": [
+      "Amulet",
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitAilmentDamage5": [
+      "Amulet",
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitAilmentDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAilmentDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAllAttributes1": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitAllAttributes2": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitAllAttributes3": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitAllDamage3": [
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitAllDamage4": [
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitAllDamage5": [
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitAllDamageCorruptedItem1": [
+      "Ring"
+    ],
+    "SynthesisImplicitAllDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAllDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAllElementalResistanceCorruptedItem1": [
+      "Helmet"
+    ],
+    "SynthesisImplicitAllResist1__": [
+      "Body Armour",
+      "Boots"
+    ],
+    "SynthesisImplicitAllResist2_": [
+      "Body Armour",
+      "Boots"
+    ],
+    "SynthesisImplicitAllResist3": [
+      "Boots"
+    ],
+    "SynthesisImplicitAnimateGuardianResistances1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitAoEGemQuality1": [
+      "Gloves",
+      "Helmet"
+    ],
+    "SynthesisImplicitAoEGemQuality2": [
+      "Gloves",
+      "Helmet"
+    ],
+    "SynthesisImplicitArcaneSurgeOnHit1": [
+      "Ring"
+    ],
+    "SynthesisImplicitAreaDamage1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitAreaDamage2": [
+      "Amulet"
+    ],
+    "SynthesisImplicitAreaOfEffect1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitAreaOfEffect2": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitAreaOfEffect3_": [
+      "Amulet",
+      "Body Armour"
+    ],
+    "SynthesisImplicitAreaOfEffectJewel1_": [
+      "Jewel"
+    ],
+    "SynthesisImplicitAreaOfEffectJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitAreaOfEffectOnStun1": [
+      "Belt",
+      "Quiver"
+    ],
+    "SynthesisImplicitArmourEvasionWithFortify1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitArmourEvasionWithFortify2": [
+      "Amulet"
+    ],
+    "SynthesisImplicitArmourEvasionWithFortify3": [
+      "Amulet"
+    ],
+    "SynthesisImplicitAttackAndCastSpeed1": [
+      "Belt",
+      "Body Armour",
+      "Gloves",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackAndCastSpeed2": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Gloves",
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackAndCastSpeed3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Gloves",
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackAndCastSpeedCorruptedItem1___": [
+      "Gloves"
+    ],
+    "SynthesisImplicitAttackAndCastSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAttackAndCastSpeedWithOnslaught1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitAttackAndCastSpeedWithOnslaughtJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAttackAndCastSpeedWithOnslaughtJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAttackBlock1": [
+      "Body Armour",
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitAttackBlock2": [
+      "Body Armour",
+      "Gloves"
+    ],
+    "SynthesisImplicitAttackChanceToImpale1": [
+      "Gloves"
+    ],
+    "SynthesisImplicitAttackDamage1": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackDamage2": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackDamage3": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackDamageCorruptedItem1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitAttackDamageCorruptedItem2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitAttackDamagePerMana1": [
+      "Claw",
+      "Dagger",
+      "Sceptre",
+      "Shield",
+      "Wand"
+    ],
+    "SynthesisImplicitAttackDamagePerMana2": [
+      "Staff"
+    ],
+    "SynthesisImplicitAttackDodge1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackDodge2": [
+      "Body Armour",
+      "Boots",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackDodgeMinor1": [
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitAttackDodgeMinor2": [
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitAttackLifeLeechJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAttackManaLeech1": [
+      "Claw"
+    ],
+    "SynthesisImplicitAttackSpeed1": [
+      "Gloves",
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackSpeed2_": [
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackSpeed3": [
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAttackerTakesDamageNoRange1_": [
+      "Belt",
+      "Body Armour",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackerTakesDamageNoRange2": [
+      "Belt",
+      "Body Armour",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAttackerTakesDamageNoRange3": [
+      "Belt",
+      "Body Armour",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAuraGemLevel1": [
+      "Helmet"
+    ],
+    "SynthesisImplicitAuraGemQuality1_": [
+      "Helmet"
+    ],
+    "SynthesisImplicitAuraGemQuality2": [
+      "Helmet"
+    ],
+    "SynthesisImplicitAvoidBleed1": [
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidBleed2_": [
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidBleed3": [
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidBleedJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAvoidChill1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitAvoidChill2_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitAvoidChill3": [
+      "Amulet"
+    ],
+    "SynthesisImplicitAvoidCold1": [
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidFire1": [
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidFreeze1_": [
+      "Amulet",
+      "Belt",
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitAvoidFreeze2": [
+      "Amulet",
+      "Belt",
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitAvoidFreeze3": [
+      "Amulet",
+      "Belt",
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitAvoidFreezeJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAvoidIgnite1_": [
+      "Belt",
+      "Boots",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitAvoidIgnite2": [
+      "Belt",
+      "Boots",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitAvoidIgnite3": [
+      "Belt",
+      "Boots",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitAvoidIgniteJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAvoidLightning1": [
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidPoison1": [
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidPoison2": [
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidPoison3": [
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidPoisonJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAvoidShock1": [
+      "Belt",
+      "Boots",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitAvoidShock2_": [
+      "Belt",
+      "Boots",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitAvoidShock3": [
+      "Belt",
+      "Boots",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitAvoidShockJewel1____": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAvoidStatusAilments2": [
+      "Belt",
+      "Body Armour",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidStatusAilmentsJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAvoidStatusAilmentsMinor1": [
+      "Boots"
+    ],
+    "SynthesisImplicitAvoidStatusAilmentsMinor2": [
+      "Boots"
+    ],
+    "SynthesisImplicitAvoidStun1": [
+      "Belt",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidStun2": [
+      "Belt",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidStun3": [
+      "Belt",
+      "Body Armour",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitAvoidStunCastingJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAvoidStunJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAxeAccuracyRatingJewel1__": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAxeAccuracyRatingJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAxeCriticalMultiplierJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAxeCriticalMultiplierJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitAxeIncreasedAttackSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAxeIncreasedAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAxeIncreasedPhysicalDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitAxeIncreasedPhysicalDamageJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitBaseManaRegeneration1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitBaseManaRegenerationOneHand1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitBaseManaRegenerationOneHand2_": [
+      "Dagger",
+      "Sceptre",
+      "Shield",
+      "Wand"
+    ],
+    "SynthesisImplicitBaseManaRegenerationTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitBaseManaRegenerationTwoHand2": [
+      "Staff"
+    ],
+    "SynthesisImplicitBleedDamage1": [
+      "Gloves"
+    ],
+    "SynthesisImplicitBleedDamage2": [
+      "Gloves"
+    ],
+    "SynthesisImplicitBleedDamage3": [
+      "Gloves"
+    ],
+    "SynthesisImplicitBleedDamageJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitBleedDamageJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitBleedDuration1": [
+      "Bow",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitBlindOnHit1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitBlindOnHitJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitBlindOnHitJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitBowAccuracyRatingJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitBowAccuracyRatingJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitBowCriticalMultiplierJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitBowCriticalMultiplierJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitBowGemLevel1": [
+      "Bow"
+    ],
+    "SynthesisImplicitBowGemQuality1_": [
+      "Bow"
+    ],
+    "SynthesisImplicitBowGemQuality2": [
+      "Bow"
+    ],
+    "SynthesisImplicitBowIncreasedAttackSpeedJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitBowIncreasedAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitBowIncreasedPhysicalDamageJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitBowIncreasedPhysicalDamageJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitBrandAttachmentRange1_": [
+      "Amulet",
+      "Gloves"
+    ],
+    "SynthesisImplicitBrandAttachmentRange2": [
+      "Amulet",
+      "Gloves"
+    ],
+    "SynthesisImplicitBurnDamage1": [
+      "Boots"
+    ],
+    "SynthesisImplicitBurnDamage2__": [
+      "Boots"
+    ],
+    "SynthesisImplicitBurnDamage3": [
+      "Boots"
+    ],
+    "SynthesisImplicitBurnDamageJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitBurnDamageJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitBurnDamageOneHand1": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitBurnDamageOneHand2_": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitBurnDamageOneHand3": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitBurnDamageTwoHand1": [
+      "Staff"
+    ],
+    "SynthesisImplicitBurnDamageTwoHand2": [
+      "Staff"
+    ],
+    "SynthesisImplicitBurnDamageTwoHand3": [
+      "Staff"
+    ],
+    "SynthesisImplicitCastSpeed1": [
+      "Amulet",
+      "Gloves",
+      "Shield"
+    ],
+    "SynthesisImplicitCastSpeed2": [
+      "Amulet",
+      "Gloves",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitCastSpeed3": [
+      "Amulet",
+      "Gloves",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitCastSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCastSpeedJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCastSpeedWithDualWieldJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCastSpeedWithDualWieldJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCastSpeedWithShieldJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCastSpeedWithShieldJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCastSpeedWithStaffJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCastSpeedWithStaffJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceForDoubleArmour1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitChanceToBleedJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToBleedJewel2__": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToFreeze1": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToFreeze2": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToFreeze3": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToFreezeJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToFreezeJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToFreezeTwoHand1": [
+      "Staff"
+    ],
+    "SynthesisImplicitChanceToFreezeTwoHand2": [
+      "Staff"
+    ],
+    "SynthesisImplicitChanceToFreezeTwoHand3": [
+      "Staff"
+    ],
+    "SynthesisImplicitChanceToIgnite1": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToIgnite2": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToIgnite3": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToIgniteJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToIgniteJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToIgniteTwoHand1_": [
+      "Helmet",
+      "Staff"
+    ],
+    "SynthesisImplicitChanceToIgniteTwoHand2": [
+      "Helmet",
+      "Staff"
+    ],
+    "SynthesisImplicitChanceToIgniteTwoHand3_": [
+      "Helmet",
+      "Staff"
+    ],
+    "SynthesisImplicitChanceToPoisonJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToPoisonJewel2_": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToShock1": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToShock2": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToShock3": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitChanceToShockJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToShockJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChanceToShockTwoHand1": [
+      "Staff"
+    ],
+    "SynthesisImplicitChanceToShockTwoHand2": [
+      "Staff"
+    ],
+    "SynthesisImplicitChanceToShockTwoHand3": [
+      "Staff"
+    ],
+    "SynthesisImplicitChaosDamage1": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitChaosDamage2_": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitChaosDamage3": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitChaosDamage4": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Ring"
+    ],
+    "SynthesisImplicitChaosDamage5": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Ring"
+    ],
+    "SynthesisImplicitChaosDamage6_": [
+      "Belt"
+    ],
+    "SynthesisImplicitChaosDamageAttacksJewel1___": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitChaosDamageAttacksJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitChaosDamageJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChaosDamageJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitChaosDamageOverTimeMultiplier1_": [
+      "Wand"
+    ],
+    "SynthesisImplicitChaosDamageOverTimeMultiplier2": [
+      "Wand"
+    ],
+    "SynthesisImplicitChaosDamageOverTimeMultiplier3_": [
+      "Wand"
+    ],
+    "SynthesisImplicitChaosDamageOverTimeMultiplierTwoHand1": [
+      "Staff"
+    ],
+    "SynthesisImplicitChaosDamageOverTimeMultiplierTwoHand2": [
+      "Staff"
+    ],
+    "SynthesisImplicitChaosDamageOverTimeMultiplierTwoHand3": [
+      "Staff"
+    ],
+    "SynthesisImplicitChaosDamageSpellsJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitChaosDamageSpellsJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitChaosGemLevel1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitChaosGemQuality1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitChaosGemQuality2_": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitChaosLeech1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitChaosLeechMinor1": [
+      "Ring"
+    ],
+    "SynthesisImplicitChaosResist1_": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitChaosResist2": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitChaosResist3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitChaosResistJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitChillDurationJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitChillDurationJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitChillEffect1": [
+      "Boots",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitChillEffect2": [
+      "Boots",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitChillEffectJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitClawAccuracyRatingJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitClawAccuracyRatingJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitClawCriticalMultiplierJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitClawCriticalMultiplierJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitClawIncreasedAttackSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitClawIncreasedAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitClawIncreasedPhysicalDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitClawIncreasedPhysicalDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitColdAddedAsChaos1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdAddedAsChaos2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitColdDamage1": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitColdDamage2": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitColdDamage3": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitColdDamage4": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitColdDamage5_": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitColdDamage6": [
+      "Belt"
+    ],
+    "SynthesisImplicitColdDamageAttacksJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitColdDamageAttacksJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitColdDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitColdDamageJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitColdDamageOverTimeMultiplier1": [
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitColdDamageOverTimeMultiplier2": [
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitColdDamageOverTimeMultiplier3_": [
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitColdDamageOverTimeMultiplierTwoHand1_": [
+      "Staff"
+    ],
+    "SynthesisImplicitColdDamageOverTimeMultiplierTwoHand2_": [
+      "Staff"
+    ],
+    "SynthesisImplicitColdDamageOverTimeMultiplierTwoHand3_": [
+      "Staff"
+    ],
+    "SynthesisImplicitColdDamagePerFrenzyCharge1": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitColdDamageSpellsJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitColdDamageSpellsJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitColdGemLevel1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdGemQuality1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdGemQuality2": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdLeech1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitColdLeechMinor1": [
+      "Ring"
+    ],
+    "SynthesisImplicitColdPenetration1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitColdPenetrationWeapon1_": [
+      "Belt"
+    ],
+    "SynthesisImplicitColdResist1": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdResist2_": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdResist3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdResist4": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdResist5": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitColdResistJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitColdResistJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCriticalMultiplier1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitCriticalMultiplier2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitCriticalMultiplier3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitCriticalMultiplier4": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitCriticalMultiplier5": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitCriticalMultiplierJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCriticalMultiplierJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitCurseDuration1": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitCurseDuration2": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitCurseEffect1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitCurseEffectConductivity1": [
+      "Bow",
+      "Shield",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitCurseEffectConductivityOneHand1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitCurseEffectElementalWeakness1": [
+      "Shield"
+    ],
+    "SynthesisImplicitCurseEffectFlammability1": [
+      "Bow",
+      "Shield",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitCurseEffectFlammabilityOneHand1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitCurseEffectFrostbite1": [
+      "Bow",
+      "Shield",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitCurseEffectFrostbiteOneHand1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitCurseEffectVulnerability1_": [
+      "Shield"
+    ],
+    "SynthesisImplicitCurseOnHitConductivity1": [
+      "Ring"
+    ],
+    "SynthesisImplicitCurseOnHitConductivity2": [
+      "Gloves"
+    ],
+    "SynthesisImplicitCurseOnHitElementalWeakness1__": [
+      "Ring"
+    ],
+    "SynthesisImplicitCurseOnHitFlammability1": [
+      "Ring"
+    ],
+    "SynthesisImplicitCurseOnHitFlammability2": [
+      "Gloves"
+    ],
+    "SynthesisImplicitCurseOnHitFrostbite1_": [
+      "Ring"
+    ],
+    "SynthesisImplicitCurseOnHitFrostbite2_": [
+      "Gloves"
+    ],
+    "SynthesisImplicitCurseOnHitVulnerability1": [
+      "Ring"
+    ],
+    "SynthesisImplicitCurseOnHitVulnerability2": [
+      "Gloves"
+    ],
+    "SynthesisImplicitDaggerAccuracyRatingJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitDaggerAccuracyRatingJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitDaggerCriticalMultiplierJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitDaggerCriticalMultiplierJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitDaggerIncreasedAttackSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitDaggerIncreasedAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitDaggerIncreasedPhysicalDamageJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitDaggerIncreasedPhysicalDamageJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitDamageAffectedByAuras1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamageAffectedByAuras2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamageAffectedByAuras3_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamageAffectedByAurasTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDamageAffectedByAurasTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDamageAffectedByAurasTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDamageDuringFlaskEffect1": [
+      "Gloves"
+    ],
+    "SynthesisImplicitDamageDuringFlaskEffect2": [
+      "Gloves"
+    ],
+    "SynthesisImplicitDamagePerDexterity1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitDamagePerEnduranceCharge1": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamagePerEnduranceCharge2": [
+      "Amulet",
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDamagePerEnduranceChargeMinor1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamagePerFrenzyCharge1_": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamagePerFrenzyCharge2_": [
+      "Amulet",
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDamagePerFrenzyChargeMinor1_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamagePerIntelligence1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitDamagePerPowerCharge1_": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamagePerPowerCharge2": [
+      "Amulet",
+      "Bow",
+      "Shield",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDamagePerPowerChargeMinor1___": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamagePerStrength1_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitDamageTakenCorruptedItem1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitDamageTakenPer250Dexterity1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitDamageTakenPer250Intelligence1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitDamageTakenPer250Strength1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitDamageVSAbyssMonsters1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamageVSAbyssMonsters2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamageWhileLeeching1": [
+      "Amulet",
+      "Gloves"
+    ],
+    "SynthesisImplicitDamageWhileLeeching2": [
+      "Amulet",
+      "Gloves"
+    ],
+    "SynthesisImplicitDamageWhileLeechingLife1": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitDamageWhileLeechingLife2__": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitDamageWhileLeechingLife3": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitDamageWhileLeechingMana1": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitDamageWhileLeechingMana2_": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitDamageWhileLeechingMana3_": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitDamageWithTriggeredSpells1": [
+      "Helmet"
+    ],
+    "SynthesisImplicitDamageWithTriggeredSpells2": [
+      "Helmet"
+    ],
+    "SynthesisImplicitDamageWithTriggeredSpellsWeapon1_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamageWithTriggeredSpellsWeapon2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDamageWithTriggeredSpellsWeaponTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDamageWithTriggeredSpellsWeaponTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDegenDamageTaken1_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitDegenerationDamage1_": [
+      "Gloves"
+    ],
+    "SynthesisImplicitDegenerationDamage2": [
+      "Gloves"
+    ],
+    "SynthesisImplicitDegenerationDamage3": [
+      "Gloves"
+    ],
+    "SynthesisImplicitDegenerationDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitDegenerationDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitDeterminationEffect1": [
+      "Amulet",
+      "Body Armour",
+      "Ring"
+    ],
+    "SynthesisImplicitDeterminationPhysicalDamageReduction1": [
+      "Belt"
+    ],
+    "SynthesisImplicitDeterminationReservation1": [
+      "Body Armour",
+      "Boots",
+      "Gloves"
+    ],
+    "SynthesisImplicitDexterity1": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDexterity2": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDexterity3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDexterity4": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Shield",
+      "Thrusting One Hand Sword"
+    ],
+    "SynthesisImplicitDexterity5": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Shield",
+      "Thrusting One Hand Sword"
+    ],
+    "SynthesisImplicitDexterityGemLevel1": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDexterityGemQuality1": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDexterityGemQuality2": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDexterityJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitDexterityJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitDisciplineEffect1": [
+      "Amulet",
+      "Body Armour",
+      "Ring"
+    ],
+    "SynthesisImplicitDisciplineEnergyShieldRegen1___": [
+      "Belt"
+    ],
+    "SynthesisImplicitDisciplineReservation1_": [
+      "Body Armour",
+      "Boots",
+      "Gloves"
+    ],
+    "SynthesisImplicitDoubleDamageChanceOneHand1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDoubleDamageChanceOneHand2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitDoubleDamageChanceTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitDoubleDamageChanceTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitElementalDamage1": [
+      "Belt",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitElementalDamage2": [
+      "Belt",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitElementalDamage3": [
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitElementalDamage4": [
+      "Belt",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitElementalDamage5": [
+      "Belt",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitElementalDamageHigh1__": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitElementalDamageHigh2": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitElementalDamageHigh3__": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitElementalDamageHighTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitElementalDamageHighTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitElementalDamageHighTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitElementalDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitElementalDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitElementalLeechMinor1": [
+      "Ring"
+    ],
+    "SynthesisImplicitElementalPenetration1": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitEnduranceChargeDuration1": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitEnduranceChargeDuration2__": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitEnduranceChargeGeneration1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitEnduranceChargeOnKill1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitEnemyStunThreshold1": [
+      "Belt",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitEnemyStunThreshold2": [
+      "Belt",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitEnemyStunThreshold3": [
+      "Belt",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitEnergyShieldDelay1": [
+      "Ring"
+    ],
+    "SynthesisImplicitEnergyShieldDelay2": [
+      "Ring"
+    ],
+    "SynthesisImplicitEnergyShieldJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitEnergyShieldJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitEnergyShieldLeech1": [
+      "Quiver"
+    ],
+    "SynthesisImplicitEnergyShieldLeechJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitEnergyShieldOnHitJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitEnergyShieldRechargeRate1": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitEnergyShieldRechargeRate2_": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitEnergyShieldRechargeRate3_": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitEnergyShieldRecoveryRate1": [
+      "Belt",
+      "Body Armour"
+    ],
+    "SynthesisImplicitEnergyShieldRegen1": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitEnergyShieldRegen2": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitEnergyShieldRegen3": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitEnergyShieldRegenJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitEvasionPerFrenzyCharge1_": [
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitExperience1": [
+      "Ring"
+    ],
+    "SynthesisImplicitExplosion1_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitExplosion2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitFasterBleed1_": [
+      "Ring"
+    ],
+    "SynthesisImplicitFasterBleedWeapon1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFasterBleedWeapon2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitFasterIgnite1__": [
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitFasterIgniteWeapon1_": [
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitFasterIgniteWeapon2": [
+      "Staff"
+    ],
+    "SynthesisImplicitFasterPoison1": [
+      "Ring"
+    ],
+    "SynthesisImplicitFasterPoisonWeapon1_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFasterPoisonWeapon2__": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitFireAddedAsChaos1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireAddedAsChaos2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitFireDamage1_": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitFireDamage2": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitFireDamage3": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitFireDamage4": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitFireDamage5": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitFireDamage6": [
+      "Belt"
+    ],
+    "SynthesisImplicitFireDamageAttacksJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitFireDamageAttacksJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitFireDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitFireDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitFireDamagePerStrength1": [
+      "Boots"
+    ],
+    "SynthesisImplicitFireDamageSpellsJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitFireDamageSpellsJewel2__": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitFireGemLevel1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireGemQuality1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireGemQuality2": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireLeech1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitFireLeechMinor1__": [
+      "Ring"
+    ],
+    "SynthesisImplicitFirePenetration1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitFirePenetrationWeapon1": [
+      "Belt"
+    ],
+    "SynthesisImplicitFireResist1": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireResist2": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireResist3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireResist4": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireResist5": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFireResistJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitFireResistJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitFlaskChargesGained1": [
+      "Belt"
+    ],
+    "SynthesisImplicitFlaskChargesGained2": [
+      "Belt"
+    ],
+    "SynthesisImplicitFlaskChargesGained3": [
+      "Belt"
+    ],
+    "SynthesisImplicitFlaskDuration1_": [
+      "Belt"
+    ],
+    "SynthesisImplicitFlaskDuration2": [
+      "Belt"
+    ],
+    "SynthesisImplicitFlaskDuration3": [
+      "Belt"
+    ],
+    "SynthesisImplicitFlatAccuracy1_": [
+      "Amulet",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitFlatAccuracy2": [
+      "Shield"
+    ],
+    "SynthesisImplicitFlatArmour1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatArmour2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatArmour3": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatArmour4": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatArmour5": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatChaosDamageTaken1": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatChaosDamageTaken2": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatColdDamageTaken1_": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatColdDamageTaken2": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatColdDamageTaken3": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatEnergyShield1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEnergyShield2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEnergyShield3": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEnergyShield4": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEnergyShield5_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEvasion1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEvasion2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEvasion3": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEvasion4": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatEvasion5": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitFlatFireDamageTaken1": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatFireDamageTaken2": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatFireDamageTaken3": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatLifeOnBlock1": [
+      "Shield"
+    ],
+    "SynthesisImplicitFlatLifeOnBlock2": [
+      "Shield"
+    ],
+    "SynthesisImplicitFlatLifeOnBlockJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitFlatLightningDamageTaken1": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatLightningDamageTaken2_": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatLightningDamageTaken3": [
+      "Ring"
+    ],
+    "SynthesisImplicitFlatManaOnBlock1": [
+      "Shield"
+    ],
+    "SynthesisImplicitFlatManaOnBlock2": [
+      "Shield"
+    ],
+    "SynthesisImplicitFlatManaOnBlockJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitFortifyEffect1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitFortifyEffect2": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitFortifyEffect3": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitFreezeDuration1": [
+      "Helmet",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitFreezeDuration2": [
+      "Helmet",
+      "Staff"
+    ],
+    "SynthesisImplicitFrenzyChargeDuration1_": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFrenzyChargeDuration2_": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitFrenzyChargeGeneration1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitFrenzyChargeOnKill1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGemLevel1_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGemQuality1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGemQuality2_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalAddedChaosDamage1_": [
+      "Ring"
+    ],
+    "SynthesisImplicitGlobalAddedColdDamage1_": [
+      "Ring"
+    ],
+    "SynthesisImplicitGlobalAddedFireDamage1": [
+      "Ring"
+    ],
+    "SynthesisImplicitGlobalAddedLightningDamage1": [
+      "Ring"
+    ],
+    "SynthesisImplicitGlobalArmour1": [
+      "Amulet",
+      "Belt",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalArmour2": [
+      "Amulet",
+      "Belt",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalArmour3": [
+      "Amulet",
+      "Belt",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalArmourJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitGlobalArmourJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitGlobalArmourTwoHand1__": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalArmourTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalArmourTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalCrit1": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Ring"
+    ],
+    "SynthesisImplicitGlobalCrit2": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Ring"
+    ],
+    "SynthesisImplicitGlobalCrit3": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Ring"
+    ],
+    "SynthesisImplicitGlobalCrit4": [
+      "Amulet"
+    ],
+    "SynthesisImplicitGlobalCrit5": [
+      "Amulet"
+    ],
+    "SynthesisImplicitGlobalCritJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitGlobalCritJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitGlobalCritQuiver1": [
+      "Quiver"
+    ],
+    "SynthesisImplicitGlobalCritQuiver2": [
+      "Quiver"
+    ],
+    "SynthesisImplicitGlobalCritQuiver3": [
+      "Quiver"
+    ],
+    "SynthesisImplicitGlobalCritQuiver4": [
+      "Quiver"
+    ],
+    "SynthesisImplicitGlobalCritQuiver5": [
+      "Quiver"
+    ],
+    "SynthesisImplicitGlobalCriticalStrikeChanceCorruptedItem1": [
+      "Quiver"
+    ],
+    "SynthesisImplicitGlobalEnergyShield1": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalEnergyShield2": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalEnergyShield3__": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalEnergyShieldTwoHand1": [
+      "Belt",
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalEnergyShieldTwoHand2": [
+      "Belt",
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalEnergyShieldTwoHand3___": [
+      "Belt",
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalEvasion1": [
+      "Amulet",
+      "Belt",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalEvasion2": [
+      "Amulet",
+      "Belt",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalEvasion3": [
+      "Amulet",
+      "Belt",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitGlobalEvasionJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitGlobalEvasionJewel2__": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitGlobalEvasionTwoHand1_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalEvasionTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalEvasionTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitGlobalFlaskLifeRecovery1_": [
+      "Ring"
+    ],
+    "SynthesisImplicitGlobalKnockbackChanceJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitGraceAdditionalChanceToEvade1": [
+      "Belt"
+    ],
+    "SynthesisImplicitGraceEffect1": [
+      "Amulet",
+      "Body Armour",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitGraceReservation1": [
+      "Body Armour",
+      "Boots",
+      "Gloves"
+    ],
+    "SynthesisImplicitGrantsAnger1": [
+      "Ring"
+    ],
+    "SynthesisImplicitGrantsAnger2": [
+      "Ring"
+    ],
+    "SynthesisImplicitGrantsHatred1": [
+      "Ring"
+    ],
+    "SynthesisImplicitGrantsHatred2": [
+      "Ring"
+    ],
+    "SynthesisImplicitGrantsPurityOfFire1": [
+      "Ring"
+    ],
+    "SynthesisImplicitGrantsPurityOfIce1__": [
+      "Ring"
+    ],
+    "SynthesisImplicitGrantsPurityOfLightning1": [
+      "Ring"
+    ],
+    "SynthesisImplicitGrantsWrath1": [
+      "Ring"
+    ],
+    "SynthesisImplicitGrantsWrath2_": [
+      "Ring"
+    ],
+    "SynthesisImplicitHasSocket1_": [
+      "Ring"
+    ],
+    "SynthesisImplicitHighLifeRegen1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitHinderOnHitJewel1__": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitHinderOnHitJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitIgniteDuration1": [
+      "Helmet",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitIgniteDuration2_": [
+      "Helmet",
+      "Staff"
+    ],
+    "SynthesisImplicitImmuneToBleed1____": [
+      "Belt",
+      "Shield"
+    ],
+    "SynthesisImplicitImmuneToCursesCorruptedItem1": [
+      "Shield"
+    ],
+    "SynthesisImplicitImmuneToFreeze1": [
+      "Belt"
+    ],
+    "SynthesisImplicitImmuneToIgnite1": [
+      "Belt"
+    ],
+    "SynthesisImplicitImmuneToPoison1": [
+      "Belt"
+    ],
+    "SynthesisImplicitImmuneToShock1": [
+      "Belt"
+    ],
+    "SynthesisImplicitIncreasedArmour1_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedArmour2_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedArmour3": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedArmour4": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedArmour5_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEnergyShield1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEnergyShield2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEnergyShield3__": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEnergyShield4": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEnergyShield5": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEnergyShieldCorruptedItem1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitIncreasedEvasion1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEvasion2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEvasion3": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEvasion4": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedEvasion5": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitIncreasedLifeCorruptedItem1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitIncreasedLifeLeechRate1_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitIncreasedLifeLeechRate2_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitIncreasedLifeLeechRate3": [
+      "Amulet"
+    ],
+    "SynthesisImplicitIntelligence1": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitIntelligence2_": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitIntelligence3_": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitIntelligence4": [
+      "Body Armour",
+      "Boots",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitIntelligence5": [
+      "Body Armour",
+      "Boots",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitIntelligenceGemLevel1": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitIntelligenceGemQuality1": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitIntelligenceGemQuality2": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitIntelligenceJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitIntelligenceJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitIntimidateOnHit1": [
+      "Ring"
+    ],
+    "SynthesisImplicitIntimidateOnHitWeapon1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitIntimidateOnHitWeapon2_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitIntimidateOnHitWeapon3_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitItemDropsOnDeathAnimateGuardian1_": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitLife1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitLife2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitLife3": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitLife4_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitLife5": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitLifeAddedAsEnergyShield1_": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitLifeJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitLifeJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitLifeLeech1": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLifeLeech2_": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLifeLeech3": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLifeLeechJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitLifeLeechOneHanded1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLifeLeechTwoHanded1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLifeOnBlock1_": [
+      "Shield"
+    ],
+    "SynthesisImplicitLifeOnHit1": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLifeOnHit2_": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLifeOnHit3": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLifeOnHitJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitLifeOnHitOneHanded1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLifeOnHitTwoHanded1_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLifeOnKill1_": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitLifeOnKill2": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitLifeOnKill3": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitLifeRecoveryRate1": [
+      "Belt"
+    ],
+    "SynthesisImplicitLifeRegen1_": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLifeRegen2_": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLifeRegen3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLifeRegen4": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLifeRegen5_": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLifeRegenPerEnduranceCharge1____": [
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitLightRadius1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightRadius2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightRadius3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningAddedAsChaos1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningAddedAsChaos2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLightningDamage1": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLightningDamage2_": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLightningDamage3": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLightningDamage4": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLightningDamage5": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitLightningDamage6": [
+      "Belt"
+    ],
+    "SynthesisImplicitLightningDamageAttacksJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitLightningDamageAttacksJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitLightningDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitLightningDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitLightningDamageSpellsJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitLightningDamageSpellsJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitLightningGemLevel1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningGemQuality1": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningGemQuality2": [
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningLeech1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitLightningLeechMinor1": [
+      "Ring"
+    ],
+    "SynthesisImplicitLightningPenetration1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitLightningPenetrationWeapon1__": [
+      "Belt"
+    ],
+    "SynthesisImplicitLightningResist1": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningResist2": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningResist3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningResist4": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningResist5": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLightningResistJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitLightningResistJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamage4": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamage5": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamageTwoHand1_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamageTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamageTwoHand4_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalAddedPhysicalDamageTwoHand5": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalAttackSpeed1_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalAttackSpeed2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalAttackSpeed3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalBleedOnHit1": [
+      "Bow",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalChaosDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalChaosDamage2_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalChaosDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalChaosDamageTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalChaosDamageTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalChaosDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalColdDamage1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalColdDamage2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalColdDamage3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalColdDamage4": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalColdDamage5": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalColdDamageTwoHand1__": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalColdDamageTwoHand2__": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalColdDamageTwoHand3_": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalColdDamageTwoHand4": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalColdDamageTwoHand5_": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalCrit1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalCrit2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalCrit3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalCrit4_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalCrit5": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalElementalPen1_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalElementalPen2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalElementalPen3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalFireDamage1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalFireDamage2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalFireDamage3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalFireDamage4": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalFireDamage5": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalFireDamageTwoHand1": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalFireDamageTwoHand2": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalFireDamageTwoHand3": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalFireDamageTwoHand4": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalFireDamageTwoHand5": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalIncreaseSocketedGemLevel1_": [
+      "Helmet"
+    ],
+    "SynthesisImplicitLocalLightningDamage1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalLightningDamage2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalLightningDamage3_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalLightningDamage4": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalLightningDamage5": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalLightningDamageTwoHand1": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalLightningDamageTwoHand2": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalLightningDamageTwoHand3": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalLightningDamageTwoHand4": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalLightningDamageTwoHand5": [
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalPhysicalDamage1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalPhysicalDamage2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalPhysicalDamage3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalPhysicalDamage4": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalPhysicalDamage5": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitLocalPoisonOnHit1_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Sword",
+      "Thrusting One Hand Sword",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalWeaponRange1_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitLocalWeaponRange2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitMaceAccuracyRatingJewel1__": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMaceAccuracyRatingJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMaceCriticalMultiplierJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMaceCriticalMultiplierJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMaceIncreasedAttackSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMaceIncreasedAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMaceIncreasedPhysicalDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMaceIncreasedPhysicalDamageJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMana1": [
+      "Body Armour",
+      "Boots",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitMana2": [
+      "Body Armour",
+      "Boots",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitMana3_": [
+      "Body Armour",
+      "Boots",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitMana4": [
+      "Body Armour",
+      "Boots",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitMana5": [
+      "Body Armour",
+      "Boots",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitManaJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitManaJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitManaLeech1": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitManaLeech2": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitManaLeech3": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitManaLeechJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitManaLeechOneHanded1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitManaLeechTwoHanded1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitManaOnBlock1": [
+      "Shield"
+    ],
+    "SynthesisImplicitManaOnHit1__": [
+      "Gloves"
+    ],
+    "SynthesisImplicitManaOnHit2": [
+      "Gloves"
+    ],
+    "SynthesisImplicitManaOnHit3": [
+      "Gloves"
+    ],
+    "SynthesisImplicitManaOnHitJewel1_": [
+      "Jewel"
+    ],
+    "SynthesisImplicitManaOnKill1_": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitManaOnKill2___": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitManaOnKill3": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitManaRecoveryRate1_": [
+      "Belt"
+    ],
+    "SynthesisImplicitManaRegeneration1": [
+      "Belt",
+      "Claw",
+      "Dagger",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitManaRegeneration2": [
+      "Belt",
+      "Body Armour",
+      "Claw",
+      "Dagger",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Wand"
+    ],
+    "SynthesisImplicitManaRegeneration3_": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitManaRegeneration4_": [
+      "Amulet",
+      "Belt",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitManaRegeneration5": [
+      "Amulet",
+      "Belt",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitManaRegenerationJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMaxChaosResist1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver"
+    ],
+    "SynthesisImplicitMaxChaosResist2": [
+      "Shield"
+    ],
+    "SynthesisImplicitMaxColdResist1_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver"
+    ],
+    "SynthesisImplicitMaxColdResist2": [
+      "Shield"
+    ],
+    "SynthesisImplicitMaxFireResist1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver"
+    ],
+    "SynthesisImplicitMaxFireResist2": [
+      "Shield"
+    ],
+    "SynthesisImplicitMaxLightningResist1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver"
+    ],
+    "SynthesisImplicitMaxLightningResist2____": [
+      "Shield"
+    ],
+    "SynthesisImplicitMaximumAttackBlock1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitMaximumEnduranceCharge1": [
+      "Boots",
+      "Ring",
+      "Shield",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitMaximumEnergyShieldLeechRate1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitMaximumFrenzyCharge1": [
+      "Bow",
+      "Gloves",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitMaximumLifeLeechRate1": [
+      "Amulet",
+      "Gloves"
+    ],
+    "SynthesisImplicitMaximumManaLeechRate1_": [
+      "Amulet",
+      "Gloves"
+    ],
+    "SynthesisImplicitMaximumPowerCharge1": [
+      "Helmet",
+      "Ring",
+      "Shield",
+      "Staff"
+    ],
+    "SynthesisImplicitMaximumResistance1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitMaximumResistance2_": [
+      "Shield"
+    ],
+    "SynthesisImplicitMaximumSpellBlock1_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitMaximumSpellDodge1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitMeleeDamage1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitMeleeDamage2": [
+      "Amulet"
+    ],
+    "SynthesisImplicitMeleeDamageJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitMeleeDamageJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitMeleeGemLevel1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitMeleeGemQuality1": [
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitMeleeGemQuality2": [
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitMineLayingSpeed1": [
+      "Amulet",
+      "Helmet"
+    ],
+    "SynthesisImplicitMineLayingSpeed2": [
+      "Amulet",
+      "Helmet"
+    ],
+    "SynthesisImplicitMineLayingSpeedJewel1_": [
+      "Jewel"
+    ],
+    "SynthesisImplicitMineLayingSpeedJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitMinimumEnduranceCharge1": [
+      "Shield"
+    ],
+    "SynthesisImplicitMinimumFrenzyCharge1_": [
+      "Shield"
+    ],
+    "SynthesisImplicitMinimumPowerCharge1": [
+      "Shield"
+    ],
+    "SynthesisImplicitMinionAccuracyJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMinionAccuracyJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMinionAttackSpeedJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionCastSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionCastSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionDamage1": [
+      "Body Armour",
+      "Helmet"
+    ],
+    "SynthesisImplicitMinionDamage2_": [
+      "Body Armour",
+      "Gloves",
+      "Helmet"
+    ],
+    "SynthesisImplicitMinionDamage3": [
+      "Amulet",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitMinionDamage4": [
+      "Amulet",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitMinionDamage5": [
+      "Amulet",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitMinionDamageJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionDamageJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionGemLevel1_": [
+      "Helmet"
+    ],
+    "SynthesisImplicitMinionLife1_": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitMinionLife2__": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitMinionLife3": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitMinionLifeJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionLifeJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionLifeRegen1": [
+      "Gloves"
+    ],
+    "SynthesisImplicitMinionLifeRegen2": [
+      "Gloves"
+    ],
+    "SynthesisImplicitMinionMovementSpeed1": [
+      "Amulet",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitMinionMovementSpeed2": [
+      "Amulet",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitMinionMovementSpeed3": [
+      "Amulet",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitMinionMovementSpeedJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMinionMovementSpeedJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMinionResistanceJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinionResistanceJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitMinorCriticalMultiplier1": [
+      "Amulet",
+      "Ring"
+    ],
+    "SynthesisImplicitMinorCriticalMultiplier2": [
+      "Amulet",
+      "Ring"
+    ],
+    "SynthesisImplicitMinorCriticalMultiplier3_": [
+      "Amulet",
+      "Ring"
+    ],
+    "SynthesisImplicitMinorCriticalMultiplier4_": [
+      "Amulet",
+      "Ring"
+    ],
+    "SynthesisImplicitMinorCriticalMultiplier5": [
+      "Amulet",
+      "Belt",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitMovementSpeedWhilePhasedJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMovementSpeedWhilePhasedJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMovementVelocity1": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitMovementVelocity2": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitMovementVelocity3___": [
+      "Belt",
+      "Boots"
+    ],
+    "SynthesisImplicitMovementVelocityCorruptedItem1": [
+      "Boots"
+    ],
+    "SynthesisImplicitMovementVelocityJewel1___": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitMovementVelocityJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitOnslaught1": [
+      "Boots"
+    ],
+    "SynthesisImplicitOnslaughtOnHit1": [
+      "Ring"
+    ],
+    "SynthesisImplicitOnslaughtOnKill1": [
+      "Belt",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentAllAttributes1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPercentAllAttributes2": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPercentDexterity1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitPercentDexterity2": [
+      "Amulet",
+      "Boots",
+      "Helmet"
+    ],
+    "SynthesisImplicitPercentDexterity3_": [
+      "Amulet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentDexterityTrinket1": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPercentDexterityTrinket2": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPercentDexterityTrinket3": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPercentIntelligence1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitPercentIntelligence2_": [
+      "Amulet",
+      "Boots",
+      "Gloves",
+      "Quiver"
+    ],
+    "SynthesisImplicitPercentIntelligence3_": [
+      "Amulet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentIntelligenceTrinket1": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPercentIntelligenceTrinket2_": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPercentIntelligenceTrinket3_": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPercentLife1_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentLife2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentLife3": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPercentLifeOnKill1_": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitPercentLifeRegen1": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentLifeRegen2": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentLifeRegen3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentLifeRegenJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitPercentLifeTrinket1__": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitPercentLifeTrinket2": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitPercentLifeTrinket3": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitPercentMana1_": [
+      "Amulet",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitPercentMana2": [
+      "Amulet",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentMana3": [
+      "Amulet",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitPercentManaOnKill1": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitPercentStrength1_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitPercentStrength2_": [
+      "Amulet",
+      "Gloves",
+      "Helmet",
+      "Quiver"
+    ],
+    "SynthesisImplicitPercentStrength3_": [
+      "Amulet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPercentStrengthTrinket1": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPercentStrengthTrinket2": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPercentStrengthTrinket3": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitPhysicalAddedAsChaos1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitPhysicalAddedAsChaos2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitPhysicalAddedAsFire1": [
+      "Ring"
+    ],
+    "SynthesisImplicitPhysicalAddedAsFire2": [
+      "Quiver"
+    ],
+    "SynthesisImplicitPhysicalAddedAsLightning1___": [
+      "Helmet"
+    ],
+    "SynthesisImplicitPhysicalAttackDamageTaken1_": [
+      "Belt",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitPhysicalAttackDamageTaken2": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitPhysicalAttackDamageTaken3": [
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitPhysicalAttackDamageTaken4": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPhysicalAttackDamageTakenJewel1_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitPhysicalAttackDamageTakenJewel2___": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitPhysicalConvertedToCold1_": [
+      "Gloves",
+      "Quiver"
+    ],
+    "SynthesisImplicitPhysicalConvertedToColdMinor1": [
+      "Gloves"
+    ],
+    "SynthesisImplicitPhysicalConvertedToFire1": [
+      "Gloves",
+      "Quiver"
+    ],
+    "SynthesisImplicitPhysicalConvertedToFireJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitPhysicalConvertedToFireMinor1": [
+      "Gloves"
+    ],
+    "SynthesisImplicitPhysicalConvertedToLightning1": [
+      "Gloves",
+      "Quiver"
+    ],
+    "SynthesisImplicitPhysicalConvertedToLightningMinor1": [
+      "Gloves"
+    ],
+    "SynthesisImplicitPhysicalDamage1_": [
+      "Amulet",
+      "Gloves",
+      "Quiver",
+      "Shield"
+    ],
+    "SynthesisImplicitPhysicalDamage2_": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPhysicalDamage3_": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPhysicalDamage4": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPhysicalDamage5": [
+      "Amulet",
+      "Belt",
+      "Gloves",
+      "Quiver",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitPhysicalDamage6": [
+      "Belt"
+    ],
+    "SynthesisImplicitPhysicalDamageAddedAsRandomElement1": [
+      "Quiver"
+    ],
+    "SynthesisImplicitPhysicalDamageAttacksJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitPhysicalDamageAttacksJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitPhysicalDamageJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitPhysicalDamageJewel2__": [
+      "Jewel"
+    ],
+    "SynthesisImplicitPhysicalDamageSpellsJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitPhysicalDamageSpellsJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitPhysicalDamageTakenFromMana1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPhysicalDamageTakenFromMana2_": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPhysicalDamageWithUnholyMightJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitPhysicalDamageWithUnholyMightJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitPhysicalLeech1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitPhysicalLeechMinor1": [
+      "Ring"
+    ],
+    "SynthesisImplicitPhysicalTakenAsChaos1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPhysicalTakenAsCold1__": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPhysicalTakenAsFire1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPhysicalTakenAsLightning1": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPoisonDamage1": [
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitPoisonDamage2": [
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitPoisonDamage3": [
+      "Gloves",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitPoisonDamageJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitPoisonDamageJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitPoisonDuration1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Thrusting One Hand Sword",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitPowerChargeDuration1": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitPowerChargeDuration2": [
+      "Amulet",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Ring",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitPowerChargeGeneration1_": [
+      "Body Armour"
+    ],
+    "SynthesisImplicitPowerChargeOnKill1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitProjectileDamage1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitProjectileDamage2_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitProjectileGemQuality1": [
+      "Gloves",
+      "Helmet"
+    ],
+    "SynthesisImplicitProjectileGemQuality2": [
+      "Gloves",
+      "Helmet"
+    ],
+    "SynthesisImplicitProjectileSpeed1": [
+      "Bow",
+      "Quiver",
+      "Wand"
+    ],
+    "SynthesisImplicitProjectileSpeed2": [
+      "Bow",
+      "Quiver",
+      "Wand"
+    ],
+    "SynthesisImplicitProjectileSpeed3": [
+      "Bow",
+      "Quiver",
+      "Wand"
+    ],
+    "SynthesisImplicitProjectileSpeed4": [
+      "Bow",
+      "Quiver",
+      "Wand"
+    ],
+    "SynthesisImplicitProjectileSpeed5_": [
+      "Amulet",
+      "Bow",
+      "Quiver",
+      "Wand"
+    ],
+    "SynthesisImplicitProjectileSpeedJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitProjectileSpeedJewel2__": [
+      "Jewel"
+    ],
+    "SynthesisImplicitPurityOfFireReservation1_": [
+      "Boots",
+      "Gloves"
+    ],
+    "SynthesisImplicitPurityOfFireReservation2_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitPurityOfIceReservation1_": [
+      "Boots",
+      "Gloves"
+    ],
+    "SynthesisImplicitPurityOfIceReservation2": [
+      "Amulet"
+    ],
+    "SynthesisImplicitPurityOfLightningReservation1": [
+      "Boots",
+      "Gloves"
+    ],
+    "SynthesisImplicitPurityOfLightningReservation2": [
+      "Amulet"
+    ],
+    "SynthesisImplicitQuantity1": [
+      "Boots",
+      "Gloves",
+      "Helmet"
+    ],
+    "SynthesisImplicitRarity1": [
+      "Amulet",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitRarity2": [
+      "Amulet",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitRarity3": [
+      "Amulet",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitRarity4": [
+      "Amulet",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitRarity5": [
+      "Amulet",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Ring"
+    ],
+    "SynthesisImplicitRarityJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitRarityJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitReducedDamageFromCrits1": [
+      "Belt"
+    ],
+    "SynthesisImplicitReducedFlaskChargesUsed1_": [
+      "Belt"
+    ],
+    "SynthesisImplicitReducedFlaskChargesUsed2": [
+      "Belt"
+    ],
+    "SynthesisImplicitReducedFlaskChargesUsed3": [
+      "Belt"
+    ],
+    "SynthesisImplicitReducedManaCost1_": [
+      "Amulet",
+      "Boots",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitReducedManaCost2": [
+      "Amulet",
+      "Boots",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitReducedManaCost3": [
+      "Amulet",
+      "Boots",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitReducedManaCostJewel1_": [
+      "Jewel"
+    ],
+    "SynthesisImplicitReducedManaReservation1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitReducedPhysicalDamageTakenVsAbyssMonsters1": [
+      "Body Armour",
+      "Boots"
+    ],
+    "SynthesisImplicitReducedPhysicalDamageTakenVsAbyssMonsters2": [
+      "Body Armour",
+      "Boots"
+    ],
+    "SynthesisImplicitReflectDamageTaken1": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitReflectDamageTaken2": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitReflectDamageTaken3": [
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitRemoveFreezeOnFlaskUse1": [
+      "Belt"
+    ],
+    "SynthesisImplicitRemoveIgniteOnFlaskUse1": [
+      "Belt"
+    ],
+    "SynthesisImplicitRemoveShockOnFlaskUse1": [
+      "Belt"
+    ],
+    "SynthesisImplicitSelfAilmentDuration1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitSelfAilmentDuration2": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitSelfAilmentDuration3": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitSelfAilmentDurationJewel1_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSelfAuraEffect1_": [
+      "Helmet"
+    ],
+    "SynthesisImplicitShieldAttackBlock1_": [
+      "Shield"
+    ],
+    "SynthesisImplicitShieldAttackBlock2": [
+      "Shield"
+    ],
+    "SynthesisImplicitShieldSpellBlock1": [
+      "Shield"
+    ],
+    "SynthesisImplicitShieldSpellBlock2_": [
+      "Shield"
+    ],
+    "SynthesisImplicitShockDuration1": [
+      "Helmet",
+      "Ring",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitShockDuration2_": [
+      "Helmet",
+      "Ring",
+      "Staff"
+    ],
+    "SynthesisImplicitShockDurationJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitShockDurationJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitShockEffect1": [
+      "Boots",
+      "Ring"
+    ],
+    "SynthesisImplicitShockEffect2": [
+      "Boots",
+      "Ring"
+    ],
+    "SynthesisImplicitShockEffectJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSkeletonDamage1_": [
+      "Body Armour",
+      "Helmet"
+    ],
+    "SynthesisImplicitSocketedGemReducedReservation1_": [
+      "Shield"
+    ],
+    "SynthesisImplicitSocketedSkillsManaMultiplier1": [
+      "Helmet"
+    ],
+    "SynthesisImplicitSocketedSkillsManaMultiplier2": [
+      "Helmet"
+    ],
+    "SynthesisImplicitSocketedSkillsManaMultiplier3": [
+      "Helmet"
+    ],
+    "SynthesisImplicitSpectreDamage1": [
+      "Boots"
+    ],
+    "SynthesisImplicitSpellAddedColdDamage1_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedColdDamage2_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedColdDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedColdDamage4": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedColdDamage5": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedColdDamageTwoHand1_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedColdDamageTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedColdDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedColdDamageTwoHand4": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedColdDamageTwoHand5": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedFireDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedFireDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedFireDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedFireDamage4": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedFireDamage5": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedFireDamageTwoHand1_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedFireDamageTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedFireDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedFireDamageTwoHand4": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedFireDamageTwoHand5__": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamage4": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamage5": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamageTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamageTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamageTwoHand4": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellAddedLightningDamageTwoHand5": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitSpellBlock1": [
+      "Boots",
+      "Gloves"
+    ],
+    "SynthesisImplicitSpellBlock2_": [
+      "Helmet"
+    ],
+    "SynthesisImplicitSpellCriticalChanceWithDualWieldJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalChanceWithDualWieldJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalChanceWithShieldJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalChanceWithShieldJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalChanceWithStaffJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalChanceWithStaffJewel2__": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalMultiplierWithDualWieldJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalMultiplierWithDualWieldJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalMultiplierWithShieldJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalMultiplierWithShieldJewel2__": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalMultiplierWithStaffJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalMultiplierWithStaffJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSpellCriticalStrikeChance1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellCriticalStrikeChance2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellCriticalStrikeChance3_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellCriticalStrikeChance4": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellCriticalStrikeChance5_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellDamage1": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitSpellDamage2_": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitSpellDamage3_": [
+      "Body Armour",
+      "Shield"
+    ],
+    "SynthesisImplicitSpellDamageCorruptedItem1": [
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellDamageCorruptedItem2": [
+      "Staff"
+    ],
+    "SynthesisImplicitSpellDamageJewel1__": [
+      "Jewel"
+    ],
+    "SynthesisImplicitSpellDamageJewel2_": [
+      "Jewel"
+    ],
+    "SynthesisImplicitSpellDamagePerDexterity1": [
+      "Dagger"
+    ],
+    "SynthesisImplicitSpellDamagePerIntelligence1": [
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellDamagePerIntelligence2": [
+      "Staff"
+    ],
+    "SynthesisImplicitSpellDamagePerMana1": [
+      "Dagger",
+      "Sceptre",
+      "Shield",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellDamagePerMana2___": [
+      "Staff"
+    ],
+    "SynthesisImplicitSpellDamagePerPowerCharge1": [
+      "Belt",
+      "Ring"
+    ],
+    "SynthesisImplicitSpellDamagePerStrength1_": [
+      "Sceptre"
+    ],
+    "SynthesisImplicitSpellDamagePerStrength2_": [
+      "Staff"
+    ],
+    "SynthesisImplicitSpellDamageSuppressed1_": [
+      "Amulet"
+    ],
+    "SynthesisImplicitSpellDamageWithDualWieldJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSpellDamageWithDualWieldJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSpellDamageWithShieldJewel1__": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSpellDamageWithShieldJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSpellDamageWithStaffJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSpellDamageWithStaffJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSpellDodge1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitSpellDodge2": [
+      "Body Armour",
+      "Boots",
+      "Shield"
+    ],
+    "SynthesisImplicitSpellsDoubleDamageChance1__": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSpellsDoubleDamageChance2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitStaffAccuracyRatingJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitStaffAccuracyRatingJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitStaffCriticalMultiplierJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitStaffCriticalMultiplierJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitStaffIncreasedAttackSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitStaffIncreasedAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitStaffIncreasedPhysicalDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitStaffIncreasedPhysicalDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitStrength1": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitStrength2__": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitStrength3": [
+      "Amulet",
+      "Belt",
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitStrength4": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitStrength5": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Ring",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitStrengthGemLevel1": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitStrengthGemQuality1": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitStrengthGemQuality2__": [
+      "Body Armour",
+      "Boots",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "Gloves",
+      "Helmet",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitStrengthJewel1__": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitStrengthJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitStunDuration1_": [
+      "Belt",
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Quiver",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitStunDuration2": [
+      "Belt",
+      "Quiver"
+    ],
+    "SynthesisImplicitStunDuration3_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitStunDurationJewel1___": [
+      "Jewel"
+    ],
+    "SynthesisImplicitStunDurationJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitStunRecovery1": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitStunRecovery2_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitStunRecovery3_": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitStunRecovery4": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitStunRecovery5": [
+      "Body Armour",
+      "Boots",
+      "Gloves",
+      "Helmet",
+      "Shield"
+    ],
+    "SynthesisImplicitStunRecoveryJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSupportGemLevel1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSupportGemQuality1_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSupportGemQuality2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Shield",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitSwordAccuracyRatingJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSwordAccuracyRatingJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSwordCriticalMultiplierJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSwordCriticalMultiplierJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitSwordIncreasedAttackSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSwordIncreasedAttackSpeedJewel2_": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSwordIncreasedPhysicalDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitSwordIncreasedPhysicalDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitTauntOnHitJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitTauntOnHitJewel2_": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitTotalManaCost1_": [
+      "Amulet",
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitTotalManaCost2_": [
+      "Amulet",
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitTotalManaCost3": [
+      "Amulet",
+      "Body Armour",
+      "Boots",
+      "Helmet",
+      "Ring",
+      "Shield"
+    ],
+    "SynthesisImplicitTotemElementalResistanceJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitTotemElementalResistanceJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitTotemPlacementSpeed1": [
+      "Amulet",
+      "Boots"
+    ],
+    "SynthesisImplicitTotemPlacementSpeed2": [
+      "Amulet",
+      "Boots"
+    ],
+    "SynthesisImplicitTotemPlacementSpeedJewel1___": [
+      "Jewel"
+    ],
+    "SynthesisImplicitTotemPlacementSpeedJewel2_": [
+      "Jewel"
+    ],
+    "SynthesisImplicitTrapThrowingSpeed1": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitTrapThrowingSpeed2": [
+      "Amulet",
+      "Belt"
+    ],
+    "SynthesisImplicitTrapThrowingSpeedJewel1": [
+      "Jewel"
+    ],
+    "SynthesisImplicitTrapThrowingSpeedJewel2": [
+      "Jewel"
+    ],
+    "SynthesisImplicitTrinketMovementVelocity1": [
+      "Amulet",
+      "Ring"
+    ],
+    "SynthesisImplicitTwoHandWeaponCastSpeed1": [
+      "Staff"
+    ],
+    "SynthesisImplicitTwoHandWeaponCastSpeed2": [
+      "Staff"
+    ],
+    "SynthesisImplicitTwoHandWeaponCastSpeed3": [
+      "Staff"
+    ],
+    "SynthesisImplicitUnaffectedByBurningGround1": [
+      "Boots"
+    ],
+    "SynthesisImplicitUnaffectedByChilledGround1": [
+      "Boots"
+    ],
+    "SynthesisImplicitUnaffectedByShockedGround1": [
+      "Boots"
+    ],
+    "SynthesisImplicitUnwaveringStance1": [
+      "Boots",
+      "Shield"
+    ],
+    "SynthesisImplicitVaalSkillCriticalStrikeChance1": [
+      "Gloves",
+      "Quiver"
+    ],
+    "SynthesisImplicitVaalSkillCriticalStrikeChance2_": [
+      "Gloves",
+      "Quiver"
+    ],
+    "SynthesisImplicitVaalSkillDamage1": [
+      "Belt",
+      "Boots",
+      "Gloves",
+      "Ring"
+    ],
+    "SynthesisImplicitVaalSkillDamage2": [
+      "Belt",
+      "Boots",
+      "Gloves",
+      "Ring"
+    ],
+    "SynthesisImplicitVaalSkillDamageAffectsSkillDamage1": [
+      "Belt"
+    ],
+    "SynthesisImplicitVaalSkillDamageWeapon1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitVaalSkillDamageWeapon2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitVaalSkillDamageWeaponTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitVaalSkillDamageWeaponTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitVaalSkillDuration1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitVaalSkillDuration2": [
+      "Amulet"
+    ],
+    "SynthesisImplicitVitalityReservation1": [
+      "Boots",
+      "Gloves"
+    ],
+    "SynthesisImplicitWandAccuracyRatingJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitWandAccuracyRatingJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitWandCriticalMultiplierJewel1": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitWandCriticalMultiplierJewel2": [
+      "AbyssJewel"
+    ],
+    "SynthesisImplicitWandIncreasedAttackSpeedJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitWandIncreasedAttackSpeedJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitWandIncreasedPhysicalDamageJewel1": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitWandIncreasedPhysicalDamageJewel2": [
+      "AbyssJewel",
+      "Jewel"
+    ],
+    "SynthesisImplicitWeaponAccuracy1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAccuracy2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAccuracy3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAccuracyHigh1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAllDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAllDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAllDamage3_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAllDamageTwoHand1_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponAllDamageTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponAllDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponAttackDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAttackDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAttackDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponAttackDamageTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponAttackDamageTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponAttackDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponBleedDamage1_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponBleedDamage2_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponBleedDamage3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponCastSpeed1_": [
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponCastSpeed2": [
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponCastSpeed3": [
+      "Dagger",
+      "Sceptre",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponChaosDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponChaosDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponChaosDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponChaosDamage4": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponChaosDamageTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponChaosDamageTwoHand2___": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponChaosDamageTwoHand3_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponChaosDamageTwoHand4": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponColdDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponColdDamage3_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponColdDamage4": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponColdDamage5": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponColdDamageTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponColdDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponColdDamageTwoHand4": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponColdDamageTwoHand5": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponElementalDamage1_": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitWeaponElementalDamage2": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitWeaponElementalDamage3": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitWeaponElementalDamage4": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitWeaponElementalDamage5": [
+      "Amulet",
+      "Belt",
+      "Quiver",
+      "Ring"
+    ],
+    "SynthesisImplicitWeaponFireDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponFireDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponFireDamage4": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponFireDamage5": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponFireDamageTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponFireDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponFireDamageTwoHand4": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponFireDamageTwoHand5": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponLightningDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponLightningDamage3_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponLightningDamage4_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponLightningDamage5_": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponLightningDamageTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponLightningDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponLightningDamageTwoHand4": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponLightningDamageTwoHand5_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponMinionDamage1_": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponMinionDamage2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponMinionDamage3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponMinionDamageTwoHand1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponMinionDamageTwoHand2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponMinionDamageTwoHand3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponPhysicalDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponPhysicalDamage2": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponPhysicalDamage3": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponPhysicalDamageTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponPhysicalDamageTwoHand2_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponPhysicalDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponPoisonDamage1": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponPoisonDamage2": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponPoisonDamage3": [
+      "Bow",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Staff",
+      "Thrusting One Hand Sword",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponRange1": [
+      "Amulet"
+    ],
+    "SynthesisImplicitWeaponSpellDamage1": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponSpellDamage2": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponSpellDamage3": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponSpellDamage4": [
+      "Amulet",
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponSpellDamage5": [
+      "Claw",
+      "Dagger",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Sceptre",
+      "Shield",
+      "Thrusting One Hand Sword",
+      "Wand"
+    ],
+    "SynthesisImplicitWeaponSpellDamageTwoHand1": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponSpellDamageTwoHand2": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponSpellDamageTwoHand3": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponSpellDamageTwoHand4_": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitWeaponSpellDamageTwoHand5": [
+      "Bow",
+      "Staff",
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword"
+    ],
+    "SynthesisImplicitZombieDamage1": [
+      "Body Armour",
+      "Helmet"
+    ]
+  }
+}
