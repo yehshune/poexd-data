@@ -1,10 +1,10 @@
 {
   "gameVersion": "poe1",
-  "generatedAt": "2026-11-21T09:18:28.188Z",
-  "totalTiers": 15727,
-  "matchedCount": 15316,
+  "generatedAt": "2026-11-21T17:21:32.770Z",
+  "totalTiers": 17128,
+  "matchedCount": 16717,
   "unmatchedCount": 411,
-  "matchRate": "97.4%",
+  "matchRate": "97.6%",
   "summaryByTemplate": [
     {
       "template": "增加#%此區域的輿圖掉落加成",

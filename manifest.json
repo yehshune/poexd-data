@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
-  "generatedAt": "2026-11-21T11:44:50.495Z",
-  "sourceCommit": "e7b85e53e78bb29672dbc3c879ca2e2a589174bc",
+  "generatedAt": "2026-11-21T17:23:05.634Z",
+  "sourceCommit": "613403a7b282a9a5e4335716e28177f86e1c3faf",
   "games": {
     "poe1": {
       "patchVersion": "3.30.0.4"
@@ -12,31 +12,31 @@
   },
   "batches": {
     "poe2/game": {
-      "builtAt": "2026-11-21T09:18:07.397Z",
+      "builtAt": "2026-11-21T17:21:17.006Z",
       "patch": "0.5.5.10"
     },
     "poe1/game": {
-      "builtAt": "2026-11-21T09:18:28.191Z",
+      "builtAt": "2026-11-21T17:21:32.771Z",
       "patch": "3.30.0.4"
     },
     "poe1/mercenary": {
-      "builtAt": "2026-11-21T09:18:29.128Z",
+      "builtAt": "2026-11-21T17:21:33.659Z",
       "patch": "3.30.0.4"
     },
     "poe1/trade-filters": {
-      "builtAt": "2026-11-21T11:44:18.821Z",
+      "builtAt": "2026-11-21T17:22:30.655Z",
       "staleLocales": [
         "ko"
       ]
     },
     "poe2/trade-filters": {
-      "builtAt": "2026-11-21T11:44:18.821Z",
+      "builtAt": "2026-11-21T17:22:30.656Z",
       "staleLocales": [
         "ko"
       ]
     },
     "market": {
-      "builtAt": "2026-11-21T11:44:49.713Z"
+      "builtAt": "2026-11-21T17:23:04.681Z"
     }
   },
   "files": {
@@ -64,8 +64,8 @@
     },
     "poe1/locales/de/stats.json": {
       "batch": "poe1/game",
-      "sha256": "94fff546b65967a92562041bf269f9237a6dff5518554275d0091b88810adae0",
-      "bytes": 643174
+      "sha256": "26bf16b2d22ca068e66d3b92de77807880b5cc52f62012596531b504cc3b4049",
+      "bytes": 668135
     },
     "poe1/locales/de/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -85,8 +85,8 @@
     },
     "poe1/locales/en/stats.json": {
       "batch": "poe1/game",
-      "sha256": "36399dd9ba1598e2631aab668a1872db96aa78e774bb6b4e3a2368093ad6c3e7",
-      "bytes": 571721
+      "sha256": "86ec4ebdcf6a7ddb7fbdc9aa9e5b11aff27af7230e5c3840bc7fc2c5c95cc533",
+      "bytes": 595182
     },
     "poe1/locales/en/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -96,7 +96,7 @@
     },
     "poe1/locales/en/trade-stats.json": {
       "batch": "market",
-      "sha256": "36c57b7ca91207e5cc2b0ca7c860caa837cdeebeee820ee5b11f0514f811fa79",
+      "sha256": "ad584ac90041d9fd6b57192e5ebf0ea1fc7c2d2c275e613d350283b97f6a6878",
       "bytes": 1550085,
       "schema": 1
     },
@@ -112,8 +112,8 @@
     },
     "poe1/locales/es/stats.json": {
       "batch": "poe1/game",
-      "sha256": "60c6b581655094bfb022680e108c9e614d1f8b76c9e5e79b373cd6e71218f023",
-      "bytes": 691840
+      "sha256": "dddb5e3f7d330da764843ad7a52a9cd454ee97dbcac35fb5f067ac822e86bac3",
+      "bytes": 717457
     },
     "poe1/locales/es/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -133,8 +133,8 @@
     },
     "poe1/locales/fr/stats.json": {
       "batch": "poe1/game",
-      "sha256": "6adf86e00c9af6678ea5d446252da2de31f7911b2a5a7c8c7c4d80903d51e5cc",
-      "bytes": 704469
+      "sha256": "0ef17c5e2bfd815cec3fefcbc0ac5543642fb763394d7079380fbc1c7ff78502",
+      "bytes": 731246
     },
     "poe1/locales/fr/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -154,8 +154,8 @@
     },
     "poe1/locales/ja/stats.json": {
       "batch": "poe1/game",
-      "sha256": "6d65008ca35ad78c7b81acf06fab822dbadc1b9d82886f1264013eb949a8adfa",
-      "bytes": 723014
+      "sha256": "8d3b919ba67dfdc1cbd9a28d4781dd229372c05fbb74d7b2c384acae5165c0b0",
+      "bytes": 749185
     },
     "poe1/locales/ja/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -175,8 +175,8 @@
     },
     "poe1/locales/ko/stats.json": {
       "batch": "poe1/game",
-      "sha256": "d0007252d5e7cc5c5883acd116d0bb55fd6fbc2d30eb0802691412db3dd1a97b",
-      "bytes": 607891
+      "sha256": "cd556111295975f233c343cffd4f473701a043ecce5904069e8a2cd89f89e332",
+      "bytes": 631378
     },
     "poe1/locales/pt/items.json": {
       "batch": "poe1/game",
@@ -190,8 +190,8 @@
     },
     "poe1/locales/pt/stats.json": {
       "batch": "poe1/game",
-      "sha256": "b05a7a70fe906d634ac15653063d82cf8a2f7e5f8fd5fb362f551a97447403b4",
-      "bytes": 644394
+      "sha256": "44a503f67b6136af04cd91712d3b6ef47d97e29f09385ca3931dc7018b13086b",
+      "bytes": 669130
     },
     "poe1/locales/pt/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -211,8 +211,8 @@
     },
     "poe1/locales/ru/stats.json": {
       "batch": "poe1/game",
-      "sha256": "fb8421a5fb54b7f3f4cc6f0273afaa4b16f75dc4804eac1e486f81d679a4731d",
-      "bytes": 937630
+      "sha256": "fdaa8cc68be354750199753a6d4c432db43173a3709a36d87504c07b1bb5ee42",
+      "bytes": 969183
     },
     "poe1/locales/ru/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -232,8 +232,8 @@
     },
     "poe1/locales/th/stats.json": {
       "batch": "poe1/game",
-      "sha256": "424f7bde97d1c029c986d6bd251a548de9b6157b46e88a6ac51d16d7fbd8af28",
-      "bytes": 1085991
+      "sha256": "4633ba1a0cb547de60952bce9c0c04d242c40b9291eb3a57299709886617a762",
+      "bytes": 1121512
     },
     "poe1/locales/th/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -243,8 +243,8 @@
     },
     "poe1/locales/zh-CN/items.json": {
       "batch": "poe1/game",
-      "sha256": "0da91a5759bb83b48aae597fac8c438779eb730552fcf32b908d7e9d84cd71a7",
-      "bytes": 115152
+      "sha256": "b834f10f5da3c5b672cd88dd0c35d109cc61a88cfedfba831c69a729a1e22553",
+      "bytes": 115153
     },
     "poe1/locales/zh-CN/mod-lines.json": {
       "batch": "poe1/game",
@@ -266,8 +266,8 @@
     },
     "poe1/locales/zh-CN/stats.json": {
       "batch": "poe1/game",
-      "sha256": "f288b546d0dbe2aa4cd22e6c8080e079ef3acd77320dc9e5b7cfc9f5720a87f2",
-      "bytes": 536287
+      "sha256": "b71018303798b2387aa08cb3cce210fda193ddb75195ac654c9ca774391e37a7",
+      "bytes": 558789
     },
     "poe1/locales/zh-CN/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -277,8 +277,8 @@
     },
     "poe1/locales/zh-CN/trade-items.json": {
       "batch": "market",
-      "sha256": "7cc4f2d6c7d12138d3759b1ddd6197789ecd3e3913aa5a1f3ab24f3cd94fc4d2",
-      "bytes": 21212,
+      "sha256": "06b6a477e840bd46e2f4395b484de44ce1ad1bed712b67679397c6f4cd8ee83e",
+      "bytes": 21476,
       "schema": 1
     },
     "poe1/locales/zh-CN/trade-static.json": {
@@ -289,8 +289,8 @@
     },
     "poe1/locales/zh-CN/trade-stats.json": {
       "batch": "market",
-      "sha256": "2921ee2fe0b73a689a66926670dc6ac9668d4768edad656f74081949f8700ce1",
-      "bytes": 1451417,
+      "sha256": "7f57a29c421b13829d85240a9cf90e2649806dfcd9efa46fd956c148ac05aad1",
+      "bytes": 1451727,
       "schema": 1
     },
     "poe1/locales/zh-TW/items.json": {
@@ -335,8 +335,8 @@
     },
     "poe1/locales/zh-TW/stats.json": {
       "batch": "poe1/game",
-      "sha256": "297fbf2b29f5c50961b66c16427739c1e58aef27d8099a7502e3bbe02fc53f4e",
-      "bytes": 519753
+      "sha256": "7463a8bff87e6e04c61741c374093467eca8ee7d342c7ffe3e4063115c1a967e",
+      "bytes": 542149
     },
     "poe1/locales/zh-TW/trade-filters.json": {
       "batch": "poe1/trade-filters",
@@ -346,8 +346,8 @@
     },
     "poe1/locales/zh-TW/trade-items.json": {
       "batch": "market",
-      "sha256": "1856cdf7f8f7fc7cc7340721fb3315c28f9f7f46e7df1d9473e872183359757c",
-      "bytes": 20656,
+      "sha256": "f1068d3ba120a44482027e30494f330ec9c5f503c8a5be00336be386ca27d5a3",
+      "bytes": 20694,
       "schema": 1
     },
     "poe1/locales/zh-TW/trade-static.json": {
@@ -358,8 +358,8 @@
     },
     "poe1/locales/zh-TW/trade-stats.json": {
       "batch": "market",
-      "sha256": "d23dcfd0dded351c187ef85fad933406a4327167fe4f694fd8b2072d9b70173e",
-      "bytes": 1406793,
+      "sha256": "d27bf5239d7cb58cfabf3947e5060e5a22966f59131de2e45ad3756e3b64cf69",
+      "bytes": 1406880,
       "schema": 1
     },
     "poe1/mercenary.json": {
@@ -369,8 +369,8 @@
     },
     "poe1/mods-tiers.json": {
       "batch": "poe1/game",
-      "sha256": "892bade9b8a1452bb7ab6fefbad51f028cc884ee8658a4d34816deddac97af9c",
-      "bytes": 3689095
+      "sha256": "4729a7bc11c1b02ac6d3779c60ea192cf94c6f05d9671424dcf7499c7994357f",
+      "bytes": 4053273
     },
     "poe1/stat-aliases.json": {
       "batch": "poe1/game",
@@ -412,7 +412,7 @@
     },
     "poe2/locales/en/trade-stats.json": {
       "batch": "market",
-      "sha256": "38c9163ee55147c868411ba322e2e4ddee955d6b17721e3866cd83c222e7b1c1",
+      "sha256": "5d15a429a0b3f1d7eedb0884c0a4fd26c68d455d4aafffe07385c9757e853e40",
       "bytes": 587203,
       "schema": 1
     },
@@ -570,7 +570,7 @@
     },
     "poe2/locales/zh-CN/trade-stats.json": {
       "batch": "market",
-      "sha256": "e983da808e908dabc3653012fff3a96cfc1aa35190a76c5c79110e8287607281",
+      "sha256": "1117f28b32eb8591325eaf80bf17283e2554b10802b4905fbc28ccf331b6ec90",
       "bytes": 531533,
       "schema": 1
     },
@@ -634,7 +634,7 @@
     },
     "poe2/locales/zh-TW/trade-stats.json": {
       "batch": "market",
-      "sha256": "c3dd39035aba836d78fd8c41c540ce8fd927671560117e53a93b69dc4f556c00",
+      "sha256": "6b9eb3e24ea61dec17ad909dfb84135c20361405b52bdf9b95b40f5b50545695",
       "bytes": 520443,
       "schema": 1
     },
